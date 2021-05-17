@@ -1,11 +1,11 @@
 {
   "root": true,
-  "project": {
-    "name": "mondage"
-  },
   "api": {
     "projectId": "pc8kcslj",
     "dataset": "production"
+  },
+  "project": {
+    "name": "mondage"
   },
   "plugins": [
     "@sanity/base",
@@ -18,7 +18,8 @@
     "dashboard-widget-document-list",
     "dashboard-widget-netlify"
   ],
-  "parts": [{
+  "parts": [
+    {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema.js"
     },
