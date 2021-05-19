@@ -9,6 +9,7 @@ import { mapEdgesToNodes } from "../lib/helpers";
 import styles from "../pages/vins.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
 import PortableText from "../components/portableText";
+import {Link} from "gatsby";
 
 export const query = graphql`
   query VinsPageQuery {
@@ -23,6 +24,9 @@ export const query = graphql`
       edges {
         node {
           title
+          slug {
+            current
+          }
           logo {
             asset {
               url
@@ -49,6 +53,7 @@ const VinsPage = (props) => {
         <img src={games.node.logo.asset.url} alt="" width="165" height="164" />
         <h1> {games.node.title} </h1>
         <PortableText blocks={games.node._rawDescription} />
+        <Link to={"/game/" + `${games.node.slug.current}`} > <button> Voir la gamme </button> </Link>
       </div>
       )}
     </Layout>

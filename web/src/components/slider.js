@@ -19,6 +19,7 @@ const Slider = ({data, count}) => (
               <img src={game[count].logo.asset.url} alt=""  width="297" height="281" />
               <h1> {game[count].title} </h1>
               <PortableText blocks={game[count]._rawDescription} />
+              <Link to={"/game/" + `${game[count].slug.current}`}> <button> Voir Plus </button> </Link>
             </div>
         </div>
   )

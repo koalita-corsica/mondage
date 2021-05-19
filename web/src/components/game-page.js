@@ -6,9 +6,11 @@ import PortableText from "./portableText";
 import React from "react";
 import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
+import {Link} from "gatsby";
 
 function GamePage(props) {
 const {title, produits, logo, _rawDescription} = props
+console.log(produits)
     return (
     <div>
         {produits.map(item =>
@@ -22,6 +24,7 @@ const {title, produits, logo, _rawDescription} = props
             <img src={item.image.asset.url} alt="" width="359" height="720" />
             <h1> {item.genre} </h1>
             <PortableText blocks={item._rawDescription} />
+            <Link to={"/produit/" + `${item.slug.current}`}> <button> Fiche Produit </button> </Link>
         </div>
         )}
     </div>

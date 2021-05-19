@@ -23,6 +23,9 @@ export const query = graphql`
         _rawDescription
         produits {
           genre
+          slug {
+            current
+          }
           _rawDescription
           image {
             asset {
