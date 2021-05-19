@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { graphql } from "gatsby";
 import {
   filterOutDocsPublishedInTheFuture,
@@ -10,6 +10,11 @@ import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../containers/layout";
+import Slider from "../components/slider";
+
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { AiOutlineArrowLeft } from 'react-icons/ai';
+
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -66,6 +71,7 @@ export const query = graphql`
 
 const IndexPage = (props) => {
   const { data, errors } = props;
+  const [count, setCount] = useState(0);
 
   if (errors) {
     return (
@@ -88,23 +94,20 @@ const IndexPage = (props) => {
     );
   }
 
+
+  function moins() {
+    count && count == 0 ? setCount(3 - 1) : setCount(count - 1)
+  }
+
+  function plus() {
+    count && count == 3 - 1 ? setCount(0) : setCount(count + 1)
+  }
+
   return (
     <Layout>
-      <SEO
-        title={site.title}
-        description={site.description}
-        keywords={site.keywords}
-      />
-      <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-        {postNodes && (
-          <BlogPostPreviewList
-            title="Latest blog posts"
-            nodes={postNodes}
-            browseMoreHref="/archive/"
-          />
-        )}
-      </Container>
+       <AiOutlineArrowLeft onClick={moins} />
+        <Slider count={count} />
+      <AiOutlineArrowRight onClick={plus}/>
     </Layout>
   );
 };
