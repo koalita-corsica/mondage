@@ -1,0 +1,79 @@
+@import "../pages/normalize.module.css";
+
+
+
+.ntm {
+    color:red;
+}
+.wrapper {
+    background-color: $color-backgroundGrey;
+    height: 56.218057921635435vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    *{
+        font-size: 14px;
+    }
+    a{
+        text-decoration: none;
+    }
+}
+.container{
+    display: grid;
+    margin-top: 9vh;
+    height: 47.018739352640544vh;
+    width: 58vw;
+    background-color: green;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.domainMondange{
+    grid-area: 1/2/2/3;
+    font-size: 20px;
+}
+.contact{
+    grid-area: 1/1/3/2;
+}
+.plan{
+    grid-area: 1/3/2/4;
+}
+.plansite{
+    grid-area: 2/3/4/4;
+    ul{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-flow: column;
+        list-style-type: none;
+        *::before{
+            border-bottom: solid 2px $color-fontBrown;
+        }
+    }
+}
+.follow{
+    grid-area: 2/2/3/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    .sociaux{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.bar{
+    grid-area: 3/1/4/4;
+    border-bottom: 2px solid #707070;
+}
+.domainMondange2{
+    grid-area: 4 / 1 / 5 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.cgv{
+    grid-area: 4/3/5/4;
+    display: flex;
+    width: 100%;
+}

@@ -25,6 +25,10 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
-    "react-icons": "^4.2.0"
+    "@react-icons/all-files": "^4.1.0",
+    "gatsby-plugin-typography": "^3.5.0",
+    "react-icons": "^4.2.0",
+    "react-typography": "^0.16.20",
+    "typography": "^0.16.21"
   }
 }

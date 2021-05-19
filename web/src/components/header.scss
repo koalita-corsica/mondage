@@ -1,0 +1,44 @@
+@import "../pages/normalize.module.css";
+@import "../pages/variable.scss";
+
+.wrapper{
+    height: 11vh;
+    width: 100%;
+    background-color: $color-fontWhite;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    .siteTitle{
+        margin-left: 6.09375vw;
+        color: $color-fontBrown;
+        justify-self: left;
+        grid-area: 1 / 1 / 2 / 2;
+        
+    }
+    nav{
+        grid-area: 1 / 2 / 2 / 4;
+        
+    }
+    ul{
+        justify-self: right;
+        margin-right: 6.09375vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    a{
+        color: $color-fontBrown;
+        text-decoration: none;
+    }
+    li{
+        list-style-type: none;
+        
+        
+    }
+    li:hover{
+        color: $color-button;
+        font-weight: bold;
+    }
+}
+
+
