@@ -1,5 +1,5 @@
 html {
-  width: 100vw;
+  
   
 }
 
@@ -10,5 +10,5 @@ html,
 body,
 body > div,
 body > div > div {
-  height: 100%;
+  
 }

@@ -1,16 +1,37 @@
 @import "../pages/normalize.module.css";
-@import "../pages/variable.scss";
-
+$color-fontWhite: #E3E3DC;
+$color-fontBrown: #685950;
+$color-backgroundGrey:#D9D9D7;
+$color-backgroundLightGrey:#E3E3DC;
+$color-button:#A8957E;
+$color-line:#707070;
+$font-title:40px;
+$font-subtitle:20px;
+$font-text:15px;
+@font-face {
+    font-family: "Reislust";
+    src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+    font-family: "FuturaText";
+    src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+    font-family: "FuturaSub";
+    src: url("../fonts/FuturaPTCondMedium.otf");
+}
 .wrapper{
-    height: 11vh;
+    height: 17.169811320754718vh;
     width: 100%;
     background-color: $color-fontWhite;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    .siteTitle{
+    .siteTitle{ 
         margin-left: 6.09375vw;
         color: $color-fontBrown;
+        font-family: "Reislust";
+        font-size: $font-title;
         justify-self: left;
         grid-area: 1 / 1 / 2 / 2;
         
@@ -25,13 +46,14 @@
         display: flex;
         justify-content: space-between;
     }
-    
     a{
         color: $color-fontBrown;
         text-decoration: none;
     }
     li{
         list-style-type: none;
+        font-size: $font-text;
+        font-family: "FuturaSub";
         
         
     }
