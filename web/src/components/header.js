@@ -1,32 +1,35 @@
 import { Link } from "gatsby";
 import React from "react";
-import Icon from "./icon";
 import { cn } from "../lib/helpers";
-
 import * as styles from "./header.module.css";
 
-const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
-  <div className={styles.root}>
-    <div className={styles.wrapper}>
-      <div className={styles.branding}>
-        <Link to="/">{siteTitle}</Link>
-      </div>
-
-      <button
-        className={styles.toggleNavButton}
-        onClick={showNav ? onHideNav : onShowNav}
-      >
-        <Icon symbol="hamburger" />
-      </button>
-
-      <nav className={cn(styles.nav, showNav && styles.showNav)}>
-        <ul>
-          <li>
-            <Link to="/archive/">Archive</Link>
-          </li>
-        </ul>
-      </nav>
+const Header = ({ showNav }) => (
+  <div className={styles.wrapper}>
+    <div className={styles.siteTitle}>
+      <Link to="/">DOMAINE MONDANGE</Link>
     </div>
+    <nav className={cn(styles.nav, showNav && styles.showNav)}>
+      <ul>
+        <li>
+          <Link to="/">ACCUEIL</Link>
+        </li>
+        <li>
+          <Link to="/vins">NOS VINS</Link>
+        </li>
+        <li>
+          <Link to="/domaine">LE DOMAINE</Link>
+        </li>
+        <li>
+          <Link to="/galerie">LA GALERIE</Link>
+        </li>
+        <li>
+          <Link to="/presse">LA PRESSE</Link>
+        </li>
+        <li>
+          <Link to="/contact">CONTACT</Link>
+        </li>
+      </ul>
+    </nav>
   </div>
 );
 
