@@ -1,59 +1,40 @@
 import { graphql } from "gatsby";
-import BlogPost from "../components/blog-post";
 import React from "react";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import Container from "../components/container";
 import SEO from "../components/seo";
 import { toPlainText } from "../lib/helpers";
+import GamePage from "../components/game-page";
 
 export const query = graphql`
-  query BlogPostTemplateQuery($id: String!) {
-    post: sanityPost(id: { eq: $id }) {
-      id
-      publishedAt
-      categories {
-        _id
+  query GamePageTemplateQuery($id: String!) {
+    post: sanityGame(id: { eq: $id }) {
+        id
         title
-      }
-      title
-      slug {
-        current
-      }
-      _rawExcerpt(resolveReferences: { maxDepth: 5 })
-      _rawBody(resolveReferences: { maxDepth: 5 })
-      authors {
-        _key
-        author {
+        slug {
+          current
+        }
+        logo {
+          asset {
+            url
+          }
+        }
+        _rawDescription
+        produits {
+          genre
+          _rawDescription
           image {
-            crop {
-              _key
-              _type
-              top
-              bottom
-              left
-              right
-            }
-            hotspot {
-              _key
-              _type
-              x
-              y
-              height
-              width
-            }
             asset {
-              _id
+              url
             }
           }
-          name
         }
-      }
     }
   }
 `;
 
-const BlogPostTemplate = (props) => {
+const GamePageTemplate = (props) => {
   const { data, errors } = props;
   const post = data && data.post;
   return (
@@ -73,9 +54,9 @@ const BlogPostTemplate = (props) => {
         </Container>
       )}
 
-      {post && <BlogPost {...post} />}
+      {post && <GamePage {...post} />}
     </Layout>
   );
 };
 
-export default BlogPostTemplate;
+export default GamePageTemplate;

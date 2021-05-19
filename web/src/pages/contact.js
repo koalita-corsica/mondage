@@ -11,22 +11,13 @@ import { responsiveTitle1 } from "../components/typography.module.css";
 
 export const query = graphql`
   query ContactPageQuery {
-    posts: allSanityPost(
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
+    allSanityPage(filter: {slug: {current: {eq: "accueil"}}}) {
       edges {
         node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
           title
-          _rawExcerpt
-          slug {
-            current
+          pageBuilder {
+            title1
+            _rawDesc
           }
         }
       }

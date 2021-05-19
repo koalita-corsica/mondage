@@ -6,27 +6,19 @@ import React from "react";
 import SEO from "../components/seo";
 import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
-import styles from "../pages/Presse.module.css";
+import styles from "../pages/vins.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
+import PortableText from "../components/portableText";
 
 export const query = graphql`
   query PressePageQuery {
-    posts: allSanityPost(
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
+    allSanityPage(filter: {slug: {current: {eq: "la-presse"}}}) {
       edges {
         node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
           title
-          _rawExcerpt
-          slug {
-            current
+          pageBuilder {
+            title1
+            _rawDesc
           }
         }
       }
@@ -35,14 +27,18 @@ export const query = graphql`
 `;
 
 const PressePage = (props) => {
-  
-
-  
+  const { data, errors } = props;
 
   return (
     <Layout>
-      <SEO title="Presse" />
-      <h1>La Presse</h1>
+     {data.allSanityPage.edges.map(item =>
+      <React.Fragment>
+        <div className="section1">
+          <h1> {item.node.pageBuilder[0].title1} </h1>
+          <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
+        </div>
+      </React.Fragment>
+      )}
     </Layout>
   );
 };
