@@ -1,0 +1,11 @@
+.slide {
+    background-color: orangered;
+    width: 933px;
+    height: 703px;
+    display: flex;
+    flex-direction: row;
+}
+
+.content {
+    width: 40%;
+}

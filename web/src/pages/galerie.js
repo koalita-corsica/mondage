@@ -11,23 +11,10 @@ import { responsiveTitle1 } from "../components/typography.module.css";
 
 export const query = graphql`
   query GaleriePageQuery {
-    posts: allSanityPost(
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
+    allSanityPage(filter: {slug: {current: {eq: "la-galerie"}}}) {
       edges {
         node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
           title
-          _rawExcerpt
-          slug {
-            current
-          }
         }
       }
     }
@@ -35,14 +22,14 @@ export const query = graphql`
 `;
 
 const GaleriePage = (props) => {
-  
-
-  
+  const { data, errors } = props;
 
   return (
     <Layout>
       <SEO title="galerie" />
-      <h1>La Galerie</h1>
+      {data.allSanityPage.edges.map(item =>
+          <h1>{item.node.title}</h1>
+        )}
     </Layout>
   );
 };

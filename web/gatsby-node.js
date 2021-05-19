@@ -46,6 +46,110 @@ async function createBlogPostPages(graphql, actions) {
     });
 }
 
+async function CreateGamePages(graphql, actions) {
+  const { createPage } = actions;
+  const result = await graphql(`
+    {
+      allSanityGame(
+        filter: { slug: { current: { ne: null } }}
+      ) {
+        edges {
+          node {
+            id
+            title
+            slug {
+              current
+            }
+            logo {
+              asset {
+                url
+              }
+            }
+            _rawDescription
+            produits {
+              genre
+              _rawDescription
+              image {
+                asset {
+                  url
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) throw result.errors;
+
+  const postEdges = (result.data.allSanityGame || {}).edges || [];
+
+  postEdges
+    .forEach((edge) => {
+      const { id, slug = {}} = edge.node;
+      const path = `/game/${slug.current}/`;
+
+      createPage({
+        path,
+        component: require.resolve("./src/templates/game-page.js"),
+        context: { id },
+      });
+    });
+}
+
+async function ProduitPages(graphql, actions) {
+  const { createPage } = actions;
+  const result = await graphql(`
+    {
+      allSanityProduit(
+        filter: { slug: { current: { ne: null } }}
+      ) {
+        edges {
+          node {
+            id
+        slug {
+          current
+        }
+        game {
+          logo {
+            asset {
+              url
+            }
+          }
+          title
+        }
+        _rawFiche
+        image {
+          asset {
+            url
+          }
+        }
+          }
+        }
+      }
+    }
+  `);
+
+  if (result.errors) throw result.errors;
+
+  const postEdges = (result.data.allSanityProduit || {}).edges || [];
+
+  postEdges
+    .forEach((edge) => {
+      const { id, slug = {}} = edge.node;
+      const path = `/produit/${slug.current}`;
+
+      createPage({
+        path,
+        component: require.resolve("./src/templates/produit-page.js"),
+        context: { id },
+      });
+    });
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   await createBlogPostPages(graphql, actions);
+  await CreateGamePages(graphql, actions);
+  await ProduitPages(graphql, actions);
 };

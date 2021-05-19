@@ -8,26 +8,31 @@ import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
 import styles from "../pages/vins.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
+import PortableText from "../components/portableText";
+import {Link} from "gatsby";
 
 export const query = graphql`
   query VinsPageQuery {
-    posts: allSanityPost(
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
+    allSanityPage(filter: {slug: {current: {eq: "nos-vins"}}}) {
       edges {
         node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
           title
-          _rawExcerpt
+        }
+      }
+    }
+    allSanityGame {
+      edges {
+        node {
+          title
           slug {
             current
           }
+          logo {
+            asset {
+              url
+            }
+          }
+          _rawDescription
         }
       }
     }
@@ -35,14 +40,22 @@ export const query = graphql`
 `;
 
 const VinsPage = (props) => {
-  
-
-  
+  const { data, errors } = props;
 
   return (
     <Layout>
       <SEO title="Vins" />
-      <h1>Nos vins</h1>
+      {data.allSanityPage.edges.map(item =>
+          <h1>{item.node.title}</h1>
+        )}
+      {data.allSanityGame.edges.map(games =>
+      <div className="games">
+        <img src={games.node.logo.asset.url} alt="" width="165" height="164" />
+        <h1> {games.node.title} </h1>
+        <PortableText blocks={games.node._rawDescription} />
+        <Link to={"/game/" + `${games.node.slug.current}`} > <button> Voir la gamme </button> </Link>
+      </div>
+      )}
     </Layout>
   );
 };
