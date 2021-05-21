@@ -23,6 +23,19 @@ export const query = graphql`
         }
       }
     }
+    allSanityPost {
+      edges {
+        node {
+          title
+          _rawExcerpt
+          mainImage {
+            asset {
+              url
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -38,6 +51,13 @@ const PressePage = (props) => {
           <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
         </div>
       </React.Fragment>
+      )}
+      {data.allSanityPost.edges.map(element => 
+        <div>
+          <h1> {element.node.title} </h1>
+          <PortableText blocks={element.node._rawExcerpt} />
+          <img src={element.node.mainImage.asset.url} alt="" />
+        </div>
       )}
     </Layout>
   );
