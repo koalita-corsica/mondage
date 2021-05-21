@@ -51,11 +51,11 @@ const IndexPage = (props) => {
 
 
   function moins() {
-    count && count == 0 ? setCount(3 - 1) : setCount(count - 1)
+    count && count == 0 ? setCount(2) : setCount(count + 1)
   }
 
   function plus() {
-    count && count == 3 - 1 ? setCount(0) : setCount(count + 1)
+    count && count == 2 ? setCount(0) : setCount(count + 1)
   }
 
   return (
