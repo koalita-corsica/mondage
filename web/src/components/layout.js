@@ -6,9 +6,11 @@ import * as styles from "./layout.module.css";
 import Footer from "../components/footer";
 const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
   <>
+  <div className={styles.page}>
     <Header/>
     <Main>{children}</Main>
     <Footer/>
+  </div>
   </>
 );
 

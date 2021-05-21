@@ -28,7 +28,7 @@ $font-text:15px;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     .siteTitle{ 
-        margin-left: 6.09375vw;
+        margin-left: 6vw;
         color: $color-fontBrown;
         font-family: "Reislust";
         font-size: $font-title;
@@ -42,7 +42,7 @@ $font-text:15px;
     }
     ul{
         justify-self: right;
-        margin-right: 6.09375vw;
+        margin-right: 6vw;
         display: flex;
         justify-content: space-between;
     }

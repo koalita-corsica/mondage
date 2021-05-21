@@ -1,3 +1,110 @@
-@import "./normalize.module.css";
+@import "../pages/normalize.module.css";
+@font-face {
+  font-family: "Reislust";
+  src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+  font-family: "FuturaText";
+  src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+  font-family: "FuturaSub";
+  src: url("../fonts/FuturaPTCondMedium.otf");
+}
+@font-face {
+  font-family: "FuturaLight";
+  src: url("../fonts/FuturaPTLight.otf");
+}
+h1 {
+  font-family: "Reislust";
+  font-size: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.gridGalery {
+  height: 4349px;
+  width: 100%;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+}
+.gridGalery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 5px;
+}
+
+.galerie1 {
+  grid-area: 1/1/4/10;
+}
+
+.galerie2 {
+  grid-area: 1/10/7/18;
+}
+
+.galerie3 {
+  grid-area: 1/18/4/25;
+}
+
+.galerie4 {
+  grid-area: 4/1/12/10;
+}
+
+.galerie5 {
+  grid-area: 7/10/9/18;
+}
+
+.galerie6 {
+  grid-area: 4/18/9/25;
+}
+
+.galerie7 {
+  grid-area: 12/1/16/10;
+}
+
+.galerie8 {
+  grid-area: 9/10/14/25;
+}
+
+.galerie9 {
+  grid-area: 16/1/19/10;
+}
+
+.galerie10 {
+  grid-area: 14/10/19/25;
+}
+
+.galerie11 {
+  grid-area: 19/1/22/3;
+}
+
+.galerie12 {
+  grid-area: 19/3/22/16;
+}
+
+.galerie13 {
+  grid-area: 19/16/25/25;
+}
+
+.galerie14 {
+  grid-area: 22/1/25/7;
+}
+
+.galerie15 {
+  grid-area: 22/7/25/16;
+}
 
 /*# sourceMappingURL=galerie.module.css.map */

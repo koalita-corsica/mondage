@@ -20,7 +20,7 @@
   align-items: center;
 }
 .wrapper .siteTitle {
-  margin-left: 6.09375vw;
+  margin-left: 6vw;
   color: #685950;
   font-family: "Reislust";
   font-size: 40px;
@@ -32,7 +32,7 @@
 }
 .wrapper ul {
   justify-self: right;
-  margin-right: 6.09375vw;
+  margin-right: 6vw;
   display: flex;
   justify-content: space-between;
 }

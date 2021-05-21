@@ -1,2 +1,65 @@
-@import "./normalize.module.css";
-@import "./variable.scss";
+@import "../pages/normalize.module.css";
+$color-fontWhite: #E3E3DC;
+$color-fontBrown: #685950;
+$color-backgroundGrey:#D9D9D7;
+$color-backgroundLightGrey:#E3E3DC;
+$color-button:#A8957E;
+$color-line:#707070;
+$font-title:50px;
+$font-subtitle:20px;
+$font-text:15px;
+@font-face {
+    font-family: "Reislust";
+    src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+    font-family: "FuturaText";
+    src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+    font-family: "FuturaSub";
+    src: url("../fonts/FuturaPTCondMedium.otf");
+}
+@font-face {
+    font-family: "FuturaLight";
+    src: url("../fonts/FuturaPTLight.otf");
+}
+p {
+font-family: "FuturaText";
+}
+h1{
+    font-family: "Reislust";
+    font-size: $font-title;
+}
+.bandeau{
+    background:url("../asset/nosvins-bandeau.jpg");
+    height: 293px;
+    background-position: 50% 23%;
+    background-size: cover;
+}
+.domainContain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .content{
+        display: flex;
+        justify-content: space-between;
+        gap: 5vw;
+    }
+    .gammes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 356px;
+        .logo{
+            width: 70%;
+            height: auto;
+        }
+        .block{
+            background-color: white;
+            text-align: center;
+        }
+        
+    }
+}

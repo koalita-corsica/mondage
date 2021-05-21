@@ -11,7 +11,7 @@ import { responsiveTitle1 } from "../components/typography.module.css";
 
 export const query = graphql`
   query ContactPageQuery {
-    allSanityPage(filter: {slug: {current: {eq: "accueil"}}}) {
+    allSanityPage {
       edges {
         node {
           title
