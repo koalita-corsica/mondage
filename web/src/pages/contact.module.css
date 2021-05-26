@@ -1,3 +1,127 @@
-@import "./normalize.module.css";
+@import "../pages/normalize.module.css";
+@font-face {
+  font-family: "Reislust";
+  src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+  font-family: "FuturaText";
+  src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+  font-family: "FuturaSub";
+  src: url("../fonts/FuturaPTCondMedium.otf");
+}
+@font-face {
+  font-family: "FuturaLight";
+  src: url("../fonts/FuturaPTLight.otf");
+}
+p {
+  font-family: "FuturaText";
+}
+
+h1 {
+  font-family: "Reislust";
+  font-size: 50px;
+}
+
+label {
+  font-size: 20px;
+  font-family: "FuturaSub";
+}
+
+.ouverture {
+  font-size: 20px;
+  font-family: "FuturaSub";
+}
+
+.dates {
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "FuturaSub";
+}
+
+.wrapperCtc {
+  margin-left: 6vw;
+  margin-right: 6vw;
+  display: flex;
+  width: 88vw;
+  column-gap: 6vw;
+  background-color: white;
+}
+
+.contactLayout {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 31vw;
+  height: 100%;
+}
+
+.contact {
+  width: 75vw;
+  display: grid;
+  grid-template-columns: 23vw 16vw 12vw;
+  column-gap: 2.9vw;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.5vh;
+}
+.form .lbl {
+  display: flex;
+  flex-direction: column;
+}
+.form input {
+  height: 3.8vh;
+  border: none;
+  border-bottom: 2px solid #A8957E;
+}
+.form ::placeholder {
+  color: #E3E3DC;
+  font-size: 15px;
+  font-family: "FuturaText";
+}
+.form textarea {
+  height: 13.5vh;
+  border: 2px solid #A8957E;
+}
+.form button {
+  width: 9.7vw;
+  height: 4.3vh;
+  background-color: #A8957E;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  align-self: flex-end;
+}
+
+.horaire {
+  z-index: 1000;
+  height: 100%;
+}
+.horaire div {
+  line-height: 2;
+}
+
+.rouge1 {
+  width: 100%;
+  height: 100%;
+  margin-top: 10vh;
+}
+
+.bouteilles {
+  transform: rotate(-90deg);
+  display: flex;
+  justify-content: center;
+}
+.bouteilles img:first-child {
+  background-color: red;
+  margin-left: 10vh;
+}
 
 /*# sourceMappingURL=contact.module.css.map */

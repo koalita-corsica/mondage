@@ -6,7 +6,7 @@ import React from "react";
 import SEO from "../components/seo";
 import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
-import styles from "../pages/vins.module.css";
+import * as styles from "../pages/presse.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
 import PortableText from "../components/portableText";
 
@@ -44,21 +44,21 @@ const PressePage = (props) => {
 
   return (
     <Layout>
-     {data.allSanityPage.edges.map(item =>
-      <React.Fragment>
-        <div className="section1">
-          <h1> {item.node.pageBuilder[0].title1} </h1>
-          <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
-        </div>
-      </React.Fragment>
-      )}
-      {data.allSanityPost.edges.map(element => 
-        <div>
-          <h1> {element.node.title} </h1>
-          <PortableText blocks={element.node._rawExcerpt} />
-          <img src={element.node.mainImage.asset.url} alt="" />
-        </div>
-      )}
+      <div className={styles.wrapperPresse}>
+        {data.allSanityPage.edges.map(item =>
+          <div className={styles.presse}>
+            <h1> {item.node.pageBuilder[0].title1} </h1>
+            <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
+          </div>
+        )}
+        {data.allSanityPost.edges.map(element => 
+          <div className={styles.articles}>
+            <h1> {element.node.title} </h1>
+            <PortableText blocks={element.node._rawExcerpt} />
+            <img src={element.node.mainImage.asset.url} alt="" />
+          </div>
+        )}
+      </div>
     </Layout>
   );
 };

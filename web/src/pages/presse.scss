@@ -31,3 +31,28 @@ h1{
     font-family: "Reislust";
     font-size: $font-title;
 }
+.wrapperPresse{
+    width: auto;
+    height: auto;
+    background-color: red;
+    margin-left: 17vw;
+    margin-right: 17vw;
+    display: grid;
+    grid-template-columns: 24vw 28vw;
+    column-gap: 6vw;
+    
+    
+}
+.presse{
+    grid-area: 1/1/2/3;
+}
+.articles{
+    display: block;
+    width: 100%;
+    
+    object-fit: fill;
+    border-radius: 5px;
+    img{
+        width: 70%;
+    }
+}

@@ -1,0 +1,135 @@
+@import "../pages/normalize.module.css";
+$color-fontWhite: #E3E3DC;
+$color-fontBrown: #685950;
+$color-backgroundGrey:#D9D9D7;
+$color-backgroundLightGrey:#E3E3DC;
+$color-button:#A8957E;
+$color-line:#707070;
+$font-title:50px;
+$font-subtitle:20px;
+$font-text:15px;
+@font-face {
+    font-family: "Reislust";
+    src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+    font-family: "FuturaText";
+    src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+    font-family: "FuturaSub";
+    src: url("../fonts/FuturaPTCondMedium.otf");
+}
+@font-face {
+    font-family: "FuturaLight";
+    src: url("../fonts/FuturaPTLight.otf");
+}
+* {
+    color: $color-button;
+}
+p {
+    font-family: "FuturaText";
+    font-size: $font-text;
+    
+}
+h1{
+    font-family: "Reislust";
+    font-size: $font-title;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.desc{
+    border-top: 2px solid $color-line;
+    border-bottom: 2px solid $color-line;
+    text-align: center;
+    width: 100%;
+    .title{
+        font-family: "Reislust";
+        text-transform: uppercase;
+        font-size: 19em;
+            
+    }
+    .descText{
+        justify-content: space-around;
+        display: flex;
+        :first-child{
+            width: 44vw;
+            h3{
+                font-family: "FuturaSub";
+                font-size: $font-subtitle;
+            }
+        }
+    }
+    .logo{
+        width: 10vw;
+        height: auto;
+    }
+}
+.gameBg{
+    line-height: 0;
+    .game:nth-child(2n){
+        background-color: $color-backgroundGrey;
+    }
+}
+.game{
+    line-height: 1;
+    .gameBg2{
+        margin-left: 23vw;
+        margin-right: 23vw;
+        display: flex;
+
+    }
+    .gameText{
+        justify-self: center;
+        align-self: center;
+    }
+    h3{
+        line-height: 2;
+        font-size: $font-subtitle;
+    }
+    button{
+        width: 10vw;
+        height: auto;
+        font-size: $font-text;
+        color: $color-button;
+        border: 3px solid #A8957E;
+        border-radius: 4px;
+        background-color: transparent;
+        margin-top: 2vh;
+    }
+}
+.bandeau{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    .img{
+        grid-area: 1/2/2/4;
+        img{
+            height: auto;
+            width: 12vw;
+        }
+        position: relative;
+        top: 23vh;
+        align-self: center;
+        justify-self: center;
+    }
+    .retour{
+        grid-area: 1/1/2/2;
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        justify-self: right;
+        
+
+    }
+    .arrow{
+        font-size: 58px;
+    }
+    .back{
+        font-size: $font-subtitle;
+        font-family: "FuturaSub";
+    }
+}

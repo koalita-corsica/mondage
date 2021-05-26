@@ -1,0 +1,94 @@
+@import "../pages/normalize.module.css";
+@font-face {
+  font-family: "Reislust";
+  src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+  font-family: "FuturaText";
+  src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+  font-family: "FuturaSub";
+  src: url("../fonts/FuturaPTCondMedium.otf");
+}
+@font-face {
+  font-family: "FuturaLight";
+  src: url("../fonts/FuturaPTLight.otf");
+}
+* {
+  color: #685950;
+}
+
+p {
+  font-family: "FuturaText";
+  font-size: 15px;
+}
+
+h1 {
+  font-family: "Reislust";
+  font-size: 50px;
+}
+
+.wrapperProduit {
+  display: flex;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  margin-bottom: 6vw;
+  height: 94vh;
+  background-color: white;
+}
+.wrapperProduit .bouteille {
+  margin-top: 4vh;
+  width: 29.58vw;
+  height: 110vh;
+}
+.wrapperProduit .logo {
+  background-color: green;
+  width: 9vw;
+  height: 27vh;
+  float: right;
+}
+.wrapperProduit .retour {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-self: right;
+}
+.wrapperProduit .arrow {
+  font-size: 58px;
+}
+.wrapperProduit .back {
+  font-size: 20px;
+  font-family: "FuturaSub";
+}
+.wrapperProduit .game {
+  height: 100%;
+  display: block;
+  flex-direction: column;
+  background-color: pink;
+}
+.wrapperProduit .game h1 {
+  font-size: 9.4em;
+  text-transform: uppercase;
+  line-height: 0;
+}
+.wrapperProduit .game .desc {
+  background-color: red;
+  width: 44vw;
+  height: auto;
+  font-size: 15px;
+}
+.wrapperProduit .game .desc * {
+  line-height: 2em;
+}
+.wrapperProduit .game .desc code {
+  font-size: 15px;
+  font-family: "FuturaSub";
+  font-style: oblique;
+  width: 50%;
+}
+.wrapperProduit .game .desc p {
+  line-height: 1.2;
+}
+
+/*# sourceMappingURL=produit.module.css.map */

@@ -27,13 +27,27 @@ $font-text:15px;
 .wrapperAccueil{
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+    
 }
 h1{
     font-family: "Reislust";
     font-size: $font-title;
 }
+button{
+    width: 9.7vw;
+    height: 4.3vh;
+    background-color: transparent;
+    border: 3px solid #A8957E;
+    border-radius: 4px;
+    color: $color-button;
+    a{
+        text-decoration: none;
+        font-family: "FuturaText";
+    }
+}
 .section1{
-    background: url("../asset/accueilvigne.jpg");
+    background: linear-gradient(0deg, transparent 0%, #131313EA 150%),
+    url("../asset/accueilvigne.jpg");
     background-size: cover;
     margin-left: 6vw;
     margin-right: 6vw;
@@ -43,6 +57,10 @@ h1{
         width: auto;
         height: 96vh;
     }
+    .block1 * {
+        color: $color-backgroundGrey;
+    }
+    
 }
 .section2{
     color: $color-fontWhite;
