@@ -1,3 +1,52 @@
-@import "./normalize.module.css";
+@import "../pages/normalize.module.css";
+@font-face {
+  font-family: "Reislust";
+  src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+  font-family: "FuturaText";
+  src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+  font-family: "FuturaSub";
+  src: url("../fonts/FuturaPTCondMedium.otf");
+}
+@font-face {
+  font-family: "FuturaLight";
+  src: url("../fonts/FuturaPTLight.otf");
+}
+p {
+  font-family: "FuturaText";
+}
+
+h1 {
+  font-family: "Reislust";
+  font-size: 50px;
+}
+
+.wrapperPresse {
+  width: auto;
+  height: auto;
+  background-color: red;
+  margin-left: 17vw;
+  margin-right: 17vw;
+  display: grid;
+  grid-template-columns: 24vw 28vw;
+  column-gap: 6vw;
+}
+
+.presse {
+  grid-area: 1/1/2/3;
+}
+
+.articles {
+  display: block;
+  width: 100%;
+  object-fit: fill;
+  border-radius: 5px;
+}
+.articles img {
+  width: 70%;
+}
 
 /*# sourceMappingURL=presse.module.css.map */

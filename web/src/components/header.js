@@ -6,7 +6,7 @@ import * as styles from "./header.module.css";
 const Header = ({ showNav }) => (
   <div className={styles.wrapper}>
     <div className={styles.siteTitle}>
-      <Link to="/">DOMAINE MONDANGE</Link>
+      <Link to="/">domaine mondange</Link>
     </div>
     <nav className={cn(styles.nav, showNav && styles.showNav)}>
       <ul>

@@ -15,24 +15,23 @@
   height: 17.1698113208vh;
   width: 100%;
   background-color: #E3E3DC;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 .wrapper .siteTitle {
-  margin-left: 6.09375vw;
+  margin-left: 6vw;
   color: #685950;
   font-family: "Reislust";
   font-size: 40px;
   justify-self: left;
-  grid-area: 1/1/2/2;
 }
 .wrapper nav {
-  grid-area: 1/2/2/4;
+  width: 50vw;
 }
 .wrapper ul {
   justify-self: right;
-  margin-right: 6.09375vw;
+  margin-right: 6vw;
   display: flex;
   justify-content: space-between;
 }

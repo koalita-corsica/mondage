@@ -1,5 +1,11 @@
 @import "../pages/normalize.module.css";
-@import "../pages/variable.scss";
+
+
+.page{
+    background-color: #E3E3DC;
+    width: 100vw;
+}
+
 
 
 

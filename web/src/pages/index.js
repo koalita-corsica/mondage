@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "gatsby"
 import { graphql } from "gatsby";
 import {
   filterOutDocsPublishedInTheFuture,
@@ -9,10 +10,11 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import Slider from "../components/slider";
 import PortableText from "../components/portableText";
-
-import { AiOutlineArrowRight } from 'react-icons/ai';
-import { AiOutlineArrowLeft } from 'react-icons/ai';
-
+import bottle from "../asset/Laudria_Rouge.png" 
+import domainImg from "../asset/accueildomaine.jpg"
+import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowBack } from 'react-icons/io';
+import * as styles from "../pages/index.module.css";
 
 export const query = graphql`
 query AccueilQuery {
@@ -62,23 +64,41 @@ const IndexPage = (props) => {
     <Layout>
       {data.allSanityPage.edges.map(item =>
       <React.Fragment>
-        <div className="section1">
-          <h1> {item.node.pageBuilder[0].title1} </h1>
-          <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
-        </div>
-        <div className="section2">
-          <h1> {item.node.pageBuilder[1].title1} </h1>
-          <PortableText blocks={item.node.pageBuilder[1]._rawDesc} />
-        </div>
-        <div className="section3">
-          <h1> {item.node.pageBuilder[2].title1} </h1>
-          <AiOutlineArrowLeft onClick={moins} />
-            <Slider count={count} />
-          <AiOutlineArrowRight onClick={plus}/>
-        </div>
-        <div className="section4">
-          <h1> {item.node.pageBuilder[3].title1} </h1>
-          <PortableText blocks={item.node.pageBuilder[3]._rawDesc} />
+        <div className={styles.wrapperAccueil}>
+          <div className={styles.section1}>
+              <img src={bottle} className={styles.bottle}/>
+              <div className={styles.block1}>
+                <h1> {item.node.pageBuilder[0].title1} </h1>
+                <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
+                <button className={styles.gamme}><Link to="/vins">VOIR NOS GAMMES</Link></button> 
+            </div>
+          </div>
+          <div className={styles.section2}>
+            <h1> {item.node.pageBuilder[1].title1} </h1>
+            <img src={domainImg} className={styles.domainimg}/>
+            <PortableText blocks={item.node.pageBuilder[1]._rawDesc} />
+          </div>
+          <div className={styles.section3}>
+            <div className={styles.sliderimg}/>
+            <div className={styles.sliderContain}>
+              <h1> {item.node.pageBuilder[2].title1} </h1>
+              <div className={styles.slider}>
+                <IoIosArrowBack onClick={moins} />
+                  <Slider count={count} />
+                <IoIosArrowForward onClick={plus}/>
+              </div>
+            </div>
+          </div>
+          <div className={styles.section4}>
+            <div className={styles.pressContain}>
+              <h1> {item.node.pageBuilder[3].title1} </h1>
+              <div className={styles.pressBlock}>
+                <PortableText blocks={item.node.pageBuilder[3]._rawDesc} />
+                <button className={styles.article}><Link to="/presse">VOIR LES ARTICLES</Link></button>
+              </div>
+            </div>
+            <div className={styles.pressimg}/>
+          </div>
         </div>
       </React.Fragment>
       )}

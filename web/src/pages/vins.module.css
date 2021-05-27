@@ -1,3 +1,60 @@
-@import "./normalize.module.css";
+@import "../pages/normalize.module.css";
+@font-face {
+  font-family: "Reislust";
+  src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+  font-family: "FuturaText";
+  src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+  font-family: "FuturaSub";
+  src: url("../fonts/FuturaPTCondMedium.otf");
+}
+@font-face {
+  font-family: "FuturaLight";
+  src: url("../fonts/FuturaPTLight.otf");
+}
+p {
+  font-family: "FuturaText";
+}
+
+h1 {
+  font-family: "Reislust";
+  font-size: 7.2em;
+}
+
+.bandeau {
+  background: url("../asset/nosvins-bandeau.jpg");
+  height: 293px;
+  background-position: 50% 23%;
+  background-size: cover;
+}
+
+.domainContain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.domainContain .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 5vw;
+}
+.domainContain .gammes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 356px;
+}
+.domainContain .gammes .logo {
+  width: 70%;
+  height: auto;
+}
+.domainContain .gammes .block {
+  background-color: white;
+  text-align: center;
+}
 
 /*# sourceMappingURL=vins.module.css.map */
