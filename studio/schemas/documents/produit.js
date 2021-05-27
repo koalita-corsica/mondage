@@ -52,7 +52,8 @@ export default {
             type: "array",
             title: "Fiche Technique",
             of: [
-                {type: "block"}
+                {type: "block"},
+                {type: "image"}
             ]
         }
     ]

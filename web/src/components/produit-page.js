@@ -13,7 +13,6 @@ function ProduitPage(props) {
     <div>
         <img src={image.asset.url} alt="" width="568" height="957" />
         <h1> {game.title} </h1>
-        <img src={game.logo.asset.url} alt="" width="179" height="254"/>
         <PortableText blocks={_rawFiche} />
     </div>
   );

@@ -9,9 +9,8 @@ import { imageUrlFor } from "../lib/image-url";
 
 function BlogPost(props) {
   const {
-    _rawBody,
+    _rawExcerpt,
     authors,
-    categories,
     title,
     mainImage,
     publishedAt,
@@ -35,7 +34,7 @@ function BlogPost(props) {
         <div className={styles.grid}>
           <div className={styles.mainContent}>
             <h1 className={styles.title}>{title}</h1>
-            {_rawBody && <PortableText blocks={_rawBody} />}
+            {_rawBody && <PortableText blocks={_rawExcerpt} />}
           </div>
           <aside className={styles.metaContent}>
             {publishedAt && (
@@ -46,16 +45,6 @@ function BlogPost(props) {
               </div>
             )}
             {authors && <AuthorList items={authors} title="Authors" />}
-            {categories && (
-              <div className={styles.categories}>
-                <h3 className={styles.categoriesHeadline}>Categories</h3>
-                <ul>
-                  {categories.map((category) => (
-                    <li key={category._id}>{category.title}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </aside>
         </div>
       </Container>
