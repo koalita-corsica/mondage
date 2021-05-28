@@ -48,7 +48,7 @@ const VinsPage = (props) => {
       <div className={styles.domainContain}>
         <SEO title="Vins" />
         {data.allSanityPage.edges.map(item =>
-            <h1 className={styles.title}>{item.node.title}</h1>
+            <div className={styles.title}>{item.node.title}</div>
           )}
         <div className={styles.content}>
           {data.allSanityGame.edges.map(games =>

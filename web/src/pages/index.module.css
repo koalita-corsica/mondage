@@ -16,52 +16,64 @@
   src: url("../fonts/FuturaPTLight.otf");
 }
 .wrapperAccueil {
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-}
-
-h1 {
-  font-family: "Reislust";
-  font-size: 50px;
-}
-
-button {
-  width: 9.7vw;
-  height: 4.3vh;
-  background-color: transparent;
-  border: 3px solid #A8957E;
-  border-radius: 4px;
-  color: #A8957E;
-}
-button a {
-  text-decoration: none;
-  font-family: "FuturaText";
+  display: flex;
+  flex-direction: column;
 }
 
 .section1 {
-  background: linear-gradient(0deg, transparent 0%, #131313EA 150%), url("../asset/accueilvigne.jpg");
-  background-size: cover;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(19, 19, 19, 0.6) 75%, rgba(226, 226, 226, 0.7) 100%), url("../asset/accueilvigne.jpg");
+  background-size: 91vw 94vh;
+  background-repeat: no-repeat;
+  height: 104vh;
   margin-left: 6vw;
   margin-right: 6vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 .section1 .bottle {
-  width: auto;
-  height: 96vh;
+  width: 30vw;
+  height: auto;
 }
 .section1 .block1 * {
   color: #D9D9D7;
+}
+.section1 .block1 {
+  margin-right: 7vw;
+  margin-top: 21vh;
+}
+.section1 div p {
+  line-height: 1.5;
+  font-family: "FuturaText";
+  font-size: 20px;
+}
+.section1 div h2 {
+  font-family: "FuturaText";
+  line-height: 2;
+  font-size: 25px;
+}
+.section1 .gamme {
+  margin-top: 3vh;
+  border: 3px solid #A8957E;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  padding: 5px;
+}
+.section1 .gamme a {
+  text-decoration: none;
+  font-family: "FuturaText";
+  font-size: 20px;
+  color: #A8957E;
 }
 
 .section2 {
   color: #E3E3DC;
   display: flex;
+  height: 104vh;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: url("../asset/nosvins-bandeau.jpg");
-  background-position: 50% 95%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 19, 0.7) 75%, rgba(226, 226, 226, 0.7) 150%), url("../asset/nosvins-bandeau.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -71,11 +83,35 @@ button a {
   border-radius: 75%;
 }
 .section2 div {
+  margin-top: 2vh;
   width: 50%;
+  color: #E3E3DC;
 }
-.section2 p {
+.section2 div p {
+  color: #E3E3DC;
+  line-height: 1.5;
   font-family: "FuturaText";
-  font-size: 15px;
+  font-size: 20px;
+}
+.section2 div h2 {
+  color: #E3E3DC;
+  font-family: "FuturaText";
+  line-height: 3;
+  font-size: 25px;
+}
+.section2 .gamme {
+  margin-top: 3vh;
+  border: 3px solid #A8957E;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  padding: 5px;
+}
+.section2 .gamme a {
+  text-decoration: none;
+  font-family: "FuturaText";
+  font-size: 20px;
+  color: #A8957E;
 }
 
 .section3 {
@@ -90,29 +126,89 @@ button a {
   background-position: center;
   background-repeat: no-repeat;
 }
+.section3 .title {
+  color: #685950;
+}
+.section3 .sliderContain {
+  margin: 2vw;
+}
 .section3 .slider {
-  background-color: green;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
+.section3 .slider svg {
+  font-size: 75px;
+}
+.section3 .slider svg path {
+  color: #685950;
+}
+.section3 .slider div p {
+  font-family: "FuturaText";
+  font-size: 20px;
+  width: 100%;
+}
+.section3 .slider div h2 {
+  font-family: "FuturaText";
+  font-size: 25px;
+}
+.section3 .slider a {
+  color: #A8957E;
+}
 
 .section4 {
-  display: grid;
-  grid-template-columns: 60% 40%;
+  height: 94vh;
+  display: flex;
+  justify-content: space-between;
 }
 .section4 .pressimg {
   background: url("../asset/accueilpresse.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  width: 40vw;
 }
 .section4 .pressContain {
-  background-color: pink;
-  margin-left: 348px;
+  margin-left: 18vw;
+  width: 28vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  margin-top: 14vh;
+}
+.section4 div p {
+  font-family: "FuturaText";
+  font-size: 20px;
+  line-height: 1.5;
+}
+.section4 div h2 {
+  margin-top: 14vh;
+  font-family: "FuturaText";
+  font-size: 25px;
+  line-height: 2;
+}
+.section4 .pressBlock {
+  margin-top: 2vh;
+  height: 100%;
+}
+.section4 .gamme {
+  margin-top: 3vh;
+  border: 3px solid #A8957E;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  padding: 5px;
+}
+.section4 .gamme a {
+  text-decoration: none;
+  font-family: "FuturaText";
+  font-size: 20px;
+  color: #A8957E;
+}
+
+.title {
+  font-family: "Reislust";
+  font-size: 7.2em;
+  line-height: 2;
 }
 
 /*# sourceMappingURL=index.module.css.map */

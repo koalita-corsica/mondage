@@ -6,20 +6,23 @@ import PortableText from "./portableText";
 
 import * as styles from './slider.module.css'
 
-const game = []
+const game = [];
+
+
 
 
 const Slider = ({data, count}) => (
-    data.allSanityGame.edges.map(item =>
-        game.push(item.node)
-        ),
-        <div className={styles.slide}>
+  
+  data.allSanityGame.edges.map(item =>
+    game.push(item.node)
+    ),
+    <div className={styles.slide}>
             <img src={game[count].produits[0].image.asset.url} alt="" width="357" height="703"/>
             <div className={styles.content}>
               <img src={game[count].logo.asset.url} alt=""  width="297" height="281" />
-              <h1> {game[count].title} </h1>
-              <PortableText blocks={game[count]._rawDescription} />
-              <Link to={"/game/" + `${game[count].slug.current}`}> <button> Voir Plus </button> </Link>
+              <h1 className={styles.title} > {game[count].title}  </h1>
+              <PortableText blocks={game[count]._rawDescription} className={styles.desc}/>
+              <button><Link to={"/game/" + `${game[count].slug.current}`}>  Voir Plus  </Link></button>
             </div>
         </div>
   )
@@ -54,7 +57,8 @@ const Slider = ({data, count}) => (
           }
           
         `}
-        render={data => <Slider data={data} {...props} />}
+        render={data => <Slider data={data} {...props} /> }
       />
     )
   }
+  

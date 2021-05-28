@@ -8,7 +8,7 @@ const Footer = () => (
      <div className={styles.wrapper}>
         <div className={styles.container}>
             <div className={styles.domainMondange}>
-                <div>DOMAINE MONDANGE</div>
+                <Link to="/domaine">domaine mondange</Link>
             </div>
             <div className={styles.contact}>
                 <div>Laura et Andria Mondange</div>

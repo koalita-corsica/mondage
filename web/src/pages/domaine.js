@@ -35,9 +35,11 @@ const DomainePage = (props) => {
      {data.allSanityPage.edges.map(item =>
       <React.Fragment>
         <div className={styles.wrapperDomain}>
-          <div className={styles.section1}>
-            <h1> {item.node.pageBuilder[0].title1} </h1>
-            <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
+          <div className={styles.section1Domaine}>
+            <div className={styles.block1}>
+              <h1> {item.node.pageBuilder[0].title1} </h1>
+              <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
+            </div>
           </div>
           <div className={styles.section2}>
             <img src={laura} className={styles.laura}/>
@@ -45,9 +47,9 @@ const DomainePage = (props) => {
             <PortableText blocks={item.node.pageBuilder[1]._rawDesc} />
           </div>
           <div className={styles.section3}>
-            <img  className={styles.domainImg1}/>
-            <img  className={styles.domainImg2}/>
-            <img  className={styles.domainImg3}/>
+            <div  className={styles.domainImg1}/>
+            <div  className={styles.domainImg2}/>
+            <div  className={styles.domainImg3}/>
           </div>
         </div>
       </React.Fragment>

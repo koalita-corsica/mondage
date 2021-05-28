@@ -22,16 +22,17 @@
 .wrapper {
   background-color: #D9D9D7;
   align-items: center;
-  color: #685950;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   height: 330px;
 }
+.wrapper * {
+  color: #685950;
+}
 .wrapper a {
   text-decoration: none;
-  color: #685950;
-  font-size: 15px;
+  font-size: 20px;
   font-family: "FuturaText";
 }
 
@@ -44,22 +45,25 @@
 }
 
 .domainMondange {
-  font-family: "Reislust" !important;
   grid-area: 1/2/2/3;
   justify-self: center;
-  font-size: 50px;
+}
+.domainMondange a {
+  font-family: "Reislust" !important;
+  font-size: 4.62em;
+  line-height: 1;
 }
 
 .contact {
-  font-size: 15px;
+  font-size: 20px;
   font-family: "FuturaText";
   grid-area: 1/1/2/2;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .plansite {
   grid-area: 1/3/2/4;
-  font-size: 20px;
+  font-size: 25px;
   justify-self: center;
 }
 .plansite .plan {
@@ -80,14 +84,13 @@
 }
 
 .follow {
-  font-size: 20px;
+  font-size: 25px;
   font-family: "FuturaSub";
   grid-area: 1/2/2/3;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1vw;
-  margin-top: 37.5px;
 }
 .follow .sociaux {
   display: flex;
@@ -98,7 +101,7 @@
 }
 
 .container2 {
-  font-size: 15px;
+  font-size: 20px;
   font-family: "FuturaText";
   font-style: italic;
   width: 70vw;

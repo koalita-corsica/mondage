@@ -15,19 +15,10 @@
   font-family: "FuturaLight";
   src: url("../fonts/FuturaPTLight.otf");
 }
-p {
-  font-family: "FuturaText";
-}
-
-h1 {
-  font-family: "Reislust";
-  font-size: 7.2em;
-}
-
 .bandeau {
   background: url("../asset/nosvins-bandeau.jpg");
-  height: 293px;
-  background-position: 50% 23%;
+  height: 30vh;
+  background-position: center 23%;
   background-size: cover;
 }
 
@@ -37,12 +28,20 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+.domainContain * {
+  color: #685950;
+}
+.domainContain .title {
+  font-family: "Reislust";
+  font-size: 7.2rem;
+}
 .domainContain .content {
   display: flex;
   justify-content: space-between;
   gap: 5vw;
 }
 .domainContain .gammes {
+  margin: 2vh auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,8 +52,33 @@ h1 {
   height: auto;
 }
 .domainContain .gammes .block {
-  background-color: white;
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border-radius: 12px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+.domainContain .gammes .block button {
+  color: #A8957E;
+  margin: 2vh auto;
+}
+.domainContain .gammes .block p {
+  font-family: "FuturaText";
+  font-size: 20px;
+}
+.domainContain .gammes .block h2 {
+  font-family: "FuturaText";
+  font-size: 20px;
+}
+.domainContain .gammes .block h1 {
+  font-family: "Reislust";
+  font-size: 90px;
+  margin: 0 auto;
+}
+.domainContain .gammes .block h1::first-letter {
+  color: red;
 }
 
 /*# sourceMappingURL=vins.module.css.map */

@@ -21,30 +21,33 @@
 }
 .wrapper .siteTitle {
   margin-left: 6vw;
+  justify-self: left;
+}
+.wrapper .siteTitle a {
   color: #685950;
   font-family: "Reislust";
-  font-size: 40px;
-  justify-self: left;
+  font-size: 4.4em;
 }
 .wrapper nav {
   width: 50vw;
 }
-.wrapper ul {
+.wrapper nav ul {
   justify-self: right;
   margin-right: 6vw;
   display: flex;
   justify-content: space-between;
 }
-.wrapper a {
-  color: #685950;
-  text-decoration: none;
-}
-.wrapper li {
+.wrapper nav li {
   list-style-type: none;
+}
+.wrapper nav li a {
+  text-decoration: none;
   font-size: 15px;
+  color: red;
+  color: #685950;
   font-family: "FuturaSub";
 }
-.wrapper li:hover {
+.wrapper nav li a:hover {
   color: #A8957E;
   font-weight: bold;
 }

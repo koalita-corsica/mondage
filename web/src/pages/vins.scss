@@ -6,8 +6,8 @@ $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
 $font-title:7.2em;
-$font-subtitle:20px;
-$font-text:15px;
+$font-subtitle:25px;
+$font-text:20px;
 @font-face {
     font-family: "Reislust";
     src: url("../fonts/Reislust-97D7.ttf");
@@ -24,17 +24,13 @@ $font-text:15px;
     font-family: "FuturaLight";
     src: url("../fonts/FuturaPTLight.otf");
 }
-p {
-font-family: "FuturaText";
-}
-h1{
-    font-family: "Reislust";
-    font-size: $font-title;
-}
+
+
 .bandeau{
-    background:url("../asset/nosvins-bandeau.jpg");
-    height: 293px;
-    background-position: 50% 23%;
+    background: 
+    url("../asset/nosvins-bandeau.jpg");
+    height: 30vh;
+    background-position: center 23%;
     background-size: cover;
 }
 .domainContain{
@@ -42,12 +38,20 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    * {
+        color: $color-fontBrown;
+    }
+    .title{
+        font-family: "Reislust";
+        font-size: 7.2rem;
+    }
     .content{
         display: flex;
         justify-content: space-between;
         gap: 5vw;
     }
     .gammes{
+        margin: 2vh auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -57,8 +61,33 @@ h1{
             height: auto;
         }
         .block{
-            background-color: white;
+            background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            border-radius: 12px;
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
             text-align: center;
+            button{
+                color: $color-button;
+                margin: 2vh auto;
+            }
+            p {
+                font-family: "FuturaText";
+                font-size: 20px;
+            }
+            h2 {
+                font-family: "FuturaText";
+                font-size: 20px;
+            }
+            h1{
+                font-family:  "Reislust";
+                font-size: 90px;
+                margin: 0 auto;
+            }
+            h1::first-letter{
+                color: red;
+            }
         }
         
     }

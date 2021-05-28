@@ -68,20 +68,21 @@ const IndexPage = (props) => {
           <div className={styles.section1}>
               <img src={bottle} className={styles.bottle}/>
               <div className={styles.block1}>
-                <h1> {item.node.pageBuilder[0].title1} </h1>
-                <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
-                <button className={styles.gamme}><Link to="/vins">VOIR NOS GAMMES</Link></button> 
+                <div className={styles.title}> {item.node.pageBuilder[0].title1} </div>
+                <PortableText blocks={item.node.pageBuilder[0]._rawDesc} className={styles.text}/>
+                <button className={styles.gamme}><Link to="/vins" className={styles.a}>VOIR NOS GAMMES</Link></button> 
             </div>
           </div>
           <div className={styles.section2}>
-            <h1> {item.node.pageBuilder[1].title1} </h1>
+            <div className={styles.title}> {item.node.pageBuilder[1].title1} </div>
             <img src={domainImg} className={styles.domainimg}/>
             <PortableText blocks={item.node.pageBuilder[1]._rawDesc} />
+            <button className={styles.gamme}><Link to="/domaine" className={styles.a}>EN SAVOIR PLUS</Link></button>
           </div>
           <div className={styles.section3}>
             <div className={styles.sliderimg}/>
             <div className={styles.sliderContain}>
-              <h1> {item.node.pageBuilder[2].title1} </h1>
+              <div className={styles.title}> {item.node.pageBuilder[2].title1} </div>
               <div className={styles.slider}>
                 <IoIosArrowBack onClick={moins} />
                   <Slider count={count} />
@@ -91,10 +92,10 @@ const IndexPage = (props) => {
           </div>
           <div className={styles.section4}>
             <div className={styles.pressContain}>
-              <h1> {item.node.pageBuilder[3].title1} </h1>
+              <div className={styles.title}> {item.node.pageBuilder[3].title1} </div>
               <div className={styles.pressBlock}>
                 <PortableText blocks={item.node.pageBuilder[3]._rawDesc} />
-                <button className={styles.article}><Link to="/presse">VOIR LES ARTICLES</Link></button>
+                <button className={styles.gamme}><Link to="/presse">VOIR LES ARTICLES</Link></button>
               </div>
             </div>
             <div className={styles.pressimg}/>

@@ -15,9 +15,36 @@
   font-family: "FuturaLight";
   src: url("../fonts/FuturaPTLight.otf");
 }
-h1 {
+.titleContain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 15vh;
+  margin-top: 15vh;
+}
+.titleContain .trait {
+  height: 2px;
+  width: 30vw;
+  background-color: rgba(112, 112, 112, 0.35);
+  align-self: center;
+  margin-left: 18vh;
+  border-radius: 25px;
+}
+.titleContain .trait2 {
+  height: 2px;
+  width: 30vw;
+  background-color: rgba(112, 112, 112, 0.35);
+  border-radius: 25px;
+  align-self: center;
+  margin-right: 18vh;
+}
+.titleContain .title {
+  margin: 0 auto;
+  justify-self: center;
   font-family: "Reislust";
-  font-size: 50px;
+  font-size: 7.2em;
+  color: #685950;
+  font-weight: normal;
+  align-self: center;
 }
 
 * {

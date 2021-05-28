@@ -29,37 +29,38 @@ $font-text:15px;
     justify-content: space-between;
     .siteTitle{ 
         margin-left: 6vw;
-        color: $color-fontBrown;
-        font-family: "Reislust";
-        font-size: $font-title;
         justify-self: left;
-        
+        a{   
+            color: $color-fontBrown;
+            font-family: "Reislust";
+            font-size: 4.4em;
+        }
         
     }
     nav{
         width: 50vw;
         
-    }
-    ul{
-        justify-self: right;
-        margin-right: 6vw;
-        display: flex;
-        justify-content: space-between;
-    }
-    a{
-        color: $color-fontBrown;
-        text-decoration: none;
-    }
-    li{
-        list-style-type: none;
-        font-size: $font-text;
-        font-family: "FuturaSub";
-        
-        
-    }
-    li:hover{
-        color: $color-button;
-        font-weight: bold;
+        ul{
+            justify-self: right;
+            margin-right: 6vw;
+            display: flex;
+            justify-content: space-between;
+        }
+        li{
+            list-style-type: none;
+        }
+        li a{
+            text-decoration: none;
+            font-size: $font-text;
+            color: red;
+            color: $color-fontBrown;
+            font-family: "FuturaSub"; 
+        }
+        li a:hover{
+            color: $color-button;
+            font-weight: bold;
+            
+        }
     }
 }
 

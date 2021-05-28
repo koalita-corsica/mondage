@@ -44,7 +44,13 @@ const GaleriePage = (props) => {
     <Layout>
       <SEO title="galerie" />
       {data.allSanityPage.edges.map(item =>
-          <h1>{item.node.title}</h1>
+        <React.Fragment>
+          <div className={styles.titleContain}>
+            <div className={styles.trait}></div>
+            <div className={styles.title}>{item.node.title}</div>
+            <div className={styles.trait2}></div>
+          </div>
+        </React.Fragment>
         )}
       <div className={styles.gridGalery}>
         <div className={styles.galerie1}><img src={galerie1}/></div>

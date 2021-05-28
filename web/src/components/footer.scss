@@ -5,9 +5,9 @@ $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:50px;
-$font-subtitle:20px;
-$font-text:15px;
+$font-title:6.25em;
+$font-subtitle:25px;
+$font-text:20px;
 @font-face {
     font-family: "Reislust";
     src: url("../fonts/Reislust-97D7.ttf");
@@ -28,16 +28,17 @@ $font-text:15px;
     color:red;
 }
 .wrapper {
+    * {
+        color: $color-fontBrown;
+    }
     background-color: $color-backgroundGrey;
     align-items: center;
-    color: $color-fontBrown;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     height: 330px;
     a{
         text-decoration: none;
-        color: $color-fontBrown;
         font-size: $font-text;
         font-family: "FuturaText";
     }
@@ -53,17 +54,20 @@ $font-text:15px;
     
 }
 .domainMondange{
-    font-family: "Reislust" !important;
     grid-area: 1/2/2/3;
     justify-self: center;
-    font-size: $font-title;
+    a{
+        font-family: "Reislust" !important;
+        font-size: 4.62em;
+        line-height: 1;
+    }
     
 }
 .contact{
     font-size: $font-text;
     font-family: "FuturaText";
     grid-area: 1/1/2/2;
-    line-height: 1.5;
+    line-height: 2;
     
 }
 
@@ -100,7 +104,7 @@ $font-text:15px;
     justify-content: center;
     align-items: center;
     gap: 1vw;
-    margin-top: 37.5px;
+    
     
     .sociaux{
         display: flex;
@@ -133,6 +137,4 @@ $font-text:15px;
     display: flex;
     gap: 0.5vw;
     justify-self: right;
-
-    
 }

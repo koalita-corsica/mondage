@@ -5,9 +5,9 @@ $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:50px;
-$font-subtitle:20px;
-$font-text:15px;
+$font-title:7.2em;
+$font-subtitle:25px;
+$font-text:20px;
 @font-face {
     font-family: "Reislust";
     src: url("../fonts/Reislust-97D7.ttf");
@@ -25,51 +25,67 @@ $font-text:15px;
     src: url("../fonts/FuturaPTLight.otf");
 }
 .wrapperAccueil{
-    display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    
+    display: flex;
+    flex-direction: column;
 }
-h1{
-    font-family: "Reislust";
-    font-size: $font-title;
-}
-button{
-    width: 9.7vw;
-    height: 4.3vh;
-    background-color: transparent;
-    border: 3px solid #A8957E;
-    border-radius: 4px;
-    color: $color-button;
-    a{
-        text-decoration: none;
-        font-family: "FuturaText";
-    }
-}
-.section1{
-    background: linear-gradient(0deg, transparent 0%, #131313EA 150%),
+
+.section1{ 
+    background:  linear-gradient(to top, rgba(0,0,0,.6) 0%, rgba(19, 19, 19,0.6) 75%, rgba(226, 226, 226,0.7) 100%), 
     url("../asset/accueilvigne.jpg");
-    background-size: cover;
+    background-size: 91vw 94vh;
+    background-repeat: no-repeat;
+    height: 104vh;
     margin-left: 6vw;
     margin-right: 6vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     .bottle{
-        width: auto;
-        height: 96vh;
+        width: 30vw;
+        height: auto;
     }
     .block1 * {
         color: $color-backgroundGrey;
     }
+    .block1{
+        margin-right: 7vw;
+        margin-top: 21vh;
+    }
+    div  p{
+        line-height: 1.5;
+        font-family: "FuturaText";
+        font-size:  $font-text;
+    }
+    div h2{
+        font-family: "FuturaText";
+        line-height: 2;
+        font-size: 25px;
+    }
+    .gamme{
+        margin-top: 3vh;
+        border: 3px solid #A8957E;
+        border-radius: 4px;
+        width: auto;
+        height: auto;
+        padding: 5px;
+        a{
+            text-decoration: none;
+            font-family: "FuturaText";
+            font-size: $font-text;
+            color: $color-button;
+        }  
+    }
+    
     
 }
 .section2{
     color: $color-fontWhite;
     display: flex;
+    height: 104vh;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background: url("../asset/nosvins-bandeau.jpg");
-    background-position: 50% 95%;
+    background:  linear-gradient(to top, rgba(0,0,0,.7) 0%, rgba(19, 19, 19,0.7) 75%, rgba(226, 226, 226,0.7) 150%), url("../asset/nosvins-bandeau.jpg");
+    // background-position-y: 120%;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -80,12 +96,37 @@ button{
         border-radius: 75%;
     }
     div{
+        margin-top: 2vh;
         width: 50%;
+        color: $color-fontWhite;
     }
-    p{
+    div  p{
+        color: $color-fontWhite;
+        line-height: 1.5;
         font-family: "FuturaText";
         font-size:  $font-text;
     }
+    div h2{
+        color: $color-fontWhite;
+        font-family: "FuturaText";
+        line-height: 3;
+        font-size: 25px;
+    }
+    .gamme{
+        margin-top: 3vh;
+        border: 3px solid #A8957E;
+        border-radius: 4px;
+        width: auto;
+        height: auto;
+        padding: 5px;
+        a{
+            text-decoration: none;
+            font-family: "FuturaText";
+            font-size: $font-text;
+            color: $color-button;
+        }  
+    }
+    
 }
 .section3{
     background-color: $color-backgroundGrey;
@@ -93,35 +134,96 @@ button{
     grid-template-columns: 25vw 75vw;
     width: 100%;
     .sliderimg{
-        
         background: url("../asset/accueilnosvins.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    
+    .title{
+        color: $color-fontBrown;
+    }
+    .sliderContain{
+        margin: 2vw;
+    }
     .slider{
-        background-color: green;
+        
         display: flex;
         justify-content: space-around;
         align-items: center;
+        svg {
+            font-size: 75px;
+            path{
+            color: $color-fontBrown;
+            }
+        }
+        
+        div  p{
+            font-family: "FuturaText";
+            font-size:  $font-text;  
+            width: 100%;
+        }
+        div h2{
+            font-family: "FuturaText";
+            font-size: 25px;
+        }
+        a{
+            color: $color-button;
+        }
     }
+    
 
 }
 .section4{
-    display: grid;
-    grid-template-columns: 60% 40%;
+    height: 94vh;
+    display: flex;
+    justify-content: space-between;
     .pressimg{
         background: url("../asset/accueilpresse.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        width: 40vw;
+        
     }
     .pressContain{ 
-        background-color: pink; 
-        margin-left: 348px;
+        margin-left: 18vw;
+        width: 28vw;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        margin-top: 14vh;
     }
+    div  p{
+        font-family: "FuturaText";
+        font-size:  $font-text;
+        line-height: 1.5;
+    }
+    div h2{
+        margin-top: 14vh;
+        font-family: "FuturaText";
+        font-size: 25px;
+        line-height: 2;
+    }
+    .pressBlock{
+        margin-top: 2vh;
+        height: 100%;
+    }
+    .gamme{
+        margin-top: 3vh;
+        border: 3px solid #A8957E;
+        border-radius: 4px;
+        width: auto;
+        height: auto;
+        padding: 5px;
+        a{
+            text-decoration: none;
+            font-family: "FuturaText";
+            font-size: $font-text;
+            color: $color-button;
+        }  
+    }
+}
+.title {
+    font-family: "Reislust";
+    font-size: 7.2em;
+    line-height: 2;
 }
