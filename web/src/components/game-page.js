@@ -22,7 +22,7 @@ console.log(produits)
             <Link to="/vins" className={styles.retour}><BsArrowLeft className={styles.arrow}/><div className={styles.back}>RETOUR</div></Link>
             <div className={styles.img}>
             {produits.map(item =>
-                <img src={item.image.asset.url} alt="" width="359" height="720" />
+            <Link to={'#' + `${item.slug.current}`}> <img src={item.image.asset.url} alt="" width="359" height="720" /> </Link>
                 )}
             </div>
         </div>
@@ -33,8 +33,8 @@ console.log(produits)
                 <PortableText blocks={_rawDescription} />
             </div>
         </div>
-        <div className={styles.gameBg}>
         {produits.map(item =>
+        <div className={styles.gameBg} id={item.slug.current}>
                 <div className={styles.game}>
                     <div className={styles.gameBg2}>
                         <img src={item.image.asset.url} alt="" width="359" height="720" />
@@ -45,8 +45,8 @@ console.log(produits)
                     </div>
                 </div>
             </div>
-            )};
-            </div>
+        </div>
+        )};
     </div>
   );
 }

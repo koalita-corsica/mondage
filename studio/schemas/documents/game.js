@@ -10,6 +10,15 @@ export default {
             name: "title",
             type: "string",
             title: "Title",
+            validation: Rule => Rule.custom(string => {
+                var len = string.length
+                if (string.charAt(len - 1) === string.charAt(len - 1).toUpperCase()) {
+                    return true
+                } else {
+                    return "Derniere lettre en Majuscule !"
+                }
+                
+              })
         },
         {
             name: "slug",
