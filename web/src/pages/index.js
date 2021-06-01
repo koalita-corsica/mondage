@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import { Link } from "gatsby"
 import { graphql } from "gatsby";
 import {
@@ -15,6 +15,7 @@ import domainImg from "../asset/accueildomaine.jpg"
 import { IoIosArrowForward } from 'react-icons/io';
 import { IoIosArrowBack } from 'react-icons/io';
 import * as styles from "../pages/index.module.css";
+
 
 export const query = graphql`
 query AccueilQuery {
@@ -60,6 +61,44 @@ const IndexPage = (props) => {
     count && count == 2 ? setCount(0) : setCount(count + 1)
   }
 
+
+    
+  
+  window.addEventListener("scroll", () => {
+      var startPosition = 0;
+      const blockPara = document.querySelector("#block1");
+      var blockPosition = document.querySelector("#block1").offsetLeft;
+      var rect = blockPara.getBoundingClientRect();
+      console.log( rect.left);
+      const initialRectLeft = blockPosition;
+      console.log("initial rect left  " + initialRectLeft);
+      console.log("blockpos " + blockPosition);
+      const yOffset = window.pageYOffset || document.documentElement.scrollTop;
+      console.log("yoffset " + yOffset);
+
+      if(yOffset > startPosition || rect.left < initialRectLeft){
+        blockPara.style.transform = "translateX(10%)";
+        
+      }else{
+        blockPara.style.transform = "translateX(-10%)";
+        
+      }
+
+      
+    // var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    //   if (st > lastScrollTop){
+    //     blockPara.style.transform = "translateX(10%)";
+    //   } else {
+    //     blockPara.style.transform = "translateX(-10%)";
+    //  }
+    //  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    // }, false);
+    //   blockPara.style.transition = "all 1s";
+    })
+    
+
+
+  
   return (
     <Layout>
       {data.allSanityPage.edges.map(item =>
@@ -67,7 +106,7 @@ const IndexPage = (props) => {
         <div className={styles.wrapperAccueil}>
           <div className={styles.section1}>
               <img src={bottle} className={styles.bottle}/>
-              <div className={styles.block1}>
+              <div className={styles.block1}   id="block1" onScroll={{}}>
                 <div className={styles.title}> {item.node.pageBuilder[0].title1} </div>
                 <PortableText blocks={item.node.pageBuilder[0]._rawDesc} className={styles.text}/>
                 <button className={styles.gamme}><Link to="/vins" className={styles.a}>VOIR NOS GAMMES</Link></button> 

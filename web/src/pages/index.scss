@@ -24,11 +24,24 @@ $font-text:20px;
     font-family: "FuturaLight";
     src: url("../fonts/FuturaPTLight.otf");
 }
+body::after{
+    content: '';
+    height: 2px;
+    position: fixed;
+    left: calc(50% -1px);
+    top: 0;
+    background-color: red;
+    z-index: 100;
+}
 .wrapperAccueil{
     display: flex;
     flex-direction: column;
 }
-
+.title {
+    font-family: "Reislust";
+    font-size: 7.2em;
+    line-height: 1;
+}
 .section1{ 
     background:  linear-gradient(to top, rgba(0,0,0,.6) 0%, rgba(19, 19, 19,0.6) 75%, rgba(226, 226, 226,0.7) 100%), 
     url("../asset/accueilvigne.jpg");
@@ -47,8 +60,15 @@ $font-text:20px;
         color: $color-backgroundGrey;
     }
     .block1{
+        background-color: red;
         margin-right: 7vw;
-        margin-top: 21vh;
+        
+        box-sizing: border-box;
+        
+        
+    }
+    .title{
+        margin-top: 20vh;
     }
     div  p{
         line-height: 1.5;
@@ -222,8 +242,4 @@ $font-text:20px;
         }  
     }
 }
-.title {
-    font-family: "Reislust";
-    font-size: 7.2em;
-    line-height: 2;
-}
+

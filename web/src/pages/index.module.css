@@ -15,9 +15,25 @@
   font-family: "FuturaLight";
   src: url("../fonts/FuturaPTLight.otf");
 }
+body::after {
+  content: "";
+  height: 2px;
+  position: fixed;
+  left: calc(50% -1px);
+  top: 0;
+  background-color: red;
+  z-index: 100;
+}
+
 .wrapperAccueil {
   display: flex;
   flex-direction: column;
+}
+
+.title {
+  font-family: "Reislust";
+  font-size: 7.2em;
+  line-height: 1;
 }
 
 .section1 {
@@ -38,8 +54,12 @@
   color: #D9D9D7;
 }
 .section1 .block1 {
+  background-color: red;
   margin-right: 7vw;
-  margin-top: 21vh;
+  box-sizing: border-box;
+}
+.section1 .title {
+  margin-top: 20vh;
 }
 .section1 div p {
   line-height: 1.5;
@@ -203,12 +223,6 @@
   font-family: "FuturaText";
   font-size: 20px;
   color: #A8957E;
-}
-
-.title {
-  font-family: "Reislust";
-  font-size: 7.2em;
-  line-height: 2;
 }
 
 /*# sourceMappingURL=index.module.css.map */
