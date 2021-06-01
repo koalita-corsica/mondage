@@ -67,22 +67,24 @@ const IndexPage = (props) => {
   window.addEventListener("scroll", () => {
       var startPosition = 0;
       const blockPara = document.querySelector("#block1");
+      //position du block
       var blockPosition = document.querySelector("#block1").offsetLeft;
-      var rect = blockPara.getBoundingClientRect();
-      console.log( rect.left);
-      const initialRectLeft = blockPosition;
-      console.log("initial rect left  " + initialRectLeft);
       console.log("blockpos " + blockPosition);
+      //position actuel gauche du block
+      var actualPositionLeft = window.scrollX + blockPara.getBoundingClientRect().left
+      var actualPositionTop = window.scrollX + blockPara.getBoundingClientRect().top
+      console.log("position actuel left " + actualPositionLeft);
+      console.log("position actuel top " + actualPositionTop);
+      //position dans la fenetre vertical
       const yOffset = window.pageYOffset || document.documentElement.scrollTop;
       console.log("yoffset " + yOffset);
 
-      if(yOffset > startPosition || rect.left < initialRectLeft){
-        blockPara.style.transform = "translateX(10%)";
-        
-      }else{
-        blockPara.style.transform = "translateX(-10%)";
-        
-      }
+        if(actualPositionLeft >= blockPosition && actualPositionTop >= yOffset){
+          blockPara.style.transform = "translateX(-10%)";
+        }else if(actualPositionLeft <= blockPosition && actualPositionTop <= yOffset){
+          blockPara.style.transform = "translateX(10%)";
+        }
+      
 
       
     // var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
