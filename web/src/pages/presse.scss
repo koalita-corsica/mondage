@@ -37,7 +37,7 @@ h1{
     margin-left: 17vw;
     margin-right: 17vw;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: 50% 50%;
     column-gap: 6vw;
     
     
@@ -49,6 +49,8 @@ h1{
     }
 }
 .articles{
+    background-color: green;
+    
     h1{
         font-size: 65px;
     }
@@ -60,4 +62,7 @@ h1{
     img{
         width: 70%;
     }
+}
+[data-size="grand"]{
+    background-color: yellow;
 }
