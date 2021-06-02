@@ -10,29 +10,29 @@ import GamePage from "../components/game-page";
 export const query = graphql`
   query GamePageTemplateQuery($id: String!) {
     post: sanityGame(id: { eq: $id }) {
-        id
-        title
+      id
+      title
+      slug {
+        current
+      }
+      logo {
+        asset {
+          url
+        }
+      }
+      _rawDescription
+      produits {
+        genre
         slug {
           current
         }
-        logo {
+        _rawDescription
+        image {
           asset {
             url
           }
         }
-        _rawDescription
-        produits {
-          genre
-          slug {
-            current
-          }
-          _rawDescription
-          image {
-            asset {
-              url
-            }
-          }
-        }
+      }
     }
   }
 `;

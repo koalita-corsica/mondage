@@ -51,14 +51,13 @@ export default {
       ],
     },
     {
-      title: "Size",
-      name: "size",
+      title: "Cote",
+      name: "cote",
       type: "string",
       options: {
         list: [
-          { title: "Grand", value: "grand" },
-          { title: "Moyen", value: "moyen" },
-          { title: "Petit", value: "petit" },
+          { title: "Gauche", value: "gauche" },
+          { title: "Droite", value: "droite" },
         ],
       },
     },
