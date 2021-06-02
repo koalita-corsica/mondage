@@ -50,6 +50,18 @@ export default {
         },
       ],
     },
+    {
+      title: "Size",
+      name: "size",
+      type: "string",
+      options: {
+        list: [
+          { title: "Grand", value: "grand" },
+          { title: "Moyen", value: "moyen" },
+          { title: "Petit", value: "petit" },
+        ],
+      },
+    },
   ],
   orderings: [
     {
