@@ -5,9 +5,9 @@ $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:50px;
-$font-subtitle:20px;
-$font-text:15px;
+$font-title:7.2em;
+$font-subtitle:25px;
+$font-text:20px;
 @font-face {
     font-family: "Reislust";
     src: url("../fonts/Reislust-97D7.ttf");
@@ -39,6 +39,27 @@ h1{
 .wrapper{
     display: flex;
     flex-direction: column;
+    .btt{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        a{
+            width: 10vw;
+            align-self: flex-end;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            bottom: 10vh;
+            right: 5vw;
+        }
+        .icon{
+            font-size: 58px;
+        }
+        p{
+            font-size: $font-text;
+        }
+    }
 }
 .desc{
     border-top: 2px solid $color-line;

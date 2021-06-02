@@ -5,9 +5,9 @@ $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:50px;
-$font-subtitle:20px;
-$font-text:15px;
+$font-title:7.2em;
+$font-subtitle:25px;
+$font-text:20px;
 @font-face {
     font-family: "Reislust";
     src: url("../fonts/Reislust-97D7.ttf");
@@ -25,11 +25,10 @@ $font-text:15px;
     src: url("../fonts/FuturaPTLight.otf");
 }
 p {
-font-family: "FuturaText";
+    font-family: "FuturaText";
 }
 h1{
     font-family: "Reislust";
-    font-size: $font-title;
 }
 .wrapperPresse{
     width: auto;
@@ -38,15 +37,21 @@ h1{
     margin-left: 17vw;
     margin-right: 17vw;
     display: grid;
-    grid-template-columns: 24vw 28vw;
+    grid-template-columns: repeat(2,1fr);
     column-gap: 6vw;
     
     
 }
 .presse{
     grid-area: 1/1/2/3;
+    h1{
+        font-size: 100px;
+    }
 }
 .articles{
+    h1{
+        font-size: 65px;
+    }
     display: block;
     width: 100%;
     

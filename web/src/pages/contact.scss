@@ -61,7 +61,7 @@ label{
 }
 .img{
     width: 31vw;
-    height: 100%;
+    
 }
 .contact{ 
     width: 75vw;
@@ -116,10 +116,9 @@ label{
     }
 }
 .rouge1{
-    width: 100%;
-    height: 100%;
-    // background-color: black;
-    margin-top: 10vh;
+    width: 339px;
+    height: 464px;
+    margin-top: 75%;
     
     
 }
@@ -127,9 +126,8 @@ label{
 .bouteilles{
     transform: rotate(-90deg);
     display: flex;
-    justify-content: center;   
+    margin-top: 25vh;
     img:first-child{
-        background-color: red;
-        margin-left: 10vh;
+        
     }
 }

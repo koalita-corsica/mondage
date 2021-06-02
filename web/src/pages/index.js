@@ -57,7 +57,14 @@ const IndexPage = (props) => {
   function plus() {
     count && count == 2 ? setCount(0) : setCount(count - 1);
   }
+  function translateLoad() {
+    const blockPara = document.querySelector("#block1");
+    const bottle = document.querySelector("#bottle");
+    blockPara.setAttribute('style', 'opacity: 1; transform: translateX(0%); transition: all 1.8s');
+    bottle.setAttribute('style', 'opacity: 1; transform: translateX(0%); transition: all 1.8s');
 
+
+  }
   window.addEventListener("scroll", () => {
     const blockPara = document.querySelector("#block1");
     const bottle = document.querySelector("#bottle");
@@ -69,26 +76,42 @@ const IndexPage = (props) => {
       blockPara.setAttribute('style', 'opacity: 1; transform: translateX(0%); transition: all 1s');
       bottle.style.transform = "translateX(0%)";
     }
-    if (window.scrollY > 133) {
-      blockPara.setAttribute('style', 'opacity: 0.75; transform: translateX(25%); transition: all 1s');
-      bottle.style.transform = "translateX(-25%)";
+    if (window.scrollY > 99) {
+      blockPara.setAttribute('style', 'opacity: 0.9; transform: translateX(15%); transition: all 1s');
+      bottle.style.transform = "translateX(-15%)";
     }
-    if (window.scrollY > 266) {
+    if (window.scrollY > 199) {
       // blockPara.style.transform = "translateX(50%)";
-      blockPara.setAttribute('style', 'opacity: 0.5; transform: translateX(50%); transition: all 1s');
-      bottle.style.transform = "translateX(-50%)"; 
+      blockPara.setAttribute('style', 'opacity: 0.8; transform: translateX(30%); transition: all 1s');
+      bottle.style.transform = "translateX(-30%)"; 
+    }
+    if (window.scrollY > 299) {
+      blockPara.setAttribute('style', 'opacity: 0.7; transform: translateX(45%); transition: all 1s');
+      bottle.style.transform = "translateX(-45%)";  
     }
     if (window.scrollY > 399) {
-      blockPara.setAttribute('style', 'opacity: 0.25; transform: translateX(75%); transition: all 1s');
-      bottle.style.transform = "translateX(-75%)";  
+      blockPara.setAttribute('style', 'opacity: 0.6; transform: translateX(60%); transition: all 1s');
+      bottle.style.transform = "translateX(-60%)";
     }
-    if (window.scrollY > 533) {
-      blockPara.setAttribute('style', 'opacity: 0; transform: translateX(100%); transition: all 1s');
-      bottle.style.transform = "translateX(-100%)";
+    if (window.scrollY > 499) {
+      blockPara.setAttribute('style', 'opacity: 0.5; transform: translateX(75%); transition: all 1s');
+      bottle.style.transform = "translateX(-75%)";
     }
-    if (window.scrollY > 666) {
-      blockPara.setAttribute('style', 'opacity: 0; transform: translateX(125%); transition: all 1s');
-      bottle.style.transform = "translateX(-125%)";
+    if (window.scrollY > 599) {
+      blockPara.setAttribute('style', 'opacity: 0.4; transform: translateX(90%); transition: all 1s');
+      bottle.style.transform = "translateX(-90%)";
+    }
+    if (window.scrollY > 699) {
+      blockPara.setAttribute('style', 'opacity: 0.3; transform: translateX(105%); transition: all 1s');
+      bottle.style.transform = "translateX(-105%)";
+    }
+    if (window.scrollY > 799) {
+      blockPara.setAttribute('style', 'opacity: 0.2; transform: translateX(120%); transition: all 1s');
+      bottle.style.transform = "translateX(-120%)";
+    }
+    if (window.scrollY > 899) {
+      blockPara.setAttribute('style', 'opacity: 0.1; transform: translateX(135%); transition: all 1s');
+      bottle.style.transform = "translateX(-135%)";
     }
     // if (window.scrollY > 799) {
     //   blockPara.style.transform = "translateX(150%)";
@@ -104,7 +127,8 @@ const IndexPage = (props) => {
     <Layout>
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
-          <div className={styles.wrapperAccueil}>
+          
+          <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
               <img src={bottle} className={styles.bottle} id="bottle"/>
               <div className={styles.block1} id="block1" onScroll={{}}>

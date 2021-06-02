@@ -28,7 +28,8 @@
 
 .section1 {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(19, 19, 19, 0.6) 75%, rgba(226, 226, 226, 0.7) 100%), url("../asset/accueilvigne.jpg");
-  background-size: 91vw 94vh;
+  background-size: cover;
+  background-position: center 25%;
   background-repeat: no-repeat;
   height: 104vh;
   margin-left: 6vw;
@@ -38,14 +39,19 @@
 }
 .section1 .bottle {
   width: 30vw;
+  margin-top: 8vh;
+  justify-self: center;
   height: auto;
+  transform: translateX(-200%);
 }
 .section1 .block1 * {
   color: #D9D9D7;
 }
 .section1 .block1 {
+  transform: translateX(200%);
   margin-right: 7vw;
   box-sizing: border-box;
+  margin-top: 8vh;
 }
 .section1 .title {
   margin-top: 20vh;

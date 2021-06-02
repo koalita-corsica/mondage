@@ -21,7 +21,6 @@ p {
 
 h1 {
   font-family: "Reislust";
-  font-size: 50px;
 }
 
 .wrapperPresse {
@@ -31,12 +30,15 @@ h1 {
   margin-left: 17vw;
   margin-right: 17vw;
   display: grid;
-  grid-template-columns: 24vw 28vw;
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 6vw;
 }
 
 .presse {
   grid-area: 1/1/2/3;
+}
+.presse h1 {
+  font-size: 100px;
 }
 
 .articles {
@@ -44,6 +46,9 @@ h1 {
   width: 100%;
   object-fit: fill;
   border-radius: 5px;
+}
+.articles h1 {
+  font-size: 65px;
 }
 .articles img {
   width: 70%;

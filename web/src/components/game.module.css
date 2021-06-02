@@ -21,17 +21,38 @@
 
 p {
   font-family: "FuturaText";
-  font-size: 15px;
+  font-size: 20px;
 }
 
 h1 {
   font-family: "Reislust";
-  font-size: 50px;
+  font-size: 7.2em;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
+}
+.wrapper .btt {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.wrapper .btt a {
+  width: 10vw;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  bottom: 10vh;
+  right: 5vw;
+}
+.wrapper .btt .icon {
+  font-size: 58px;
+}
+.wrapper .btt p {
+  font-size: 20px;
 }
 
 .desc {
@@ -54,7 +75,7 @@ h1 {
 }
 .desc .descText :first-child h3 {
   font-family: "FuturaSub";
-  font-size: 20px;
+  font-size: 25px;
 }
 .desc .logo {
   width: 10vw;
@@ -82,12 +103,12 @@ h1 {
 }
 .game h3 {
   line-height: 2;
-  font-size: 20px;
+  font-size: 25px;
 }
 .game button {
   width: 10vw;
   height: auto;
-  font-size: 15px;
+  font-size: 20px;
   color: #A8957E;
   border: 3px solid #A8957E;
   border-radius: 4px;
@@ -123,7 +144,7 @@ h1 {
   font-size: 58px;
 }
 .bandeau .back {
-  font-size: 20px;
+  font-size: 25px;
   font-family: "FuturaSub";
 }
 

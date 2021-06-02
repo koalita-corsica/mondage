@@ -9,7 +9,9 @@ import { imageUrlFor } from "../lib/image-url";
 import {Link} from "gatsby";
 import * as styles from "../components/game.module.css";
 import { BsArrowLeft } from 'react-icons/bs';
+import { BsArrowUp } from 'react-icons/bs';
 import { IoIosArrowBack } from 'react-icons/io';
+import { sr } from "date-fns/locale";
 
 function GamePage(props) {
 const {title, produits, logo, _rawDescription} = props
@@ -47,6 +49,9 @@ console.log(produits)
             </div>
         </div>
         )};
+        <div className={styles.btt}>
+            <Link to='/game/laudria'> <BsArrowUp className={styles.icon}/> <p>HAUT DE PAGE</p> </Link>
+        </div>
     </div>
   );
 }
