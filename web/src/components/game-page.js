@@ -9,9 +9,9 @@ import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 import { Link } from "gatsby";
 import * as styles from "../components/game.module.css";
-import { BsArrowLeft } from 'react-icons/bs';
-import { BsArrowUp } from 'react-icons/bs';
-import { IoIosArrowBack } from 'react-icons/io';
+import { BsArrowLeft } from "react-icons/bs";
+import { BsArrowUp } from "react-icons/bs";
+import { IoIosArrowBack } from "react-icons/io";
 import { sr } from "date-fns/locale";
 
 function GamePage(props) {
@@ -61,12 +61,6 @@ function GamePage(props) {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      ))};
-        <div className={styles.btt}>
-            <Link to='/game/laudria'> <BsArrowUp className={styles.icon}/> <p>HAUT DE PAGE</p> </Link>
-        </div>
-=======
       ))}
       ;
       <div className={styles.btt}>
@@ -74,7 +68,6 @@ function GamePage(props) {
           <BsArrowUp className={styles.icon} /> <p>HAUT DE PAGE</p>{" "}
         </Link>
       </div>
->>>>>>> 5a1675e48230fb7b1e0e8eed13e78ffda6af3e03
     </div>
   );
 }

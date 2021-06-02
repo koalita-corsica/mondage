@@ -10,6 +10,7 @@ import { mapEdgesToNodes } from "../lib/helpers";
 import * as styles from "../pages/presse.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
 import PortableText from "../components/portableText";
+import { el } from "date-fns/locale";
 
 export const query = graphql`
   query PressePageQuery {
@@ -44,8 +45,6 @@ export const query = graphql`
 const PressePage = (props) => {
   const { data, errors } = props;
 
-  const div = document.querySelector('#grand');
-  console.log("blablabla" + div);
   return (
     <Layout>
       <div className={styles.wrapperPresse}>
@@ -57,16 +56,26 @@ const PressePage = (props) => {
         ))}
         {data.allSanityPost.edges.map((element) => (
           <React.Fragment>
-            <div className={styles.articlesDroite} data-pos={element.node.cote}>
-              <h1> {element.node.title} </h1>
-              <PortableText blocks={element.node._rawExcerpt} />
-              <img src={element.node.mainImage.asset.url} alt="" />
-            </div>
-            <div className={styles.articlesGauche} data-pos={element.node.cote}>
-              <h1> {element.node.title} </h1>
-              <PortableText blocks={element.node._rawExcerpt} />
-              <img src={element.node.mainImage.asset.url} alt="" />
-            </div>
+            {element.node.cote && element.node.cote === "gauche" && (
+              <div
+                className={styles.articlesDroite}
+                data-pos={element.node.cote}
+              >
+                <h1> {element.node.title} </h1>
+                <PortableText blocks={element.node._rawExcerpt} />
+                <img src={element.node.mainImage.asset.url} alt="" />
+              </div>
+            )}
+            {element.node.cote && element.node.cote === "droite" && (
+              <div
+                className={styles.articlesGauche}
+                data-pos={element.node.cote}
+              >
+                <h1> {element.node.title} </h1>
+                <PortableText blocks={element.node._rawExcerpt} />
+                <img src={element.node.mainImage.asset.url} alt="" />
+              </div>
+            )}
           </React.Fragment>
         ))}
       </div>
