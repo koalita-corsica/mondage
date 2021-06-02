@@ -60,40 +60,44 @@ const IndexPage = (props) => {
 
   window.addEventListener("scroll", () => {
     const blockPara = document.querySelector("#block1");
+    const bottle = document.querySelector("#bottle");
     blockPara.style.transition = "all 1s";
+    bottle.style.transition = "all 1s";
     var i = 0;
     console.log(window.scrollY);
-    if (window.scrollY > i) {
-      blockPara.style.transform = "translateX(0%)";
-      i = i + 10;
+    if (window.scrollY == i) {
+      blockPara.setAttribute('style', 'opacity: 1; transform: translateX(0%); transition: all 1s');
+      bottle.style.transform = "translateX(0%)";
     }
-    if (window.scrollY > i) {
-      blockPara.style.transform = "translateX(10%)";
-      i = i + 10;
-    } else {
-      blockPara.style.transform = "translateX(20%)";
+    if (window.scrollY > 133) {
+      blockPara.setAttribute('style', 'opacity: 0.75; transform: translateX(25%); transition: all 1s');
+      bottle.style.transform = "translateX(-25%)";
     }
-    if (window.scrollY > i) {
-      blockPara.style.transform = "translateX(20%)";
-      i = i + 10;
-    } else {
-      blockPara.style.transform = "translateX(20%)";
+    if (window.scrollY > 266) {
+      // blockPara.style.transform = "translateX(50%)";
+      blockPara.setAttribute('style', 'opacity: 0.5; transform: translateX(50%); transition: all 1s');
+      bottle.style.transform = "translateX(-50%)"; 
     }
-    if (window.scrollY > i) {
-      blockPara.style.transform = "translateX(30%)";
-      i = i + 10;
-    } else {
-      blockPara.style.transform = "translateX(-30%)";
+    if (window.scrollY > 399) {
+      blockPara.setAttribute('style', 'opacity: 0.25; transform: translateX(75%); transition: all 1s');
+      bottle.style.transform = "translateX(-75%)";  
     }
-    if (window.scrollY > i) {
-      blockPara.style.transform = "translateX(40%)";
-      i = i + 10;
-    } else {
-      blockPara.style.transform = "translateX(-40%)";
+    if (window.scrollY > 533) {
+      blockPara.setAttribute('style', 'opacity: 0; transform: translateX(100%); transition: all 1s');
+      bottle.style.transform = "translateX(-100%)";
     }
-    if (window.scrollY > 400) {
-      blockPara.style.transform = "translate(140%)";
+    if (window.scrollY > 666) {
+      blockPara.setAttribute('style', 'opacity: 0; transform: translateX(125%); transition: all 1s');
+      bottle.style.transform = "translateX(-125%)";
     }
+    // if (window.scrollY > 799) {
+    //   blockPara.style.transform = "translateX(150%)";
+    //   bottle.style.transform = "translateX(-150%)";
+    // }
+    // if (window.scrollY > 933) {
+    //   blockPara.style.transform = "translate(175%)";
+    //   bottle.style.transform = "translate(-175%)";
+    // }
   });
 
   return (
@@ -102,7 +106,7 @@ const IndexPage = (props) => {
         <React.Fragment>
           <div className={styles.wrapperAccueil}>
             <div className={styles.section1}>
-              <img src={bottle} className={styles.bottle} />
+              <img src={bottle} className={styles.bottle} id="bottle"/>
               <div className={styles.block1} id="block1" onScroll={{}}>
                 <div className={styles.title}>
                   {" "}
