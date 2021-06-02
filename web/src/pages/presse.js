@@ -56,13 +56,18 @@ const PressePage = (props) => {
           </div>
         ))}
         {data.allSanityPost.edges.map((element) => (
-          <div className={styles.articles} >
-            <div data-size={element.node.cote}>
+          <React.Fragment>
+            <div className={styles.articlesDroite} data-pos={element.node.cote}>
               <h1> {element.node.title} </h1>
               <PortableText blocks={element.node._rawExcerpt} />
               <img src={element.node.mainImage.asset.url} alt="" />
             </div>
-          </div>
+            <div className={styles.articlesGauche} data-pos={element.node.cote}>
+              <h1> {element.node.title} </h1>
+              <PortableText blocks={element.node._rawExcerpt} />
+              <img src={element.node.mainImage.asset.url} alt="" />
+            </div>
+          </React.Fragment>
         ))}
       </div>
     </Layout>

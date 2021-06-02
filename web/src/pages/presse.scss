@@ -39,6 +39,16 @@ h1{
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 6vw;
+    [data-pos="droite"]{
+        background-color: yellow;
+        grid-column: 2 span 3;
+    
+    }
+    [data-pos="gauche"]{
+        background-color: pink;
+        grid-column: 1 span 2;
+    
+    }
     
     
 }
@@ -49,7 +59,8 @@ h1{
     }
 }
 .articles{
-    background-color: green;
+    display: flex;
+    flex-direction: column;
     
     h1{
         font-size: 65px;
@@ -63,6 +74,4 @@ h1{
         width: 70%;
     }
 }
-[data-size="grand"]{
-    background-color: yellow;
-}
+

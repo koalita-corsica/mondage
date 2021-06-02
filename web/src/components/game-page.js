@@ -9,15 +9,10 @@ import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 import { Link } from "gatsby";
 import * as styles from "../components/game.module.css";
-<<<<<<< HEAD
 import { BsArrowLeft } from 'react-icons/bs';
 import { BsArrowUp } from 'react-icons/bs';
 import { IoIosArrowBack } from 'react-icons/io';
 import { sr } from "date-fns/locale";
-=======
-import { BsArrowLeft } from "react-icons/bs";
-import { IoIosArrowBack } from "react-icons/io";
->>>>>>> 16ebc1cddbdff44701c61aa68d257dc681c7371d
 
 function GamePage(props) {
   const { title, produits, logo, _rawDescription } = props;
@@ -67,15 +62,10 @@ function GamePage(props) {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        )};
+      ))};
         <div className={styles.btt}>
             <Link to='/game/laudria'> <BsArrowUp className={styles.icon}/> <p>HAUT DE PAGE</p> </Link>
         </div>
-=======
-      ))}
-      ;
->>>>>>> 16ebc1cddbdff44701c61aa68d257dc681c7371d
     </div>
   );
 }

@@ -33,6 +33,14 @@ h1 {
   grid-template-columns: 50% 50%;
   column-gap: 6vw;
 }
+.wrapperPresse [data-pos=droite] {
+  background-color: yellow;
+  grid-column: 2 span 3;
+}
+.wrapperPresse [data-pos=gauche] {
+  background-color: pink;
+  grid-column: 1 span 2;
+}
 
 .presse {
   grid-area: 1/1/2/3;
@@ -42,7 +50,8 @@ h1 {
 }
 
 .articles {
-  background-color: green;
+  display: flex;
+  flex-direction: column;
   display: block;
   width: 100%;
   object-fit: fill;
@@ -53,10 +62,6 @@ h1 {
 }
 .articles img {
   width: 70%;
-}
-
-[data-size=grand] {
-  background-color: yellow;
 }
 
 /*# sourceMappingURL=presse.module.css.map */
