@@ -61,20 +61,10 @@ function GamePage(props) {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       ))};
         <div className={styles.btt}>
             <Link to='/game/laudria'> <BsArrowUp className={styles.icon}/> <p>HAUT DE PAGE</p> </Link>
         </div>
-=======
-      ))}
-      ;
-      <div className={styles.btt}>
-        <Link to={"/game/" + `${slug.current}`}>
-          <BsArrowUp className={styles.icon} /> <p>HAUT DE PAGE</p>{" "}
-        </Link>
-      </div>
->>>>>>> 5a1675e48230fb7b1e0e8eed13e78ffda6af3e03
     </div>
   );
 }
