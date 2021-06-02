@@ -15,7 +15,7 @@ import { IoIosArrowBack } from 'react-icons/io';
 import { sr } from "date-fns/locale";
 
 function GamePage(props) {
-  const { title, produits, logo, _rawDescription } = props;
+  const { title, produits, logo, _rawDescription, slug } = props;
   console.log(produits);
 
   return (
@@ -55,17 +55,26 @@ function GamePage(props) {
                 <h1> {item.genre} </h1>
                 <PortableText blocks={item._rawDescription} />
                 <Link to={"/produit/" + `${item.slug.current}`}>
-                  {" "}
                   <button> Fiche Produit </button>{" "}
                 </Link>
               </div>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       ))};
         <div className={styles.btt}>
             <Link to='/game/laudria'> <BsArrowUp className={styles.icon}/> <p>HAUT DE PAGE</p> </Link>
         </div>
+=======
+      ))}
+      ;
+      <div className={styles.btt}>
+        <Link to={"/game/" + `${slug.current}`}>
+          <BsArrowUp className={styles.icon} /> <p>HAUT DE PAGE</p>{" "}
+        </Link>
+      </div>
+>>>>>>> 5a1675e48230fb7b1e0e8eed13e78ffda6af3e03
     </div>
   );
 }
