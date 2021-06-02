@@ -28,7 +28,7 @@ export const query = graphql`
       edges {
         node {
           title
-          size
+          cote
           _rawExcerpt
           mainImage {
             asset {
@@ -44,6 +44,8 @@ export const query = graphql`
 const PressePage = (props) => {
   const { data, errors } = props;
 
+  const div = document.querySelector('#grand');
+  console.log("blablabla" + div);
   return (
     <Layout>
       <div className={styles.wrapperPresse}>
@@ -54,10 +56,12 @@ const PressePage = (props) => {
           </div>
         ))}
         {data.allSanityPost.edges.map((element) => (
-          <div className={styles.articles + " " + `${element.node.size}`}>
-            <h1> {element.node.title} </h1>
-            <PortableText blocks={element.node._rawExcerpt} />
-            <img src={element.node.mainImage.asset.url} alt="" />
+          <div className={styles.articles} >
+            <div data-size={element.node.cote}>
+              <h1> {element.node.title} </h1>
+              <PortableText blocks={element.node._rawExcerpt} />
+              <img src={element.node.mainImage.asset.url} alt="" />
+            </div>
           </div>
         ))}
       </div>
