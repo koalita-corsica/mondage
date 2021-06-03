@@ -10,10 +10,10 @@ import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "gatsby";
 
 function ProduitPage(props) {
-  const { fiche, game, image } = props;
+  const { fiche, game, image, slug } = props;
   return (
     <div className={styles.wrapperProduit}>
-      <Link to="/vins" className={styles.retour}>
+      <Link to={"/game/" + `${game.slug.current}`} className={styles.retour}>
         <BsArrowLeft className={styles.arrow} />
         <div className={styles.back}>RETOUR</div>
       </Link>

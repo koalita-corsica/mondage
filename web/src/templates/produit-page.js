@@ -15,6 +15,9 @@ export const query = graphql`
         current
       }
       game {
+        slug {
+          current
+        }
         logo {
           asset {
             url
