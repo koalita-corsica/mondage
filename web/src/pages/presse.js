@@ -72,8 +72,8 @@ const PressePage = (props) => {
         {data.allSanityPost.edges.map((element) => (
           <React.Fragment>
             <div className={styles.container}>
-              <div className={styles.gauche}>
-                {element.node.cote && element.node.cote === "gauche" && (
+              {element.node.cote === "gauche" ? (
+                <div className={styles.gauche}>
                   <div
                     className={styles.articlesGauche}
                     data-pos={element.node.cote}
@@ -82,10 +82,9 @@ const PressePage = (props) => {
                     <PortableText blocks={element.node.excerpt._rawFr} />
                     <img src={element.node.mainImage.asset.url} alt="" />
                   </div>
-                )}
-              </div>
-              <div className={styles.droite}>
-                {element.node.cote && element.node.cote === "droite" && (
+                </div>
+              ) : (
+                <div className={styles.droite}>
                   <div
                     className={styles.articlesDroite}
                     data-pos={element.node.cote}
@@ -94,8 +93,8 @@ const PressePage = (props) => {
                     <PortableText blocks={element.node.excerpt._rawFr} />
                     <img src={element.node.mainImage.asset.url} alt="" />
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </React.Fragment>
         ))}
