@@ -1,4 +1,9 @@
-import { format } from "date-fns";
+const supportedLanguages = [
+  { id: "fr", title: "Français", isDefault: true },
+  { id: "en", title: "English" },
+];
+
+const baseLanguage = supportedLanguages.find((l) => l.isDefault);
 
 export default {
   name: "post",
@@ -7,7 +12,7 @@ export default {
   fields: [
     {
       name: "title",
-      type: "string",
+      type: "localeString",
       title: "Title",
       description: "Titles should be catchy, descriptive, and not too long",
     },
@@ -18,7 +23,7 @@ export default {
       description:
         "Some frontends will require a slug to be set to be able to show the post",
       options: {
-        source: "title",
+        source: `title.${baseLanguage.id}`,
         maxLength: 96,
       },
     },
@@ -35,7 +40,7 @@ export default {
     },
     {
       name: "excerpt",
-      type: "excerptPortableText",
+      type: "localeBody",
       title: "Excerpt",
       description:
         "This ends up on summary pages, on Google, when people share your post in social media.",
@@ -62,51 +67,9 @@ export default {
       },
     },
   ],
-  orderings: [
-    {
-      name: "publishingDateAsc",
-      title: "Publishing date new–>old",
-      by: [
-        {
-          field: "publishedAt",
-          direction: "asc",
-        },
-        {
-          field: "title",
-          direction: "asc",
-        },
-      ],
-    },
-    {
-      name: "publishingDateDesc",
-      title: "Publishing date old->new",
-      by: [
-        {
-          field: "publishedAt",
-          direction: "desc",
-        },
-        {
-          field: "title",
-          direction: "asc",
-        },
-      ],
-    },
-  ],
   preview: {
     select: {
-      title: "title",
-      publishedAt: "publishedAt",
-      slug: "slug",
-      media: "mainImage",
-    },
-    prepare({ title = "No title", publishedAt, slug = {}, media }) {
-      const dateSegment = format(new Date(publishedAt), "yyyy/MM");
-      const path = `/${dateSegment}/${slug.current}/`;
-      return {
-        title,
-        media,
-        subtitle: publishedAt ? path : "Missing publishing date",
-      };
+      title: `title.${baseLanguage.id}`,
     },
   },
 };

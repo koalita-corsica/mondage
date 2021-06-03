@@ -17,10 +17,19 @@ export const query = graphql`
     allSanityPage(filter: { slug: { current: { eq: "la-presse" } } }) {
       edges {
         node {
-          title
+          title {
+            fr
+            en
+          }
           pageBuilder {
-            title1
-            _rawDesc
+            title1 {
+              fr
+              en
+            }
+            desc {
+              _rawFr
+              _rawEn
+            }
           }
         }
       }
@@ -28,9 +37,15 @@ export const query = graphql`
     allSanityPost {
       edges {
         node {
-          title
+          title {
+            fr
+            en
+          }
           cote
-          _rawExcerpt
+          excerpt {
+            _rawFr
+            _rawEn
+          }
           mainImage {
             asset {
               url
@@ -50,19 +65,20 @@ const PressePage = (props) => {
       <div className={styles.wrapperPresse}>
         {data.allSanityPage.edges.map((item) => (
           <div className={styles.presse}>
-            <h1> {item.node.pageBuilder[0].title1} </h1>
-            <PortableText blocks={item.node.pageBuilder[0]._rawDesc} />
+            <h1> {item.node.pageBuilder[0].title1.fr} </h1>
+            <PortableText blocks={item.node.pageBuilder[0].desc._rawFr} />
           </div>
         ))}
         {data.allSanityPost.edges.map((element) => (
           <React.Fragment>
+            {console.log(element)}
             {element.node.cote && element.node.cote === "gauche" && (
               <div
                 className={styles.articlesDroite}
                 data-pos={element.node.cote}
               >
-                <h1> {element.node.title} </h1>
-                <PortableText blocks={element.node._rawExcerpt} />
+                <h1> {element.node.title.fr} </h1>
+                <PortableText blocks={element.node.excerpt._rawFr} />
                 <img src={element.node.mainImage.asset.url} alt="" />
               </div>
             )}
@@ -71,8 +87,8 @@ const PressePage = (props) => {
                 className={styles.articlesGauche}
                 data-pos={element.node.cote}
               >
-                <h1> {element.node.title} </h1>
-                <PortableText blocks={element.node._rawExcerpt} />
+                <h1> {element.node.title.fr} </h1>
+                <PortableText blocks={element.node.excerpt._rawFr} />
                 <img src={element.node.mainImage.asset.url} alt="" />
               </div>
             )}

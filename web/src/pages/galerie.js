@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import BlogPostPreviewGrid from "../components/blog-post-preview-grid";
 import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
@@ -24,13 +25,15 @@ import galerie13 from "../asset/galerie13.jpg";
 import galerie14 from "../asset/galerie14.jpg";
 import galerie15 from "../asset/galerie15.jpg";
 
-
 export const query = graphql`
   query GaleriePageQuery {
-    allSanityPage(filter: {slug: {current: {eq: "la-galerie"}}}) {
+    allSanityPage(filter: { slug: { current: { eq: "la-galerie" } } }) {
       edges {
         node {
-          title
+          title {
+            fr
+            en
+          }
         }
       }
     }
@@ -39,35 +42,65 @@ export const query = graphql`
 
 const GaleriePage = (props) => {
   const { data, errors } = props;
-  
+
   return (
     <Layout>
       <SEO title="galerie" />
-      {data.allSanityPage.edges.map(item =>
+      {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
           <div className={styles.titleContain}>
             <div className={styles.trait}></div>
-            <div className={styles.title}>{item.node.title}</div>
+            <div className={styles.title}>{item.node.title.fr}</div>
             <div className={styles.trait2}></div>
           </div>
         </React.Fragment>
-        )}
+      ))}
       <div className={styles.gridGalery}>
-        <div className={styles.galerie1}><img src={galerie1}/></div>
-        <div className={styles.galerie2}><img src={galerie2}/></div>
-        <div className={styles.galerie3}><img src={galerie3}/></div>
-        <div className={styles.galerie4}><img src={galerie4}/></div>
-        <div className={styles.galerie5}><img src={galerie5}/></div>
-        <div className={styles.galerie6}><img src={galerie6}/></div>
-        <div className={styles.galerie7}><img src={galerie7}/></div>
-        <div className={styles.galerie8}><img src={galerie8}/></div>
-        <div className={styles.galerie9}><img src={galerie9}/></div>
-        <div className={styles.galerie10}><img src={galerie10}/></div>
-        <div className={styles.galerie11}><img src={galerie11}/></div>
-        <div className={styles.galerie12}><img src={galerie12}/></div>
-        <div className={styles.galerie13}><img src={galerie13}/></div>
-        <div className={styles.galerie14}><img src={galerie14}/></div>
-        <div className={styles.galerie15}><img src={galerie15}/></div>
+        <div className={styles.galerie1}>
+          <img src={galerie1} />
+        </div>
+        <div className={styles.galerie2}>
+          <img src={galerie2} />
+        </div>
+        <div className={styles.galerie3}>
+          <img src={galerie3} />
+        </div>
+        <div className={styles.galerie4}>
+          <img src={galerie4} />
+        </div>
+        <div className={styles.galerie5}>
+          <img src={galerie5} />
+        </div>
+        <div className={styles.galerie6}>
+          <img src={galerie6} />
+        </div>
+        <div className={styles.galerie7}>
+          <img src={galerie7} />
+        </div>
+        <div className={styles.galerie8}>
+          <img src={galerie8} />
+        </div>
+        <div className={styles.galerie9}>
+          <img src={galerie9} />
+        </div>
+        <div className={styles.galerie10}>
+          <img src={galerie10} />
+        </div>
+        <div className={styles.galerie11}>
+          <img src={galerie11} />
+        </div>
+        <div className={styles.galerie12}>
+          <img src={galerie12} />
+        </div>
+        <div className={styles.galerie13}>
+          <img src={galerie13} />
+        </div>
+        <div className={styles.galerie14}>
+          <img src={galerie14} />
+        </div>
+        <div className={styles.galerie15}>
+          <img src={galerie15} />
+        </div>
       </div>
     </Layout>
   );

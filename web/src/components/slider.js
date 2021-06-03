@@ -20,7 +20,7 @@ const Slider = ({ data, count }) => (
         <img src={game[count].logo.asset.url} alt="" width="297" height="281" />
         <h1 className={styles.title}> {game[count].title} </h1>
         <PortableText
-          blocks={game[count]._rawDescription}
+          blocks={game[count].description._rawFr}
           className={styles.desc}
         />
         <button>
@@ -42,7 +42,10 @@ export default function MySlider(props) {
                 slug {
                   current
                 }
-                _rawDescription
+                description {
+                  _rawFr
+                  _rawEn
+                }
                 logo {
                   asset {
                     url
