@@ -71,27 +71,32 @@ const PressePage = (props) => {
         ))}
         {data.allSanityPost.edges.map((element) => (
           <React.Fragment>
-            {console.log(element)}
-            {element.node.cote && element.node.cote === "gauche" && (
-              <div
-                className={styles.articlesDroite}
-                data-pos={element.node.cote}
-              >
-                <h1> {element.node.title.fr} </h1>
-                <PortableText blocks={element.node.excerpt._rawFr} />
-                <img src={element.node.mainImage.asset.url} alt="" />
+            <div className={styles.container}>
+              <div className={styles.gauche}>
+                {element.node.cote && element.node.cote === "gauche" && (
+                  <div
+                    className={styles.articlesGauche}
+                    data-pos={element.node.cote}
+                  >
+                    <h1> {element.node.title.fr} </h1>
+                    <PortableText blocks={element.node.excerpt._rawFr} />
+                    <img src={element.node.mainImage.asset.url} alt="" />
+                  </div>
+                )}
               </div>
-            )}
-            {element.node.cote && element.node.cote === "droite" && (
-              <div
-                className={styles.articlesGauche}
-                data-pos={element.node.cote}
-              >
-                <h1> {element.node.title.fr} </h1>
-                <PortableText blocks={element.node.excerpt._rawFr} />
-                <img src={element.node.mainImage.asset.url} alt="" />
+              <div className={styles.droite}>
+                {element.node.cote && element.node.cote === "droite" && (
+                  <div
+                    className={styles.articlesDroite}
+                    data-pos={element.node.cote}
+                  >
+                    <h1> {element.node.title.fr} </h1>
+                    <PortableText blocks={element.node.excerpt._rawFr} />
+                    <img src={element.node.mainImage.asset.url} alt="" />
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </React.Fragment>
         ))}
       </div>
