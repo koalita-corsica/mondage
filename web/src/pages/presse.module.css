@@ -15,63 +15,87 @@
   font-family: "FuturaLight";
   src: url("../fonts/FuturaPTLight.otf");
 }
-p {
+p * {
   font-family: "FuturaText";
-}
-
-h1 {
-  font-family: "Reislust";
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .wrapperPresse {
   width: auto;
   height: auto;
-  background-color: red;
   margin-left: 17vw;
   margin-right: 17vw;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  column-gap: 6vw;
+}
+.wrapperPresse * {
+  color: #685950;
+  text-align: left;
 }
 
-.presse {
-  grid-area: 1/1/2/3;
-}
 .presse h1 {
   font-size: 100px;
+  font-family: "Reislust";
+  line-height: 0;
+}
+.presse h2 {
+  font-size: 25px;
+  line-height: 1.5;
 }
 
-.articlesDroite {
-  grid-column: 2 span 3;
+.container {
   display: flex;
-  flex-direction: column;
-  display: block;
-  width: 100%;
-  object-fit: fill;
-  border-radius: 5px;
-}
-.articlesDroite h1 {
-  font-size: 65px;
-}
-.articlesDroite img {
-  width: 70%;
+  column-gap: 4vw;
+  padding-bottom: 15vh;
 }
 
-.articlesGauche {
-  grid-column: 1 span 2;
-  background-color: yellow;
+.gauche {
   display: flex;
   flex-direction: column;
-  display: block;
   width: 100%;
-  object-fit: fill;
   border-radius: 5px;
 }
-.articlesGauche h1 {
+.gauche .articlesGauche {
+  border-bottom: #707070 solid 1px;
+}
+.gauche .articlesGauche h1 {
   font-size: 65px;
 }
-.articlesGauche img {
-  width: 70%;
+.gauche .articlesGauche .block {
+  width: 90%;
+  line-height: 1.5;
+  padding-bottom: 4vh;
+}
+.gauche .articlesGauche .block img {
+  width: 80%;
+}
+
+.gauche .articlesGauche:last-child {
+  border: none;
+}
+
+.droite {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.droite .articlesDroite {
+  border-bottom: #707070 solid 2px;
+}
+.droite .articlesDroite h1 {
+  font-size: 65px;
+}
+.droite .articlesDroite .block {
+  width: 90%;
+  line-height: 1.5;
+  padding-bottom: 4vh;
+}
+.droite .articlesDroite .block img {
+  width: 80%;
+}
+
+.droite .articlesDroite:last-child {
+  border: none;
 }
 
 /*# sourceMappingURL=presse.module.css.map */

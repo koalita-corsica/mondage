@@ -24,64 +24,88 @@ $font-text:20px;
     font-family: "FuturaLight";
     src: url("../fonts/FuturaPTLight.otf");
 }
-p {
+
+p * {
     font-family: "FuturaText";
+    font-size: $font-text;
+    line-height: 1.5;
+    
 }
-h1{
-    font-family: "Reislust";
-}
+
 .wrapperPresse{
     width: auto;
     height: auto;
-    background-color: red;
     margin-left: 17vw;
     margin-right: 17vw;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    column-gap: 6vw;
-    
-    
-   
+    * {
+        color: $color-fontBrown;
+        text-align: left;
+    }
+
 }
 .presse{
-    grid-area: 1/1/2/3;
     h1{
         font-size: 100px;
+        font-family: "Reislust";
+        line-height: 0;
     }
+    h2{
+        font-size: $font-subtitle;
+        line-height: 1.5;
+    }
+    
 }
-.articlesDroite{
-    grid-column: 2 span 3;
+.container{
+    display: flex;
+    column-gap: 4vw;
+    padding-bottom: 15vh;
+}
+.gauche{
     display: flex;
     flex-direction: column;
-    
-    h1{
-        font-size: 65px;
-    }
-    display: block;
     width: 100%;
-    
-    object-fit: fill;
     border-radius: 5px;
-    img{
-        width: 70%;
+    .articlesGauche{
+        h1{
+            font-size: 65px;
+        }
+        .block{
+            width: 90%;
+            line-height: 1.5;
+            img{
+                width: 80%;
+            }
+            padding-bottom: 4vh;
+        }
+        border-bottom: $color-line solid 1px;
     }
 }
-.articlesGauche{
-    grid-column: 1 span 2;
-    background-color: yellow;
+.gauche .articlesGauche:last-child{
+    border: none;
+}
+.droite{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    
-    h1{
-        font-size: 65px;
-    }
-    display: block;
-    width: 100%;
-    
-    object-fit: fill;
     border-radius: 5px;
-    img{
-        width: 70%;
+    .articlesDroite{
+        h1{
+            font-size: 65px;
+        }
+        
+        .block{
+            width: 90%;
+            line-height: 1.5;
+            img{
+                width: 80%;
+            }
+            padding-bottom: 4vh;
+        }
+        border-bottom: $color-line solid 2px;
     }
+    
+}
+.droite .articlesDroite:last-child{
+    border: none;
 }
 

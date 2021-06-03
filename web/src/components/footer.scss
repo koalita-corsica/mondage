@@ -58,7 +58,7 @@ $font-text:20px;
     justify-self: center;
     a{
         font-family: "Reislust" !important;
-        font-size: 4.62em;
+        font-size: $font-title;
         line-height: 1;
     }
     
@@ -91,7 +91,7 @@ $font-text:20px;
         .li{
             margin-top: 2vh;
             font-family: "FuturaLight";
-            border-bottom: $color-fontBrown solid 2px;
+            border-bottom: $color-line solid 2px;
             
         }
     }
