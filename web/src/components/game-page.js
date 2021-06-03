@@ -61,13 +61,10 @@ function GamePage(props) {
             </div>
           </div>
         </div>
-      ))}
-      ;
-      <div className={styles.btt}>
-        <Link to={"/game/" + `${slug.current}`}>
-          <BsArrowUp className={styles.icon} /> <p>HAUT DE PAGE</p>{" "}
-        </Link>
-      </div>
+      ))};
+        <div className={styles.btt}>
+            <Link to='/game/laudria'> <BsArrowUp className={styles.icon}/> <p>HAUT DE PAGE</p> </Link>
+        </div>
     </div>
   );
 }
