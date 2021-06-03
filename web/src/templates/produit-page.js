@@ -11,23 +11,26 @@ export const query = graphql`
   query ProduitTemplateQuery($id: String!) {
     post: sanityProduit(id: { eq: $id }) {
       id
-        slug {
-          current
-        }
-        game {
-          logo {
-            asset {
-              url
-            }
-          }
-          title
-        }
-        _rawFiche
-        image {
+      slug {
+        current
+      }
+      game {
+        logo {
           asset {
             url
           }
         }
+        title
+      }
+      fiche {
+        _rawEn
+        _rawFr
+      }
+      image {
+        asset {
+          url
+        }
+      }
     }
   }
 `;

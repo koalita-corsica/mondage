@@ -20,13 +20,19 @@ export const query = graphql`
           url
         }
       }
-      _rawDescription
+      description {
+        _rawEn
+        _rawFr
+      }
       produits {
         genre
         slug {
           current
         }
-        _rawDescription
+        description {
+          _rawEn
+          _rawFr
+        }
         image {
           asset {
             url

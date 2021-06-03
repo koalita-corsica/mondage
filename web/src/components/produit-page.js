@@ -10,7 +10,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "gatsby";
 
 function ProduitPage(props) {
-  const { _rawFiche, game, image } = props;
+  const { fiche, game, image } = props;
   return (
     <div className={styles.wrapperProduit}>
       <Link to="/vins" className={styles.retour}>
@@ -22,7 +22,7 @@ function ProduitPage(props) {
         <img src={game.logo.asset.url} alt="" className={styles.logo} />
         <h1> {game.title} </h1>
         <div className={styles.desc}>
-          <PortableText blocks={_rawFiche} />
+          <PortableText blocks={fiche._rawFr} />
         </div>
       </div>
     </div>

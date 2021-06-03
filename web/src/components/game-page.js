@@ -15,7 +15,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { sr } from "date-fns/locale";
 
 function GamePage(props) {
-  const { title, produits, logo, _rawDescription, slug } = props;
+  const { title, produits, logo, description, slug } = props;
   console.log(produits);
 
   return (
@@ -40,10 +40,10 @@ function GamePage(props) {
         </div>
       </div>
       <div className={styles.desc}>
-        <p className={styles.title}> {title} </p>
+        <p className={styles.title}> {title.fr} </p>
         <img src={logo.asset.url} alt="" className={styles.logo} />
         <div className={styles.descText}>
-          <PortableText blocks={_rawDescription} />
+          <PortableText blocks={description._rawFr} />
         </div>
       </div>
       {produits.map((item) => (
@@ -53,7 +53,7 @@ function GamePage(props) {
               <img src={item.image.asset.url} alt="" width="359" height="720" />
               <div className={styles.gameText}>
                 <h1> {item.genre} </h1>
-                <PortableText blocks={item._rawDescription} />
+                <PortableText blocks={item.description._rawFr} />
                 <Link to={"/produit/" + `${item.slug.current}`}>
                   <button> Fiche Produit </button>{" "}
                 </Link>
