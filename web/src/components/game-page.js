@@ -9,9 +9,9 @@ import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 import { Link } from "gatsby";
 import * as styles from "../components/game.module.css";
-import { BsArrowLeft } from 'react-icons/bs';
-import { BsArrowUp } from 'react-icons/bs';
-import { IoIosArrowBack } from 'react-icons/io';
+import { BsArrowLeft } from "react-icons/bs";
+import { BsArrowUp } from "react-icons/bs";
+import { IoIosArrowBack } from "react-icons/io";
 import { sr } from "date-fns/locale";
 
 function GamePage(props) {

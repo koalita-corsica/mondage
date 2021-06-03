@@ -39,18 +39,9 @@ h1{
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 6vw;
-    [data-pos="droite"]{
-        background-color: yellow;
-        grid-column: 2 span 3;
-    
-    }
-    [data-pos="gauche"]{
-        background-color: pink;
-        grid-column: 1 span 2;
-    
-    }
     
     
+   
 }
 .presse{
     grid-area: 1/1/2/3;
@@ -58,7 +49,26 @@ h1{
         font-size: 100px;
     }
 }
-.articles{
+.articlesDroite{
+    grid-column: 2 span 3;
+    display: flex;
+    flex-direction: column;
+    
+    h1{
+        font-size: 65px;
+    }
+    display: block;
+    width: 100%;
+    
+    object-fit: fill;
+    border-radius: 5px;
+    img{
+        width: 70%;
+    }
+}
+.articlesGauche{
+    grid-column: 1 span 2;
+    background-color: yellow;
     display: flex;
     flex-direction: column;
     
