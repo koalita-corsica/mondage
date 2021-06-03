@@ -61,14 +61,19 @@ h1 {
   text-align: center;
   width: 100%;
 }
+.desc * {
+  color: #685950;
+}
 .desc .title {
   font-family: "Reislust";
-  text-transform: uppercase;
-  font-size: 19em;
+  font-size: 302px;
 }
 .desc .descText {
   justify-content: space-around;
   display: flex;
+}
+.desc .descText * {
+  line-height: 1.5;
 }
 .desc .descText :first-child {
   width: 44vw;
@@ -89,19 +94,20 @@ h1 {
   background-color: #D9D9D7;
 }
 
-.game {
-  line-height: 1;
+.game * {
+  color: #685950;
+  line-height: 1.5;
 }
 .game .gameBg2 {
   margin-left: 23vw;
-  margin-right: 23vw;
+  margin-right: 17vw;
   display: flex;
 }
 .game .gameText {
   justify-self: center;
   align-self: center;
 }
-.game h3 {
+.game h2 {
   line-height: 2;
   font-size: 25px;
 }

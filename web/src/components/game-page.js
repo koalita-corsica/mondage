@@ -40,7 +40,7 @@ function GamePage(props) {
         </div>
       </div>
       <div className={styles.desc}>
-        <p className={styles.title}> {title.fr} </p>
+        <p className={styles.title}> {title} </p>
         <img src={logo.asset.url} alt="" className={styles.logo} />
         <div className={styles.descText}>
           <PortableText blocks={description._rawFr} />

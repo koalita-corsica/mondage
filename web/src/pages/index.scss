@@ -153,6 +153,9 @@ $font-text:20px;
     display: grid;
     grid-template-columns: 25vw 75vw;
     width: 100%;
+    * {
+        color: $color-fontBrown;
+    }
     .sliderimg{
         background: url("../asset/accueilnosvins.jpg");
         background-size: cover;
@@ -166,12 +169,12 @@ $font-text:20px;
         margin: 2vw;
     }
     .slider{
-        
         display: flex;
         justify-content: space-around;
         align-items: center;
         svg {
-            font-size: 75px;
+            height: 100px;
+            width: 100px;
             path{
             color: $color-fontBrown;
             }
@@ -197,6 +200,9 @@ $font-text:20px;
     height: 94vh;
     display: flex;
     justify-content: space-between;
+    * {
+        color: $color-fontBrown;
+    }
     .pressimg{
         background: url("../asset/accueilpresse.jpg");
         background-size: cover;

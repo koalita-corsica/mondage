@@ -19,8 +19,8 @@ function ProduitPage(props) {
       </Link>
       <img src={image.asset.url} alt="" className={styles.bouteille} />
       <div className={styles.game}>
-        <img src={game.logo.asset.url} alt="" className={styles.logo} />
         <h1> {game.title} </h1>
+        <img src={game.logo.asset.url} alt="" className={styles.logo} />
         <div className={styles.desc}>
           <PortableText blocks={fiche._rawFr} />
         </div>

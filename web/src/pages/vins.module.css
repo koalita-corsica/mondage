@@ -48,7 +48,7 @@
   width: 356px;
 }
 .domainContain .gammes .logo {
-  width: 70%;
+  width: 165px;
   height: auto;
 }
 .domainContain .gammes .block {
@@ -67,18 +67,17 @@
 .domainContain .gammes .block p {
   font-family: "FuturaText";
   font-size: 20px;
+  line-height: 1.5;
 }
 .domainContain .gammes .block h2 {
   font-family: "FuturaText";
   font-size: 20px;
+  line-height: 1.5;
 }
 .domainContain .gammes .block h1 {
   font-family: "Reislust";
   font-size: 90px;
   margin: 0 auto;
-}
-.domainContain .gammes .block h1::first-letter {
-  color: red;
 }
 
 /*# sourceMappingURL=vins.module.css.map */

@@ -136,6 +136,9 @@
   grid-template-columns: 25vw 75vw;
   width: 100%;
 }
+.section3 * {
+  color: #685950;
+}
 .section3 .sliderimg {
   background: url("../asset/accueilnosvins.jpg");
   background-size: cover;
@@ -154,7 +157,8 @@
   align-items: center;
 }
 .section3 .slider svg {
-  font-size: 75px;
+  height: 100px;
+  width: 100px;
 }
 .section3 .slider svg path {
   color: #685950;
@@ -176,6 +180,9 @@
   height: 94vh;
   display: flex;
   justify-content: space-between;
+}
+.section4 * {
+  color: #685950;
 }
 .section4 .pressimg {
   background: url("../asset/accueilpresse.jpg");
