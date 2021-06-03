@@ -12,11 +12,17 @@ export const query = graphql`
     post: sanityPost(id: { eq: $id }) {
       id
       publishedAt
-      title
+      title {
+        fr
+        en
+      }
       slug {
         current
       }
-      _rawExcerpt(resolveReferences: { maxDepth: 5 })
+      excerpt {
+        _rawEn
+        _rawFr
+      }
       authors {
         _key
         author {

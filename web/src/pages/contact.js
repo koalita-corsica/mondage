@@ -17,9 +17,15 @@ export const query = graphql`
     allSanityPage {
       edges {
         node {
-          title
+          title {
+            fr
+            en
+          }
           pageBuilder {
-            title1
+            title1 {
+              fr
+              en
+            }
             _rawDesc
           }
         }

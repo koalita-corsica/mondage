@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name */
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { graphql } from "gatsby";
@@ -21,10 +23,19 @@ export const query = graphql`
     allSanityPage(filter: { slug: { current: { eq: "accueil" } } }) {
       edges {
         node {
-          title
+          title {
+            fr
+            en
+          }
           pageBuilder {
-            title1
-            _rawDesc
+            title1 {
+              fr
+              en
+            }
+            desc {
+              _rawEn
+              _rawFr
+            }
           }
         }
       }
@@ -60,10 +71,14 @@ const IndexPage = (props) => {
   function translateLoad() {
     const blockPara = document.querySelector("#block1");
     const bottle = document.querySelector("#bottle");
-    blockPara.setAttribute('style', 'opacity: 1; transform: translateX(0%); transition: all 1.8s');
-    bottle.setAttribute('style', 'opacity: 1; transform: translateX(0%); transition: all 1.8s');
-
-
+    blockPara.setAttribute(
+      "style",
+      "opacity: 1; transform: translateX(0%); transition: all 1.8s"
+    );
+    bottle.setAttribute(
+      "style",
+      "opacity: 1; transform: translateX(0%); transition: all 1.8s"
+    );
   }
   window.addEventListener("scroll", () => {
     const blockPara = document.querySelector("#block1");
@@ -73,44 +88,74 @@ const IndexPage = (props) => {
     var i = 0;
     console.log(window.scrollY);
     if (window.scrollY == i) {
-      blockPara.setAttribute('style', 'opacity: 1; transform: translateX(0%); transition: all 1s');
+      blockPara.setAttribute(
+        "style",
+        "opacity: 1; transform: translateX(0%); transition: all 1s"
+      );
       bottle.style.transform = "translateX(0%)";
     }
     if (window.scrollY > 99) {
-      blockPara.setAttribute('style', 'opacity: 0.9; transform: translateX(15%); transition: all 1s');
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.9; transform: translateX(15%); transition: all 1s"
+      );
       bottle.style.transform = "translateX(-15%)";
     }
     if (window.scrollY > 199) {
       // blockPara.style.transform = "translateX(50%)";
-      blockPara.setAttribute('style', 'opacity: 0.8; transform: translateX(30%); transition: all 1s');
-      bottle.style.transform = "translateX(-30%)"; 
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.8; transform: translateX(30%); transition: all 1s"
+      );
+      bottle.style.transform = "translateX(-30%)";
     }
     if (window.scrollY > 299) {
-      blockPara.setAttribute('style', 'opacity: 0.7; transform: translateX(45%); transition: all 1s');
-      bottle.style.transform = "translateX(-45%)";  
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.7; transform: translateX(45%); transition: all 1s"
+      );
+      bottle.style.transform = "translateX(-45%)";
     }
     if (window.scrollY > 399) {
-      blockPara.setAttribute('style', 'opacity: 0.6; transform: translateX(60%); transition: all 1s');
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.6; transform: translateX(60%); transition: all 1s"
+      );
       bottle.style.transform = "translateX(-60%)";
     }
     if (window.scrollY > 499) {
-      blockPara.setAttribute('style', 'opacity: 0.5; transform: translateX(75%); transition: all 1s');
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.5; transform: translateX(75%); transition: all 1s"
+      );
       bottle.style.transform = "translateX(-75%)";
     }
     if (window.scrollY > 599) {
-      blockPara.setAttribute('style', 'opacity: 0.4; transform: translateX(90%); transition: all 1s');
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.4; transform: translateX(90%); transition: all 1s"
+      );
       bottle.style.transform = "translateX(-90%)";
     }
     if (window.scrollY > 699) {
-      blockPara.setAttribute('style', 'opacity: 0.3; transform: translateX(105%); transition: all 1s');
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.3; transform: translateX(105%); transition: all 1s"
+      );
       bottle.style.transform = "translateX(-105%)";
     }
     if (window.scrollY > 799) {
-      blockPara.setAttribute('style', 'opacity: 0.2; transform: translateX(120%); transition: all 1s');
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.2; transform: translateX(120%); transition: all 1s"
+      );
       bottle.style.transform = "translateX(-120%)";
     }
     if (window.scrollY > 899) {
-      blockPara.setAttribute('style', 'opacity: 0.1; transform: translateX(135%); transition: all 1s');
+      blockPara.setAttribute(
+        "style",
+        "opacity: 0.1; transform: translateX(135%); transition: all 1s"
+      );
       bottle.style.transform = "translateX(-135%)";
     }
     // if (window.scrollY > 799) {
@@ -123,22 +168,31 @@ const IndexPage = (props) => {
     // }
   });
 
+  const serializers = {
+    types: {
+      code: (props) => (
+        <pre data-language={props.node.language}>
+          <code>{props.node.code}</code>
+        </pre>
+      ),
+    },
+  };
+
   return (
     <Layout>
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
-          
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
-              <img src={bottle} className={styles.bottle} id="bottle"/>
+              <img src={bottle} className={styles.bottle} id="bottle" />
               <div className={styles.block1} id="block1" onScroll={{}}>
                 <div className={styles.title}>
-                  {" "}
-                  {item.node.pageBuilder[0].title1}{" "}
+                  {item.node.pageBuilder[0].title1.fr}{" "}
                 </div>
                 <PortableText
-                  blocks={item.node.pageBuilder[0]._rawDesc}
+                  blocks={item.node.pageBuilder[0].desc._rawFr}
                   className={styles.text}
+                  serializers={serializers}
                 />
                 <button className={styles.gamme}>
                   <Link to="/vins" className={styles.a}>
@@ -150,10 +204,13 @@ const IndexPage = (props) => {
             <div className={styles.section2}>
               <div className={styles.title}>
                 {" "}
-                {item.node.pageBuilder[1].title1}{" "}
+                {item.node.pageBuilder[1].title1.fr}{" "}
               </div>
               <img src={domainImg} className={styles.domainimg} />
-              <PortableText blocks={item.node.pageBuilder[1]._rawDesc} />
+              <PortableText
+                blocks={item.node.pageBuilder[1].desc._rawFr}
+                serializers={serializers}
+              />
               <button className={styles.gamme}>
                 <Link to="/domaine" className={styles.a}>
                   EN SAVOIR PLUS
@@ -165,7 +222,7 @@ const IndexPage = (props) => {
               <div className={styles.sliderContain}>
                 <div className={styles.title}>
                   {" "}
-                  {item.node.pageBuilder[2].title1}{" "}
+                  {item.node.pageBuilder[2].title1.fr}{" "}
                 </div>
                 <div className={styles.slider}>
                   <IoIosArrowBack onClick={moins} />
@@ -178,10 +235,13 @@ const IndexPage = (props) => {
               <div className={styles.pressContain}>
                 <div className={styles.title}>
                   {" "}
-                  {item.node.pageBuilder[3].title1}{" "}
+                  {item.node.pageBuilder[3].title1.fr}{" "}
                 </div>
                 <div className={styles.pressBlock}>
-                  <PortableText blocks={item.node.pageBuilder[3]._rawDesc} />
+                  <PortableText
+                    blocks={item.node.pageBuilder[3].desc._rawFr}
+                    serializers={serializers}
+                  />
                   <button className={styles.gamme}>
                     <Link to="/presse">VOIR LES ARTICLES</Link>
                   </button>
