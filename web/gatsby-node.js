@@ -50,9 +50,7 @@ async function CreateGamePages(graphql, actions) {
   const { createPage } = actions;
   const result = await graphql(`
     {
-      allSanityGame(
-        filter: { slug: { current: { ne: null } }}
-      ) {
+      allSanityGame(filter: { slug: { current: { ne: null } } }) {
         edges {
           node {
             id
@@ -85,46 +83,43 @@ async function CreateGamePages(graphql, actions) {
 
   const postEdges = (result.data.allSanityGame || {}).edges || [];
 
-  postEdges
-    .forEach((edge) => {
-      const { id, slug = {}} = edge.node;
-      const path = `/game/${slug.current}/`;
+  postEdges.forEach((edge) => {
+    const { id, slug = {} } = edge.node;
+    const path = `/game/${slug.current}/`;
 
-      createPage({
-        path,
-        component: require.resolve("./src/templates/game-page.js"),
-        context: { id },
-      });
+    createPage({
+      path,
+      component: require.resolve("./src/templates/game-page.js"),
+      context: { id },
     });
+  });
 }
 
 async function ProduitPages(graphql, actions) {
   const { createPage } = actions;
   const result = await graphql(`
     {
-      allSanityProduit(
-        filter: { slug: { current: { ne: null } }}
-      ) {
+      allSanityProduit(filter: { slug: { current: { ne: null } } }) {
         edges {
           node {
             id
-        slug {
-          current
-        }
-        game {
-          logo {
-            asset {
-              url
+            slug {
+              current
             }
-          }
-          title
-        }
-        _rawFiche
-        image {
-          asset {
-            url
-          }
-        }
+            game {
+              logo {
+                asset {
+                  url
+                }
+              }
+              title
+            }
+            _rawFiche
+            image {
+              asset {
+                url
+              }
+            }
           }
         }
       }
@@ -135,17 +130,16 @@ async function ProduitPages(graphql, actions) {
 
   const postEdges = (result.data.allSanityProduit || {}).edges || [];
 
-  postEdges
-    .forEach((edge) => {
-      const { id, slug = {}} = edge.node;
-      const path = `/produit/${slug.current}`;
+  postEdges.forEach((edge) => {
+    const { id, slug = {} } = edge.node;
+    const path = `/produit/${slug.current}`;
 
-      createPage({
-        path,
-        component: require.resolve("./src/templates/produit-page.js"),
-        context: { id },
-      });
+    createPage({
+      path,
+      component: require.resolve("./src/templates/produit-page.js"),
+      context: { id },
     });
+  });
 }
 
 exports.createPages = async ({ graphql, actions }) => {
