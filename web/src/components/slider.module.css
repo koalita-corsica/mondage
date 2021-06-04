@@ -23,14 +23,13 @@
 }
 .slide {
     display: flex;
-    flex-direction: row;
 }
 
 .content{
-    width: 40vw;
+    
 }
 .title{
-    font-size: 5.3em;
+    font-size: 85px;
     font-family: "Reislust";
 }
 button{

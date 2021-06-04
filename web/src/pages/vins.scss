@@ -57,7 +57,7 @@ $font-text:20px;
         align-items: center;
         width: 356px;
         .logo{
-            width: 70%;
+            width: 165px;
             height: auto;
         }
         .block{
@@ -75,19 +75,19 @@ $font-text:20px;
             p {
                 font-family: "FuturaText";
                 font-size: 20px;
+                line-height: 1.5;
             }
             h2 {
                 font-family: "FuturaText";
                 font-size: 20px;
+                line-height: 1.5;
             }
             h1{
                 font-family:  "Reislust";
                 font-size: 90px;
                 margin: 0 auto;
             }
-            h1::first-letter{
-                color: red;
-            }
+            
         }
         
     }

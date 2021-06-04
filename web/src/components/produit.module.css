@@ -15,80 +15,81 @@
   font-family: "FuturaLight";
   src: url("../fonts/FuturaPTLight.otf");
 }
-* {
-  color: #685950;
-}
-
 p {
   font-family: "FuturaText";
-  font-size: 15px;
+  font-size: 20px;
 }
 
 h1 {
   font-family: "Reislust";
-  font-size: 50px;
+  font-size: 7.2em;
 }
 
 .wrapperProduit {
-  display: flex;
+  display: grid;
+  grid-template-columns: 10vw repeat(2, 1fr);
   margin-left: 6vw;
   margin-right: 6vw;
   margin-bottom: 6vw;
-  height: 94vh;
+  height: 104vh;
   background-color: white;
 }
-.wrapperProduit .bouteille {
-  margin-top: 4vh;
-  width: 29.58vw;
-  height: 110vh;
+.wrapperProduit * {
+  color: #685950;
 }
-.wrapperProduit .logo {
-  background-color: green;
-  width: 9vw;
-  height: 27vh;
-  float: right;
+.wrapperProduit .bouteille {
+  padding-top: 4vw;
+  width: 30vw;
+  height: auto;
 }
 .wrapperProduit .retour {
   display: flex;
   text-decoration: none;
+  margin-top: 6vw;
   align-items: center;
-  justify-self: right;
+  justify-content: center;
+  height: 100px;
 }
-.wrapperProduit .arrow {
+.wrapperProduit .retour .arrow {
   font-size: 58px;
 }
-.wrapperProduit .back {
-  font-size: 20px;
+.wrapperProduit .retour .back {
+  height: 58px;
+  font-size: 25px;
   font-family: "FuturaSub";
+  line-height: 2;
 }
 .wrapperProduit .game {
-  height: 100%;
+  align-self: center;
+  margin-right: 6vw;
   display: block;
-  flex-direction: column;
-  background-color: pink;
+  width: auto;
+  height: auto;
+}
+.wrapperProduit .game .logo {
+  width: auto;
+  height: 254px;
+  margin-top: -10vh;
+  float: right;
+  margin-right: 5vw;
+  margin-left: 2.5vw;
 }
 .wrapperProduit .game h1 {
-  font-size: 9.4em;
-  text-transform: uppercase;
+  width: auto;
+  font-size: 150px;
   line-height: 0;
 }
 .wrapperProduit .game .desc {
-  background-color: red;
-  width: 44vw;
-  height: auto;
-  font-size: 15px;
+  width: 100%;
+  padding-right: 5vw;
 }
 .wrapperProduit .game .desc * {
-  line-height: 2em;
+  line-height: 1.5;
 }
-.wrapperProduit .game .desc code {
-  font-size: 15px;
-  font-family: "FuturaSub";
+.wrapperProduit .game .desc div p:first-child {
+  font-size: 20px;
+  font-family: "FuturaText";
   font-style: oblique;
-  width: 50%;
-}
-.wrapperProduit .game .desc p {
-  line-height: 1.2;
 }
 
 /*# sourceMappingURL=produit.module.css.map */
