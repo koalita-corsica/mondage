@@ -1,0 +1,111 @@
+@import "../pages/normalize.module.css";
+$color-fontWhite: #E3E3DC;
+$color-fontBrown: #685950;
+$color-backgroundGrey:#D9D9D7;
+$color-backgroundLightGrey:#E3E3DC;
+$color-button:#A8957E;
+$color-line:#707070;
+$font-title:7.2em;
+$font-subtitle:25px;
+$font-text:20px;
+@font-face {
+    font-family: "Reislust";
+    src: url("../fonts/Reislust-97D7.ttf");
+}
+@font-face {
+    font-family: "FuturaText";
+    src: url("../fonts/FuturaPTBook.otf");
+}
+@font-face {
+    font-family: "FuturaSub";
+    src: url("../fonts/FuturaPTCondMedium.otf");
+}
+@font-face {
+    font-family: "FuturaLight";
+    src: url("../fonts/FuturaPTLight.otf");
+}
+.wrapperAccueil{
+    display: flex;
+    flex-direction: column;
+    
+}
+.slide {
+    display: flex;
+    
+}
+.sliderBot{
+    width: 25vw;
+    height: auto;
+}
+@media (max-width: 750px){
+    .sliderBot{
+        height: auto;
+        width: 40vw;
+    }
+}
+
+.sliderLogo{
+    width:15vw; 
+    height:auto;
+    margin: 0 auto;
+}
+@media (max-width: 750px){
+    .sliderLogo{
+        width: 20vw;
+    }
+}
+
+    
+.content{
+    width: 30vw;
+    @media (max-width: 750px){
+        width: 45vw;
+        margin: 0 auto;
+        
+    }
+    .title{
+        font-size: 85px;
+        font-family: "Reislust";
+        font-weight: normal;
+        line-height: 0;
+        @media (max-width: 750px){
+            font-size: 48px;
+        }
+    }
+    .content p {
+        width: 90% !important;
+    }
+    button{
+        margin-top: 3vh;
+        background-color: transparent;
+        border: 3px solid #A8957E;
+        border-radius: 4px;   
+        width: 10vw;
+        height: 4.5vh; 
+        @media (max-width: 750px){
+            width: auto;
+            margin-top: 1vh;
+            margin-bottom: 2vh;
+            
+        }
+        .btn{
+            font-size: 20px;
+            text-decoration: none;
+            font-family: "FuturaText";
+            color: $color-button;
+            @media (max-width: 750px){
+                margin: 2vw; 
+            }
+            
+        }
+    }
+    button:hover{
+        background-color: $color-button;
+        .btn{
+            color: $color-backgroundLightGrey;
+        }
+    }
+}
+
+
+

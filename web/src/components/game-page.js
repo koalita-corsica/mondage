@@ -18,6 +18,7 @@ function GamePage(props) {
   const { title, produits, logo, description, slug } = props;
   console.log(produits);
 
+  
   return (
     <div className={styles.wrapper}>
       <div className={styles.bandeau}>
@@ -28,13 +29,19 @@ function GamePage(props) {
         <div className={styles.img}>
           {produits.map((item) => (
             <Link to={"#" + `${item.slug.current}`}>
-              {" "}
-              <img
-                src={item.image.asset.url}
-                alt=""
-                width="359"
-                height="720"
-              />{" "}
+              <div
+                style={{
+                  background: `url(${item.image.asset.url})`,
+                  backgroundSize: "25vh",
+                  backgroundRepeat: "no-repeat",
+                  height: "100%",
+                  width: "13vw",
+                  backgroundPositionX: "center",
+                  backgroundPositionY: "10vh",
+                  
+                }}
+                className={styles.btl}
+              />
             </Link>
           ))}
         </div>
@@ -50,7 +57,7 @@ function GamePage(props) {
         <div className={styles.gameBg} id={item.slug.current}>
           <div className={styles.game}>
             <div className={styles.gameBg2}>
-              <img src={item.image.asset.url} alt="" width="359" height="720" />
+              <img src={item.image.asset.url} alt=""  />
               <div className={styles.gameText}>
                 <h1> {item.genre} </h1>
                 <PortableText blocks={item.description._rawFr} />

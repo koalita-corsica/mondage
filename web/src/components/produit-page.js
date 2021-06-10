@@ -25,6 +25,7 @@ function ProduitPage(props) {
           <PortableText blocks={fiche._rawFr} />
         </div>
       </div>
+      <img src={game.logo.asset.url} alt="" className={styles.logo2} />
     </div>
   );
 }

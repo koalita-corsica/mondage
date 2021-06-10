@@ -21,6 +21,11 @@
   background-position: center 23%;
   background-size: cover;
 }
+@media (max-width: 750px) {
+  .bandeau {
+    height: 13vh;
+  }
+}
 
 .domainContain {
   display: flex;
@@ -37,15 +42,17 @@
 }
 .domainContain .content {
   display: flex;
-  justify-content: space-between;
-  gap: 5vw;
+}
+@media (max-width: 750px) {
+  .domainContain .content {
+    flex-direction: column;
+  }
 }
 .domainContain .gammes {
-  margin: 2vh auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 356px;
+  margin: 5vw;
 }
 .domainContain .gammes .logo {
   width: 165px;
@@ -60,14 +67,39 @@
   flex-direction: column;
   text-align: center;
 }
+@media (max-width: 750px) {
+  .domainContain .gammes .block {
+    border-radius: 0;
+    width: 80%;
+  }
+}
 .domainContain .gammes .block button {
+  margin: 2vw;
+  border: 3px solid #A8957E;
+  background-color: transparent;
+  border-radius: 4px;
+  align-self: center;
+  width: 40%;
+  height: auto;
+  padding: 5px;
+}
+.domainContain .gammes .block button a {
+  text-decoration: none;
+  font-family: "FuturaText";
+  font-size: 20px;
   color: #A8957E;
-  margin: 2vh auto;
+}
+.domainContain .gammes .block button:hover {
+  background-color: #A8957E;
+}
+.domainContain .gammes .block button:hover a {
+  color: #E3E3DC;
 }
 .domainContain .gammes .block p {
   font-family: "FuturaText";
   font-size: 20px;
   line-height: 1.5;
+  margin: 2vh;
 }
 .domainContain .gammes .block h2 {
   font-family: "FuturaText";
@@ -76,7 +108,7 @@
 }
 .domainContain .gammes .block h1 {
   font-family: "Reislust";
-  font-size: 90px;
+  font-size: 5.625em;
   margin: 0 auto;
 }
 

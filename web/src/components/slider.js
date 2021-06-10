@@ -10,21 +10,19 @@ const Slider = ({ data, count }) => (
   data.allSanityGame.edges.map((item) => game.push(item.node)),
   (
     <div className={styles.slide}>
-      <img
+      <img className={styles.sliderBot}
         src={game[count].produits[0].image.asset.url}
         alt=""
-        width="357"
-        height="703"
       />
       <div className={styles.content}>
-        <img src={game[count].logo.asset.url} alt="" width="297" height="281" />
+        <img src={game[count].logo.asset.url} alt=""  className={styles.sliderLogo}/>
         <h1 className={styles.title}> {game[count].title} </h1>
         <PortableText
           blocks={game[count].description._rawFr}
           className={styles.desc}
         />
         <button>
-          <Link to={"/game/" + `${game[count].slug.current}`}> Voir Plus </Link>
+          <Link to={"/game/" + `${game[count].slug.current}`}className={styles.btn}> VOIR PLUS </Link>
         </button>
       </div>
     </div>

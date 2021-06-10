@@ -41,7 +41,7 @@ const Footer = () => (
         </div>
       </div>
       <div className={styles.follow}>
-        <div>Suivez-nous</div>
+        <div className={styles.us}>Suivez-nous</div>
         <div className={styles.sociaux}>
           <div>
             <FaFacebookF />

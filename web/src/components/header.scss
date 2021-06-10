@@ -27,6 +27,9 @@ $font-text:20px;
     align-items: center;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 750px){
+        height: auto;
+    }
     .siteTitle{ 
         margin-left: 6vw;
         justify-self: left;
@@ -34,6 +37,10 @@ $font-text:20px;
             color: $color-fontBrown;
             font-family: "Reislust";
             font-size: $font-title;
+            text-decoration: none;
+            @media (max-width: 750px){
+                font-size: 56px;
+            }
         }
         
     }

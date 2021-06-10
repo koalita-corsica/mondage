@@ -30,11 +30,17 @@ $font-text:20px;
 p {
     font-family: "FuturaText";
     font-size: $font-text;
+    @media (max-width: 750px){
+        font-size: 18px;
+    }
     
 }
 h1{
     font-family: "Reislust";
     font-size: $font-title;
+    @media (max-width: 750px){
+        font-size: 46px;
+    }
 }
 .wrapper{
     display: flex;
@@ -43,6 +49,9 @@ h1{
         display: flex;
         flex-direction: column;
         align-content: center;
+        @media (max-width: 750px){
+            display: none;
+        }
         a{
             width: 10vw;
             align-self: flex-end;
@@ -66,14 +75,19 @@ h1{
     border-bottom: 2px solid $color-line;
     text-align: center;
     width: 100%;
+    @media (max-width: 750px){
+        border-bottom: none ;
+    }
     *{
         color: $color-fontBrown;
     }
     .title{
         font-family: "Reislust";
-        font-size: 302px;
-
-            
+        font-size: calc(5.125rem + ((1vw - 5.68px) * 19.0972));
+        @media (max-width: 750px){
+            font-size: 82px;
+        }
+   
     }
     .descText{
         justify-content: space-around;
@@ -90,26 +104,42 @@ h1{
         }
     }
     .logo{
-        width: 10vw;
+        width: 15vw;
         height: auto;
     }
 }
 .gameBg{
-    line-height: 0;
+    line-height: 1;
     .game:nth-child(2n){
         background-color: $color-backgroundGrey;
     }
 }
 .game{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     *{
         color: $color-fontBrown;
         line-height: 1.5;
+        @media (max-width: 750px){
+            line-height: 1;
+        }
+        
     }
     .gameBg2{
         margin-left: 23vw;
         margin-right: 17vw;
-        display: flex;
+        display: grid;
+        grid-template-columns: 23vw 38vw;
+        @media (max-width: 750px){
+            margin-left: 10vw;
+            margin-right: 6vw;
+            grid-template-columns: 38vw 48vw;
+        }
 
+    }
+    img{
+        width: 100%; 
+        height: 100%;
     }
     .gameText{
         justify-self: center;
@@ -118,9 +148,12 @@ h1{
     h2{
         line-height: 2;
         font-size: $font-subtitle;
+        @media (max-width: 750px){
+            font-size: 21px;
+        }
     }
     button{
-        width: 10vw;
+        width: auto;
         height: auto;
         font-size: $font-text;
         color: $color-button;
@@ -128,37 +161,59 @@ h1{
         border-radius: 4px;
         background-color: transparent;
         margin-top: 2vh;
+        @media (max-width: 750px){
+            font-size: 18px;
+        }
     }
 }
 .bandeau{
     overflow: hidden;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 30vw 40vw 30vw;
+    align-items: flex-end;
     width: 100%;
+    height: 35vh;
+    padding: 0;
+    @media (max-width: 750px){
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
     .img{
-        grid-area: 1/2/2/4;
-        img{
-            height: auto;
-            width: 12vw;
-        }
-        position: relative;
-        top: 23vh;
-        align-self: center;
-        justify-self: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-self: flex-end;
+        justify-content: space-around;
+        column-gap: 1vw;   
+        @media (max-width: 900px){
+            height: 30vh;
+            justify-content: center;
+        }   
     }
     .retour{
-        grid-area: 1/1/2/2;
         display: flex;
         text-decoration: none;
         align-items: center;
         justify-self: right;
+        // padding-bottom: 2vh;
+        padding-right: 2vw;
+        *{
+            color: $color-fontBrown;
+        }
+        @media (max-width: 750px){
+            display: none;
+        }
         
-
+        
+        
     }
     .arrow{
+        color: $color-fontBrown;
         font-size: 58px;
     }
     .back{
+        color: $color-fontBrown;
         font-size: $font-subtitle;
         font-family: "FuturaSub";
     }

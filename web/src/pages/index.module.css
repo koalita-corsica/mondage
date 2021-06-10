@@ -35,14 +35,28 @@
   margin-left: 6vw;
   margin-right: 6vw;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 30vw 1fr;
+  column-gap: 10vw;
+}
+@media (max-width: 750px) {
+  .section1 {
+    height: 73vh;
+    margin-bottom: 12vw;
+  }
 }
 .section1 .bottle {
-  width: 30vw;
+  grid-area: 1/1/2/2;
+  position: relative;
+  width: auto;
   margin-top: 8vh;
-  justify-self: center;
-  height: auto;
+  height: 112vh;
   transform: translateX(-200%);
+}
+@media (max-width: 750px) {
+  .section1 .bottle {
+    height: 73vh;
+    right: 45%;
+  }
 }
 .section1 .block1 * {
   color: #D9D9D7;
@@ -52,21 +66,45 @@
   margin-right: 7vw;
   box-sizing: border-box;
   margin-top: 8vh;
+  grid-area: 1/2/2/3;
+}
+@media (max-width: 750px) {
+  .section1 .block1 {
+    margin: 0 auto;
+    align-self: center;
+  }
 }
 .section1 .title {
   margin-top: 20vh;
+}
+@media (max-width: 750px) {
+  .section1 .title {
+    display: none;
+  }
 }
 .section1 div p {
   line-height: 1.5;
   font-family: "FuturaText";
   font-size: 20px;
 }
+@media (max-width: 750px) {
+  .section1 div p {
+    font-size: 18px;
+  }
+}
 .section1 div h2 {
   font-family: "FuturaText";
   line-height: 2;
   font-size: 25px;
 }
+@media (max-width: 750px) {
+  .section1 div h2 {
+    font-size: 21px;
+    line-height: 1.5;
+  }
+}
 .section1 .gamme {
+  background-color: transparent;
   margin-top: 3vh;
   border: 3px solid #A8957E;
   border-radius: 4px;
@@ -74,11 +112,29 @@
   height: auto;
   padding: 5px;
 }
+@media (max-width: 750px) {
+  .section1 .gamme {
+    margin-bottom: 5vh;
+    width: auto;
+  }
+}
 .section1 .gamme a {
   text-decoration: none;
   font-family: "FuturaText";
   font-size: 20px;
   color: #A8957E;
+  margin: 2vw;
+}
+@media (max-width: 750px) {
+  .section1 .gamme a {
+    font-size: 18px;
+  }
+}
+.section1 .gamme:hover {
+  background-color: #A8957E;
+}
+.section1 .gamme:hover .a {
+  color: #E3E3DC;
 }
 
 .section2 {
@@ -93,15 +149,26 @@
   background-repeat: no-repeat;
   z-index: 100;
 }
+@media (max-width: 750px) {
+  .section2 {
+    height: auto;
+  }
+}
 .section2 .domainimg {
-  width: 16vw;
-  height: 32vh;
-  border-radius: 75%;
+  width: 310px;
+  height: 310px;
+  border-radius: 100%;
 }
 .section2 div {
   margin-top: 2vh;
   width: 50%;
   color: #E3E3DC;
+}
+@media (max-width: 750px) {
+  .section2 div {
+    width: 80%;
+    margin-bottom: 5vh;
+  }
 }
 .section2 div p {
   color: #E3E3DC;
@@ -117,11 +184,17 @@
 }
 .section2 .gamme {
   margin-top: 3vh;
+  background-color: transparent;
   border: 3px solid #A8957E;
   border-radius: 4px;
   width: auto;
   height: auto;
   padding: 5px;
+}
+@media (max-width: 750px) {
+  .section2 .gamme {
+    margin-bottom: 5vh;
+  }
 }
 .section2 .gamme a {
   text-decoration: none;
@@ -129,12 +202,37 @@
   font-size: 20px;
   color: #A8957E;
 }
+@media (max-width: 750px) {
+  .section2 .gamme a {
+    font-size: 0;
+  }
+}
+@media (max-width: 750px) {
+  .section2 .gamme a::after {
+    margin: 2vw;
+    content: "VOIR PLUS";
+    font-size: 20px;
+  }
+}
+.section2 .gamme:hover {
+  background-color: #A8957E;
+}
+.section2 .gamme:hover .a {
+  color: #E3E3DC;
+}
 
 .section3 {
   background-color: #D9D9D7;
   display: grid;
   grid-template-columns: 25vw 75vw;
   width: 100%;
+}
+@media (max-width: 750px) {
+  .section3 {
+    height: auto;
+    width: 100vw;
+    display: flex;
+  }
 }
 .section3 * {
   color: #685950;
@@ -145,11 +243,22 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+@media (max-width: 750px) {
+  .section3 .sliderimg {
+    display: none;
+  }
+}
 .section3 .title {
   color: #685950;
+  text-align: center;
 }
 .section3 .sliderContain {
   margin: 2vw;
+}
+@media (max-width: 750px) {
+  .section3 .sliderContain {
+    margin: 0 auto;
+  }
 }
 .section3 .slider {
   display: flex;
@@ -157,8 +266,8 @@
   align-items: center;
 }
 .section3 .slider svg {
-  height: 100px;
-  width: 100px;
+  height: 12vh;
+  width: 6vw;
 }
 .section3 .slider svg path {
   color: #685950;
@@ -172,31 +281,56 @@
   font-family: "FuturaText";
   font-size: 25px;
 }
-.section3 .slider a {
-  color: #A8957E;
-}
 
 .section4 {
   height: 94vh;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 750px) {
+  .section4 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .section4 * {
   color: #685950;
 }
 .section4 .pressimg {
-  background: url("../asset/accueilpresse.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 40vw;
+  width: 43vw;
+  justify-self: right;
+}
+@media (max-width: 750px) {
+  .section4 .pressimg {
+    width: auto;
+  }
+}
+.section4 .pressimg img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 750px) {
+  .section4 .pressimg img {
+    width: 100%;
+    height: auto;
+  }
 }
 .section4 .pressContain {
-  margin-left: 18vw;
-  width: 28vw;
+  width: 27vw;
+  justify-self: center;
   display: flex;
   flex-direction: column;
-  margin-top: 14vh;
+  align-self: center;
+}
+@media (max-width: 750px) {
+  .section4 .pressContain {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 .section4 div p {
   font-family: "FuturaText";
@@ -209,13 +343,25 @@
   font-size: 25px;
   line-height: 2;
 }
+@media (max-width: 750px) {
+  .section4 div h2 {
+    margin: 0 auto;
+  }
+}
 .section4 .pressBlock {
   margin-top: 2vh;
   height: 100%;
 }
+@media (max-width: 750px) {
+  .section4 .pressBlock {
+    margin: 6vw;
+    height: auto;
+  }
+}
 .section4 .gamme {
   margin-top: 3vh;
   border: 3px solid #A8957E;
+  background-color: transparent;
   border-radius: 4px;
   width: auto;
   height: auto;
@@ -226,6 +372,24 @@
   font-family: "FuturaText";
   font-size: 20px;
   color: #A8957E;
+}
+@media (max-width: 750px) {
+  .section4 .gamme a {
+    font-size: 0;
+  }
+}
+@media (max-width: 750px) {
+  .section4 .gamme a::after {
+    margin: 2vw;
+    content: "VOIR PLUS";
+    font-size: 20px;
+  }
+}
+.section4 .gamme:hover {
+  background-color: #A8957E;
+}
+.section4 .gamme:hover a {
+  color: #E3E3DC;
 }
 
 /*# sourceMappingURL=index.module.css.map */

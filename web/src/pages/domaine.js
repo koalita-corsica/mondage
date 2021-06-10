@@ -12,6 +12,9 @@ import * as styles from "../pages/domaine.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
 import PortableText from "../components/portableText";
 import laura from "../asset/domainelaura.jpg";
+import domainImg1 from "../asset/domainetonneau.jpg";
+import domainImg2 from "../asset/domainevigne.jpg";
+import domainImg3 from "../asset/domainelabo.jpg";
 
 export const query = graphql`
   query DomainePageQuery {
@@ -74,9 +77,12 @@ const DomainePage = (props) => {
               />
             </div>
             <div className={styles.section3}>
-              <div className={styles.domainImg1} />
-              <div className={styles.domainImg2} />
-              <div className={styles.domainImg3} />
+              <div className={styles.domainImg1}><img src={domainImg1}/></div>
+              <div className={styles.domainImg2}><img src={domainImg2}/></div>
+              <div className={styles.domainImg3}><img src={domainImg3}/></div>
+              {/* <div className={styles.domainImg1}></img></div>
+              <div className={styles.domainImg2}><img src={domainImg2}></img></div>
+              <div className={styles.domainImg3}><img src={domainImg3}></img></div> */}
             </div>
           </div>
         </React.Fragment>

@@ -15,27 +15,41 @@
   font-family: "FuturaLight";
   src: url("../fonts/FuturaPTLight.otf");
 }
+.wrapperTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 20vh;
+}
+
 .titleContain {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 15vh;
-  margin-top: 15vh;
+  display: flex;
+  gap: 5vw;
+  justify-content: space-between;
+  align-items: center;
 }
 .titleContain .trait {
   height: 2px;
-  width: 30vw;
+  width: 25vw;
   background-color: rgba(112, 112, 112, 0.35);
-  align-self: center;
-  margin-left: 18vh;
   border-radius: 25px;
+}
+@media (max-width: 750px) {
+  .titleContain .trait {
+    width: 20vw;
+  }
 }
 .titleContain .trait2 {
   height: 2px;
-  width: 30vw;
+  width: 25vw;
   background-color: rgba(112, 112, 112, 0.35);
   border-radius: 25px;
-  align-self: center;
-  margin-right: 18vh;
+}
+@media (max-width: 750px) {
+  .titleContain .trait2 {
+    width: 20vw;
+  }
 }
 .titleContain .title {
   margin: 0 auto;
@@ -45,6 +59,11 @@
   color: #685950;
   font-weight: normal;
   align-self: center;
+}
+@media (max-width: 750px) {
+  .titleContain .title {
+    font-size: 56px;
+  }
 }
 
 * {
@@ -59,12 +78,19 @@ body {
 }
 
 .gridGalery {
-  height: 4349px;
+  height: auto;
   width: 100%;
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(24, 1fr);
+}
+@media (max-width: 750px) {
+  .gridGalery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(22, 1fr);
+    gap: 9px;
+  }
 }
 .gridGalery img {
   display: block;
@@ -73,65 +99,145 @@ body {
   object-fit: fill;
   border-radius: 5px;
 }
+@media (max-width: 750px) {
+  .gridGalery img {
+    border-radius: 0;
+  }
+}
 
 .galerie1 {
   grid-area: 1/1/4/10;
+}
+@media (max-width: 750px) {
+  .galerie1 {
+    grid-area: 1/1/5/2;
+  }
 }
 
 .galerie2 {
   grid-area: 1/10/7/18;
 }
+@media (max-width: 750px) {
+  .galerie2 {
+    grid-area: 1/2/6/3;
+  }
+}
 
 .galerie3 {
   grid-area: 1/18/4/25;
+}
+@media (max-width: 750px) {
+  .galerie3 {
+    grid-area: 5/1/8/2;
+  }
 }
 
 .galerie4 {
   grid-area: 4/1/12/10;
 }
+@media (max-width: 750px) {
+  .galerie4 {
+    grid-area: 6/2/11/3;
+  }
+}
 
 .galerie5 {
   grid-area: 7/10/9/18;
+}
+@media (max-width: 750px) {
+  .galerie5 {
+    grid-area: 11/2/14/3;
+  }
 }
 
 .galerie6 {
   grid-area: 4/18/9/25;
 }
+@media (max-width: 750px) {
+  .galerie6 {
+    grid-area: 8/1/13/2;
+  }
+}
 
 .galerie7 {
   grid-area: 12/1/16/10;
+}
+@media (max-width: 750px) {
+  .galerie7 {
+    grid-area: 13/1/16/2;
+  }
 }
 
 .galerie8 {
   grid-area: 9/10/14/25;
 }
+@media (max-width: 750px) {
+  .galerie8 {
+    grid-area: 14/2/17/3;
+  }
+}
 
 .galerie9 {
   grid-area: 16/1/19/10;
+}
+@media (max-width: 750px) {
+  .galerie9 {
+    grid-area: 16/1/20/2;
+  }
 }
 
 .galerie10 {
   grid-area: 14/10/19/25;
 }
+@media (max-width: 750px) {
+  .galerie10 {
+    display: none;
+  }
+}
 
 .galerie11 {
   grid-area: 19/1/22/3;
+}
+@media (max-width: 750px) {
+  .galerie11 {
+    display: none;
+  }
 }
 
 .galerie12 {
   grid-area: 19/3/22/16;
 }
+@media (max-width: 750px) {
+  .galerie12 {
+    grid-area: 17/2/20/3;
+  }
+}
 
 .galerie13 {
   grid-area: 19/16/25/25;
+}
+@media (max-width: 750px) {
+  .galerie13 {
+    grid-area: 20/2/23/3;
+  }
 }
 
 .galerie14 {
   grid-area: 22/1/25/7;
 }
+@media (max-width: 750px) {
+  .galerie14 {
+    display: none;
+  }
+}
 
 .galerie15 {
   grid-area: 22/7/25/16;
+}
+@media (max-width: 750px) {
+  .galerie15 {
+    grid-area: 20/1/23/2;
+  }
 }
 
 /*# sourceMappingURL=galerie.module.css.map */

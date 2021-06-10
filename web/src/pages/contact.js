@@ -12,6 +12,9 @@ import img from "../asset/galerie2.jpg";
 import spargo from "../asset/Spargolato_Rouge.png";
 import primizia from "../asset/Primizia_Rouge.png";
 import laudria from "../asset/Laudria_Rouge.png";
+import spargo2 from "../asset/Spargolato_Rouge2.png";
+import primizia2 from "../asset/Primizia_Rouge2.png";
+import laudria2 from "../asset/Laudria_Rouge2.png";
 export const query = graphql`
   query ContactPageQuery {
     allSanityPage {
@@ -98,15 +101,20 @@ const ContactPage = (props) => {
               </p>
             </div>
             <div className={styles.bouteilles}>
-              {/* <div> */}
-              <img src={spargo} className={styles.rouge1}></img>
-              {/* </div> */}
-              {/* <div> */}
+              <div className={styles.rouge1}/>
+              <div className={styles.rouge12}/>
+              <div className={styles.rouge13}/>
+              <div className={styles.rouge21}/>
+              <div className={styles.rouge22}/>
+              <div className={styles.rouge23}/>
+              
+              
+              {/* <img src={laudria} className={styles.rouge1}></img>
               <img src={primizia} className={styles.rouge1}></img>
-              {/* </div> */}
-              {/* <div> */}
-              <img src={laudria} className={styles.rouge1}></img>
-              {/* </div> */}
+              <img src={spargo} className={styles.rouge1}></img>
+              <img src={laudria2} className={styles.rouge2}></img>
+              <img src={primizia2} className={styles.rouge2}></img>
+              <img src={spargo2} className={styles.rouge2}></img> */}
             </div>
           </div>
         </div>

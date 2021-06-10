@@ -19,6 +19,11 @@ p {
   font-family: "FuturaText";
   font-size: 20px;
 }
+@media (max-width: 750px) {
+  p {
+    font-size: 18px;
+  }
+}
 
 h1 {
   font-family: "Reislust";
@@ -34,6 +39,17 @@ h1 {
   height: 104vh;
   background-color: white;
 }
+@media (max-width: 750px) {
+  .wrapperProduit {
+    grid-template-columns: 25vw 40vw 30vw;
+    grid-template-rows: 42% 42% 16%;
+    height: auto;
+    width: auto;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-bottom: 6vw;
+  }
+}
 .wrapperProduit * {
   color: #685950;
 }
@@ -42,6 +58,16 @@ h1 {
   width: 30vw;
   height: auto;
 }
+@media (max-width: 750px) {
+  .wrapperProduit .bouteille {
+    grid-area: 2/3/4/4;
+    align-self: flex-end;
+    position: relative;
+    width: 32vw;
+    left: 2vw;
+    top: 6vh;
+  }
+}
 .wrapperProduit .retour {
   display: flex;
   text-decoration: none;
@@ -49,6 +75,13 @@ h1 {
   align-items: center;
   justify-content: center;
   height: 100px;
+}
+@media (max-width: 750px) {
+  .wrapperProduit .retour {
+    grid-area: 3/1/4/2;
+    align-self: flex-end;
+    height: auto;
+  }
 }
 .wrapperProduit .retour .arrow {
   font-size: 58px;
@@ -66,6 +99,16 @@ h1 {
   width: auto;
   height: auto;
 }
+@media (max-width: 750px) {
+  .wrapperProduit .game {
+    grid-area: 1/1/3/4;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 80vw;
+    margin-left: 4vw;
+  }
+}
 .wrapperProduit .game .logo {
   width: auto;
   height: 254px;
@@ -74,14 +117,35 @@ h1 {
   margin-right: 5vw;
   margin-left: 2.5vw;
 }
+@media (max-width: 750px) {
+  .wrapperProduit .game .logo {
+    display: none;
+    order: 3;
+    margin: 0;
+    width: 25vw;
+    height: auto;
+    align-self: center;
+  }
+}
 .wrapperProduit .game h1 {
-  width: auto;
+  width: 100%;
+  height: auto;
   font-size: 150px;
   line-height: 0;
+}
+@media (max-width: 750px) {
+  .wrapperProduit .game h1 {
+    font-size: 82px;
+  }
 }
 .wrapperProduit .game .desc {
   width: 100%;
   padding-right: 5vw;
+}
+@media (max-width: 750px) {
+  .wrapperProduit .game .desc {
+    padding: 0;
+  }
 }
 .wrapperProduit .game .desc * {
   line-height: 1.5;
@@ -90,6 +154,29 @@ h1 {
   font-size: 20px;
   font-family: "FuturaText";
   font-style: oblique;
+}
+@media (max-width: 750px) {
+  .wrapperProduit .game .desc div p:first-child {
+    font-size: 16px;
+  }
+}
+@media (max-width: 750px) {
+  .wrapperProduit .game .desc div p:last-child {
+    width: 70vw;
+  }
+}
+.wrapperProduit .logo2 {
+  display: none;
+}
+@media (max-width: 750px) {
+  .wrapperProduit .logo2 {
+    grid-area: 3/2/4/3;
+    display: block;
+    width: 20vw;
+    height: auto;
+    justify-self: center;
+    align-self: flex-end;
+  }
 }
 
 /*# sourceMappingURL=produit.module.css.map */

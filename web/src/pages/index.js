@@ -12,7 +12,8 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import Slider from "../components/slider";
 import PortableText from "../components/portableText";
-import bottle from "../asset/Laudria_Rouge.png";
+import bottle from "../asset/Laudria_Rouge2.png";
+import pressImg from "../asset/accueilpresse.jpg";
 import domainImg from "../asset/accueildomaine.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
@@ -158,14 +159,6 @@ const IndexPage = (props) => {
       );
       bottle.style.transform = "translateX(-135%)";
     }
-    // if (window.scrollY > 799) {
-    //   blockPara.style.transform = "translateX(150%)";
-    //   bottle.style.transform = "translateX(-150%)";
-    // }
-    // if (window.scrollY > 933) {
-    //   blockPara.style.transform = "translate(175%)";
-    //   bottle.style.transform = "translate(-175%)";
-    // }
   });
 
   const serializers = {
@@ -185,7 +178,7 @@ const IndexPage = (props) => {
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
               <img src={bottle} className={styles.bottle} id="bottle" />
-              <div className={styles.block1} id="block1" onScroll={{}}>
+              <div className={styles.block1} id="block1" data-att="block1" onScroll={{}}>
                 <div className={styles.title}>
                   {item.node.pageBuilder[0].title1.fr}{" "}
                 </div>
@@ -247,7 +240,9 @@ const IndexPage = (props) => {
                   </button>
                 </div>
               </div>
-              <div className={styles.pressimg} />
+              <div className={styles.pressimg}>
+                <img src={pressImg}></img>
+              </div>
             </div>
           </div>
         </React.Fragment>

@@ -48,10 +48,12 @@ const GaleriePage = (props) => {
       <SEO title="galerie" />
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
-          <div className={styles.titleContain}>
-            <div className={styles.trait}></div>
-            <div className={styles.title}>{item.node.title.fr}</div>
-            <div className={styles.trait2}></div>
+          <div className={styles.wrapperTitle}>
+            <div className={styles.titleContain}>
+              <div className={styles.trait}></div>
+              <div className={styles.title}>{item.node.title.fr}</div>
+              <div className={styles.trait2}></div>
+            </div>
           </div>
         </React.Fragment>
       ))}

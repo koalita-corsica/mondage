@@ -32,6 +32,9 @@ $font-text:20px;
     height: 30vh;
     background-position: center 23%;
     background-size: cover;
+    @media (max-width: 750px){
+        height: 13vh;
+    }
 }
 .domainContain{
     display: flex;
@@ -47,15 +50,15 @@ $font-text:20px;
     }
     .content{
         display: flex;
-        justify-content: space-between;
-        gap: 5vw;
+        @media (max-width: 750px){
+            flex-direction: column;
+        }
     }
     .gammes{
-        margin: 2vh auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 356px;
+        margin: 5vw;
         .logo{
             width: 165px;
             height: auto;
@@ -68,14 +71,38 @@ $font-text:20px;
             display: flex;
             flex-direction: column;
             text-align: center;
-            button{
-                color: $color-button;
-                margin: 2vh auto;
+            @media (max-width: 750px){
+                border-radius: 0;
+                width: 80%;
             }
+            button{
+                margin: 2vw;
+                border: 3px solid #A8957E;
+                background-color: transparent;
+                border-radius: 4px;
+                align-self: center;
+                width: 40%;
+                height: auto;
+                padding: 5px;
+                a{
+                    text-decoration: none;
+                    font-family: "FuturaText";
+                    font-size: $font-text;
+                    color: $color-button;
+                }
+            }
+            button:hover{
+                background-color: $color-button;
+                a{
+                    color: $color-backgroundLightGrey;
+                }
+            }
+            
             p {
                 font-family: "FuturaText";
                 font-size: 20px;
                 line-height: 1.5;
+                margin: 2vh;
             }
             h2 {
                 font-family: "FuturaText";
@@ -84,7 +111,7 @@ $font-text:20px;
             }
             h1{
                 font-family:  "Reislust";
-                font-size: 90px;
+                font-size: 5.625em;
                 margin: 0 auto;
             }
             
@@ -92,3 +119,4 @@ $font-text:20px;
         
     }
 }
+

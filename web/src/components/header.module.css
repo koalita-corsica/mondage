@@ -19,6 +19,11 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 750px) {
+  .wrapper {
+    height: auto;
+  }
+}
 .wrapper .siteTitle {
   margin-left: 6vw;
   justify-self: left;
@@ -27,6 +32,12 @@
   color: #685950;
   font-family: "Reislust";
   font-size: 7.2em;
+  text-decoration: none;
+}
+@media (max-width: 750px) {
+  .wrapper .siteTitle a {
+    font-size: 56px;
+  }
 }
 .wrapper nav {
   width: 50vw;

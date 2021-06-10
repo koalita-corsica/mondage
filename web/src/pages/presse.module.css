@@ -15,12 +15,6 @@
   font-family: "FuturaLight";
   src: url("../fonts/FuturaPTLight.otf");
 }
-p * {
-  font-family: "FuturaText";
-  font-size: 20px;
-  line-height: 1.5;
-}
-
 .wrapperPresse {
   width: auto;
   height: auto;
@@ -31,21 +25,63 @@ p * {
   color: #685950;
   text-align: left;
 }
+@media (max-width: 750px) {
+  .wrapperPresse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+  }
+}
+.wrapperPresse p {
+  font-family: "FuturaText";
+  font-size: 20px;
+  line-height: 1.5;
+}
+@media (max-width: 750px) {
+  .wrapperPresse p {
+    font-size: 18px;
+  }
+}
 
 .presse h1 {
   font-size: 100px;
   font-family: "Reislust";
   line-height: 0;
 }
+@media (max-width: 750px) {
+  .presse h1 {
+    text-align: center;
+    font-size: 45px;
+  }
+}
 .presse h2 {
   font-size: 25px;
   line-height: 1.5;
+}
+@media (max-width: 750px) {
+  .presse h2 {
+    text-align: center;
+    font-size: 22px;
+  }
+}
+@media (max-width: 750px) {
+  .presse p {
+    text-align: center;
+  }
 }
 
 .container {
   display: flex;
   column-gap: 4vw;
   padding-bottom: 15vh;
+}
+@media (max-width: 750px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .gauche {
@@ -60,13 +96,43 @@ p * {
 .gauche .articlesGauche h1 {
   font-size: 65px;
 }
+@media (max-width: 750px) {
+  .gauche .articlesGauche h1 {
+    text-align: center;
+    font-size: 45px;
+  }
+}
 .gauche .articlesGauche .block {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 80%;
   line-height: 1.5;
-  padding-bottom: 4vh;
+  padding-bottom: 10vh;
+}
+@media (max-width: 750px) {
+  .gauche .articlesGauche .block {
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .gauche .articlesGauche .block p {
+    text-align: center;
+  }
 }
 .gauche .articlesGauche .block img {
   width: 80%;
+}
+@media (max-width: 750px) {
+  .gauche .articlesGauche .block img {
+    width: 60%;
+  }
+}
+@media (max-width: 750px) {
+  .gauche .articlesGauche {
+    border: none;
+  }
 }
 
 .gauche .articlesGauche:last-child {
@@ -85,13 +151,43 @@ p * {
 .droite .articlesDroite h1 {
   font-size: 65px;
 }
+@media (max-width: 750px) {
+  .droite .articlesDroite h1 {
+    text-align: center;
+    font-size: 45px;
+  }
+}
 .droite .articlesDroite .block {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 80%;
   line-height: 1.5;
-  padding-bottom: 4vh;
+  padding-bottom: 10vh;
+}
+@media (max-width: 750px) {
+  .droite .articlesDroite .block {
+    align-items: center;
+    width: 100%;
+  }
+}
+@media (max-width: 750px) {
+  .droite .articlesDroite .block p {
+    text-align: center;
+  }
 }
 .droite .articlesDroite .block img {
   width: 80%;
+}
+@media (max-width: 750px) {
+  .droite .articlesDroite .block img {
+    width: 60%;
+  }
+}
+@media (max-width: 750px) {
+  .droite .articlesDroite {
+    border: none;
+  }
 }
 
 .droite .articlesDroite:last-child {
