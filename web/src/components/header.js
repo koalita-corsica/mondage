@@ -29,7 +29,7 @@ const MenuIcon = styled.div`
       transform-origin: 1px;
       transition: transform 300ms;
       z-index: 900;
-      
+
       :first-child {
         transform: ${({ nav }) => (nav ? "rotate(45deg)" : "rotate(0)")};
       }
@@ -102,17 +102,17 @@ const Header = ({ nav, showNav, show }) => (
     <div className={styles.siteTitle}>
       <Link to="/">domaine mondange</Link>
     </div>
-    
+
     <MenuIcon
-        nav={nav}
-        onClick={() => showNav(!nav)}
-        styles={{ display: "none" }}
-      >
-        <div />
-        <div />
-        <div />
-      </MenuIcon>
-    
+      nav={nav}
+      onClick={() => showNav(!nav)}
+      styles={{ display: "none" }}
+    >
+      <div />
+      <div />
+      <div />
+    </MenuIcon>
+
     <MenuLinks nav={nav}>
       <nav className={cn(styles.nav, showNav && styles.showNav)}>
         <div className={styles.siteTitle}>

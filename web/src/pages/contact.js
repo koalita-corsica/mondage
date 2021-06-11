@@ -101,14 +101,13 @@ const ContactPage = (props) => {
               </p>
             </div>
             <div className={styles.bouteilles}>
-              <div className={styles.rouge1}/>
-              <div className={styles.rouge12}/>
-              <div className={styles.rouge13}/>
-              <div className={styles.rouge21}/>
-              <div className={styles.rouge22}/>
-              <div className={styles.rouge23}/>
-              
-              
+              <div className={styles.rouge1} />
+              <div className={styles.rouge12} />
+              <div className={styles.rouge13} />
+              <div className={styles.rouge21} />
+              <div className={styles.rouge22} />
+              <div className={styles.rouge23} />
+
               {/* <img src={laudria} className={styles.rouge1}></img>
               <img src={primizia} className={styles.rouge1}></img>
               <img src={spargo} className={styles.rouge1}></img>

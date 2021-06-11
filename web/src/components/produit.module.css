@@ -32,6 +32,7 @@ h1 {
 
 .wrapperProduit {
   display: grid;
+  width: auto;
   grid-template-columns: 10vw repeat(2, 1fr);
   margin-left: 6vw;
   margin-right: 6vw;
@@ -96,7 +97,7 @@ h1 {
   align-self: center;
   margin-right: 6vw;
   display: block;
-  width: auto;
+  width: 50vw;
   height: auto;
 }
 @media (max-width: 750px) {
@@ -130,7 +131,7 @@ h1 {
 .wrapperProduit .game h1 {
   width: 100%;
   height: auto;
-  font-size: 150px;
+  font-size: calc(5.125rem + ((1vw - 7.5px) * 18.8034));
   line-height: 0;
 }
 @media (max-width: 750px) {
@@ -140,6 +141,7 @@ h1 {
 }
 .wrapperProduit .game .desc {
   width: 100%;
+  height: auto;
   padding-right: 5vw;
 }
 @media (max-width: 750px) {
