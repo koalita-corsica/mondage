@@ -51,7 +51,7 @@ label{
 .wrapperCtc{
     margin-left: 6vw;
     margin-right: 6vw;
-    margin-bottom: 10vh;
+    margin-bottom: 6vw;
     display: flex;
     width: 88vw;
     background-color: white;
@@ -69,13 +69,12 @@ label{
     flex-direction: column;
     width: 100%;
     @media (max-width: 750px){
-        margin: 6vw;
-        overflow: visible;
+        margin-right: 6vw;
+        margin-left: 6vw;
+        
     }
     h1{
-        @media (max-width: 750px){
-            font-size: 60px;
-        }
+        font-size: calc(3.5rem + ((1vw - 7.5px) * 1.1966));
     }
     
     
@@ -89,7 +88,6 @@ label{
     
 }
 .contact{ 
-    background-color: green;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 0.5fr 0.5fr;
@@ -208,13 +206,12 @@ label{
     display: grid;
     align-items: center;
     justify-content: flex-end;
-    background-color: red;
     @media (max-width: 750px){
         width: 100%;
-        height: 12vh;
-        position: static;
+        height: 20vh;
         display: flex;
         justify-content: space-around;
+        align-items: flex-end;
     }
     .rouge1{
         background: url("../asset/Laudria_Rouge.png");
@@ -257,7 +254,13 @@ label{
         @media (max-width: 750px){
             display: block;
             background: url("../asset/Laudria_Rouge2.png");
-            
+            background-size: 15vh;
+            background-repeat: no-repeat;
+            height: 15vh;
+            width: 100%;
+            background-position-x: center;
+            align-self: flex-end;
+            // background-position-y: 5vh;
         } 
     }
     .rouge22{
@@ -265,7 +268,13 @@ label{
         @media (max-width: 750px){
             display: block;
             background: url("../asset/Primizia_Rouge2.png");
-            
+            background-size: 15vh;
+            background-repeat: no-repeat;
+            height: 15vh;
+            width: 100%;
+            background-position-x: center;
+            align-self: flex-end;
+            // background-position-y: 5vh;
         } 
     }
     .rouge23{
@@ -273,7 +282,13 @@ label{
         @media (max-width: 750px){
             display: block;
             background: url("../asset/Spargolato_Rouge2.png");
-            
+            background-size: 15vh;
+            background-repeat: no-repeat;
+            height: 15vh;
+            width: 100%;
+            background-position-x: center;
+            align-self: flex-end;
+            // background-position-y: 5vh;
         } 
     }
 }

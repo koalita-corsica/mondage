@@ -1,36 +1,35 @@
 import { Link } from "gatsby";
 import React from "react";
 import { cn } from "../lib/helpers";
+import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
+import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import * as styles from "./header.module.css";
 
 import styled from "styled-components";
 
 const MenuIcon = styled.div`
   display: ${({ show }) => (show === false ? "none" : "none")};
-  @media (max-width: 768px) {
-    position: absolute;
-    top: 2rem;
-    left: ${({ nav }) => (nav ? "" : "2rem")};
-    right: ${({ nav }) => (nav ? "2rem" : "")};
+  @media (max-width: 750px) {
+    position: ${({ nav }) => (nav ? "relative" : "fixed")};
+    left: ${({ nav }) => (nav ? "40vw" : "6vw")};
+    // right: ${({ nav }) => (nav ? "6vw" : "")};
+    top: ${({ nav }) => (nav ? "10vh" : "")};
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border: none;
     cursor: pointer;
     z-index: 100;
     div {
-      width: 1.5rem;
-      height: 0.33rem;
-      background: ${({ nav }) => (nav ? "#f26633" : "white")};
-      border-radius: 5px;
+      width: 2.5rem;
+      height: 0.3rem;
+      background: ${({ nav }) => (nav ? "#707070" : "#707070")};
       transform-origin: 1px;
       transition: transform 300ms;
       z-index: 900;
-      :nth-child(3) {
-        width: ${({ nav }) => (nav ? "1.5rem" : "1rem")};
-      }
+      
       :first-child {
         transform: ${({ nav }) => (nav ? "rotate(45deg)" : "rotate(0)")};
       }
@@ -45,41 +44,55 @@ const MenuIcon = styled.div`
 `;
 const MenuLinks = styled.nav`
   display: flex;
-  justify-content: space-evenly;
   list-style-type: none;
-  width: 100%;
-  @media (max-width: 768px) {
+  justify-content: space-evenly;
+  div {
+    display: none;
+  }
+  @media (max-width: 750px) {
+    align-item: ${({ nav }) => (nav ? "center" : "none")};
     text-transform: uppercase;
     flex-direction: column;
     text-align: center;
-    height: 100vh;
-    width: 100%;
+    // height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
     display: ${({ nav }) => (nav ? "block" : "none")};
-    background-color: #262626;
+    background-color: #E3E3DC;
     z-index: 90;
     ul {
       list-style-type: none;
       flex-direction: column;
     }
     li {
-      margin-top: 1rem;
-      margin-left: -15%;
+      margin-top: 6vh;
+      justify-self: center;
     }
     a {
       text-decoration: none;
       color: #ffffff;
-      font-size: 1.5rem;
+      font-size: ${({ nav }) => (nav ? "" : "")}
       transition: color 300ms;
       :hover {
         color: #f26633;
       }
     }
-    img {
-      display: inline-block;
-      margin-left: -5.5vw;
+    div {
+      display: block;
+    }
+    div:last-child {
+      display: flex;
+      margin-top: 6vh;
+      justify-content: center;
+      gap: 3vw;
+      svg {
+        width: 40px;
+        height: auto;
+        path{
+          color: #685950;
+        }
+      }
     }
   }
 `;
@@ -89,17 +102,22 @@ const Header = ({ nav, showNav, show }) => (
     <div className={styles.siteTitle}>
       <Link to="/">domaine mondange</Link>
     </div>
+    
     <MenuIcon
-      nav={nav}
-      onClick={() => showNav(!nav)}
-      styles={{ display: "none" }}
-    >
-      <div />
-      <div />
-      <div />
-    </MenuIcon>
+        nav={nav}
+        onClick={() => showNav(!nav)}
+        styles={{ display: "none" }}
+      >
+        <div />
+        <div />
+        <div />
+      </MenuIcon>
+    
     <MenuLinks nav={nav}>
       <nav className={cn(styles.nav, showNav && styles.showNav)}>
+        <div className={styles.siteTitle}>
+          <Link to="/">domaine mondange</Link>
+        </div>
         <ul>
           <li>
             <Link to="/">ACCUEIL</Link>
@@ -120,6 +138,10 @@ const Header = ({ nav, showNav, show }) => (
             <Link to="/contact">CONTACT</Link>
           </li>
         </ul>
+        <div className={styles.sociaux}>
+          <FaInstagram />
+          <FaFacebookF />
+        </div>
       </nav>
     </MenuLinks>
   </div>
