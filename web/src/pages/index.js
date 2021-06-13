@@ -63,11 +63,19 @@ const IndexPage = (props) => {
     : [];
 
   function moins() {
-    count && count == 0 ? setCount(2) : setCount(count + 1);
+    if (count == 0) {
+      setCount(2);
+    } else {
+      setCount(count - 1);
+    }
   }
 
   function plus() {
-    count && count == 2 ? setCount(0) : setCount(count - 1);
+    if (count == 2) {
+      setCount(0);
+    } else {
+      setCount(count + 1);
+    }
   }
   function translateLoad() {
     const blockPara = document.querySelector("#block1");
@@ -178,7 +186,12 @@ const IndexPage = (props) => {
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
               <img src={bottle} className={styles.bottle} id="bottle" />
-              <div className={styles.block1} id="block1" data-att="block1" onScroll={{}}>
+              <div
+                className={styles.block1}
+                id="block1"
+                data-att="block1"
+                onScroll={{}}
+              >
                 <div className={styles.title}>
                   {item.node.pageBuilder[0].title1.fr}{" "}
                 </div>
