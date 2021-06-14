@@ -181,6 +181,7 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
+      <title>Mondange</title>
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
