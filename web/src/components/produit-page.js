@@ -8,6 +8,7 @@ import { buildImageObj } from "../lib/helpers";
 import { imageUrlFor } from "../lib/image-url";
 import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "gatsby";
+import Img from "gatsby-image";
 
 function ProduitPage(props) {
   const { fiche, game, image, slug } = props;
@@ -17,15 +18,15 @@ function ProduitPage(props) {
         <BsArrowLeft className={styles.arrow} />
         <div className={styles.back}>RETOUR</div>
       </Link>
-      <img src={image.asset.url} alt="" className={styles.bouteille} />
+      <Img src={image.asset.url} alt="" className={styles.bouteille} />
       <div className={styles.game}>
         <h1> {game.title} </h1>
-        <img src={game.logo.asset.url} alt="" className={styles.logo} />
+        <Img src={game.logo.asset.url} alt="" className={styles.logo} />
         <div className={styles.desc}>
           <PortableText blocks={fiche._rawFr} />
         </div>
       </div>
-      <img src={game.logo.asset.url} alt="" className={styles.logo2} />
+      <Img src={game.logo.asset.url} alt="" className={styles.logo2} />
     </div>
   );
 }

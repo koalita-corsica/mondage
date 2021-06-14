@@ -11,6 +11,7 @@ import * as styles from "../pages/presse.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
 import PortableText from "../components/portableText";
 import { el } from "date-fns/locale";
+import Img from "gatsby-image";
 
 export const query = graphql`
   query PressePageQuery {
@@ -69,44 +70,44 @@ const PressePage = (props) => {
             <PortableText blocks={item.node.pageBuilder[0].desc._rawFr} />
           </div>
         ))}
-          <div className={styles.container}>
-            <div className={styles.gauche}>
-              {data.allSanityPost.edges.map((element) => (
-                <React.Fragment>
-                      {element.node.cote && element.node.cote === "gauche" && (
-                        <div
-                          className={styles.articlesGauche}
-                          data-pos={element.node.cote}
-                        >
-                          <h1> {element.node.title.fr} </h1>
-                          <div className={styles.block}>
-                              <PortableText blocks={element.node.excerpt._rawFr} />
-                              <img src={element.node.mainImage.asset.url} alt="" />
-                            </div>
-                        </div>
-                      )}
-                </React.Fragment>
-              ))}
-            </div>
-            <div className={styles.droite}>
-              {data.allSanityPost.edges.map((element) => (
-                  <React.Fragment>
-                        {element.node.cote && element.node.cote === "droite" && (
-                          <div
-                          className={styles.articlesDroite}
-                          data-pos={element.node.cote}
-                          >
-                            <h1> {element.node.title.fr} </h1>
-                            <div className={styles.block}>
-                              <PortableText blocks={element.node.excerpt._rawFr} />
-                              <img src={element.node.mainImage.asset.url} alt="" />
-                            </div>
-                          </div>
-                        )}
-                  </React.Fragment>
-                ))}
-              </div>
+        <div className={styles.container}>
+          <div className={styles.gauche}>
+            {data.allSanityPost.edges.map((element) => (
+              <React.Fragment>
+                {element.node.cote && element.node.cote === "gauche" && (
+                  <div
+                    className={styles.articlesGauche}
+                    data-pos={element.node.cote}
+                  >
+                    <h1> {element.node.title.fr} </h1>
+                    <div className={styles.block}>
+                      <PortableText blocks={element.node.excerpt._rawFr} />
+                      <Img src={element.node.mainImage.asset.url} alt="" />
+                    </div>
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
           </div>
+          <div className={styles.droite}>
+            {data.allSanityPost.edges.map((element) => (
+              <React.Fragment>
+                {element.node.cote && element.node.cote === "droite" && (
+                  <div
+                    className={styles.articlesDroite}
+                    data-pos={element.node.cote}
+                  >
+                    <h1> {element.node.title.fr} </h1>
+                    <div className={styles.block}>
+                      <PortableText blocks={element.node.excerpt._rawFr} />
+                      <Img src={element.node.mainImage.asset.url} alt="" />
+                    </div>
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
       </div>
     </Layout>
   );

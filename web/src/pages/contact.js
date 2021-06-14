@@ -15,6 +15,8 @@ import laudria from "../asset/Laudria_Rouge.png";
 import spargo2 from "../asset/Spargolato_Rouge2.png";
 import primizia2 from "../asset/Primizia_Rouge2.png";
 import laudria2 from "../asset/Laudria_Rouge2.png";
+import Img from "gatsby-image";
+
 export const query = graphql`
   query ContactPageQuery {
     allSanityPage {
@@ -42,7 +44,7 @@ const ContactPage = (props) => {
     <Layout>
       <SEO title="contact" />
       <div className={styles.wrapperCtc}>
-        <img src={img} className={styles.img}></img>
+        <Img src={img} className={styles.img} />
         <div className={styles.contactLayout}>
           <h1>contactez-nous</h1>
           <div className={styles.contact}>
