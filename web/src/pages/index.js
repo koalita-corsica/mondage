@@ -12,12 +12,13 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import Slider from "../components/slider";
 import PortableText from "../components/portableText";
-import bottle from "../asset/Laudria_Rouge2.webp";
+import bottle from "../asset/Laudria_Rouge2.png";
 import pressImg from "../asset/accueilpresse.jpg";
-import domainImg from "../asset/accueildomaine.webp";
+import domainImg from "../asset/accueildomaine.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import * as styles from "../pages/index.module.css";
+import Image from "gatsby-plugin-sanity-image";
 
 export const query = graphql`
   query AccueilQuery {
@@ -41,11 +42,19 @@ export const query = graphql`
         }
       }
     }
+    accvigne: sanityAssets(title: { eq: "accueilvigne" }) {
+      image {
+        asset {
+          url
+        }
+      }
+    }
   }
 `;
 
 const IndexPage = (props) => {
   const { data, errors } = props;
+  console.log(data.accvigne);
   const [count, setCount] = useState(0);
 
   if (errors) {
@@ -185,7 +194,14 @@ const IndexPage = (props) => {
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
-            <div className={styles.section1}>
+            <div
+              className={styles.section1}
+              style={{
+                background: `url(${data.accvigne.image.asset.url})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            >
               <img src={bottle} className={styles.bottle} id="bottle" />
               <div
                 className={styles.block1}

@@ -33,7 +33,7 @@
       rgba(19, 19, 19, 0.6) 75%,
       rgba(226, 226, 226, 0.7) 100%
     ),
-    url("../asset/accueilvigne.webp");
+    url("../asset/accueilvigne.jpg");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -156,7 +156,7 @@
       rgba(19, 19, 19, 0.7) 75%,
       rgba(226, 226, 226, 0.7) 150%
     ),
-    url("../asset/nosvins-bandeau.webp");
+    url("../asset/nosvins-bandeau.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 100;
