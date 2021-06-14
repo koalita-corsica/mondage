@@ -18,7 +18,6 @@ import domainImg from "../asset/accueildomaine.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import * as styles from "../pages/index.module.css";
-import Img from "gatsby-image";
 
 export const query = graphql`
   query AccueilQuery {
@@ -186,7 +185,7 @@ const IndexPage = (props) => {
         <React.Fragment>
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
-              <Img src={bottle} className={styles.bottle} id="bottle" />
+              <img src={bottle} className={styles.bottle} id="bottle" />
               <div
                 className={styles.block1}
                 id="block1"
@@ -213,7 +212,7 @@ const IndexPage = (props) => {
                 {" "}
                 {item.node.pageBuilder[1].title1.fr}{" "}
               </div>
-              <Img src={domainImg} className={styles.domainimg} />
+              <img src={domainImg} className={styles.domainimg} />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}
                 serializers={serializers}
@@ -255,7 +254,7 @@ const IndexPage = (props) => {
                 </div>
               </div>
               <div className={styles.pressimg}>
-                <Img src={pressImg} />
+                <img src={pressImg}></img>
               </div>
             </div>
           </div>

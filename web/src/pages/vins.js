@@ -12,7 +12,6 @@ import * as styles from "../pages/vins.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
 import PortableText from "../components/portableText";
 import { Link } from "gatsby";
-import Img from "gatsby-image";
 
 export const query = graphql`
   query VinsPageQuery {
@@ -72,7 +71,7 @@ const VinsPage = (props) => {
         <div className={styles.content}>
           {data.allSanityGame.edges.map((games) => (
             <div className={styles.gammes}>
-              <Img
+              <img
                 src={games.node.logo.asset.url}
                 alt=""
                 className={styles.logo}
@@ -85,8 +84,7 @@ const VinsPage = (props) => {
                 />
                 <button>
                   <Link to={"/game/" + `${games.node.slug.current}`}>
-                    {" "}
-                    Voir la gamme{" "}
+                    Voir la gamme
                   </Link>
                 </button>
               </div>

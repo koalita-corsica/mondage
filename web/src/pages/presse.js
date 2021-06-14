@@ -11,7 +11,6 @@ import * as styles from "../pages/presse.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
 import PortableText from "../components/portableText";
 import { el } from "date-fns/locale";
-import Img from "gatsby-image";
 
 export const query = graphql`
   query PressePageQuery {
@@ -82,7 +81,7 @@ const PressePage = (props) => {
                     <h1> {element.node.title.fr} </h1>
                     <div className={styles.block}>
                       <PortableText blocks={element.node.excerpt._rawFr} />
-                      <Img src={element.node.mainImage.asset.url} alt="" />
+                      <img src={element.node.mainImage.asset.url} alt="" />
                     </div>
                   </div>
                 )}
@@ -100,7 +99,7 @@ const PressePage = (props) => {
                     <h1> {element.node.title.fr} </h1>
                     <div className={styles.block}>
                       <PortableText blocks={element.node.excerpt._rawFr} />
-                      <Img src={element.node.mainImage.asset.url} alt="" />
+                      <img src={element.node.mainImage.asset.url} alt="" />
                     </div>
                   </div>
                 )}

@@ -24,7 +24,6 @@ import galerie12 from "../asset/galerie12.jpg";
 import galerie13 from "../asset/galerie13.jpg";
 import galerie14 from "../asset/galerie14.jpg";
 import galerie15 from "../asset/galerie15.jpg";
-import Img from "gatsby-image";
 
 export const query = graphql`
   query GaleriePageQuery {
@@ -60,49 +59,49 @@ const GaleriePage = (props) => {
       ))}
       <div className={styles.gridGalery}>
         <div className={styles.galerie1}>
-          <Img src={galerie1} />
+          <img src={galerie1} />
         </div>
         <div className={styles.galerie2}>
-          <Img src={galerie2} />
+          <img src={galerie2} />
         </div>
         <div className={styles.galerie3}>
-          <Img src={galerie3} />
+          <img src={galerie3} />
         </div>
         <div className={styles.galerie4}>
-          <Img src={galerie4} />
+          <img src={galerie4} />
         </div>
         <div className={styles.galerie5}>
-          <Img src={galerie5} />
+          <img src={galerie5} />
         </div>
         <div className={styles.galerie6}>
-          <Img src={galerie6} />
+          <img src={galerie6} />
         </div>
         <div className={styles.galerie7}>
-          <Img src={galerie7} />
+          <img src={galerie7} />
         </div>
         <div className={styles.galerie8}>
-          <Img src={galerie8} />
+          <img src={galerie8} />
         </div>
         <div className={styles.galerie9}>
-          <Img src={galerie9} />
+          <img src={galerie9} />
         </div>
         <div className={styles.galerie10}>
-          <Img src={galerie10} />
+          <img src={galerie10} />
         </div>
         <div className={styles.galerie11}>
-          <Img src={galerie11} />
+          <img src={galerie11} />
         </div>
         <div className={styles.galerie12}>
-          <Img src={galerie12} />
+          <img src={galerie12} />
         </div>
         <div className={styles.galerie13}>
-          <Img src={galerie13} />
+          <img src={galerie13} />
         </div>
         <div className={styles.galerie14}>
-          <Img src={galerie14} />
+          <img src={galerie14} />
         </div>
         <div className={styles.galerie15}>
-          <Img src={galerie15} />
+          <img src={galerie15} />
         </div>
       </div>
     </Layout>

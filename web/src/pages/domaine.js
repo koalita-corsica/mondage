@@ -15,7 +15,6 @@ import laura from "../asset/domainelaura.jpg";
 import domainImg1 from "../asset/domainetonneau.jpg";
 import domainImg2 from "../asset/domainevigne.jpg";
 import domainImg3 from "../asset/domainelabo.jpg";
-import Img from "gatsby-image";
 
 export const query = graphql`
   query DomainePageQuery {
@@ -70,7 +69,7 @@ const DomainePage = (props) => {
               </div>
             </div>
             <div className={styles.section2}>
-              <Img src={laura} className={styles.laura} />
+              <img src={laura} className={styles.laura} />
               <h2> {item.node.pageBuilder[1].title1.fr} </h2>
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}
@@ -79,13 +78,13 @@ const DomainePage = (props) => {
             </div>
             <div className={styles.section3}>
               <div className={styles.domainImg1}>
-                <Img src={domainImg1} />
+                <img src={domainImg1} />
               </div>
               <div className={styles.domainImg2}>
-                <Img src={domainImg2} />
+                <img src={domainImg2} />
               </div>
               <div className={styles.domainImg3}>
-                <Img src={domainImg3} />
+                <img src={domainImg3} />
               </div>
               {/* <div className={styles.domainImg1}></img></div>
               <div className={styles.domainImg2}><img src={domainImg2}></img></div>
