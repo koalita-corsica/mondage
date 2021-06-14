@@ -17,13 +17,13 @@ import galerie5 from "../asset/galerie5.jpg";
 import galerie6 from "../asset/galerie6.jpg";
 import galerie7 from "../asset/galerie7.jpg";
 import galerie8 from "../asset/galerie8.jpg";
-import galerie9 from "../asset/galerie9.JPG";
+import galerie9 from "../asset/galerie9.jpg";
 import galerie10 from "../asset/galerie10.jpg";
-import galerie11 from "../asset/galerie11.JPG";
+import galerie11 from "../asset/galerie11.jpg";
 import galerie12 from "../asset/galerie12.jpg";
-import galerie13 from "../asset/galerie13.JPG";
+import galerie13 from "../asset/galerie13.jpg";
 import galerie14 from "../asset/galerie14.jpg";
-import galerie15 from "../asset/galerie15.JPG";
+import galerie15 from "../asset/galerie15.jpg";
 
 export const query = graphql`
   query GaleriePageQuery {
