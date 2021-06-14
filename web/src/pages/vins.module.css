@@ -16,7 +16,7 @@
   src: url("../fonts/FuturaPTLight.otf");
 }
 .bandeau {
-  background: url("../asset/nosvins-bandeau.jpg");
+  background: url("../asset/nosvins-bandeau.webp");
   height: 30vh;
   background-position: center 23%;
   background-size: cover;
@@ -60,7 +60,7 @@
 }
 .domainContain .gammes .block {
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 12px;
   opacity: 1;
   display: flex;
@@ -75,7 +75,7 @@
 }
 .domainContain .gammes .block button {
   margin: 2vw;
-  border: 3px solid #A8957E;
+  border: 3px solid #a8957e;
   background-color: transparent;
   border-radius: 4px;
   align-self: center;
@@ -87,13 +87,13 @@
   text-decoration: none;
   font-family: "FuturaText";
   font-size: 20px;
-  color: #A8957E;
+  color: #a8957e;
 }
 .domainContain .gammes .block button:hover {
-  background-color: #A8957E;
+  background-color: #a8957e;
 }
 .domainContain .gammes .block button:hover a {
-  color: #E3E3DC;
+  color: #e3e3dc;
 }
 .domainContain .gammes .block p {
   font-family: "FuturaText";
