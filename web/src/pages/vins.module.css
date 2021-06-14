@@ -16,7 +16,7 @@
   src: url("../fonts/FuturaPTLight.otf");
 }
 .bandeau {
-  background: url("../asset/nosvins-bandeau.webp");
+  background: url("../asset/nosvins-bandeau.jpg");
   height: 30vh;
   background-position: center 23%;
   background-size: cover;
