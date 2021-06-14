@@ -1,7 +1,6 @@
 import { Link, StaticQuery, graphql } from "gatsby";
 import React from "react";
 import PortableText from "./portableText";
-import Img from "gatsby-image";
 
 import * as styles from "./slider.module.css";
 
@@ -11,13 +10,15 @@ const Slider = ({ data, count }) => (
   data.allSanityGame.edges.map((item) => game.push(item.node)),
   (
     <div className={styles.slide}>
-      <Img
-        className={styles.sliderBot}
-        src={game[count].produits[0].image.asset.url}
-        alt=""
-      />
+      <div className={styles.wrp}>
+        <img
+          className={styles.sliderBot}
+          src={game[count].produits[0].image.asset.url}
+          alt=""
+        />
+      </div>
       <div className={styles.content}>
-        <Img
+        <img
           src={game[count].logo.asset.url}
           alt=""
           className={styles.sliderLogo}
@@ -32,8 +33,7 @@ const Slider = ({ data, count }) => (
             to={"/game/" + `${game[count].slug.current}`}
             className={styles.btn}
           >
-            {" "}
-            VOIR PLUS{" "}
+            VOIR PLUS
           </Link>
         </button>
       </div>

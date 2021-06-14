@@ -1,372 +1,412 @@
 @import "../pages/normalize.module.css";
-$color-fontWhite: #E3E3DC;
+$color-fontWhite: #e3e3dc;
 $color-fontBrown: #685950;
-$color-backgroundGrey:#D9D9D7;
-$color-backgroundLightGrey:#E3E3DC;
-$color-button:#A8957E;
-$color-line:#707070;
-$font-title:7.2em;
-$font-subtitle:25px;
-$font-text:20px;
+$color-backgroundGrey: #d9d9d7;
+$color-backgroundLightGrey: #e3e3dc;
+$color-button: #a8957e;
+$color-line: #707070;
+$font-title: 7.2em;
+$font-subtitle: 25px;
+$font-text: 20px;
 @font-face {
-    font-family: "Reislust";
-    src: url("../fonts/Reislust-97D7.ttf");
+  font-family: "Reislust";
+  src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-    font-family: "FuturaText";
-    src: url("../fonts/FuturaPTBook.otf");
+  font-family: "FuturaText";
+  src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-    font-family: "FuturaSub";
-    src: url("../fonts/FuturaPTCondMedium.otf");
+  font-family: "FuturaSub";
+  src: url("../fonts/FuturaPTCondMedium.otf");
 }
 @font-face {
-    font-family: "FuturaLight";
-    src: url("../fonts/FuturaPTLight.otf");
+  font-family: "FuturaLight";
+  src: url("../fonts/FuturaPTLight.otf");
 }
 
-.wrapperAccueil{
-    display: flex;
-    flex-direction: column;
-    
+.wrapperAccueil {
+  display: flex;
+  flex-direction: column;
 }
 .title {
-    font-family: "Reislust";
-    font-size: 7.2em;
-    line-height: 1;
+  font-family: "Reislust";
+  font-size: 7.2em;
+  line-height: 1;
 }
-.section1{ 
-    background:  linear-gradient(to top, rgba(0,0,0,.6) 0%, rgba(19, 19, 19,0.6) 75%, rgba(226, 226, 226,0.7) 100%), 
+.section1 {
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(19, 19, 19, 0.6) 75%,
+      rgba(226, 226, 226, 0.7) 100%
+    ),
     url("../asset/accueilvigne.jpg");
-    background-size: cover;
-    background-position: center 25%;
-    background-repeat: no-repeat;
-    height: 104vh;
-    margin-left: 6vw;
-    margin-right: 6vw;
-    display: grid;
-    grid-template-columns: 30vw 1fr;
-    column-gap: 10vw;
-    @media (max-width: 750px){
-        height: 73vh;
-        margin-bottom: 12vw;
-      }
-    
-    .bottle{
-        grid-area: 1/1/2/2;
-        position: relative;
-        width: auto;
-        margin-top: 8vh;
-        height: 112vh;
-        transform: translateX(-200%);
-        @media (max-width: 750px){
-           height: 73vh;
-           right: 45%; 
-          }
-    }
-    .block1 * {
-        color: $color-backgroundGrey;
-    }
-    
-    .block1{
-        transform: translateX(200%);
-        margin-right: 7vw;
-        box-sizing: border-box;
-        margin-top: 8vh;
-        grid-area: 1/2/2/3;
-        @media (max-width: 750px){
-            margin: 0 auto;
-            align-self: center;
-        }  
-    }
-    .title{
-        margin-top: 20vh;
-        @media (max-width: 750px){
-            display: none;
-        }
-    }
-    div  p{
-        line-height: 1.5;
-        font-family: "FuturaText";
-        font-size:  $font-text;
-        @media (max-width: 750px){
-            font-size: 18px;
-        }
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  height: 104vh;
+  margin-left: 6vw;
+  margin-right: 6vw;
+  display: grid;
+  grid-template-columns: 30vw 1fr;
+  column-gap: 10vw;
+  @media (max-width: 750px) {
+    height: 73vh;
+    margin-bottom: 12vw;
+  }
 
+  .bottle {
+    grid-area: 1/1/2/2;
+    position: relative;
+    width: auto;
+    margin-top: 8vh;
+    height: 112vh;
+    transform: translateX(-200%);
+    @media (max-width: 750px) {
+      height: 73vh;
+      right: 45%;
     }
-    div h2{
-        font-family: "FuturaText";
-        line-height: 2;
-        font-size: 25px;
-        @media (max-width: 750px){
-            font-size: 21px;
-            line-height: 1.5;
-        }
+  }
+  .block1 * {
+    color: $color-backgroundGrey;
+  }
+
+  .block1 {
+    transform: translateX(200%);
+    margin-right: 7vw;
+    box-sizing: border-box;
+    margin-top: 8vh;
+    grid-area: 1/2/2/3;
+    @media (max-width: 750px) {
+      margin: 0 auto;
+      align-self: center;
     }
-    .gamme{
-        background-color: transparent;
-        margin-top: 3vh;
-        border: 3px solid #A8957E;
-        border-radius: 4px;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        @media (max-width: 750px){
-            margin-bottom: 5vh;
-            width: auto;
-        }
-        a{
-            text-decoration: none;
-            font-family: "FuturaText";
-            font-size: $font-text;
-            color: $color-button;
-            margin: 2vw;
-            @media (max-width: 750px){
-                font-size: 18px;
-            }
-        }  
+  }
+  .title {
+    margin-top: 20vh;
+    @media (max-width: 750px) {
+      display: none;
     }
-    .gamme:hover{
-        background-color: $color-button;
-        .a{
-            color: $color-backgroundLightGrey;
-        }
+  }
+  div p {
+    line-height: 1.5;
+    font-family: "FuturaText";
+    font-size: $font-text;
+    @media (max-width: 750px) {
+      font-size: 18px;
     }
-    
+  }
+  div h2 {
+    font-family: "FuturaText";
+    line-height: 2;
+    font-size: 25px;
+    @media (max-width: 750px) {
+      font-size: 21px;
+      line-height: 1.5;
+    }
+  }
+  .gamme {
+    background-color: transparent;
+    margin-top: 3vh;
+    border: 3px solid #a8957e;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    @media (max-width: 750px) {
+      margin-bottom: 5vh;
+      width: auto;
+    }
+    a {
+      text-decoration: none;
+      font-family: "FuturaText";
+      font-size: $font-text;
+      color: $color-button;
+      margin: 2vw;
+      @media (max-width: 750px) {
+        font-size: 18px;
+      }
+    }
+  }
+  .gamme:hover {
+    background-color: $color-button;
+    .a {
+      color: $color-backgroundLightGrey;
+    }
+  }
 }
 
-.section2{
+.section2 {
+  color: $color-fontWhite;
+  display: flex;
+  height: 104vh;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(19, 19, 19, 0.7) 75%,
+      rgba(226, 226, 226, 0.7) 150%
+    ),
+    url("../asset/nosvins-bandeau.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+  @media (max-width: 750px) {
+    height: auto;
+  }
+  .domainimg {
+    width: 310px;
+    height: 310px;
+    border-radius: 100%;
+  }
+  div {
+    margin-top: 2vh;
+    width: 50%;
     color: $color-fontWhite;
-    display: flex;
-    height: 104vh;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background:  linear-gradient(to top, rgba(0,0,0,.7) 0%, rgba(19, 19, 19,0.7) 75%, rgba(226, 226, 226,0.7) 150%), url("../asset/nosvins-bandeau.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 100;
-    @media (max-width: 750px){
-        height: auto;
+    @media (max-width: 750px) {
+      width: 80%;
+      margin-bottom: 5vh;
+    }
+  }
+  div p {
+    color: $color-fontWhite;
+    line-height: 1.5;
+    font-family: "FuturaText";
+    font-size: $font-text;
+  }
+  div h2 {
+    color: $color-fontWhite;
+    font-family: "FuturaText";
+    line-height: 3;
+    font-size: 25px;
+  }
+  .gamme {
+    margin-top: 3vh;
+    background-color: transparent;
+    border: 3px solid #a8957e;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    @media (max-width: 750px) {
+      margin-bottom: 5vh;
+    }
+    a {
+      text-decoration: none;
+      font-family: "FuturaText";
+      font-size: $font-text;
+      color: $color-button;
+      @media (max-width: 750px) {
+        font-size: 0;
       }
-    .domainimg{
-        width: 310px;
-        height: 310px;
-        border-radius: 100%;
     }
-    div{
-        margin-top: 2vh;
-        width: 50%;
-        color: $color-fontWhite;
-        @media (max-width: 750px){
-            width: 80%;
-            margin-bottom: 5vh;
-        }
-    }
-    div  p{
-        color: $color-fontWhite;
-        line-height: 1.5;
-        font-family: "FuturaText";
-        font-size:  $font-text;
-    }
-    div h2{
-        color: $color-fontWhite;
-        font-family: "FuturaText";
-        line-height: 3;
-        font-size: 25px;
-    }
-    .gamme{
-        margin-top: 3vh;
-        background-color: transparent;
-        border: 3px solid #A8957E;
-        border-radius: 4px;
-        width: auto;
-        height: auto;
-        padding: 5px;
-        @media (max-width: 750px){
-            margin-bottom: 5vh;
-            
-        }
-        a{
-            text-decoration: none;
-            font-family: "FuturaText";
-            font-size: $font-text;
-            color: $color-button;
-            @media (max-width: 750px){
-                font-size: 0;
-            }
-        }
-        @media (max-width: 750px){
-            a::after{
-                margin: 2vw;
-                content: "VOIR PLUS";
-                font-size: $font-text;
-            }
-        }
-    }
-    .gamme:hover{
-        background-color: $color-button;
-        .a{
-            color: $color-backgroundLightGrey;
-        }
-    }  
-    
-}
-.section3{
-    background-color: $color-backgroundGrey;
-    display: grid;
-    grid-template-columns: 25vw 75vw;
-    width: 100%;
-    @media (max-width: 750px){
-        height: auto;
-        width: 100vw;
-        display: flex;
-      }
-    * {
-        color: $color-fontBrown;
-    }
-    .sliderimg{
-        background: url("../asset/accueilnosvins.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        @media (max-width: 750px){
-            display: none;
-          }
-    }
-    .title{
-        color: $color-fontBrown;
-        text-align: center;
-    }
-    .sliderContain{
+    @media (max-width: 750px) {
+      a::after {
         margin: 2vw;
-        @media (max-width: 750px){
-            margin: 0 auto;
-        }
-    }
-    .slider{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        svg {
-            height: 12vh;
-            width: 6vw;
-            path{
-                color: $color-fontBrown;
-            }
-        }
-        
-        div  p{
-            font-family: "FuturaText";
-            font-size:  $font-text;  
-            width: 100%;
-        }
-        div h2{
-            font-family: "FuturaText";
-            font-size: 25px;
-        }
-        
-    }
-    
-
-}
-.section4{
-    height: 94vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    @media (max-width: 750px){
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        content: "VOIR PLUS";
+        font-size: $font-text;
       }
-    * {
+    }
+  }
+  .gamme:hover {
+    background-color: $color-button;
+    .a {
+      color: $color-backgroundLightGrey;
+    }
+  }
+}
+.section3 {
+  background-color: $color-backgroundGrey;
+  display: grid;
+  grid-template-columns: 25vw 75vw;
+  width: 100%;
+  @media (max-width: 750px) {
+    height: auto;
+    width: 100vw;
+    display: flex;
+  }
+  * {
+    color: $color-fontBrown;
+  }
+  .sliderimg {
+    background: url("../asset/accueilnosvins.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (max-width: 750px) {
+      display: none;
+    }
+  }
+  .title {
+    color: $color-fontBrown;
+    text-align: center;
+  }
+  .sliderContain {
+    margin: 2vw;
+    @media (max-width: 750px) {
+      margin: 0 auto;
+    }
+  }
+  .slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    svg {
+      height: 12vh;
+      width: 6vw;
+      path {
         color: $color-fontBrown;
+      }
     }
-    .pressimg{
-        width: 43vw;
-        justify-self: right;
-        @media (max-width: 750px){
-            width: auto;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-            @media (max-width: 750px){
-                width: 100%;
-                height: auto;
-            }
-        }
-        
+
+    div p {
+      font-family: "FuturaText";
+      font-size: $font-text;
+      width: 100%;
     }
-    .pressContain{ 
-        width: 27vw;
-        justify-self: center;
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        @media (max-width: 750px){
-            width: 100%;
-            height: auto;
-            margin: 0 auto;
-            text-align: center;
-          }
+    div h2 {
+      font-family: "FuturaText";
+      font-size: 25px;
     }
-    div  p{
-        font-family: "FuturaText";
-        font-size:  $font-text;
-        line-height: 1.5;
+  }
+}
+.section4 {
+  height: 94vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media (max-width: 750px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  * {
+    color: $color-fontBrown;
+  }
+  .pressimg {
+    width: 43vw;
+    justify-self: right;
+    @media (max-width: 750px) {
+      width: auto;
     }
-    div h2{
-        margin-top: 14vh;
-        font-family: "FuturaText";
-        font-size: 25px;
-        line-height: 2;
-        @media (max-width: 750px){
-            margin: 0 auto;
-        }
-    }
-    .pressBlock{
-        margin-top: 2vh;
-        height: 100%;
-        @media (max-width: 750px){
-            margin: 6vw;
-            height: auto;
-        }
-        
-    }
-    .gamme{
-        margin-top: 3vh;
-        border: 3px solid #A8957E;
-        background-color: transparent;
-        border-radius: 4px;
-        width: auto;
+    img {
+      width: 100%;
+      height: 100%;
+      @media (max-width: 750px) {
+        width: 100%;
         height: auto;
-        padding: 5px;
-        a{
-            text-decoration: none;
-            font-family: "FuturaText";
-            font-size: $font-text;
-            color: $color-button;
-            @media (max-width: 750px){
-                font-size: 0;
-            }
-        }
-        @media (max-width: 750px){
-            a::after{
-                margin: 2vw;
-                content: "VOIR PLUS";
-                font-size: $font-text;
-            }
-        }  
+      }
     }
-    .gamme:hover{
-        background-color: $color-button;
-        a{
-            color: $color-backgroundLightGrey;
-        }
+  }
+  .pressContain {
+    width: 27vw;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    @media (max-width: 750px) {
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      text-align: center;
     }
+  }
+  div p {
+    font-family: "FuturaText";
+    font-size: $font-text;
+    line-height: 1.5;
+  }
+  div h2 {
+    margin-top: 14vh;
+    font-family: "FuturaText";
+    font-size: 25px;
+    line-height: 2;
+    @media (max-width: 750px) {
+      margin: 0 auto;
+    }
+  }
+  .pressBlock {
+    margin-top: 2vh;
+    height: 100%;
+    @media (max-width: 750px) {
+      margin: 6vw;
+      height: auto;
+    }
+  }
+  .gamme {
+    margin-top: 3vh;
+    border: 3px solid #a8957e;
+    background-color: transparent;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    padding: 5px;
+    a {
+      text-decoration: none;
+      font-family: "FuturaText";
+      font-size: $font-text;
+      color: $color-button;
+      @media (max-width: 750px) {
+        font-size: 0;
+      }
+    }
+    @media (max-width: 750px) {
+      a::after {
+        margin: 2vw;
+        content: "VOIR PLUS";
+        font-size: $font-text;
+      }
+    }
+  }
+  .gamme:hover {
+    background-color: $color-button;
+    a {
+      color: $color-backgroundLightGrey;
+    }
+  }
 }
 
+.b0 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
 
+.b1 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
 
+.b2 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.selected {
+  background-color: #a8957e;
+}
+
+.glob {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  margin-left: 225px;
+  grid-column: 2;
+  text-align: center;
+}
+@media (max-width: 750px) {
+  .glob {
+    margin-left: 130px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}

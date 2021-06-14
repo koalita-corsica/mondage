@@ -227,14 +227,41 @@ const IndexPage = (props) => {
               <div className={styles.sliderimg} />
               <div className={styles.sliderContain}>
                 <div className={styles.title}>
-                  {" "}
-                  {item.node.pageBuilder[2].title1.fr}{" "}
+                  {item.node.pageBuilder[2].title1.fr}
                 </div>
                 <div className={styles.slider}>
                   <IoIosArrowBack onClick={moins} />
                   <Slider count={count} />
                   <IoIosArrowForward onClick={plus} />
                 </div>
+                {count && count == 1 ? (
+                  <div className={styles.glob}>
+                    <div id="b0" className={styles.b0} />
+                    <div
+                      id="b1"
+                      className={styles.b1 + " " + styles.selected}
+                    />
+                    <div id="b2" className={styles.b2} />
+                  </div>
+                ) : count == 2 ? (
+                  <div className={styles.glob}>
+                    <div id="b0" className={styles.b0} />
+                    <div id="b1" className={styles.b1} />
+                    <div
+                      id="b2"
+                      className={styles.b2 + " " + styles.selected}
+                    />
+                  </div>
+                ) : (
+                  <div className={styles.glob}>
+                    <div
+                      id="b0"
+                      className={styles.b0 + " " + styles.selected}
+                    />
+                    <div id="b1" className={styles.b1} />
+                    <div id="b2" className={styles.b2} />
+                  </div>
+                )}
               </div>
             </div>
             <div className={styles.section4}>
