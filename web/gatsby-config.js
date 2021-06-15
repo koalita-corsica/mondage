@@ -11,21 +11,7 @@ const isProd = process.env.NODE_ENV === "production";
 module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
-    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
-    {
-      resolve: "gatsby-plugin-sanity-image",
-      options: {
-        // Sanity project info (required)
-        projectId: "pc8kcslj",
-        dataset: "production",
-        defaultImageConfig: {
-          quality: 75,
-          fit: "max",
-          auto: "format",
-        },
-      },
-    },
     {
       resolve: "gatsby-source-sanity",
       options: {
