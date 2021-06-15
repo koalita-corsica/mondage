@@ -79,9 +79,15 @@ const DomainePage = (props) => {
               </div>
             </div>
             <div className={styles.section3}>
-              <div className={styles.domainImg1}><img src={domainImg1}/></div>
-              <div className={styles.domainImg2}><img src={domainImg2}/></div>
-              <div className={styles.domainImg3}><img src={domainImg3}/></div>
+              <div className={styles.domainImg1}>
+                <img src={domainImg1} />
+              </div>
+              <div className={styles.domainImg2}>
+                <img src={domainImg2} />
+              </div>
+              <div className={styles.domainImg3}>
+                <img src={domainImg3} />
+              </div>
               {/* <div className={styles.domainImg1}></img></div>
               <div className={styles.domainImg2}><img src={domainImg2}></img></div>
               <div className={styles.domainImg3}><img src={domainImg3}></img></div> */}

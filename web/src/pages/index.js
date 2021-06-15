@@ -18,6 +18,7 @@ import domainImg from "../asset/accueildomaine.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import * as styles from "../pages/index.module.css";
+import Image from "gatsby-plugin-sanity-image";
 
 export const query = graphql`
   query AccueilQuery {
@@ -41,11 +42,31 @@ export const query = graphql`
         }
       }
     }
+    accvigne: sanityAssets(title: { eq: "bottle" }) {
+      image {
+        ...ImageWithPreview
+      }
+    }
+    presse: sanityAssets(title: { eq: "pressImg" }) {
+      image {
+        ...ImageWithPreview
+      }
+    }
+    domain: sanityAssets(title: { eq: "domainImg" }) {
+      image {
+        ...ImageWithPreview
+      }
+    }
   }
 `;
 
+const isBrowser = typeof window !== "undefined";
+
 const IndexPage = (props) => {
   const { data, errors } = props;
+  const bo = data.accvigne.image;
+  const pres = data.presse.image;
+  const dom = data.domain.image;
   const [count, setCount] = useState(0);
 
   if (errors) {
@@ -63,11 +84,19 @@ const IndexPage = (props) => {
     : [];
 
   function moins() {
-    count && count == 0 ? setCount(2) : setCount(count + 1);
+    if (count == 0) {
+      setCount(2);
+    } else {
+      setCount(count - 1);
+    }
   }
 
   function plus() {
-    count && count == 2 ? setCount(0) : setCount(count - 1);
+    if (count == 2) {
+      setCount(0);
+    } else {
+      setCount(count + 1);
+    }
   }
   function translateLoad() {
     const blockPara = document.querySelector("#block1");
@@ -81,85 +110,87 @@ const IndexPage = (props) => {
       "opacity: 1; transform: translateX(0%); transition: all 1.8s"
     );
   }
-  window.addEventListener("scroll", () => {
-    const blockPara = document.querySelector("#block1");
-    const bottle = document.querySelector("#bottle");
-    blockPara.style.transition = "all 1s";
-    bottle.style.transition = "all 1s";
-    var i = 0;
-    console.log(window.scrollY);
-    if (window.scrollY == i) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 1; transform: translateX(0%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(0%)";
-    }
-    if (window.scrollY > 99) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.9; transform: translateX(15%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-15%)";
-    }
-    if (window.scrollY > 199) {
-      // blockPara.style.transform = "translateX(50%)";
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.8; transform: translateX(30%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-30%)";
-    }
-    if (window.scrollY > 299) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.7; transform: translateX(45%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-45%)";
-    }
-    if (window.scrollY > 399) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.6; transform: translateX(60%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-60%)";
-    }
-    if (window.scrollY > 499) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.5; transform: translateX(75%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-75%)";
-    }
-    if (window.scrollY > 599) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.4; transform: translateX(90%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-90%)";
-    }
-    if (window.scrollY > 699) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.3; transform: translateX(105%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-105%)";
-    }
-    if (window.scrollY > 799) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.2; transform: translateX(120%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-120%)";
-    }
-    if (window.scrollY > 899) {
-      blockPara.setAttribute(
-        "style",
-        "opacity: 0.1; transform: translateX(135%); transition: all 1s"
-      );
-      bottle.style.transform = "translateX(-135%)";
-    }
-  });
+  if (isBrowser) {
+    typeof window !== "undefined" &&
+      window.addEventListener("scroll", () => {
+        const blockPara = document.querySelector("#block1");
+        const bottle = document.querySelector("#bottle");
+        blockPara.style.transition = "all 1s";
+        bottle.style.transition = "all 1s";
+        var i = 0;
+        if (typeof window !== "undefined" && window.scrollY == i) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 1; transform: translateX(0%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(0%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 99) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.9; transform: translateX(15%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-15%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 199) {
+          // blockPara.style.transform = "translateX(50%)";
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.8; transform: translateX(30%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-30%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 299) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.7; transform: translateX(45%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-45%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 399) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.6; transform: translateX(60%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-60%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 499) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.5; transform: translateX(75%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-75%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 599) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.4; transform: translateX(90%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-90%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 699) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.3; transform: translateX(105%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-105%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 799) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.2; transform: translateX(120%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-120%)";
+        }
+        if (typeof window !== "undefined" && window.scrollY > 899) {
+          blockPara.setAttribute(
+            "style",
+            "opacity: 0.1; transform: translateX(135%); transition: all 1s"
+          );
+          bottle.style.transform = "translateX(-135%)";
+        }
+      });
+  }
 
   const serializers = {
     types: {
@@ -177,8 +208,13 @@ const IndexPage = (props) => {
         <React.Fragment>
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
-              <img src={bottle} className={styles.bottle} id="bottle" />
-              <div className={styles.block1} id="block1" data-att="block1" onScroll={{}}>
+              <Image {...bo} className={styles.bottle} id="bottle" />
+              <div
+                className={styles.block1}
+                id="block1"
+                data-att="block1"
+                onScroll={{}}
+              >
                 <div className={styles.title}>
                   {item.node.pageBuilder[0].title1.fr}{" "}
                 </div>
@@ -199,7 +235,7 @@ const IndexPage = (props) => {
                 {" "}
                 {item.node.pageBuilder[1].title1.fr}{" "}
               </div>
-              <img src={domainImg} className={styles.domainimg} />
+              <Image {...dom} className={styles.domainimg} />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}
                 serializers={serializers}
@@ -214,14 +250,41 @@ const IndexPage = (props) => {
               <div className={styles.sliderimg} />
               <div className={styles.sliderContain}>
                 <div className={styles.title}>
-                  {" "}
-                  {item.node.pageBuilder[2].title1.fr}{" "}
+                  {item.node.pageBuilder[2].title1.fr}
                 </div>
                 <div className={styles.slider}>
                   <IoIosArrowBack onClick={moins} />
                   <Slider count={count} />
                   <IoIosArrowForward onClick={plus} />
                 </div>
+                {count && count == 1 ? (
+                  <div className={styles.glob}>
+                    <div id="b0" className={styles.b0} />
+                    <div
+                      id="b1"
+                      className={styles.b1 + " " + styles.selected}
+                    />
+                    <div id="b2" className={styles.b2} />
+                  </div>
+                ) : count == 2 ? (
+                  <div className={styles.glob}>
+                    <div id="b0" className={styles.b0} />
+                    <div id="b1" className={styles.b1} />
+                    <div
+                      id="b2"
+                      className={styles.b2 + " " + styles.selected}
+                    />
+                  </div>
+                ) : (
+                  <div className={styles.glob}>
+                    <div
+                      id="b0"
+                      className={styles.b0 + " " + styles.selected}
+                    />
+                    <div id="b1" className={styles.b1} />
+                    <div id="b2" className={styles.b2} />
+                  </div>
+                )}
               </div>
             </div>
             <div className={styles.section4}>
@@ -241,7 +304,7 @@ const IndexPage = (props) => {
                 </div>
               </div>
               <div className={styles.pressimg}>
-                <img src={pressImg}></img>
+                <Image {...pres} />
               </div>
             </div>
           </div>

@@ -72,7 +72,7 @@
 .content button {
   margin-top: 3vh;
   background-color: transparent;
-  border: 3px solid #A8957E;
+  border: 3px solid #a8957e;
   border-radius: 4px;
   width: 10vw;
   height: 4.5vh;
@@ -88,7 +88,7 @@
   font-size: 20px;
   text-decoration: none;
   font-family: "FuturaText";
-  color: #A8957E;
+  color: #a8957e;
 }
 @media (max-width: 750px) {
   .content button .btn {
@@ -96,10 +96,10 @@
   }
 }
 .content button:hover {
-  background-color: #A8957E;
+  background-color: #a8957e;
 }
 .content button:hover .btn {
-  color: #E3E3DC;
+  color: #e3e3dc;
 }
 
 /*# sourceMappingURL=slider.module.css.map */

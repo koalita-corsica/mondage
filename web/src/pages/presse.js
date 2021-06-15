@@ -69,44 +69,44 @@ const PressePage = (props) => {
             <PortableText blocks={item.node.pageBuilder[0].desc._rawFr} />
           </div>
         ))}
-          <div className={styles.container}>
-            <div className={styles.gauche}>
-              {data.allSanityPost.edges.map((element) => (
-                <React.Fragment>
-                      {element.node.cote && element.node.cote === "gauche" && (
-                        <div
-                          className={styles.articlesGauche}
-                          data-pos={element.node.cote}
-                        >
-                          <h1> {element.node.title.fr} </h1>
-                          <div className={styles.block}>
-                              <PortableText blocks={element.node.excerpt._rawFr} />
-                              <img src={element.node.mainImage.asset.url} alt="" />
-                            </div>
-                        </div>
-                      )}
-                </React.Fragment>
-              ))}
-            </div>
-            <div className={styles.droite}>
-              {data.allSanityPost.edges.map((element) => (
-                  <React.Fragment>
-                        {element.node.cote && element.node.cote === "droite" && (
-                          <div
-                          className={styles.articlesDroite}
-                          data-pos={element.node.cote}
-                          >
-                            <h1> {element.node.title.fr} </h1>
-                            <div className={styles.block}>
-                              <PortableText blocks={element.node.excerpt._rawFr} />
-                              <img src={element.node.mainImage.asset.url} alt="" />
-                            </div>
-                          </div>
-                        )}
-                  </React.Fragment>
-                ))}
-              </div>
+        <div className={styles.container}>
+          <div className={styles.gauche}>
+            {data.allSanityPost.edges.map((element) => (
+              <React.Fragment>
+                {element.node.cote && element.node.cote === "gauche" && (
+                  <div
+                    className={styles.articlesGauche}
+                    data-pos={element.node.cote}
+                  >
+                    <h1> {element.node.title.fr} </h1>
+                    <div className={styles.block}>
+                      <PortableText blocks={element.node.excerpt._rawFr} />
+                      <img src={element.node.mainImage.asset.url} alt="" />
+                    </div>
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
           </div>
+          <div className={styles.droite}>
+            {data.allSanityPost.edges.map((element) => (
+              <React.Fragment>
+                {element.node.cote && element.node.cote === "droite" && (
+                  <div
+                    className={styles.articlesDroite}
+                    data-pos={element.node.cote}
+                  >
+                    <h1> {element.node.title.fr} </h1>
+                    <div className={styles.block}>
+                      <PortableText blocks={element.node.excerpt._rawFr} />
+                      <img src={element.node.mainImage.asset.url} alt="" />
+                    </div>
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
       </div>
     </Layout>
   );

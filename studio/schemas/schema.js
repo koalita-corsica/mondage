@@ -22,6 +22,7 @@ import game from "./documents/game";
 import produit from "./documents/produit";
 import localeString from "./objects/localeString";
 import localeBody from "./objects/localeBody";
+import asset from "./documents/asset";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -47,6 +48,7 @@ export default createSchema({
     produit,
     localeString,
     localeBody,
+    asset,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ]),

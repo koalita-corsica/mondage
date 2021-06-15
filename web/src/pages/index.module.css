@@ -27,7 +27,13 @@
 }
 
 .section1 {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(19, 19, 19, 0.6) 75%, rgba(226, 226, 226, 0.7) 100%), url("../asset/accueilvigne.jpg");
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(19, 19, 19, 0.6) 75%,
+      rgba(226, 226, 226, 0.7) 100%
+    ),
+    url("../asset/accueilvigne.jpg");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -59,7 +65,7 @@
   }
 }
 .section1 .block1 * {
-  color: #D9D9D7;
+  color: #d9d9d7;
 }
 .section1 .block1 {
   transform: translateX(200%);
@@ -106,7 +112,7 @@
 .section1 .gamme {
   background-color: transparent;
   margin-top: 3vh;
-  border: 3px solid #A8957E;
+  border: 3px solid #a8957e;
   border-radius: 4px;
   width: auto;
   height: auto;
@@ -122,7 +128,7 @@
   text-decoration: none;
   font-family: "FuturaText";
   font-size: 20px;
-  color: #A8957E;
+  color: #a8957e;
   margin: 2vw;
 }
 @media (max-width: 750px) {
@@ -131,20 +137,26 @@
   }
 }
 .section1 .gamme:hover {
-  background-color: #A8957E;
+  background-color: #a8957e;
 }
 .section1 .gamme:hover .a {
-  color: #E3E3DC;
+  color: #e3e3dc;
 }
 
 .section2 {
-  color: #E3E3DC;
+  color: #e3e3dc;
   display: flex;
   height: 104vh;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 19, 0.7) 75%, rgba(226, 226, 226, 0.7) 150%), url("../asset/nosvins-bandeau.jpg");
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(19, 19, 19, 0.7) 75%,
+      rgba(226, 226, 226, 0.7) 150%
+    ),
+    url("../asset/nosvins-bandeau.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 100;
@@ -162,7 +174,7 @@
 .section2 div {
   margin-top: 2vh;
   width: 50%;
-  color: #E3E3DC;
+  color: #e3e3dc;
 }
 @media (max-width: 750px) {
   .section2 div {
@@ -171,13 +183,13 @@
   }
 }
 .section2 div p {
-  color: #E3E3DC;
+  color: #e3e3dc;
   line-height: 1.5;
   font-family: "FuturaText";
   font-size: 20px;
 }
 .section2 div h2 {
-  color: #E3E3DC;
+  color: #e3e3dc;
   font-family: "FuturaText";
   line-height: 3;
   font-size: 25px;
@@ -185,7 +197,7 @@
 .section2 .gamme {
   margin-top: 3vh;
   background-color: transparent;
-  border: 3px solid #A8957E;
+  border: 3px solid #a8957e;
   border-radius: 4px;
   width: auto;
   height: auto;
@@ -200,7 +212,7 @@
   text-decoration: none;
   font-family: "FuturaText";
   font-size: 20px;
-  color: #A8957E;
+  color: #a8957e;
 }
 @media (max-width: 750px) {
   .section2 .gamme a {
@@ -215,14 +227,14 @@
   }
 }
 .section2 .gamme:hover {
-  background-color: #A8957E;
+  background-color: #a8957e;
 }
 .section2 .gamme:hover .a {
-  color: #E3E3DC;
+  color: #e3e3dc;
 }
 
 .section3 {
-  background-color: #D9D9D7;
+  background-color: #d9d9d7;
   display: grid;
   grid-template-columns: 25vw 75vw;
   width: 100%;
@@ -262,6 +274,7 @@
 }
 .section3 .slider {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
@@ -360,7 +373,7 @@
 }
 .section4 .gamme {
   margin-top: 3vh;
-  border: 3px solid #A8957E;
+  border: 3px solid #a8957e;
   background-color: transparent;
   border-radius: 4px;
   width: auto;
@@ -371,7 +384,7 @@
   text-decoration: none;
   font-family: "FuturaText";
   font-size: 20px;
-  color: #A8957E;
+  color: #a8957e;
 }
 @media (max-width: 750px) {
   .section4 .gamme a {
@@ -386,10 +399,52 @@
   }
 }
 .section4 .gamme:hover {
-  background-color: #A8957E;
+  background-color: #a8957e;
 }
 .section4 .gamme:hover a {
-  color: #E3E3DC;
+  color: #e3e3dc;
+}
+
+.b0 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.b1 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.b2 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.selected {
+  background-color: #a8957e;
+}
+
+.glob {
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+  margin-left: 225px;
+  grid-column: 2;
+  text-align: center;
+}
+
+@media (max-width: 750px) {
+  .glob {
+    margin-left: 130px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=index.module.css.map */

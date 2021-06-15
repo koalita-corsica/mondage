@@ -77,16 +77,16 @@ const VinsPage = (props) => {
                 className={styles.logo}
               />
               <div className={styles.block}>
-                
                 <h1 className={styles.titleGammes}> {games.node.title} </h1>
                 <PortableText
                   blocks={games.node.description._rawFr}
                   serializers={serializers}
                 />
-                <button><Link to={"/game/" + `${games.node.slug.current}`}>
-                  {" "}
-                   Voir la gamme {" "}
-                </Link></button>
+                <button>
+                  <Link to={"/game/" + `${games.node.slug.current}`}>
+                    Voir la gamme
+                  </Link>
+                </button>
               </div>
             </div>
           ))}
