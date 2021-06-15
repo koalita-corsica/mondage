@@ -110,6 +110,9 @@ const IndexPage = (props) => {
       "opacity: 1; transform: translateX(0%); transition: all 1.8s"
     );
   }
+
+  typeof window !== "undefined" &&
+    window.addEventListener("load", translateLoad);
   if (isBrowser) {
     typeof window !== "undefined" &&
       window.addEventListener("scroll", () => {
@@ -206,7 +209,7 @@ const IndexPage = (props) => {
     <Layout>
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
-          <div className={styles.wrapperAccueil} onLoad={translateLoad}>
+          <div className={styles.wrapperAccueil}>
             <div className={styles.section1}>
               <Image {...bo} className={styles.bottle} id="bottle" />
               <div
