@@ -25,8 +25,10 @@
     "prettier": "^2.2.1"
   },
   "dependencies": {
+    "@emotion/core": "^10.1.1",
     "@react-icons/all-files": "^4.1.0",
     "aos": "^2.3.4",
+    "gatsby-plugin-emotion": "^6.7.1",
     "gatsby-plugin-sanity-image": "^0.6.0",
     "gatsby-plugin-typography": "^3.5.0",
     "gatsby-source-filesystem": "^3.7.1",
