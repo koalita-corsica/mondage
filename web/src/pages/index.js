@@ -190,7 +190,7 @@ const IndexPage = (props) => {
           bottle.style.transform = "translateX(-135%)";
         }
       });
-  }
+  } 
 
   const serializers = {
     types: {
