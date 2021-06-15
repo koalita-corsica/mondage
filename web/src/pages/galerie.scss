@@ -85,7 +85,7 @@ body {
     display: grid;
     gap: 16px;
     grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: repeat(24, 1fr);
+    grid-template-rows: repeat(20, 1fr);
     @media (max-width: 750px){
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(22, 1fr);
@@ -96,7 +96,7 @@ body {
         display: block;
         width: 100%;
         height: 100%;
-        object-fit: fill;
+        object-fit: cover;
         border-radius: 5px;
         @media (max-width: 750px){
             border-radius: 0;
@@ -107,91 +107,151 @@ body {
 }
 
 .galerie1{
+    background: url("../asset/galerie1.jpg");
+    background-size: cover;
+    background-position-x: right;
+    background-repeat: no-repeat;
     grid-area: 1/1/4/10;
     @media (max-width: 750px){
         grid-area: 1/1/5/2;
     }     
 }
 .galerie2{
-    grid-area: 1/10/7/18;
+    background: url("../asset/galerie2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 27%;
+    grid-area: 1/10/5/18;
     @media (max-width: 750px){
         grid-area: 1/2/6/3;
     }        
 }
 .galerie3{
+    background: url("../asset/galerie3.jpg");
+    background-size: cover;
+    background-position-x: left;
+    background-repeat: no-repeat;
     grid-area: 1/18/4/25;
     @media (max-width: 750px){
         grid-area: 5/1/8/2;
     }
 }
 .galerie4{
-    grid-area: 4/1/12/10;
+    background: url("../asset/galerie4.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 4/1/9/10;
     @media (max-width: 750px){
         grid-area: 6/2/11/3;
     }
 }
 .galerie5{
-    grid-area: 7/10/9/18;
+    background: url("../asset/galerie5.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 5/10/7/18;
     @media (max-width: 750px){
         grid-area: 11/2/14/3;
     }
 }
 .galerie6{
-    grid-area: 4/18/9/25;
+    background: url("../asset/galerie6.jpg");
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 4/18/7/25;
     @media (max-width: 750px){
         grid-area: 8/1/13/2;
     }
 }
 .galerie7{
-    grid-area: 12/1/16/10;
+    background: url("../asset/galerie7.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 9/1/12/10;
     @media (max-width: 750px){
         grid-area: 13/1/16/2;
     }
 }
 .galerie8{
-    grid-area: 9/10/14/25;
+    background: url("../asset/galerie8.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 7/10/11/25;
     @media (max-width: 750px){
         grid-area: 14/2/17/3;
     }
 }
 .galerie9{
-    grid-area: 16/1/19/10;
+    background: url("../asset/galerie9.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 12/1/15/10;
     @media (max-width: 750px){
         grid-area: 16/1/20/2;
     }
 }
 .galerie10{
-    grid-area: 14/10/19/25;
+    background: url("../asset/galerie10.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 11/10/15/25;
     @media (max-width: 750px){
         display: none;
     }
 }
 .galerie11{
-    grid-area: 19/1/22/3;
+    background: url("../asset/galerie11.jpg");
+    background-size: cover;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    grid-area: 15/1/18/4;
     @media (max-width: 750px){
         display: none;
     }
 }
 .galerie12{
-    grid-area: 19/3/22/16;
+    background: url("../asset/galerie12.jpg");
+    background-size: cover;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    grid-area: 15/4/18/16;
     @media (max-width: 750px){
         grid-area: 17/2/20/3;
     }
 }
 .galerie13{
-    grid-area: 19/16/25/25;
+    background: url("../asset/galerie13.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 15/16/21/25;
     @media (max-width: 750px){
         grid-area: 20/2/23/3;
     }
 }
 .galerie14{
-    grid-area: 22/1/25/7;
+    background: url("../asset/galerie14.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 18/1/21/7;
     @media (max-width: 750px){
         display: none;
     }
 }
 .galerie15{
-    grid-area: 22/7/25/16;
+    background: url("../asset/galerie15.jpg");
+    background-size: contain;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    grid-area: 18/7/21/16;
     @media (max-width: 750px){
         grid-area: 20/1/23/2;
     }

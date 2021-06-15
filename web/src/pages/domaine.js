@@ -71,10 +71,12 @@ const DomainePage = (props) => {
             <div className={styles.section2}>
               <img src={laura} className={styles.laura} />
               <h2> {item.node.pageBuilder[1].title1.fr} </h2>
-              <PortableText
-                blocks={item.node.pageBuilder[1].desc._rawFr}
-                serializers={serializers}
-              />
+              <div className={styles.block2}>
+                <PortableText
+                  blocks={item.node.pageBuilder[1].desc._rawFr}
+                  serializers={serializers}
+                />
+              </div>
             </div>
             <div className={styles.section3}>
               <div className={styles.domainImg1}><img src={domainImg1}/></div>

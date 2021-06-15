@@ -1,20 +1,30 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-  font-family: "FuturaSub";
-  src: url("../fonts/FuturaPTCondMedium.otf");
+  font-family: "FuturaPTMedium";
+  src: url("../fonts/FuturaPTMedium.otf");
+}
+@font-face {
+  font-family: "FuturaPTbold";
+  src: url("../fonts/FuturaPTBold.otf");
+}
+@font-face {
+  font-family: "FuturaPTNormalOblique";
+  src: url("../fonts/FuturaPTBookOblique.otf");
 }
 .wrapper {
-  height: 17.1698113208vh;
+  height: auto;
   margin-left: 6vw;
   margin-right: 6vw;
+  padding-top: 1vh;
   width: auto;
   background-color: #E3E3DC;
   align-items: center;
@@ -71,7 +81,7 @@
   text-decoration: none;
   font-size: 20px;
   color: #685950;
-  font-family: "FuturaSub";
+  font-family: "FuturaPTMedium";
 }
 @media (max-width: 750px) {
   .wrapper nav li a {
@@ -80,7 +90,7 @@
 }
 .wrapper nav li a:hover {
   color: #A8957E;
-  font-weight: bold;
+  font-family: "FuturaPTbold";
 }
 
 /*# sourceMappingURL=header.module.css.map */

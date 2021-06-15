@@ -1,11 +1,12 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 $color-fontWhite: #E3E3DC;
 $color-fontBrown: #685950;
 $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:7.2em;
+$font-title:70px;
 $font-subtitle:25px;
 $font-text:20px;
 @font-face {
@@ -13,16 +14,20 @@ $font-text:20px;
     src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-    font-family: "FuturaText";
+    font-family: "FuturaPTNormal";
     src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-    font-family: "FuturaSub";
-    src: url("../fonts/FuturaPTCondMedium.otf");
+    font-family: "FuturaPTMedium";
+    src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-    font-family: "FuturaLight";
-    src: url("../fonts/FuturaPTLight.otf");
+    font-family: "FuturaPTbold";
+    src: url("../fonts/FuturaPTBold.otf");
+}
+@font-face {
+    font-family: "FuturaPTNormalOblique";
+    src: url("../fonts/FuturaPTBookOblique.otf");
 }
 .ntm {
     color:red;
@@ -41,7 +46,7 @@ $font-text:20px;
     a{
         text-decoration: none;
         font-size: $font-text;
-        font-family: "FuturaText";
+        font-family: "FuturaPTNormal";
     }
     
 }
@@ -52,21 +57,25 @@ $font-text:20px;
     width: 80vw;
     display: grid;
     grid-template-columns: 25% 50% 25%;
+    grid-template-rows: repeat(2,1fr);
+    margin-bottom: 3vh;
     @media (max-width: 750px){
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
         margin: 0 auto;
     }
+    
 }
 
 .domainMondange{
     grid-area: 1/2/2/3;
     justify-self: center;
+    text-align: center;
     a{
         font-family: "Reislust" !important;
-        font-size: $font-title;
-        line-height: 1;
+        font-size: 74px;
+        // line-height: 1;
         @media (max-width: 750px){
             line-height: 2;
         }
@@ -80,9 +89,9 @@ $font-text:20px;
 }
 .contact{
     font-size: $font-text;
-    font-family: "FuturaText";
-    grid-area: 1/1/2/2;
-    line-height: 2;
+    font-family: "FuturaPTNormal";
+    grid-area: 1/1/3/2;
+    line-height: 1;
     @media (max-width: 750px){
         border-bottom: $color-line solid 2px;
         text-align: center;
@@ -93,7 +102,7 @@ $font-text:20px;
 }
 
 .plansite{
-    grid-area: 1/3/2/4;
+    grid-area: 1/3/3/4;
     font-size: $font-subtitle;
     justify-self: center;
     @media (max-width: 750px){
@@ -102,9 +111,8 @@ $font-text:20px;
         justify-self: left;
     }
     .plan{
-        font-family: "FuturaSub";
+        font-family: "FuturaPTMedium";
         font-size: $font-subtitle;
-        font-weight: bold;
         
     }
     .ul{
@@ -119,7 +127,7 @@ $font-text:20px;
         }
         .li{
             margin-top: 2vh;
-            font-family: "FuturaLight";
+            font-family: "FuturaPTNormal";
             border-bottom: $color-line solid 2px;
             @media (max-width: 750px){
                 width: 20%;
@@ -130,8 +138,8 @@ $font-text:20px;
 }
 .follow{
     font-size: $font-subtitle;
-    font-family: "FuturaSub";
-    grid-area: 1/2/2/3;
+    font-family: "FuturaPTMedium";
+    grid-area: 2/2/3/3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,8 +154,7 @@ $font-text:20px;
     .us {
         text-align: center;
         font-size: $font-subtitle;
-        font-family: "FuturaSub";
-        font-weight: bold;
+        font-family: "FuturaPTMedium";
     }
     
     .sociaux{
@@ -161,7 +168,7 @@ $font-text:20px;
         }
         svg{
             height: 30pt;
-            width: 30pt;
+            width: 30pt;   
         }
     }
 }
@@ -175,10 +182,11 @@ $font-text:20px;
 .container2{
     *{
         color: #98928D;
+        font-size: $font-text;
+        font-family: "FuturaPTNormalOblique";
+        
     }
-    font-size: $font-text;
-    font-family: "FuturaText";
-    font-style: italic;
+    margin-bottom: 2vh;
     width: 80vw;
     margin-top: 13.5px;
     display: grid;
@@ -189,6 +197,10 @@ $font-text:20px;
         margin: 3vw auto;
         font-size: 12pt;
         line-height: 1.5;
+    }
+    a{
+        font-size: $font-text;
+        font-family: "FuturaPTNormalOblique";
     }
 
 }

@@ -1,26 +1,27 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-  font-family: "FuturaSub";
-  src: url("../fonts/FuturaPTCondMedium.otf");
+  font-family: "FuturaPTMedium";
+  src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-  font-family: "FuturaLight";
-  src: url("../fonts/FuturaPTLight.otf");
+  font-family: "FuturaPTbold";
+  src: url("../fonts/FuturaPTBold.otf");
 }
-* {
-  color: #A8957E;
+@font-face {
+  font-family: "FuturaPTNormalOblique";
+  src: url("../fonts/FuturaPTBookOblique.otf");
 }
-
 p {
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
   font-size: 20px;
 }
 @media (max-width: 750px) {
@@ -31,7 +32,7 @@ p {
 
 h1 {
   font-family: "Reislust";
-  font-size: 7.2em;
+  font-size: 70px;
 }
 @media (max-width: 750px) {
   h1 {
@@ -54,6 +55,8 @@ h1 {
   }
 }
 .wrapper .btt a {
+  color: #685950;
+  text-decoration: none;
   width: 10vw;
   align-self: flex-end;
   display: flex;
@@ -69,11 +72,15 @@ h1 {
 .wrapper .btt p {
   font-size: 20px;
 }
+.wrapper .gameBg:nth-child(2n) {
+  background-color: #D9D9D7;
+}
 
 .desc {
   border-top: 2px solid #707070;
   border-bottom: 2px solid #707070;
   text-align: center;
+  padding-bottom: 5vh;
   width: 100%;
 }
 @media (max-width: 750px) {
@@ -86,7 +93,8 @@ h1 {
 }
 .desc .title {
   font-family: "Reislust";
-  font-size: calc(5.125rem + ((1vw - 5.68px) * 19.0972));
+  font-size: 302px;
+  line-height: 1;
 }
 @media (max-width: 750px) {
   .desc .title {
@@ -103,20 +111,15 @@ h1 {
 .desc .descText :first-child {
   width: 44vw;
 }
-.desc .descText :first-child h3 {
-  font-family: "FuturaSub";
+.desc .descText :first-child h2 {
+  font-family: "FuturaPTMedium";
   font-size: 25px;
+  font-weight: normal;
 }
 .desc .logo {
-  width: 15vw;
+  margin-top: -10vh;
+  width: 154px;
   height: auto;
-}
-
-.gameBg {
-  line-height: 1;
-}
-.gameBg .game:nth-child(2n) {
-  background-color: #D9D9D7;
 }
 
 .game {
@@ -153,6 +156,33 @@ h1 {
   justify-self: center;
   align-self: center;
 }
+.game .gameText button {
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  font-family: "FuturaPTNormal";
+  color: #A8957E;
+  border: 3px solid #A8957E;
+  border-radius: 4px;
+  background-color: transparent;
+  margin-top: 5vh;
+}
+@media (max-width: 750px) {
+  .game .gameText button {
+    font-size: 18px;
+  }
+}
+.game .gameText button a {
+  text-decoration: none;
+  color: #A8957E;
+  margin: 2vh;
+}
+.game .gameText button:hover {
+  background-color: #A8957E;
+}
+.game .gameText button:hover a {
+  color: #E3E3DC;
+}
 .game h2 {
   line-height: 2;
   font-size: 25px;
@@ -162,20 +192,8 @@ h1 {
     font-size: 21px;
   }
 }
-.game button {
-  width: auto;
-  height: auto;
-  font-size: 20px;
-  color: #A8957E;
-  border: 3px solid #A8957E;
-  border-radius: 4px;
-  background-color: transparent;
-  margin-top: 2vh;
-}
-@media (max-width: 750px) {
-  .game button {
-    font-size: 18px;
-  }
+.game h1 {
+  line-height: 0;
 }
 
 .bandeau {
@@ -199,8 +217,7 @@ h1 {
   height: 100%;
   display: flex;
   align-self: flex-end;
-  justify-content: space-around;
-  column-gap: 1vw;
+  justify-content: center;
 }
 @media (max-width: 900px) {
   .bandeau .img {
@@ -230,7 +247,7 @@ h1 {
 .bandeau .back {
   color: #685950;
   font-size: 25px;
-  font-family: "FuturaSub";
+  font-family: "FuturaPTMedium";
 }
 
 /*# sourceMappingURL=game.module.css.map */

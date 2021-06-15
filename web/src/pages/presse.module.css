@@ -1,19 +1,24 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-  font-family: "FuturaSub";
-  src: url("../fonts/FuturaPTCondMedium.otf");
+  font-family: "FuturaPTMedium";
+  src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-  font-family: "FuturaLight";
-  src: url("../fonts/FuturaPTLight.otf");
+  font-family: "FuturaPTbold";
+  src: url("../fonts/FuturaPTBold.otf");
+}
+@font-face {
+  font-family: "FuturaPTNormalOblique";
+  src: url("../fonts/FuturaPTBookOblique.otf");
 }
 .wrapperPresse {
   width: auto;
@@ -35,7 +40,7 @@
   }
 }
 .wrapperPresse p {
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
   font-size: 20px;
   line-height: 1.5;
 }
@@ -58,7 +63,7 @@
 }
 .presse h2 {
   font-size: 25px;
-  line-height: 1.5;
+  font-family: "FuturaPTMedium";
 }
 @media (max-width: 750px) {
   .presse h2 {
@@ -106,7 +111,7 @@
   display: flex;
   flex-direction: column;
   gap: 5vh;
-  width: 80%;
+  width: 90%;
   line-height: 1.5;
   padding-bottom: 10vh;
 }
@@ -146,7 +151,7 @@
   border-radius: 5px;
 }
 .droite .articlesDroite {
-  border-bottom: #707070 solid 2px;
+  border-bottom: #707070 solid 1px;
 }
 .droite .articlesDroite h1 {
   font-size: 65px;
@@ -161,7 +166,7 @@
   display: flex;
   flex-direction: column;
   gap: 5vh;
-  width: 80%;
+  width: 90%;
   line-height: 1.5;
   padding-bottom: 10vh;
 }
@@ -192,6 +197,11 @@
 
 .droite .articlesDroite:last-child {
   border: none;
+}
+
+strong {
+  font-family: "FuturaPTMedium";
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=presse.module.css.map */

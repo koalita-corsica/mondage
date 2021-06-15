@@ -1,19 +1,24 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-  font-family: "FuturaSub";
-  src: url("../fonts/FuturaPTCondMedium.otf");
+  font-family: "FuturaPTMedium";
+  src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-  font-family: "FuturaLight";
-  src: url("../fonts/FuturaPTLight.otf");
+  font-family: "FuturaPTbold";
+  src: url("../fonts/FuturaPTBold.otf");
+}
+@font-face {
+  font-family: "FuturaPTNormalOblique";
+  src: url("../fonts/FuturaPTBookOblique.otf");
 }
 .ntm {
   color: red;
@@ -32,7 +37,7 @@
 .wrapper a {
   text-decoration: none;
   font-size: 20px;
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
 }
 
 .container {
@@ -40,6 +45,8 @@
   width: 80vw;
   display: grid;
   grid-template-columns: 25% 50% 25%;
+  grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 3vh;
 }
 @media (max-width: 750px) {
   .container {
@@ -53,11 +60,11 @@
 .domainMondange {
   grid-area: 1/2/2/3;
   justify-self: center;
+  text-align: center;
 }
 .domainMondange a {
   font-family: "Reislust" !important;
-  font-size: 7.2em;
-  line-height: 1;
+  font-size: 74px;
 }
 @media (max-width: 750px) {
   .domainMondange a {
@@ -73,9 +80,9 @@
 
 .contact {
   font-size: 20px;
-  font-family: "FuturaText";
-  grid-area: 1/1/2/2;
-  line-height: 2;
+  font-family: "FuturaPTNormal";
+  grid-area: 1/1/3/2;
+  line-height: 1;
 }
 @media (max-width: 750px) {
   .contact {
@@ -87,7 +94,7 @@
 }
 
 .plansite {
-  grid-area: 1/3/2/4;
+  grid-area: 1/3/3/4;
   font-size: 25px;
   justify-self: center;
 }
@@ -99,9 +106,8 @@
   }
 }
 .plansite .plan {
-  font-family: "FuturaSub";
+  font-family: "FuturaPTMedium";
   font-size: 25px;
-  font-weight: bold;
 }
 .plansite .ul {
   display: grid;
@@ -118,19 +124,20 @@
 }
 .plansite .ul .li {
   margin-top: 2vh;
-  font-family: "FuturaLight";
+  font-family: "FuturaPTNormal";
   border-bottom: #707070 solid 2px;
 }
 @media (max-width: 750px) {
   .plansite .ul .li {
+    width: 20%;
     border: none;
   }
 }
 
 .follow {
   font-size: 25px;
-  font-family: "FuturaSub";
-  grid-area: 1/2/2/3;
+  font-family: "FuturaPTMedium";
+  grid-area: 2/2/3/3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,8 +155,7 @@
 .follow .us {
   text-align: center;
   font-size: 25px;
-  font-family: "FuturaSub";
-  font-weight: bold;
+  font-family: "FuturaPTMedium";
 }
 .follow .sociaux {
   display: flex;
@@ -176,9 +182,7 @@
 }
 
 .container2 {
-  font-size: 20px;
-  font-family: "FuturaText";
-  font-style: italic;
+  margin-bottom: 2vh;
   width: 80vw;
   margin-top: 13.5px;
   display: grid;
@@ -186,6 +190,8 @@
 }
 .container2 * {
   color: #98928D;
+  font-size: 20px;
+  font-family: "FuturaPTNormalOblique";
 }
 @media (max-width: 750px) {
   .container2 {
@@ -195,6 +201,10 @@
     font-size: 12pt;
     line-height: 1.5;
   }
+}
+.container2 a {
+  font-size: 20px;
+  font-family: "FuturaPTNormalOblique";
 }
 
 .domainMondange2 {

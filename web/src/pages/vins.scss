@@ -1,11 +1,12 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 $color-fontWhite: #E3E3DC;
 $color-fontBrown: #685950;
 $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:7.2em;
+$font-title:70px;
 $font-subtitle:25px;
 $font-text:20px;
 @font-face {
@@ -13,16 +14,20 @@ $font-text:20px;
     src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-    font-family: "FuturaText";
+    font-family: "FuturaPTNormal";
     src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-    font-family: "FuturaSub";
-    src: url("../fonts/FuturaPTCondMedium.otf");
+    font-family: "FuturaPTMedium";
+    src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-    font-family: "FuturaLight";
-    src: url("../fonts/FuturaPTLight.otf");
+    font-family: "FuturaPTbold";
+    src: url("../fonts/FuturaPTBold.otf");
+}
+@font-face {
+    font-family: "FuturaPTNormalOblique";
+    src: url("../fonts/FuturaPTBookOblique.otf");
 }
 
 
@@ -46,7 +51,7 @@ $font-text:20px;
     }
     .title{
         font-family: "Reislust";
-        font-size: 7.2rem;
+        font-size: 115px;
     }
     .content{
         display: flex;
@@ -86,7 +91,7 @@ $font-text:20px;
                 padding: 5px;
                 a{
                     text-decoration: none;
-                    font-family: "FuturaText";
+                    font-family: "FuturaPTNormal";
                     font-size: $font-text;
                     color: $color-button;
                 }
@@ -99,19 +104,19 @@ $font-text:20px;
             }
             
             p {
-                font-family: "FuturaText";
+                font-family: "FuturaPTNormal";
                 font-size: 20px;
-                line-height: 1.5;
+                
                 margin: 2vh;
             }
             h2 {
-                font-family: "FuturaText";
+                font-family: "FuturaPTMedium";
                 font-size: 20px;
-                line-height: 1.5;
+                
             }
             h1{
                 font-family:  "Reislust";
-                font-size: 5.625em;
+                font-size: 90px;
                 margin: 0 auto;
             }
             

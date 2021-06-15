@@ -82,7 +82,6 @@ const ContactPage = (props) => {
                   placeholder="Entrez votre message"
                 />
               </div>
-              <button className={styles.envoyer}>ENVOYER</button>
             </form>
             <div className={styles.horaire}>
               <div className={styles.ouverture}>HORAIRES D'OUVERTURES</div>
@@ -108,14 +107,10 @@ const ContactPage = (props) => {
               <div className={styles.rouge22} />
               <div className={styles.rouge23} />
 
-              {/* <img src={laudria} className={styles.rouge1}></img>
-              <img src={primizia} className={styles.rouge1}></img>
-              <img src={spargo} className={styles.rouge1}></img>
-              <img src={laudria2} className={styles.rouge2}></img>
-              <img src={primizia2} className={styles.rouge2}></img>
-              <img src={spargo2} className={styles.rouge2}></img> */}
+              
             </div>
           </div>
+          <button className={styles.envoyer}>ENVOYER</button>
         </div>
       </div>
     </Layout>

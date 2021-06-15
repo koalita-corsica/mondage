@@ -59,13 +59,13 @@ const GaleriePage = (props) => {
       ))}
       <div className={styles.gridGalery}>
         <div className={styles.galerie1}>
-          <img src={galerie1} />
+          {/* <img src={galerie1} /> */}
         </div>
         <div className={styles.galerie2}>
-          <img src={galerie2} />
+          {/* <img src={galerie2} /> */}
         </div>
         <div className={styles.galerie3}>
-          <img src={galerie3} />
+          {/* <img src={galerie3} /> */}
         </div>
         <div className={styles.galerie4}>
           <img src={galerie4} />
@@ -89,10 +89,10 @@ const GaleriePage = (props) => {
           <img src={galerie10} />
         </div>
         <div className={styles.galerie11}>
-          <img src={galerie11} />
+          {/* <img src={galerie11} /> */}
         </div>
         <div className={styles.galerie12}>
-          <img src={galerie12} />
+          {/* <img src={galerie12} /> */}
         </div>
         <div className={styles.galerie13}>
           <img src={galerie13} />

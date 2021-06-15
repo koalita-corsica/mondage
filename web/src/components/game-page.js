@@ -61,9 +61,9 @@ function GamePage(props) {
               <div className={styles.gameText}>
                 <h1> {item.genre} </h1>
                 <PortableText blocks={item.description._rawFr} />
-                <Link to={"/produit/" + `${item.slug.current}`}>
-                  <button> Fiche Produit </button>{" "}
-                </Link>
+                
+                  <button><Link to={"/produit/" + `${item.slug.current}`}>Fiche Produit</Link></button>{" "}
+                
               </div>
             </div>
           </div>

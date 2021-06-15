@@ -1,11 +1,12 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 $color-fontWhite: #E3E3DC;
 $color-fontBrown: #685950;
 $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:7.2em;
+$font-title:70px;
 $font-subtitle:25px;
 $font-text:20px;
 @font-face {
@@ -13,22 +14,24 @@ $font-text:20px;
     src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-    font-family: "FuturaText";
+    font-family: "FuturaPTNormal";
     src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-    font-family: "FuturaSub";
-    src: url("../fonts/FuturaPTCondMedium.otf");
+    font-family: "FuturaPTMedium";
+    src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-    font-family: "FuturaLight";
-    src: url("../fonts/FuturaPTLight.otf");
+    font-family: "FuturaPTbold";
+    src: url("../fonts/FuturaPTBold.otf");
 }
-* {
-    color: $color-button;
+@font-face {
+    font-family: "FuturaPTNormalOblique";
+    src: url("../fonts/FuturaPTBookOblique.otf");
 }
+
 p {
-    font-family: "FuturaText";
+    font-family: "FuturaPTNormal";
     font-size: $font-text;
     @media (max-width: 750px){
         font-size: 18px;
@@ -53,6 +56,8 @@ h1{
             display: none;
         }
         a{
+            color: $color-fontBrown;
+            text-decoration: none;
             width: 10vw;
             align-self: flex-end;
             display: flex;
@@ -69,11 +74,15 @@ h1{
             font-size: $font-text;
         }
     }
+    .gameBg:nth-child(2n){
+        background-color: $color-backgroundGrey;
+    }
 }
 .desc{
     border-top: 2px solid $color-line;
     border-bottom: 2px solid $color-line;
     text-align: center;
+    padding-bottom: 5vh;
     width: 100%;
     @media (max-width: 750px){
         border-bottom: none ;
@@ -83,7 +92,9 @@ h1{
     }
     .title{
         font-family: "Reislust";
-        font-size: calc(5.125rem + ((1vw - 5.68px) * 19.0972));
+        // font-size: calc(5.125rem + ((1vw - 5.68px) * 19.0972));
+        font-size: 302px;
+        line-height: 1;
         @media (max-width: 750px){
             font-size: 82px;
         }
@@ -97,23 +108,20 @@ h1{
         }
         :first-child{
             width: 44vw;
-            h3{
-                font-family: "FuturaSub";
+            h2{
+                font-family: "FuturaPTMedium";
                 font-size: $font-subtitle;
+                font-weight: normal;
             }
         }
     }
     .logo{
-        width: 15vw;
+        margin-top: -10vh;
+        width: 154px;
         height: auto;
     }
 }
-.gameBg{
-    line-height: 1;
-    .game:nth-child(2n){
-        background-color: $color-backgroundGrey;
-    }
-}
+
 .game{
     margin-top: 5vh;
     margin-bottom: 5vh;
@@ -144,6 +152,31 @@ h1{
     .gameText{
         justify-self: center;
         align-self: center;
+        button{
+            width: auto;
+            height: auto;
+            font-size: $font-text;
+            font-family: "FuturaPTNormal";
+            color: $color-button;
+            border: 3px solid #A8957E;
+            border-radius: 4px;
+            background-color: transparent;
+            margin-top: 5vh;
+            @media (max-width: 750px){
+                font-size: 18px;
+            }
+            a{
+                text-decoration: none;
+                color: $color-button;
+                margin: 2vh;
+            }
+        }
+        button:hover{
+            background-color: $color-button;
+            a{
+                color: $color-fontWhite;
+            }
+        }
     }
     h2{
         line-height: 2;
@@ -152,19 +185,10 @@ h1{
             font-size: 21px;
         }
     }
-    button{
-        width: auto;
-        height: auto;
-        font-size: $font-text;
-        color: $color-button;
-        border: 3px solid #A8957E;
-        border-radius: 4px;
-        background-color: transparent;
-        margin-top: 2vh;
-        @media (max-width: 750px){
-            font-size: 18px;
-        }
+    h1{
+        line-height: 0;
     }
+    
 }
 .bandeau{
     overflow: hidden;
@@ -184,8 +208,9 @@ h1{
         height: 100%;
         display: flex;
         align-self: flex-end;
-        justify-content: space-around;
-        column-gap: 1vw;   
+        justify-content: center;
+
+          
         @media (max-width: 900px){
             height: 30vh;
             justify-content: center;
@@ -215,6 +240,6 @@ h1{
     .back{
         color: $color-fontBrown;
         font-size: $font-subtitle;
-        font-family: "FuturaSub";
+        font-family: "FuturaPTMedium";
     }
 }
