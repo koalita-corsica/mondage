@@ -42,11 +42,9 @@ export const query = graphql`
         }
       }
     }
-    accvigne: sanityAssets(title: { eq: "accueilvigne" }) {
+    accvigne: sanityAssets(title: { eq: "bottle" }) {
       image {
-        asset {
-          url
-        }
+        ...ImageWithPreview
       }
     }
   }
@@ -54,7 +52,7 @@ export const query = graphql`
 
 const IndexPage = (props) => {
   const { data, errors } = props;
-  console.log(data.accvigne);
+  const bo = data.accvigne.image;
   const [count, setCount] = useState(0);
 
   if (errors) {
@@ -194,15 +192,8 @@ const IndexPage = (props) => {
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
-            <div
-              className={styles.section1}
-              style={{
-                background: `url(${data.accvigne.image.asset.url})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-            >
-              <img src={bottle} className={styles.bottle} id="bottle" />
+            <div className={styles.section1}>
+              <Image {...bo} className={styles.bottle} id="bottle" />
               <div
                 className={styles.block1}
                 id="block1"
