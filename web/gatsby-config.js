@@ -1,5 +1,4 @@
 // Load variables from `.env` as soon as possible
-const path = require(`path`);
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV || "development"}`,
 });
