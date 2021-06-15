@@ -206,7 +206,7 @@ const IndexPage = (props) => {
     <Layout>
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
-          <div className={styles.wrapperAccueil} onLoad={translateLoad}>
+          <div className={styles.wrapperAccueil}>
             <div className={styles.section1}>
               <Image {...bo} className={styles.bottle} id="bottle" />
               <div
