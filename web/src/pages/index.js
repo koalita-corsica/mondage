@@ -47,12 +47,24 @@ export const query = graphql`
         ...ImageWithPreview
       }
     }
+    presse: sanityAssets(title: { eq: "pressImg" }) {
+      image {
+        ...ImageWithPreview
+      }
+    }
+    domain: sanityAssets(title: { eq: "domainImg" }) {
+      image {
+        ...ImageWithPreview
+      }
+    }
   }
 `;
 
 const IndexPage = (props) => {
   const { data, errors } = props;
   const bo = data.accvigne.image;
+  const pres = data.presse.image;
+  const dom = data.domain.image;
   const [count, setCount] = useState(0);
 
   if (errors) {
@@ -220,7 +232,7 @@ const IndexPage = (props) => {
                 {" "}
                 {item.node.pageBuilder[1].title1.fr}{" "}
               </div>
-              <img src={domainImg} className={styles.domainimg} />
+              <Image {...dom} className={styles.domainimg} />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}
                 serializers={serializers}
@@ -289,7 +301,7 @@ const IndexPage = (props) => {
                 </div>
               </div>
               <div className={styles.pressimg}>
-                <img src={pressImg}></img>
+                <Image {...pres} />
               </div>
             </div>
           </div>
