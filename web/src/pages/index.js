@@ -18,6 +18,7 @@ import domainImg from "../asset/accueildomaine.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import * as styles from "../pages/index.module.css";
+import Imag from "gatsby-plugin-sanity-image";
 
 export const query = graphql`
   query AccueilQuery {
