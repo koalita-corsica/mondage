@@ -31,29 +31,36 @@ $font-text:20px;
 }
 
 .slide {
-    // background-color: green;
+    
     display: grid;
     width: auto;
     height: auto;
-    margin: 5vh;
-    grid-template-columns: 18.59vw 1fr;
-    align-items: flex-end;
+    grid-template-columns: 25vw 1fr;
+    .wrp{
+        height: auto;
+        width: 100%;
+        align-self: flex-end;
+        @media (max-width: 1024px){
+            
+            
+        }
+    }
     .sliderBot{
-        // background-color: red;
         width: 100%;
         height: auto;
     }
-    @media (max-width: 750px){
-        .sliderBot{
-            height: 100%;
-            width: 30vw;
-        }
+    @media (max-width: 1024px){
+        grid-template-columns: 35vw 1fr;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        
     }
     .sliderLogo{
-        width: 13vw;
+        width: 20vw;
         height: auto;
     }
-    @media (max-width: 750px){
+    @media (max-width: 1024px){
         .sliderLogo{
             width: 20vw;
         }
@@ -64,19 +71,18 @@ $font-text:20px;
 .content{
     width: 100%;
     height: auto;
-    @media (max-width: 750px){
-        width: 45vw;
-        margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    @media (max-width: 1024px){
+        height: 100%;
+
         
-    }
-    .title{
-        font-size: 5.313em;
-        font-family: "Reislust";
-        font-weight: normal;
-        margin: 0 auto;
-        @media (max-width: 750px){
-            font-size: 48px;
+        h1{
+            line-height: 0;
         }
+        
     }
      
     div {
@@ -85,37 +91,42 @@ $font-text:20px;
         font-family: "FuturaPTMedium" !important;
         font-size: $font-subtitle;
         font-weight: normal;
+        line-height: 2;
+            @media (max-width: 1024px){
+                font-size: 21px;
+                line-height: 1;
+            }
         }
     }
     
     p {
         font-family: "FuturaPTNormal" !important;
         font-size: $font-text;
+        @media (max-width: 1024px){
+            font-size: 18px;
+        }
     }
     button{
-        margin-top: 3vh;
         background-color: transparent;
-        border: 3px solid #A8957E;
-        border-radius: 4px;   
+        margin-top: 3vh;
+        border: 3px solid #a8957e;
+        border-radius: 4px;
+        width: auto;
+        height: auto;
         padding: 0.5vh;
-        padding-left: 2vw; 
-        padding-right: 2vw; 
-        @media (max-width: 750px){
-            width: auto;
-            margin-top: 1vh;
-            margin-bottom: 2vh;
-            
+        @media (max-width: 1024px){
+            margin-bottom: 5vh;
+            width: auto; 
         }
         .btn{
-            width: auto;
-            font-size: 20px;
             text-decoration: none;
             font-family: "FuturaPTNormal";
+            font-size: $font-text;
             color: $color-button;
-            @media (max-width: 750px){
-                margin: 2vw; 
+            margin: 2vw;
+            @media (max-width: 1024px){
+                font-size: 18px; 
             }
-            
         }
     }
     button:hover{

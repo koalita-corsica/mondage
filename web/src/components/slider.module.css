@@ -24,25 +24,30 @@
   display: grid;
   width: auto;
   height: auto;
-  margin: 5vh;
-  grid-template-columns: 18.59vw 1fr;
-  align-items: flex-end;
+  grid-template-columns: 25vw 1fr;
+}
+.slide .wrp {
+  height: auto;
+  width: 100%;
+  align-self: flex-end;
 }
 .slide .sliderBot {
   width: 100%;
   height: auto;
 }
-@media (max-width: 750px) {
-  .slide .sliderBot {
-    height: 100%;
-    width: 30vw;
+@media (max-width: 1024px) {
+  .slide {
+    grid-template-columns: 35vw 1fr;
+    margin: 0;
+    width: 100%;
+    height: auto;
   }
 }
 .slide .sliderLogo {
-  width: 13vw;
+  width: 20vw;
   height: auto;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .slide .sliderLogo {
     width: 20vw;
   }
@@ -51,22 +56,17 @@
 .content {
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .content {
-    width: 45vw;
-    margin: 0 auto;
+    height: 100%;
   }
-}
-.content .title {
-  font-size: 5.313em;
-  font-family: "Reislust";
-  font-weight: normal;
-  margin: 0 auto;
-}
-@media (max-width: 750px) {
-  .content .title {
-    font-size: 48px;
+  .content h1 {
+    line-height: 0;
   }
 }
 .content div {
@@ -76,37 +76,48 @@
   font-family: "FuturaPTMedium" !important;
   font-size: 25px;
   font-weight: normal;
+  line-height: 2;
+}
+@media (max-width: 1024px) {
+  .content div h2 {
+    font-size: 21px;
+    line-height: 1;
+  }
 }
 .content p {
   font-family: "FuturaPTNormal" !important;
   font-size: 20px;
 }
-.content button {
-  margin-top: 3vh;
-  background-color: transparent;
-  border: 3px solid #A8957E;
-  border-radius: 4px;
-  padding: 0.5vh;
-  padding-left: 2vw;
-  padding-right: 2vw;
+@media (max-width: 1024px) {
+  .content p {
+    font-size: 18px;
+  }
 }
-@media (max-width: 750px) {
+.content button {
+  background-color: transparent;
+  margin-top: 3vh;
+  border: 3px solid #a8957e;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  padding: 0.5vh;
+}
+@media (max-width: 1024px) {
   .content button {
+    margin-bottom: 5vh;
     width: auto;
-    margin-top: 1vh;
-    margin-bottom: 2vh;
   }
 }
 .content button .btn {
-  width: auto;
-  font-size: 20px;
   text-decoration: none;
   font-family: "FuturaPTNormal";
+  font-size: 20px;
   color: #A8957E;
+  margin: 2vw;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .content button .btn {
-    margin: 2vw;
+    font-size: 18px;
   }
 }
 .content button:hover {

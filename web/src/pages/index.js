@@ -135,7 +135,6 @@ const IndexPage = (props) => {
         bottle.style.transform = "translateX(-15%)";
       }
       if (window.scrollY > 199) {
-        // blockPara.style.transform = "translateX(50%)";
         blockPara.setAttribute(
           "style",
           "opacity: 0.8; transform: translateX(30%); transition: all 1s"
@@ -224,6 +223,7 @@ const IndexPage = (props) => {
                 className={styles.bottle}
                 id="bottle"
                 layout="responsive"
+                
               />
               <div
                 className={styles.block1}
@@ -256,9 +256,9 @@ const IndexPage = (props) => {
                 layout="responsive"
                 alt="SDSD"
                 style={{
-                  width: "310px",
                   height: "310px",
-                  borderRadius: "100% !important",
+                  width: "310px",
+                  borderRadius: "100%",
                   marginTop: "5vh",
                 }}
               />
