@@ -18,7 +18,6 @@ import domainImg from "../asset/accueildomaine.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import * as styles from "../pages/index.module.css";
-import Image from "gatsby-plugin-sanity-image";
 
 export const query = graphql`
   query AccueilQuery {
@@ -42,31 +41,11 @@ export const query = graphql`
         }
       }
     }
-    accvigne: sanityAssets(title: { eq: "bottle" }) {
-      image {
-        ...ImageWithPreview
-      }
-    }
-    presse: sanityAssets(title: { eq: "pressImg" }) {
-      image {
-        ...ImageWithPreview
-      }
-    }
-    domain: sanityAssets(title: { eq: "domainImg" }) {
-      image {
-        ...ImageWithPreview
-      }
-    }
   }
 `;
 
-const isBrowser = typeof window !== "undefined";
-
 const IndexPage = (props) => {
   const { data, errors } = props;
-  const bo = data.accvigne.image;
-  const pres = data.presse.image;
-  const dom = data.domain.image;
   const [count, setCount] = useState(0);
 
   if (errors) {
@@ -110,87 +89,85 @@ const IndexPage = (props) => {
       "opacity: 1; transform: translateX(0%); transition: all 1.8s"
     );
   }
-  if (isBrowser) {
-    typeof window !== "undefined" &&
-      window.addEventListener("scroll", () => {
-        const blockPara = document.querySelector("#block1");
-        const bottle = document.querySelector("#bottle");
-        blockPara.style.transition = "all 1s";
-        bottle.style.transition = "all 1s";
-        var i = 0;
-        if (typeof window !== "undefined" && window.scrollY == i) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 1; transform: translateX(0%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(0%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 99) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.9; transform: translateX(15%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-15%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 199) {
-          // blockPara.style.transform = "translateX(50%)";
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.8; transform: translateX(30%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-30%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 299) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.7; transform: translateX(45%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-45%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 399) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.6; transform: translateX(60%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-60%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 499) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.5; transform: translateX(75%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-75%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 599) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.4; transform: translateX(90%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-90%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 699) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.3; transform: translateX(105%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-105%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 799) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.2; transform: translateX(120%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-120%)";
-        }
-        if (typeof window !== "undefined" && window.scrollY > 899) {
-          blockPara.setAttribute(
-            "style",
-            "opacity: 0.1; transform: translateX(135%); transition: all 1s"
-          );
-          bottle.style.transform = "translateX(-135%)";
-        }
-      });
-  }
+  typeof window !== "undefined" &&
+    window.addEventListener("scroll", () => {
+      const blockPara = document.querySelector("#block1");
+      const bottle = document.querySelector("#bottle");
+      blockPara.style.transition = "all 1s";
+      bottle.style.transition = "all 1s";
+      var i = 0;
+      if (window.scrollY == i) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 1; transform: translateX(0%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(0%)";
+      }
+      if (window.scrollY > 99) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.9; transform: translateX(15%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-15%)";
+      }
+      if (window.scrollY > 199) {
+        // blockPara.style.transform = "translateX(50%)";
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.8; transform: translateX(30%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-30%)";
+      }
+      if (window.scrollY > 299) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.7; transform: translateX(45%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-45%)";
+      }
+      if (window.scrollY > 399) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.6; transform: translateX(60%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-60%)";
+      }
+      if (window.scrollY > 499) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.5; transform: translateX(75%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-75%)";
+      }
+      if (window.scrollY > 599) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.4; transform: translateX(90%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-90%)";
+      }
+      if (window.scrollY > 699) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.3; transform: translateX(105%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-105%)";
+      }
+      if (window.scrollY > 799) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.2; transform: translateX(120%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-120%)";
+      }
+      if (window.scrollY > 899) {
+        blockPara.setAttribute(
+          "style",
+          "opacity: 0.1; transform: translateX(135%); transition: all 1s"
+        );
+        bottle.style.transform = "translateX(-135%)";
+      }
+    });
 
   const serializers = {
     types: {
@@ -204,11 +181,12 @@ const IndexPage = (props) => {
 
   return (
     <Layout>
+      <title>Mondange</title>
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
-              <Image {...bo} className={styles.bottle} id="bottle" />
+              <img src={bottle} className={styles.bottle} id="bottle" />
               <div
                 className={styles.block1}
                 id="block1"
@@ -235,7 +213,7 @@ const IndexPage = (props) => {
                 {" "}
                 {item.node.pageBuilder[1].title1.fr}{" "}
               </div>
-              <Image {...dom} className={styles.domainimg} />
+              <img src={domainImg} className={styles.domainimg} />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}
                 serializers={serializers}
@@ -304,7 +282,7 @@ const IndexPage = (props) => {
                 </div>
               </div>
               <div className={styles.pressimg}>
-                <Image {...pres} />
+                <img src={pressImg}></img>
               </div>
             </div>
           </div>
