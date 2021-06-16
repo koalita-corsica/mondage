@@ -41,12 +41,36 @@ export const query = graphql`
         }
       }
     }
+    accvigne: sanityAssets(title: { eq: "bottle" }) {
+      image {
+        asset {
+          url
+        }
+      }
+    }
+    presse: sanityAssets(title: { eq: "pressImg" }) {
+      image {
+        asset {
+          url
+        }
+      }
+    }
+    domain: sanityAssets(title: { eq: "domainImg" }) {
+      image {
+        asset {
+          url
+        }
+      }
+    }
   }
 `;
 
 const IndexPage = (props) => {
   const { data, errors } = props;
   const [count, setCount] = useState(0);
+  const bo = data.accvigne.image.asset;
+  const pres = data.presse.image.asset;
+  const dom = data.domain.image.asset;
 
   if (errors) {
     return (
@@ -186,7 +210,7 @@ const IndexPage = (props) => {
         <React.Fragment>
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
-              <img src={bottle} className={styles.bottle} id="bottle" />
+              <img src={bo.url} className={styles.bottle} id="bottle" />
               <div
                 className={styles.block1}
                 id="block1"
@@ -213,7 +237,7 @@ const IndexPage = (props) => {
                 {" "}
                 {item.node.pageBuilder[1].title1.fr}{" "}
               </div>
-              <img src={domainImg} className={styles.domainimg} />
+              <img src={dom.url} className={styles.domainimg} />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}
                 serializers={serializers}
@@ -282,7 +306,7 @@ const IndexPage = (props) => {
                 </div>
               </div>
               <div className={styles.pressimg}>
-                <img src={pressImg}></img>
+                <img src={pres.url}></img>
               </div>
             </div>
           </div>
