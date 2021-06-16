@@ -51,6 +51,15 @@ const serializers = {
   },
 };
 
+const isBrowser = typeof window !== "undefined";
+
+if (isBrowser) {
+  let script = document.createElement("script");
+  script.src = "https://cdn.ampproject.org/v0.js";
+  script.async = true;
+  document.body.appendChild(script);
+}
+
 const DomainePage = (props) => {
   const { data, errors } = props;
 
@@ -69,7 +78,14 @@ const DomainePage = (props) => {
               </div>
             </div>
             <div className={styles.section2}>
-              <img src={laura} className={styles.laura} />
+              <amp-img
+                src={laura}
+                Layout="responsive"
+                style={{
+                  width: "310px",
+                  height: "310px",
+                }}
+              />
               <h2> {item.node.pageBuilder[1].title1.fr} </h2>
               <div className={styles.block2}>
                 <PortableText
@@ -80,13 +96,13 @@ const DomainePage = (props) => {
             </div>
             <div className={styles.section3}>
               <div className={styles.domainImg1}>
-                <img src={domainImg1} />
+                <amp-img src={domainImg1} Layout="responsive" />
               </div>
               <div className={styles.domainImg2}>
-                <img src={domainImg2} />
+                <amp-img src={domainImg2} Layout="responsive" />
               </div>
               <div className={styles.domainImg3}>
-                <img src={domainImg3} />
+                <amp-img src={domainImg3} Layout="responsive" />
               </div>
               {/* <div className={styles.domainImg1}></img></div>
               <div className={styles.domainImg2}><img src={domainImg2}></img></div>
