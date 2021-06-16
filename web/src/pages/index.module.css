@@ -186,6 +186,7 @@
   font-size: 20px;
 }
 .section2 div h2 {
+  margin-top: 5vh;
   color: #E3E3DC;
   font-family: "FuturaPTNormal";
   line-height: 3;
@@ -408,8 +409,9 @@
   }
 }
 .section4 .pressContain {
-  width: 27vw;
-  justify-self: center;
+  width: 30vw;
+  margin-right: 5vw;
+  justify-self: right;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -439,7 +441,7 @@
   }
 }
 .section4 .pressBlock {
-  margin-top: 2vh;
+  width: auto;
   height: 100%;
 }
 @media (max-width: 1024px) {

@@ -81,10 +81,7 @@ const DomainePage = (props) => {
               <amp-img
                 src={laura}
                 Layout="responsive"
-                style={{
-                  width: "310px",
-                  height: "310px",
-                }}
+                
               />
               <h2> {item.node.pageBuilder[1].title1.fr} </h2>
               <div className={styles.block2}>

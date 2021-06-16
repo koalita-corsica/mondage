@@ -190,6 +190,7 @@ $font-text:20px;
     font-size: $font-text;
   }
   div h2 {
+    margin-top: 5vh;
     color: $color-fontWhite;
     font-family: "FuturaPTNormal";
     line-height: 3;
@@ -390,8 +391,9 @@ $font-text:20px;
     }
   }
   .pressContain {
-    width: 27vw;
-    justify-self: center;
+    width: 30vw;
+    margin-right: 5vw;
+    justify-self: right;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -417,7 +419,7 @@ $font-text:20px;
     }
   }
   .pressBlock {
-    margin-top: 2vh;
+    width: auto;
     height: 100%;
     @media (max-width: 1024px) {
       margin: 6vw;
