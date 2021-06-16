@@ -253,8 +253,14 @@ const IndexPage = (props) => {
               </div>
               <amp-img
                 src={dom.url}
-                className={styles.domainimg}
                 layout="responsive"
+                alt="SDSD"
+                style={{
+                  width: "310px",
+                  height: "310px",
+                  borderRadius: "100% !important",
+                  marginTop: "5vh",
+                }}
               />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}
@@ -324,7 +330,13 @@ const IndexPage = (props) => {
                 </div>
               </div>
               <div className={styles.pressimg}>
-                <amp-img src={pres.url} layout="responsive" />
+                <amp-img
+                  src={pres.url}
+                  layout="responsive"
+                  alt=""
+                  width="400px"
+                  height="400px"
+                />
               </div>
             </div>
           </div>

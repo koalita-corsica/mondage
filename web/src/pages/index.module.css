@@ -167,8 +167,9 @@
   }
 }
 .section2 .domainimg {
-  width: 310px;
-  height: 310px;
+  background-color: aqua;
+  width: 340px;
+  height: 340px;
   border-radius: 100%;
 }
 .section2 div {
