@@ -203,6 +203,11 @@ const IndexPage = (props) => {
     },
   };
 
+  let script = document.createElement("script");
+  script.src = "https://cdn.ampproject.org/v0.js";
+  script.async = true;
+  document.body.appendChild(script);
+
   return (
     <Layout>
       <title>Mondange</title>
@@ -210,7 +215,12 @@ const IndexPage = (props) => {
         <React.Fragment>
           <div className={styles.wrapperAccueil} onLoad={translateLoad}>
             <div className={styles.section1}>
-              <img src={bo.url} className={styles.bottle} id="bottle" />
+              <amp-img
+                src={bo.url}
+                className={styles.bottle}
+                id="bottle"
+                layout="responsive"
+              />
               <div
                 className={styles.block1}
                 id="block1"
@@ -237,7 +247,11 @@ const IndexPage = (props) => {
                 {" "}
                 {item.node.pageBuilder[1].title1.fr}{" "}
               </div>
-              <img src={dom.url} className={styles.domainimg} />
+              <amp-img
+                src={dom.url}
+                className={styles.domainimg}
+                layout="responsive"
+              />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}
                 serializers={serializers}
@@ -306,7 +320,7 @@ const IndexPage = (props) => {
                 </div>
               </div>
               <div className={styles.pressimg}>
-                <img src={pres.url}></img>
+                <amp-img src={pres.url} layout="responsive" />
               </div>
             </div>
           </div>
