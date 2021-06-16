@@ -40,6 +40,15 @@ export const query = graphql`
   }
 `;
 
+const isBrowser = typeof window !== "undefined";
+
+if (isBrowser) {
+  let script = document.createElement("script");
+  script.src = "https://cdn.ampproject.org/v0.js";
+  script.async = true;
+  document.body.appendChild(script);
+}
+
 const GaleriePage = (props) => {
   const { data, errors } = props;
 
@@ -58,42 +67,32 @@ const GaleriePage = (props) => {
         </React.Fragment>
       ))}
       <div className={styles.gridGalery}>
-        <div className={styles.galerie1}>
-          {/* <img src={galerie1} /> */}
-        </div>
-        <div className={styles.galerie2}>
-          {/* <img src={galerie2} /> */}
-        </div>
-        <div className={styles.galerie3}>
-          {/* <img src={galerie3} /> */}
-        </div>
+        <div className={styles.galerie1}>{/* <img src={galerie1} /> */}</div>
+        <div className={styles.galerie2}>{/* <img src={galerie2} /> */}</div>
+        <div className={styles.galerie3}>{/* <img src={galerie3} /> */}</div>
         <div className={styles.galerie4}>
-          <img src={galerie4} />
+          <amp-img src={galerie4} layout="responsive" />
         </div>
         <div className={styles.galerie5}>
-          <img src={galerie5} />
+          <amp-img src={galerie5} layout="responsive" />
         </div>
         <div className={styles.galerie6}>
-          <img src={galerie6} />
+          <amp-img src={galerie6} layout="responsive" />
         </div>
         <div className={styles.galerie7}>
-          <img src={galerie7} />
+          <amp-img src={galerie7} layout="responsive" />
         </div>
         <div className={styles.galerie8}>
-          <img src={galerie8} />
+          <amp-img src={galerie8} layout="responsive" />
         </div>
         <div className={styles.galerie9}>
-          <img src={galerie9} />
+          <amp-img src={galerie9} layout="responsive" />
         </div>
         <div className={styles.galerie10}>
-          <img src={galerie10} />
+          <amp-img src={galerie10} layout="responsive" />
         </div>
-        <div className={styles.galerie11}>
-          {/* <img src={galerie11} /> */}
-        </div>
-        <div className={styles.galerie12}>
-          {/* <img src={galerie12} /> */}
-        </div>
+        <div className={styles.galerie11}>{/* <img src={galerie11} /> */}</div>
+        <div className={styles.galerie12}>{/* <img src={galerie12} /> */}</div>
         <div className={styles.galerie13}>
           <img src={galerie13} />
         </div>
