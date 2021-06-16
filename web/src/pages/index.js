@@ -256,35 +256,35 @@ const IndexPage = (props) => {
                   <IoIosArrowBack onClick={moins} />
                   <Slider count={count} />
                   <IoIosArrowForward onClick={plus} />
+                  {count && count == 1 ? (
+                    <div className={styles.glob}>
+                      <div id="b0" className={styles.b0} />
+                      <div
+                        id="b1"
+                        className={styles.b1 + " " + styles.selected}
+                      />
+                      <div id="b2" className={styles.b2} />
+                    </div>
+                  ) : count == 2 ? (
+                    <div className={styles.glob}>
+                      <div id="b0" className={styles.b0} />
+                      <div id="b1" className={styles.b1} />
+                      <div
+                        id="b2"
+                        className={styles.b2 + " " + styles.selected}
+                      />
+                    </div>
+                  ) : (
+                    <div className={styles.glob}>
+                      <div
+                        id="b0"
+                        className={styles.b0 + " " + styles.selected}
+                      />
+                      <div id="b1" className={styles.b1} />
+                      <div id="b2" className={styles.b2} />
+                    </div>
+                  )}
                 </div>
-                {count && count == 1 ? (
-                  <div className={styles.glob}>
-                    <div id="b0" className={styles.b0} />
-                    <div
-                      id="b1"
-                      className={styles.b1 + " " + styles.selected}
-                    />
-                    <div id="b2" className={styles.b2} />
-                  </div>
-                ) : count == 2 ? (
-                  <div className={styles.glob}>
-                    <div id="b0" className={styles.b0} />
-                    <div id="b1" className={styles.b1} />
-                    <div
-                      id="b2"
-                      className={styles.b2 + " " + styles.selected}
-                    />
-                  </div>
-                ) : (
-                  <div className={styles.glob}>
-                    <div
-                      id="b0"
-                      className={styles.b0 + " " + styles.selected}
-                    />
-                    <div id="b1" className={styles.b1} />
-                    <div id="b2" className={styles.b2} />
-                  </div>
-                )}
               </div>
             </div>
             <div className={styles.section4}>

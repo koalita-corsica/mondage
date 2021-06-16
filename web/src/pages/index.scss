@@ -140,7 +140,7 @@ $font-text: 20px;
 .section2 {
   color: $color-fontWhite;
   display: flex;
-  height: 104vh;
+  height: auto;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -157,13 +157,17 @@ $font-text: 20px;
   @media (max-width: 750px) {
     height: auto;
   }
+  .title{
+    line-height: 2;
+  }
   .domainimg {
-    width: 310px;
     height: 310px;
+    width: 310px;
     border-radius: 100%;
+    margin-top: 5vh;
   }
   div {
-    margin-top: 2vh;
+    margin-top: 5vh;
     width: 50%;
     color: $color-fontWhite;
     @media (max-width: 750px) {
@@ -191,6 +195,7 @@ $font-text: 20px;
     width: auto;
     height: auto;
     padding: 5px;
+    margin-bottom: 5vh;
     @media (max-width: 750px) {
       margin-bottom: 5vh;
     }
@@ -221,8 +226,9 @@ $font-text: 20px;
 .section3 {
   background-color: $color-backgroundGrey;
   display: grid;
-  grid-template-columns: 25vw 75vw;
+  grid-template-columns: 20vw 80vw;
   width: 100%;
+  height: auto;
   @media (max-width: 750px) {
     height: auto;
     width: 100vw;
@@ -232,6 +238,8 @@ $font-text: 20px;
     color: $color-fontBrown;
   }
   .sliderimg {
+    width: auto;
+    height: 100%;
     background: url("../asset/accueilnosvins.jpg");
     background-size: cover;
     background-position: center;
@@ -242,22 +250,68 @@ $font-text: 20px;
   }
   .title {
     color: $color-fontBrown;
-    text-align: center;
+    text-align: left;
   }
   .sliderContain {
-    margin: 2vw;
+    // background-color: black;
+    display: flex;
+    flex-direction: column;
     @media (max-width: 750px) {
       margin: 0 auto;
     }
+    .b0 {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 15px;
+    }
+    
+    .b1 {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 15px;
+    }
+    
+    .b2 {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border-radius: 15px;
+    }
+    
+    .selected {
+      background-color: #a8957e;
+    }
+    
+    .glob {
+      display: flex;
+      width: 13.59vw;
+      justify-content: space-around;
+      margin-bottom: 5vh;
+      margin-left: 8vh;
+      grid-column: 2;
+      // text-align: center;
+    }
+    @media (max-width: 750px) {
+      .glob {
+        margin-left: 130px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+    }
+    
   }
   .slider {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    // background-color: blue;
+    display:grid;
+    grid-template-columns: 10vw 58vw 10vw;
     align-items: center;
+    width: auto;
+    height: 100%;
     svg {
-      height: 12vh;
-      width: 6vw;
+      height: auto;
+      width: 100%;
       path {
         color: $color-fontBrown;
       }
@@ -368,45 +422,6 @@ $font-text: 20px;
       color: $color-backgroundLightGrey;
     }
   }
+  
 }
 
-.b0 {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 15px;
-}
-
-.b1 {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 15px;
-}
-
-.b2 {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 15px;
-}
-
-.selected {
-  background-color: #a8957e;
-}
-
-.glob {
-  display: flex;
-  width: 100px;
-  justify-content: space-between;
-  margin-left: 225px;
-  grid-column: 2;
-  text-align: center;
-}
-@media (max-width: 750px) {
-  .glob {
-    margin-left: 130px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-  }
-}

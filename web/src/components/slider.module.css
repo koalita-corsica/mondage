@@ -1,53 +1,56 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-  font-family: "FuturaSub";
-  src: url("../fonts/FuturaPTCondMedium.otf");
+  font-family: "FuturaPTMedium";
+  src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-  font-family: "FuturaLight";
-  src: url("../fonts/FuturaPTLight.otf");
+  font-family: "FuturaPTbold";
+  src: url("../fonts/FuturaPTBold.otf");
 }
-.wrapperAccueil {
-  display: flex;
-  flex-direction: column;
+@font-face {
+  font-family: "FuturaPTNormalOblique";
+  src: url("../fonts/FuturaPTBookOblique.otf");
 }
-
 .slide {
-  display: flex;
+  display: grid;
+  width: auto;
+  height: auto;
+  margin: 5vh;
+  grid-template-columns: 18.59vw 1fr;
+  align-items: flex-end;
 }
-
-.sliderBot {
-  width: 25vw;
+.slide .sliderBot {
+  width: 100%;
   height: auto;
 }
-
 @media (max-width: 750px) {
-  .sliderBot {
-    height: auto;
-    width: 40vw;
+  .slide .sliderBot {
+    height: 100%;
+    width: 30vw;
   }
 }
-.sliderLogo {
-  width: 15vw;
+.slide .sliderLogo {
+  width: 13vw;
   height: auto;
-  margin: 0 auto;
 }
-
 @media (max-width: 750px) {
-  .sliderLogo {
+  .slide .sliderLogo {
     width: 20vw;
   }
 }
+
 .content {
-  width: 30vw;
+  width: 100%;
+  height: auto;
 }
 @media (max-width: 750px) {
   .content {
@@ -56,26 +59,36 @@
   }
 }
 .content .title {
-  font-size: 85px;
+  font-size: 5.313em;
   font-family: "Reislust";
   font-weight: normal;
-  line-height: 0;
+  margin: 0 auto;
 }
 @media (max-width: 750px) {
   .content .title {
     font-size: 48px;
   }
 }
-.content .content p {
-  width: 90% !important;
+.content div {
+  height: auto;
+}
+.content div h2 {
+  font-family: "FuturaPTMedium" !important;
+  font-size: 25px;
+  font-weight: normal;
+}
+.content p {
+  font-family: "FuturaPTNormal" !important;
+  font-size: 20px;
 }
 .content button {
   margin-top: 3vh;
   background-color: transparent;
-  border: 3px solid #a8957e;
+  border: 3px solid #A8957E;
   border-radius: 4px;
-  width: 10vw;
-  height: 4.5vh;
+  padding: 0.5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 @media (max-width: 750px) {
   .content button {
@@ -85,10 +98,11 @@
   }
 }
 .content button .btn {
+  width: auto;
   font-size: 20px;
   text-decoration: none;
-  font-family: "FuturaText";
-  color: #a8957e;
+  font-family: "FuturaPTNormal";
+  color: #A8957E;
 }
 @media (max-width: 750px) {
   .content button .btn {
@@ -96,10 +110,10 @@
   }
 }
 .content button:hover {
-  background-color: #a8957e;
+  background-color: #A8957E;
 }
 .content button:hover .btn {
-  color: #e3e3dc;
+  color: #E3E3DC;
 }
 
 /*# sourceMappingURL=slider.module.css.map */

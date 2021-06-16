@@ -27,13 +27,7 @@
 }
 
 .section1 {
-  background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(19, 19, 19, 0.6) 75%,
-      rgba(226, 226, 226, 0.7) 100%
-    ),
-    url("../asset/accueilvigne.jpg");
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(19, 19, 19, 0.6) 75%, rgba(226, 226, 226, 0.7) 100%), url("../asset/accueilvigne.jpg");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -146,17 +140,11 @@
 .section2 {
   color: #e3e3dc;
   display: flex;
-  height: 104vh;
+  height: auto;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(19, 19, 19, 0.7) 75%,
-      rgba(226, 226, 226, 0.7) 150%
-    ),
-    url("../asset/nosvins-bandeau.jpg");
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 19, 0.7) 75%, rgba(226, 226, 226, 0.7) 150%), url("../asset/nosvins-bandeau.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 100;
@@ -166,13 +154,17 @@
     height: auto;
   }
 }
+.section2 .title {
+  line-height: 2;
+}
 .section2 .domainimg {
-  width: 310px;
   height: 310px;
+  width: 310px;
   border-radius: 100%;
+  margin-top: 5vh;
 }
 .section2 div {
-  margin-top: 2vh;
+  margin-top: 5vh;
   width: 50%;
   color: #e3e3dc;
 }
@@ -202,6 +194,7 @@
   width: auto;
   height: auto;
   padding: 5px;
+  margin-bottom: 5vh;
 }
 @media (max-width: 750px) {
   .section2 .gamme {
@@ -236,8 +229,9 @@
 .section3 {
   background-color: #d9d9d7;
   display: grid;
-  grid-template-columns: 25vw 75vw;
+  grid-template-columns: 20vw 80vw;
   width: 100%;
+  height: auto;
 }
 @media (max-width: 750px) {
   .section3 {
@@ -250,6 +244,8 @@
   color: #685950;
 }
 .section3 .sliderimg {
+  width: auto;
+  height: 100%;
   background: url("../asset/accueilnosvins.jpg");
   background-size: cover;
   background-position: center;
@@ -262,25 +258,63 @@
 }
 .section3 .title {
   color: #685950;
-  text-align: center;
+  text-align: left;
 }
 .section3 .sliderContain {
-  margin: 2vw;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 750px) {
   .section3 .sliderContain {
     margin: 0 auto;
   }
 }
-.section3 .slider {
+.section3 .sliderContain .b0 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+.section3 .sliderContain .b1 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+.section3 .sliderContain .b2 {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 15px;
+}
+.section3 .sliderContain .selected {
+  background-color: #a8957e;
+}
+.section3 .sliderContain .glob {
   display: flex;
-  flex-direction: row;
+  width: 13.59vw;
   justify-content: space-around;
+  margin-bottom: 5vh;
+  margin-left: 8vh;
+  grid-column: 2;
+}
+@media (max-width: 750px) {
+  .section3 .sliderContain .glob {
+    margin-left: 130px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
+.section3 .slider {
+  display: grid;
+  grid-template-columns: 10vw 58vw 10vw;
   align-items: center;
+  width: auto;
+  height: 100%;
 }
 .section3 .slider svg {
-  height: 12vh;
-  width: 6vw;
+  height: auto;
+  width: 100%;
 }
 .section3 .slider svg path {
   color: #685950;
@@ -403,48 +437,6 @@
 }
 .section4 .gamme:hover a {
   color: #e3e3dc;
-}
-
-.b0 {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 15px;
-}
-
-.b1 {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 15px;
-}
-
-.b2 {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border-radius: 15px;
-}
-
-.selected {
-  background-color: #a8957e;
-}
-
-.glob {
-  display: flex;
-  width: 100px;
-  justify-content: space-between;
-  margin-left: 225px;
-  grid-column: 2;
-  text-align: center;
-}
-
-@media (max-width: 750px) {
-  .glob {
-    margin-left: 130px;
-    margin-bottom: 30px;
-    margin-top: 20px;
-  }
 }
 
 /*# sourceMappingURL=index.module.css.map */

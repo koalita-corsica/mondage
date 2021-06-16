@@ -1,11 +1,12 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 $color-fontWhite: #E3E3DC;
 $color-fontBrown: #685950;
 $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:7.2em;
+$font-title:70px;
 $font-subtitle:25px;
 $font-text:20px;
 @font-face {
@@ -13,75 +14,92 @@ $font-text:20px;
     src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-    font-family: "FuturaText";
+    font-family: "FuturaPTNormal";
     src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-    font-family: "FuturaSub";
-    src: url("../fonts/FuturaPTCondMedium.otf");
+    font-family: "FuturaPTMedium";
+    src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-    font-family: "FuturaLight";
-    src: url("../fonts/FuturaPTLight.otf");
+    font-family: "FuturaPTbold";
+    src: url("../fonts/FuturaPTBold.otf");
 }
-.wrapperAccueil{
-    display: flex;
-    flex-direction: column;
-    
-}
-.slide {
-    display: flex;
-    
-}
-.sliderBot{
-    width: 25vw;
-    height: auto;
-}
-@media (max-width: 750px){
-    .sliderBot{
-        height: auto;
-        width: 40vw;
-    }
+@font-face {
+    font-family: "FuturaPTNormalOblique";
+    src: url("../fonts/FuturaPTBookOblique.otf");
 }
 
-.sliderLogo{
-    width:15vw; 
-    height:auto;
-    margin: 0 auto;
-}
-@media (max-width: 750px){
+.slide {
+    // background-color: green;
+    display: grid;
+    width: auto;
+    height: auto;
+    margin: 5vh;
+    grid-template-columns: 18.59vw 1fr;
+    align-items: flex-end;
+    .sliderBot{
+        // background-color: red;
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 750px){
+        .sliderBot{
+            height: 100%;
+            width: 30vw;
+        }
+    }
     .sliderLogo{
-        width: 20vw;
+        width: 13vw;
+        height: auto;
+    }
+    @media (max-width: 750px){
+        .sliderLogo{
+            width: 20vw;
+        }
     }
 }
 
     
 .content{
-    width: 30vw;
+    width: 100%;
+    height: auto;
     @media (max-width: 750px){
         width: 45vw;
         margin: 0 auto;
         
     }
     .title{
-        font-size: 85px;
+        font-size: 5.313em;
         font-family: "Reislust";
         font-weight: normal;
-        line-height: 0;
+        margin: 0 auto;
         @media (max-width: 750px){
             font-size: 48px;
         }
     }
-    .content p {
-        width: 90% !important;
+     
+    div {
+        height: auto;
+        h2{
+        font-family: "FuturaPTMedium" !important;
+        font-size: $font-subtitle;
+        font-weight: normal;
+        }
+    }
+    
+    p {
+        font-family: "FuturaPTNormal" !important;
+        font-size: $font-text;
     }
     button{
         margin-top: 3vh;
         background-color: transparent;
         border: 3px solid #A8957E;
         border-radius: 4px;   
-        width: 10vw;
-        height: 4.5vh; 
+        padding: 0.5vh;
+        padding-left: 2vw; 
+        padding-right: 2vw; 
         @media (max-width: 750px){
             width: auto;
             margin-top: 1vh;
@@ -89,9 +107,10 @@ $font-text:20px;
             
         }
         .btn{
+            width: auto;
             font-size: 20px;
             text-decoration: none;
-            font-family: "FuturaText";
+            font-family: "FuturaPTNormal";
             color: $color-button;
             @media (max-width: 750px){
                 margin: 2vw; 
