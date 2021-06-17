@@ -64,13 +64,7 @@ function GamePage(props) {
         <div className={styles.gameBg} id={item.slug.current}>
           <div className={styles.game}>
             <div className={styles.gameBg2}>
-              <amp-img
-                src={item.image.asset.url}
-                alt=""
-                Layout="responsive"
-                srcset={`${item.image.asset.url} 640w,
-                ${item.image.asset.url} 320w`}
-              />
+              <amp-img src={item.image.asset.url} alt="" Layout="responsive" />
 
               <div className={styles.gameText}>
                 <h1> {item.genre} </h1>
