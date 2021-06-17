@@ -9,9 +9,9 @@ import styled from "styled-components";
 
 const MenuIcon = styled.div`
   display: ${({ show }) => (show === false ? "none" : "none")};
-  @media (max-width: 750px) {
+  @media (max-width: 1024px) {
     position: ${({ nav }) => (nav ? "relative" : "fixed")};
-    left: ${({ nav }) => (nav ? "40vw" : "6vw")};
+    left: ${({ nav }) => (nav ? "" : "6vw")};
     // right: ${({ nav }) => (nav ? "6vw" : "")};
     top: ${({ nav }) => (nav ? "10vh" : "")};
     display: flex;
@@ -49,7 +49,7 @@ const MenuLinks = styled.nav`
   div {
     display: none;
   }
-  @media (max-width: 750px) {
+  @media (max-width: 1024px) {
     align-item: ${({ nav }) => (nav ? "center" : "none")};
     text-transform: uppercase;
     flex-direction: column;
@@ -114,7 +114,7 @@ const Header = ({ nav, showNav, show }) => (
     </MenuIcon>
 
     <MenuLinks nav={nav}>
-      <nav className={cn(styles.nav, showNav && styles.showNav)}>
+      <nav className={cn(styles.nav, showNav && styles.showNav)} data-nav="nav">
         <div className={styles.siteTitle}>
           <Link to="/">domaine mondange</Link>
         </div>

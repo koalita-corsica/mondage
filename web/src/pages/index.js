@@ -220,9 +220,16 @@ const IndexPage = (props) => {
             <div className={styles.section1}>
               <amp-img
                 src={bo.url}
-                className={styles.bottle}
                 id="bottle"
                 layout="responsive"
+                style={{
+                  gridArea: "1/1/2/2",
+                  position: "relative",
+                  width: "auto",
+                  marginTop: "8vh",
+                  height: "112vh",
+                  transform: "translateX(-200%)",
+                }}
                 
               />
               <div
@@ -255,12 +262,6 @@ const IndexPage = (props) => {
                 src={dom.url}
                 layout="responsive"
                 alt="SDSD"
-                style={{
-                  height: "310px",
-                  width: "310px",
-                  borderRadius: "100%",
-                  marginTop: "5vh",
-                }}
               />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}

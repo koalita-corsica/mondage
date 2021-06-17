@@ -41,10 +41,11 @@ $font-text:20px;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    @media (max-width: 750px){
+    @media (max-width: 1024px){
         flex-direction: column;
         height: auto;
         justify-content: center;
+        align-items: flex-end;
         
         
     }
@@ -52,27 +53,30 @@ $font-text:20px;
         width: auto;
         
         justify-self: left;
-        @media (max-width: 750px){
+        @media (max-width: 1024px){
             order: 2;
             margin-left: 0;
         }
         a{   
             color: $color-fontBrown;
             font-family: "Reislust";
-            font-size: calc(3.5rem + ((1vw - 7.5px) * 1.1966));
+            font-size: calc(3.25rem + ((1vw - 10.24px) * 2.0089));
             text-decoration: none;
             
-            @media (max-width: 750px) {
-                font-size: 52px;
+            @media (max-width: 1024px) {
+                width: auto;
+                font-size: 48px;
                 min-height: 0vw;
+                align-self: flex-end;
+                
             }
         }
         
     }
     nav{
         
-        width: 50vw;
-        @media (max-width: 750px) {
+        width: 55vw;
+        @media (max-width: 1024px) {
             width: 100vw;
             height: 100%;
         }
@@ -81,16 +85,17 @@ $font-text:20px;
             justify-self: right;
             display: flex;
             
+            
         }
         li{
             list-style-type: none;
         }
         li a{
             text-decoration: none;
-            font-size: $font-text;
+            font-size: calc(1rem + ((1vw - 10.24px) * 0.4464));
             color: $color-fontBrown;
             font-family: "FuturaPTMedium";
-            @media (max-width: 750px) {
+            @media (max-width: 1024px) {
                 font-size: 26px;
             } 
         }

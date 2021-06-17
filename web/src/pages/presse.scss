@@ -39,7 +39,7 @@ $font-text:20px;
         color: $color-fontBrown;
         text-align: left;
     }
-    @media (max-width: 750px){
+    @media (max-width: 1024px){
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -50,7 +50,7 @@ $font-text:20px;
         font-family: "FuturaPTNormal";
         font-size: $font-text;
         line-height: 1.5;
-        @media (max-width: 750px){
+        @media (max-width: 1024px){
             font-size: 18px;
         }
     }
@@ -62,23 +62,26 @@ $font-text:20px;
         font-size: 100px;
         font-family: "Reislust";
         line-height: 0;
-        @media (max-width: 750px){
+        @media (max-width: 1024px){
             text-align: center;
-            font-size: 45px;
+            font-size: 60px;
+            line-height: 1;
         }
     }
     h2{
         font-size: $font-subtitle;
         font-family: "FuturaPTMedium";
         
-        @media (max-width: 750px){
+        @media (max-width: 1024px){
             text-align: center;
-            font-size: 22px;
+            font-size: 21px;
+            font-family: "FuturaPTbold";
         }
     }
     p{
-        @media (max-width: 750px){
+        @media (max-width: 1024px){
             text-align: center;
+            font-family: "FuturaPTMedium";
         }
     }
     
@@ -87,7 +90,7 @@ $font-text:20px;
     display: flex;
     column-gap: 4vw;
     padding-bottom: 15vh;
-    @media (max-width: 750px){
+    @media (max-width: 1024px){
         flex-direction: column;
         align-items: center;
         
@@ -102,7 +105,7 @@ $font-text:20px;
     .articlesGauche{
         h1{
             font-size: 65px;
-            @media (max-width: 750px){
+            @media (max-width: 1024px){
                 text-align: center;
                 font-size: 45px;
             }
@@ -113,27 +116,35 @@ $font-text:20px;
             gap: 5vh;
             width: 90%;
             line-height: 1.5;
-            @media (max-width: 750px){
+            @media (max-width: 1024px){
                 align-items: center;
                 width: 100%;
             }
             p{
-                @media (max-width: 750px){
+                @media (max-width: 1024px){
                     text-align: center;
+                    font-family: "FuturaPTMedium";
                 }
             }
             img{
                 width: 80%;
-                @media (max-width: 750px){
+                @media (max-width: 1024px){
                     width: 60%;
                 }
                 
             }
+            strong{
+                @media (max-width: 1024px){
+                    font-family: "FuturaPTbold";
+                    font-size: 16px;
+                }
+            }
             padding-bottom: 10vh;
         }
         border-bottom: $color-line solid 1px;
-        @media (max-width: 750px){
+        @media (max-width: 1024px){
             border: none;
+            width: 80vw;
         }
     }
 }
@@ -149,7 +160,7 @@ $font-text:20px;
     .articlesDroite{
         h1{
             font-size: 65px;
-            @media (max-width: 750px){
+            @media (max-width: 1024px){
                 text-align: center;
                 font-size: 45px;
             }
@@ -161,27 +172,35 @@ $font-text:20px;
             gap: 5vh;
             width: 90%;
             line-height: 1.5;
-            @media (max-width: 750px){
+            @media (max-width: 1024px){
                 align-items: center;
                 width: 100%;
             }
             p{
-                @media (max-width: 750px){
+                @media (max-width: 1024px){
                     text-align: center;
+                    font-family: "FuturaPTMedium";
                 }
             }
             img{
                 width: 80%;
-                @media (max-width: 750px){
+                @media (max-width: 1024px){
                     width: 60%;
                 }
                 
             }
+            strong{
+                @media (max-width: 1024px){
+                    font-family: "FuturaPTbold";
+                    font-size: 16px;
+                }
+            }
             padding-bottom: 10vh;
         }
         border-bottom: $color-line solid 1px;
-        @media (max-width: 750px){
+        @media (max-width: 1024px){
             border: none;
+            width: 80vw;
         }
     }
     

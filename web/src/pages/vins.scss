@@ -37,7 +37,7 @@ $font-text:20px;
     height: 30vh;
     background-position: center 23%;
     background-size: cover;
-    @media (max-width: 750px){
+    @media (max-width: 1024px){
         height: 13vh;
     }
 }
@@ -56,7 +56,7 @@ $font-text:20px;
     .content{
         display: flex;
         justify-content: space-around;
-        @media (max-width: 750px){
+        @media (max-width: 1024px){
             flex-direction: column;
         }
     }
@@ -64,13 +64,18 @@ $font-text:20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-self: center;
-        margin: 5vh;
+        margin: 1vw;
+        width: 38vh;
         
-        width: 20vw;
+        @media (max-width: 1024px){
+            width: 80vw;
+        }
         .logo{
             width: 165px;
             height: auto;
+            @media (max-width: 1024px){
+                width: 30vh;
+            }
         }
         .block{
             background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
@@ -80,7 +85,8 @@ $font-text:20px;
             display: flex;
             flex-direction: column;
             text-align: center;
-            @media (max-width: 750px){
+            width: 100%;
+            @media (max-width: 1024px){
                 border-radius: 0;
                 width: 80%;
             }
@@ -94,12 +100,13 @@ $font-text:20px;
                 padding: 0.5vh;
                 margin: 2vw;
                 align-self: center;
-                width: 40%;
                 a{
                     text-decoration: none;
                     font-family: "FuturaPTNormal";
                     font-size: $font-text;
                     color: $color-button;
+                    margin-right: 2vw;
+                    margin-left: 2vw;
                 }
             }
             button:hover{

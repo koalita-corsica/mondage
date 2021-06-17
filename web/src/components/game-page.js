@@ -30,17 +30,17 @@ function GamePage(props) {
           {produits.map((item) => (
             <Link to={"#" + `${item.slug.current}`}>
               <div
+                className={styles.btl}
                 style={{
                   background: `url(${item.image.asset.url})`,
                   backgroundSize: "25vh",
                   backgroundRepeat: "no-repeat",
                   height: "100%",
-                  width: "13vw",
+                  width: "9vw",
                   backgroundPositionX: "center",
-                  backgroundPositionY: "10vh",
+                  backgroundPositionY: "16vh",
                   
                 }}
-                className={styles.btl}
               />
             </Link>
           ))}

@@ -45,8 +45,10 @@
 }
 @media (max-width: 1024px) {
   .section1 {
-    height: 73vh;
+    height: 76vh;
     margin-bottom: 12vw;
+    grid-template-columns: 35vw 1fr;
+    gap: 0;
   }
 }
 .section1 amp-img {
@@ -59,8 +61,8 @@
 }
 @media (max-width: 1024px) {
   .section1 amp-img {
-    height: 73vh;
-    right: 45%;
+    height: 42vh;
+    width: auto;
   }
 }
 .section1 .block1 * {
@@ -77,6 +79,7 @@
   .section1 .block1 {
     margin: 0 auto;
     align-self: center;
+    width: auto;
   }
 }
 .section1 .title {

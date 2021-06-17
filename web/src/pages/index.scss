@@ -57,8 +57,10 @@ $font-text:20px;
   grid-template-columns: 30vw 1fr;
   column-gap: 10vw;
   @media (max-width: 1024px) {
-    height: 73vh;
+    height: 76vh;
     margin-bottom: 12vw;
+    grid-template-columns: 35vw 1fr;
+    gap: 0;
   }
 
   amp-img {
@@ -69,8 +71,9 @@ $font-text:20px;
     height: 112vh;
     transform: translateX(-200%);
     @media (max-width: 1024px) {
-      height: 73vh;
-      right: 45%;
+      height: 42vh;
+      width: auto;
+      
     }
   }
   .block1 * {
@@ -86,6 +89,7 @@ $font-text:20px;
     @media (max-width: 1024px) {
       margin: 0 auto;
       align-self: center;
+      width: auto;
     }
   }
   .title {

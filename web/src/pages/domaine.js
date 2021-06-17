@@ -81,7 +81,12 @@ const DomainePage = (props) => {
               <amp-img
                 src={laura}
                 Layout="responsive"
-                
+                style={{
+                  height: "310px",
+                  width: "310px",
+                  borderRadius: "100%",
+                  marginTop: "5vh",
+                }}
               />
               <h2> {item.node.pageBuilder[1].title1.fr} </h2>
               <div className={styles.block2}>
@@ -93,13 +98,37 @@ const DomainePage = (props) => {
             </div>
             <div className={styles.section3}>
               <div className={styles.domainImg1}>
-                <amp-img src={domainImg1} Layout="responsive" />
+                <amp-img src={domainImg1} 
+                  Layout="responsive" 
+                  // style={{
+                  //   height: "310px",
+                  //   width: "310px",
+                  //   borderRadius: "100%",
+                  //   marginTop: "5vh",
+                  // }}
+                />
               </div>
               <div className={styles.domainImg2}>
-                <amp-img src={domainImg2} Layout="responsive" />
+                <amp-img src={domainImg2} 
+                  Layout="responsive" 
+                  // style={{
+                  //   height: "310px",
+                  //   width: "310px",
+                  //   borderRadius: "100%",
+                  //   marginTop: "5vh",
+                  // }}
+                />
               </div>
               <div className={styles.domainImg3}>
-                <amp-img src={domainImg3} Layout="responsive" />
+                <amp-img src={domainImg3} 
+                  Layout="responsive" 
+                  // style={{
+                  //   height: "310px",
+                  //   width: "310px",
+                  //   borderRadius: "100%",
+                  //   marginTop: "5vh",
+                  // }}
+                />
               </div>
               {/* <div className={styles.domainImg1}></img></div>
               <div className={styles.domainImg2}><img src={domainImg2}></img></div>

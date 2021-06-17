@@ -15,7 +15,7 @@ function ProduitPage(props) {
     <div className={styles.wrapperProduit}>
       <Link to={"/game/" + `${game.slug.current}`} className={styles.retour}>
         <BsArrowLeft className={styles.arrow} />
-        <div className={styles.back}>RETOUR</div>
+        <div className={styles.back}><p>RETOUR</p></div>
       </Link>
       <img src={image.asset.url} alt="" className={styles.bouteille} />
       <div className={styles.game}>

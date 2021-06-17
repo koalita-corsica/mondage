@@ -31,18 +31,19 @@
   display: flex;
   justify-content: space-between;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .wrapper {
     flex-direction: column;
     height: auto;
     justify-content: center;
+    align-items: flex-end;
   }
 }
 .wrapper .siteTitle {
   width: auto;
   justify-self: left;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .wrapper .siteTitle {
     order: 2;
     margin-left: 0;
@@ -51,19 +52,21 @@
 .wrapper .siteTitle a {
   color: #685950;
   font-family: "Reislust";
-  font-size: calc(3.5rem + ((1vw - 7.5px) * 1.1966));
+  font-size: calc(3.25rem + ((1vw - 10.24px) * 2.0089));
   text-decoration: none;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .wrapper .siteTitle a {
-    font-size: 52px;
+    width: auto;
+    font-size: 48px;
     min-height: 0vw;
+    align-self: flex-end;
   }
 }
 .wrapper nav {
-  width: 50vw;
+  width: 55vw;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .wrapper nav {
     width: 100vw;
     height: 100%;
@@ -79,11 +82,11 @@
 }
 .wrapper nav li a {
   text-decoration: none;
-  font-size: 20px;
+  font-size: calc(1rem + ((1vw - 10.24px) * 0.4464));
   color: #685950;
   font-family: "FuturaPTMedium";
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .wrapper nav li a {
     font-size: 26px;
   }
