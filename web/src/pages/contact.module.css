@@ -59,7 +59,20 @@ label {
   width: 88vw;
   background-color: white;
 }
-.wrapperCtc p, .wrapperCtc div, .wrapperCtc h1, .wrapperCtc h2, .wrapperCtc label {
+.wrapperCtc > amp-img img {
+  height: auto;
+  width: 31vw;
+}
+@media (max-width: 750px) {
+  .wrapperCtc > amp-img img {
+    display: none;
+  }
+}
+.wrapperCtc p,
+.wrapperCtc div,
+.wrapperCtc h1,
+.wrapperCtc h2,
+.wrapperCtc label {
   color: #685950;
 }
 @media (max-width: 750px) {
@@ -88,16 +101,6 @@ label {
 .contactLayout h1 {
   grid-area: 1/1/2/4;
   font-size: calc(3.5rem + ((1vw - 7.5px) * 1.1966));
-}
-
-.img {
-  height: auto;
-  width: 31vw;
-}
-@media (max-width: 750px) {
-  .img {
-    display: none;
-  }
 }
 
 .contact {
@@ -139,7 +142,7 @@ label {
   border-bottom: 1px solid #707070;
 }
 .form ::placeholder {
-  color: #E3E3DC;
+  color: #e3e3dc;
   font-size: 20px;
   font-family: "FuturaPTNormal";
 }
@@ -290,9 +293,9 @@ label {
 }
 
 .envoyer {
-  color: #A8957E;
+  color: #a8957e;
   background-color: transparent;
-  border: 1px solid #A8957E;
+  border: 1px solid #a8957e;
   border-radius: 4px;
   margin-top: 2vh;
   width: auto;
@@ -305,9 +308,9 @@ label {
 }
 @media (max-width: 750px) {
   .envoyer {
-    color: #A8957E;
+    color: #a8957e;
     background-color: transparent;
-    border: 1px solid #A8957E;
+    border: 1px solid #a8957e;
     align-self: center;
     font-size: 18px;
     padding-top: 0.5vh;
@@ -320,12 +323,12 @@ label {
 .envoyer:hover {
   color: white;
   border: none;
-  background-color: #A8957E;
+  background-color: #a8957e;
 }
 @media (max-width: 750px) {
   .envoyer:hover {
     color: white;
-    background-color: #A8957E;
+    background-color: #a8957e;
     border: none;
   }
 }

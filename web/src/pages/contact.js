@@ -37,12 +37,25 @@ export const query = graphql`
   }
 `;
 
+const isBrowser = typeof window !== "undefined";
+
+if (isBrowser) {
+  let script = document.createElement("script");
+  script.src = "https://cdn.ampproject.org/v0.js";
+  script.async = true;
+  document.body.appendChild(script);
+}
+
 const ContactPage = (props) => {
   return (
     <Layout>
       <SEO title="contact" />
       <div className={styles.wrapperCtc}>
-        <img src={img} className={styles.img}></img>
+        <amp-img
+          src={img}
+          Layout="responsive"
+          style={{ height: "auto", width: "70%" }}
+        />
         <div className={styles.contactLayout}>
           <h1>contactez-nous</h1>
           <div className={styles.contact}>
@@ -106,8 +119,6 @@ const ContactPage = (props) => {
               <div className={styles.rouge21} />
               <div className={styles.rouge22} />
               <div className={styles.rouge23} />
-
-              
             </div>
           </div>
           <button className={styles.envoyer}>ENVOYER</button>
