@@ -223,7 +223,6 @@ const IndexPage = (props) => {
                 className={styles.bottle}
                 id="bottle"
                 layout="responsive"
-                
               />
               <div
                 className={styles.block1}
