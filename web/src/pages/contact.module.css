@@ -57,7 +57,20 @@ label {
   width: 88vw;
   background-color: white;
 }
-.wrapperCtc p, .wrapperCtc div, .wrapperCtc h1, .wrapperCtc h2, .wrapperCtc label {
+.wrapperCtc > amp-img img {
+  height: auto;
+  width: 31vw;
+}
+@media (max-width: 750px) {
+  .wrapperCtc > amp-img img {
+    display: none;
+  }
+}
+.wrapperCtc p,
+.wrapperCtc div,
+.wrapperCtc h1,
+.wrapperCtc h2,
+.wrapperCtc label {
   color: #685950;
 }
 @media (max-width: 1024px) {
@@ -95,6 +108,7 @@ label {
   }
 }
 
+<<<<<<< HEAD
 .img {
   height: auto;
   width: 31vw;
@@ -105,6 +119,8 @@ label {
   }
 }
 
+=======
+>>>>>>> 6f365d04166571c404df0f78e06938effff5bc81
 .contact {
   width: 100%;
   height: auto;
@@ -145,7 +161,7 @@ label {
   border-bottom: 1px solid #707070;
 }
 .form ::placeholder {
-  color: #E3E3DC;
+  color: #e3e3dc;
   font-size: 20px;
   font-family: "FuturaPTNormal";
 }
@@ -298,24 +314,54 @@ label {
 }
 
 .envoyer {
-  color: #A8957E;
+  color: #a8957e;
   background-color: transparent;
+<<<<<<< HEAD
   border: 2px solid #a8957e;
+=======
+  border: 1px solid #a8957e;
+>>>>>>> 6f365d04166571c404df0f78e06938effff5bc81
   border-radius: 4px;
+  margin-top: 2vh;
   width: auto;
+<<<<<<< HEAD
   justify-self: right;
   padding: 0.5vh;
   padding-left: 2vw;
   padding-right: 2vw;
   align-self: flex-end;
+=======
+  height: auto;
+  justify-self: right;
+>>>>>>> 6f365d04166571c404df0f78e06938effff5bc81
   font-size: 20px;
-  font-family: "FuturaPTNormal";
+  line-height: 0;
+  padding-left: 2vh;
+  padding-right: 2vh;
 }
 @media (max-width: 1024px) {
   .envoyer {
-    color: #A8957E;
+    color: #a8957e;
     background-color: transparent;
-    border: 1px solid #A8957E;
+    margin-top: 3vh;
+    border: 2px solid #a8957e;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    padding: 0.5vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 2vw;
+    justify-self: right;
+    font-size: 20px;
+    font-family: "FuturaPTNormal";
+  }
+}
+@media (max-width: 750px) and (max-width: 750px) {
+  .envoyer {
+    color: #a8957e;
+    background-color: transparent;
+    border: 1px solid #a8957e;
     align-self: center;
     font-size: 18px;
     padding-top: 0.5vh;
@@ -324,17 +370,28 @@ label {
     padding-right: 6vw;
   }
 }
-
-.envoyer:hover {
+.envoyer .envoyer:hover {
   color: white;
-  border: 1px solid #A8957E;
-  background-color: #A8957E;
-  font-family: "FuturaPTNormal";
+  border: none;
+  background-color: #a8957e;
 }
+@media (max-width: 750px) {
+  .envoyer .envoyer:hover {
+    color: white;
+    border: 1px solid #a8957e;
+    background-color: #a8957e;
+    font-family: "FuturaPTNormal";
+  }
+}
+<<<<<<< HEAD
 @media (max-width: 1024px) {
   .envoyer:hover {
+=======
+@media (max-width: 750px) {
+  .envoyer .envoyer:hover {
+>>>>>>> 6f365d04166571c404df0f78e06938effff5bc81
     color: white;
-    background-color: #A8957E;
+    background-color: #a8957e;
     border: none;
   }
 }
