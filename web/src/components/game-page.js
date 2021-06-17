@@ -65,7 +65,6 @@ function GamePage(props) {
           <div className={styles.game}>
             <div className={styles.gameBg2}>
               <amp-img src={item.image.asset.url} alt="" Layout="responsive" />
-
               <div className={styles.gameText}>
                 <h1> {item.genre} </h1>
                 <PortableText blocks={item.description._rawFr} />
