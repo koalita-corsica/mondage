@@ -47,6 +47,7 @@
 }
 .domainContain .content {
   display: flex;
+  justify-content: space-around;
 }
 @media (max-width: 750px) {
   .domainContain .content {
@@ -57,7 +58,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5vw;
+  justify-self: center;
+  margin: 5vh;
+  width: 20vw;
 }
 .domainContain .gammes .logo {
   width: 165px;
@@ -65,7 +68,7 @@
 }
 .domainContain .gammes .block {
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 12px;
   opacity: 1;
   display: flex;
@@ -79,26 +82,28 @@
   }
 }
 .domainContain .gammes .block button {
-  margin: 2vw;
-  border: 3px solid #a8957e;
   background-color: transparent;
+  margin-top: 3vh;
+  border: 3px solid #a8957e;
   border-radius: 4px;
+  width: auto;
+  height: auto;
+  padding: 0.5vh;
+  margin: 2vw;
   align-self: center;
   width: 40%;
-  height: auto;
-  padding: 5px;
 }
 .domainContain .gammes .block button a {
   text-decoration: none;
   font-family: "FuturaPTNormal";
   font-size: 20px;
-  color: #a8957e;
+  color: #A8957E;
 }
 .domainContain .gammes .block button:hover {
-  background-color: #a8957e;
+  background-color: #A8957E;
 }
 .domainContain .gammes .block button:hover a {
-  color: #e3e3dc;
+  color: #E3E3DC;
 }
 .domainContain .gammes .block p {
   font-family: "FuturaPTNormal";

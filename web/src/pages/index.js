@@ -135,7 +135,6 @@ const IndexPage = (props) => {
         bottle.style.transform = "translateX(-15%)";
       }
       if (window.scrollY > 199) {
-        // blockPara.style.transform = "translateX(50%)";
         blockPara.setAttribute(
           "style",
           "opacity: 0.8; transform: translateX(30%); transition: all 1s"
@@ -224,6 +223,7 @@ const IndexPage = (props) => {
                 className={styles.bottle}
                 id="bottle"
                 layout="responsive"
+                
               />
               <div
                 className={styles.block1}
@@ -256,9 +256,9 @@ const IndexPage = (props) => {
                 layout="responsive"
                 alt="SDSD"
                 style={{
-                  width: "310px",
                   height: "310px",
-                  borderRadius: "100% !important",
+                  width: "310px",
+                  borderRadius: "100%",
                   marginTop: "5vh",
                 }}
               />
@@ -282,35 +282,35 @@ const IndexPage = (props) => {
                   <IoIosArrowBack onClick={moins} />
                   <Slider count={count} />
                   <IoIosArrowForward onClick={plus} />
+                  {count && count == 1 ? (
+                    <div className={styles.glob}>
+                      <div id="b0" className={styles.b0} />
+                      <div
+                        id="b1"
+                        className={styles.b1 + " " + styles.selected}
+                      />
+                      <div id="b2" className={styles.b2} />
+                    </div>
+                  ) : count == 2 ? (
+                    <div className={styles.glob}>
+                      <div id="b0" className={styles.b0} />
+                      <div id="b1" className={styles.b1} />
+                      <div
+                        id="b2"
+                        className={styles.b2 + " " + styles.selected}
+                      />
+                    </div>
+                  ) : (
+                    <div className={styles.glob}>
+                      <div
+                        id="b0"
+                        className={styles.b0 + " " + styles.selected}
+                      />
+                      <div id="b1" className={styles.b1} />
+                      <div id="b2" className={styles.b2} />
+                    </div>
+                  )}
                 </div>
-                {count && count == 1 ? (
-                  <div className={styles.glob}>
-                    <div id="b0" className={styles.b0} />
-                    <div
-                      id="b1"
-                      className={styles.b1 + " " + styles.selected}
-                    />
-                    <div id="b2" className={styles.b2} />
-                  </div>
-                ) : count == 2 ? (
-                  <div className={styles.glob}>
-                    <div id="b0" className={styles.b0} />
-                    <div id="b1" className={styles.b1} />
-                    <div
-                      id="b2"
-                      className={styles.b2 + " " + styles.selected}
-                    />
-                  </div>
-                ) : (
-                  <div className={styles.glob}>
-                    <div
-                      id="b0"
-                      className={styles.b0 + " " + styles.selected}
-                    />
-                    <div id="b1" className={styles.b1} />
-                    <div id="b2" className={styles.b2} />
-                  </div>
-                )}
               </div>
             </div>
             <div className={styles.section4}>

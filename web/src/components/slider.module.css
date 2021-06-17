@@ -1,105 +1,130 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-  font-family: "FuturaText";
+  font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-  font-family: "FuturaSub";
-  src: url("../fonts/FuturaPTCondMedium.otf");
+  font-family: "FuturaPTMedium";
+  src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-  font-family: "FuturaLight";
-  src: url("../fonts/FuturaPTLight.otf");
+  font-family: "FuturaPTbold";
+  src: url("../fonts/FuturaPTBold.otf");
 }
-.wrapperAccueil {
-  display: flex;
-  flex-direction: column;
+@font-face {
+  font-family: "FuturaPTNormalOblique";
+  src: url("../fonts/FuturaPTBookOblique.otf");
 }
-
 .slide {
-  display: flex;
+  display: grid;
+  width: auto;
+  height: auto;
+  grid-template-columns: 25vw 1fr;
 }
-
-.sliderBot {
-  width: 25vw;
+.slide .wrp {
+  height: auto;
+  width: 100%;
+  align-self: flex-end;
+}
+.slide .sliderBot {
+  width: 100%;
   height: auto;
 }
-
-@media (max-width: 750px) {
-  .sliderBot {
+@media (max-width: 1024px) {
+  .slide {
+    grid-template-columns: 35vw 1fr;
+    margin: 0;
+    width: 100%;
     height: auto;
-    width: 40vw;
   }
 }
-.sliderLogo {
-  width: 15vw;
+.slide .sliderLogo {
+  width: 20vw;
   height: auto;
-  margin: 0 auto;
 }
-
-@media (max-width: 750px) {
-  .sliderLogo {
+@media (max-width: 1024px) {
+  .slide .sliderLogo {
     width: 20vw;
   }
 }
+
 .content {
-  width: 30vw;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .content {
-    width: 45vw;
-    margin: 0 auto;
+    height: 100%;
+  }
+  .content h1 {
+    line-height: 0;
   }
 }
-.content .title {
-  font-size: 85px;
-  font-family: "Reislust";
+.content div {
+  height: auto;
+}
+.content div h2 {
+  font-family: "FuturaPTMedium" !important;
+  font-size: 25px;
   font-weight: normal;
-  line-height: 0;
+  line-height: 2;
 }
-@media (max-width: 750px) {
-  .content .title {
-    font-size: 48px;
+@media (max-width: 1024px) {
+  .content div h2 {
+    font-size: 21px;
+    line-height: 1;
   }
 }
-.content .content p {
-  width: 90% !important;
+.content p {
+  font-family: "FuturaPTNormal" !important;
+  font-size: 20px;
+}
+@media (max-width: 1024px) {
+  .content p {
+    font-size: 18px;
+  }
 }
 .content button {
-  margin-top: 3vh;
   background-color: transparent;
+  margin-top: 3vh;
   border: 3px solid #a8957e;
   border-radius: 4px;
-  width: 10vw;
-  height: 4.5vh;
+  width: auto;
+  height: auto;
+  padding: 0.5vh;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .content button {
+    margin-bottom: 5vh;
     width: auto;
-    margin-top: 1vh;
-    margin-bottom: 2vh;
   }
 }
 .content button .btn {
-  font-size: 20px;
   text-decoration: none;
-  font-family: "FuturaText";
-  color: #a8957e;
+  font-family: "FuturaPTNormal";
+  font-size: 20px;
+  color: #A8957E;
+  margin: 2vw;
 }
-@media (max-width: 750px) {
+@media (max-width: 1024px) {
   .content button .btn {
-    margin: 2vw;
+    font-size: 18px;
   }
 }
 .content button:hover {
-  background-color: #a8957e;
+  background-color: #A8957E;
 }
 .content button:hover .btn {
-  color: #e3e3dc;
+  color: #E3E3DC;
 }
 
 /*# sourceMappingURL=slider.module.css.map */

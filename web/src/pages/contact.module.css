@@ -297,14 +297,15 @@ label {
   background-color: transparent;
   border: 1px solid #a8957e;
   border-radius: 4px;
-  margin-top: 2vh;
   width: auto;
   height: auto;
+  padding: 0.5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin: 2vw;
   justify-self: right;
   font-size: 20px;
-  line-height: 0;
-  padding-left: 2vh;
-  padding-right: 2vh;
+  font-family: "FuturaPTNormal";
 }
 @media (max-width: 750px) {
   .envoyer {
@@ -322,8 +323,14 @@ label {
 
 .envoyer:hover {
   color: white;
+<<<<<<< HEAD
   border: none;
   background-color: #a8957e;
+=======
+  border: 1px solid #A8957E;
+  background-color: #A8957E;
+  font-family: "FuturaPTNormal";
+>>>>>>> 065d3cd99a337a94f4a6c5e515c118cb5eb9a89e
 }
 @media (max-width: 750px) {
   .envoyer:hover {

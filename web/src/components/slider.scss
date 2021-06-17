@@ -1,11 +1,12 @@
 @import "../pages/normalize.module.css";
+@import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 $color-fontWhite: #E3E3DC;
 $color-fontBrown: #685950;
 $color-backgroundGrey:#D9D9D7;
 $color-backgroundLightGrey:#E3E3DC;
 $color-button:#A8957E;
 $color-line:#707070;
-$font-title:7.2em;
+$font-title:70px;
 $font-subtitle:25px;
 $font-text:20px;
 @font-face {
@@ -13,90 +14,119 @@ $font-text:20px;
     src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-    font-family: "FuturaText";
+    font-family: "FuturaPTNormal";
     src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-    font-family: "FuturaSub";
-    src: url("../fonts/FuturaPTCondMedium.otf");
+    font-family: "FuturaPTMedium";
+    src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-    font-family: "FuturaLight";
-    src: url("../fonts/FuturaPTLight.otf");
+    font-family: "FuturaPTbold";
+    src: url("../fonts/FuturaPTBold.otf");
 }
-.wrapperAccueil{
-    display: flex;
-    flex-direction: column;
-    
-}
-.slide {
-    display: flex;
-    
-}
-.sliderBot{
-    width: 25vw;
-    height: auto;
-}
-@media (max-width: 750px){
-    .sliderBot{
-        height: auto;
-        width: 40vw;
-    }
+@font-face {
+    font-family: "FuturaPTNormalOblique";
+    src: url("../fonts/FuturaPTBookOblique.otf");
 }
 
-.sliderLogo{
-    width:15vw; 
-    height:auto;
-    margin: 0 auto;
-}
-@media (max-width: 750px){
+.slide {
+    
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-columns: 25vw 1fr;
+    .wrp{
+        height: auto;
+        width: 100%;
+        align-self: flex-end;
+        @media (max-width: 1024px){
+            
+            
+        }
+    }
+    .sliderBot{
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 1024px){
+        grid-template-columns: 35vw 1fr;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        
+    }
     .sliderLogo{
         width: 20vw;
+        height: auto;
+    }
+    @media (max-width: 1024px){
+        .sliderLogo{
+            width: 20vw;
+        }
     }
 }
 
     
 .content{
-    width: 30vw;
-    @media (max-width: 750px){
-        width: 45vw;
-        margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    @media (max-width: 1024px){
+        height: 100%;
+
+        
+        h1{
+            line-height: 0;
+        }
         
     }
-    .title{
-        font-size: 85px;
-        font-family: "Reislust";
+     
+    div {
+        height: auto;
+        h2{
+        font-family: "FuturaPTMedium" !important;
+        font-size: $font-subtitle;
         font-weight: normal;
-        line-height: 0;
-        @media (max-width: 750px){
-            font-size: 48px;
+        line-height: 2;
+            @media (max-width: 1024px){
+                font-size: 21px;
+                line-height: 1;
+            }
         }
     }
-    .content p {
-        width: 90% !important;
+    
+    p {
+        font-family: "FuturaPTNormal" !important;
+        font-size: $font-text;
+        @media (max-width: 1024px){
+            font-size: 18px;
+        }
     }
     button{
-        margin-top: 3vh;
         background-color: transparent;
-        border: 3px solid #A8957E;
-        border-radius: 4px;   
-        width: 10vw;
-        height: 4.5vh; 
-        @media (max-width: 750px){
-            width: auto;
-            margin-top: 1vh;
-            margin-bottom: 2vh;
-            
+        margin-top: 3vh;
+        border: 3px solid #a8957e;
+        border-radius: 4px;
+        width: auto;
+        height: auto;
+        padding: 0.5vh;
+        @media (max-width: 1024px){
+            margin-bottom: 5vh;
+            width: auto; 
         }
         .btn{
-            font-size: 20px;
             text-decoration: none;
-            font-family: "FuturaText";
+            font-family: "FuturaPTNormal";
+            font-size: $font-text;
             color: $color-button;
-            @media (max-width: 750px){
-                margin: 2vw; 
+            margin: 2vw;
+            @media (max-width: 1024px){
+                font-size: 18px; 
             }
-            
         }
     }
     button:hover{
