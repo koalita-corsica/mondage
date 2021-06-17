@@ -46,12 +46,7 @@ function GamePage(props) {
                   height: "100%",
                   width: "9vw",
                   backgroundPositionX: "center",
-<<<<<<< HEAD
-                  backgroundPositionY: "16vh",
-                  
-=======
                   backgroundPositionY: "10vh",
->>>>>>> 6f365d04166571c404df0f78e06938effff5bc81
                 }}
               />
             </Link>
