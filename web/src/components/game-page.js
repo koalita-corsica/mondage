@@ -14,11 +14,19 @@ import { BsArrowUp } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
 import { sr } from "date-fns/locale";
 
+const isBrowser = typeof window !== "undefined";
+
+if (isBrowser) {
+  let script = document.createElement("script");
+  script.src = "https://cdn.ampproject.org/v0.js";
+  script.async = true;
+  document.body.appendChild(script);
+}
+
 function GamePage(props) {
   const { title, produits, logo, description, slug } = props;
   console.log(produits);
 
-  
   return (
     <div className={styles.wrapper}>
       <div className={styles.bandeau}>
@@ -38,7 +46,6 @@ function GamePage(props) {
                   width: "13vw",
                   backgroundPositionX: "center",
                   backgroundPositionY: "10vh",
-                  
                 }}
                 className={styles.btl}
               />
@@ -57,13 +64,15 @@ function GamePage(props) {
         <div className={styles.gameBg} id={item.slug.current}>
           <div className={styles.game}>
             <div className={styles.gameBg2}>
-              <img src={item.image.asset.url} alt=""  />
+              <amp-img src={item.image.asset.url} alt="" Layout="responsive" />
               <div className={styles.gameText}>
                 <h1> {item.genre} </h1>
                 <PortableText blocks={item.description._rawFr} />
-                
-                  <button><Link to={"/produit/" + `${item.slug.current}`}>Fiche Produit</Link></button>{" "}
-                
+                <button>
+                  <Link to={"/produit/" + `${item.slug.current}`}>
+                    Fiche Produit
+                  </Link>
+                </button>{" "}
               </div>
             </div>
           </div>
