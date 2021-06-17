@@ -297,36 +297,34 @@ label {
     justify-self: right;
     font-size: $font-text;
     font-family: "FuturaPTNormal";
-    
-    @media (max-width: 750px){
 
-        color: $color-button;
-        background-color: transparent;
-        border: 1px solid #A8957E;
-        align-self: center;
-        font-size: 18px;
-        padding-top: 0.5vh;
-        padding-bottom: 0.5vh;
-        padding-left: 6vw;
-        padding-right: 6vw;
+    @media (max-width: 750px) {
+      color: $color-button;
+      background-color: transparent;
+      border: 1px solid #a8957e;
+      align-self: center;
+      font-size: 18px;
+      padding-top: 0.5vh;
+      padding-bottom: 0.5vh;
+      padding-left: 6vw;
+      padding-right: 6vw;
     }
-}
-.envoyer:hover {
-  color: white;
-  border: none;
-  background-color: $color-button;
-
-  @media (max-width: 750px) {
+  }
+  .envoyer:hover {
     color: white;
-    border: 1px solid #A8957E;
+    border: none;
     background-color: $color-button;
-    font-family: "FuturaPTNormal";
-    
-    
-    @media (max-width: 750px){
-        color: white;
-        background-color: $color-button;
-        border: none;
-    }
 
+    @media (max-width: 750px) {
+      color: white;
+      border: 1px solid #a8957e;
+      background-color: $color-button;
+      font-family: "FuturaPTNormal";
+    }
+    @media (max-width: 750px) {
+      color: white;
+      background-color: $color-button;
+      border: none;
+    }
+  }
 }
