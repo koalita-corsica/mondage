@@ -95,8 +95,8 @@ const ContactPage = (props) => {
                   placeholder="Entrez votre message"
                 />
               </div>
-              <button className={styles.envoyer}>ENVOYER</button>
             </form>
+              <button className={styles.envoyer}>ENVOYER</button>
             <div className={styles.horaire}>
               <h1 className={styles.ouverture}>HORAIRES D'OUVERTURES</h1>
               <div className={styles.dates}>Avril / Octobre</div>

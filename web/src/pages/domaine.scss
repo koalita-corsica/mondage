@@ -30,8 +30,8 @@ $font-text: 20px;
   src: url("../fonts/FuturaPTBookOblique.otf");
 }
 .wrapperDomain {
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
@@ -44,11 +44,11 @@ h1 {
 }
 p {
   font-family: "FuturaPTNormal";
-  font-size: $font-text;
+  font-size: calc(1rem + ((1vw - 10.24px) * 0.4464));
 }
 h2 {
   font-family: "FuturaPTMedium";
-  font-size: $font-subtitle;
+  font-size: calc(1.3125rem + ((1vw - 10.24px) * 0.4464));
 }
 .section1Domaine {
   background: linear-gradient(
@@ -64,15 +64,16 @@ h2 {
   background-position-y: 71%;
   margin-left: 6vw;
   margin-right: 6vw;
-  height: 94vh;
+  margin-bottom: 6vh;
+  height: 84vh;
   display: flex;
   align-items: center;
-  @media (max-width: 1150px) {
+  @media (max-width: 1024px) {
     background-position: center;
     height: auto;
   }
   .block1 {
-    margin: 10vw;
+    margin-left: 10vw;
     height: auto;
     width: 46vw;
     @media (max-width: 1024px) {
@@ -85,7 +86,7 @@ h2 {
     }
     h1 {
       font-family: "Reislust";
-      font-size: 115px;
+      font-size: calc(4.375rem + ((1vw - 10.24px) * 5.0223));
       font-weight: normal;
       margin: 0 auto;
       line-height: 1.5;
@@ -94,7 +95,7 @@ h2 {
       }
     }
     p {
-      font-size: $font-text;
+      font-size: calc(1rem + ((1vw - 10.24px) * 0.4464));
       line-height: 1.5;
       @media (max-width: 1024px) {
         font-size: 18px;
@@ -102,9 +103,9 @@ h2 {
       }
     }
     h2 {
-      font-size: $font-subtitle;
       font-family: "FuturaPTBold";
       line-height: 2;
+      font-size: calc(1.3125rem + ((1vw - 10.24px) * 0.4464));
       @media (max-width: 1024px) {
         font-size: 18px;
       }
@@ -114,6 +115,7 @@ h2 {
 .section2 {
   color: $color-fontBrown;
   display: flex;
+  height: 94vh;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -139,6 +141,7 @@ h2 {
     line-height: 4;
     font-weight: normal;
     color: $color-fontBrown;
+    font-size: calc(1.3125rem + ((1vw - 10.24px) * 0.4464));
     @media (max-width: 1024px) {
       font-size: 21px;
       font-family: "FuturaPTBold";
@@ -154,7 +157,7 @@ h2 {
     p {
       line-height: 1.5;
       font-family: "FuturaPTNormal";
-      font-size: $font-text;
+      font-size: calc(1rem + ((1vw - 10.24px) * 0.4464));
       color: $color-fontBrown;
       @media (max-width: 1024px) {
         font-size: 18px;

@@ -263,15 +263,17 @@ const IndexPage = (props) => {
                 alt="SDSD"
                 style={{ width: "310px", height: "310px" }}
               />
-              <PortableText
-                blocks={item.node.pageBuilder[1].desc._rawFr}
-                serializers={serializers}
-              />
-              <button className={styles.gamme}>
-                <Link to="/domaine" className={styles.a}>
-                  EN SAVOIR PLUS
-                </Link>
-              </button>
+              <div className={styles.block2}>
+                <PortableText
+                  blocks={item.node.pageBuilder[1].desc._rawFr}
+                  serializers={serializers}
+                />
+                <button className={styles.gamme}>
+                  <Link to="/domaine" className={styles.a}>
+                    EN SAVOIR PLUS
+                  </Link>
+                </button>
+              </div>
             </div>
             <div className={styles.section3}>
               <div className={styles.sliderimg} />

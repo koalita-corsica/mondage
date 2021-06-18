@@ -34,7 +34,7 @@ $font-text:20px;
 .bandeau{
     background: 
     url("../asset/nosvins-bandeau.jpg");
-    height: 30vh;
+    height: 20vh;
     background-position: center 23%;
     background-size: cover;
     @media (max-width: 1024px){
@@ -43,19 +43,23 @@ $font-text:20px;
 }
 .domainContain{
     display: flex;
+    height: 70vh;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
     * {
         color: $color-fontBrown;
     }
     .title{
         font-family: "Reislust";
-        font-size: 115px;
+        text-align: center;
+        font-size: calc(2.8125rem + ((1vw - 10.24px) * 7.8125));
     }
     .content{
         display: flex;
-        justify-content: space-around;
+        align-self: center;
+        width: 70vw;
+        justify-content: space-evenly;
+        gap: 5vh;
         @media (max-width: 1024px){
             flex-direction: column;
         }
@@ -64,14 +68,15 @@ $font-text:20px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 5vh;
-        width: 38vh;
+        width: auto;
+        height: 100%;
+     
         
         @media (max-width: 1024px){
             width: 80vw;
         }
         .logo{
-            width: 165px;
+            width: 7vw;
             height: auto;
             @media (max-width: 1024px){
                 width: 30vh;
@@ -82,31 +87,29 @@ $font-text:20px;
             background: #FFFFFF 0% 0% no-repeat padding-box;
             border-radius: 12px;
             opacity: 1;
-            display: flex;
-            flex-direction: column;
             text-align: center;
             width: 100%;
+            height: auto;
             @media (max-width: 1024px){
                 border-radius: 0;
                 width: 80%;
             }
             button{
                 background-color: transparent;
-                margin-top: 3vh;
                 border: 3px solid #a8957e;
                 border-radius: 4px;
                 width: auto;
                 height: auto;
                 padding: 0.5vh;
-                margin: 2vw;
+                margin: 1vh;
                 align-self: center;
                 a{
                     text-decoration: none;
                     font-family: "FuturaPTNormal";
-                    font-size: $font-text;
+                    font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
                     color: $color-button;
-                    margin-right: 2vw;
-                    margin-left: 2vw;
+                    margin-right: 1vw;
+                    margin-left: 1vw;
                 }
             }
             button:hover{
@@ -117,19 +120,18 @@ $font-text:20px;
             }
             
             p {
+                margin: 1vh;
                 font-family: "FuturaPTNormal";
-                font-size: 20px;
-                
-                margin: 2vh;
+                font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
             }
             h2 {
                 font-family: "FuturaPTMedium";
-                font-size: 20px;
+                font-size: calc(1.125rem + ((1vw - 10.24px) * 0.2232));
                 
             }
             h1{
                 font-family:  "Reislust";
-                font-size: 90px;
+                font-size: calc(2.1875rem + ((1vw - 10.24px) * 6.1384));
                 margin: 0 auto;
             }
             

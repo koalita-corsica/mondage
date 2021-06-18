@@ -22,7 +22,7 @@
 }
 .bandeau {
   background: url("../asset/nosvins-bandeau.jpg");
-  height: 30vh;
+  height: 20vh;
   background-position: center 23%;
   background-size: cover;
 }
@@ -34,20 +34,23 @@
 
 .domainContain {
   display: flex;
+  height: 70vh;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 .domainContain * {
   color: #685950;
 }
 .domainContain .title {
   font-family: "Reislust";
-  font-size: 115px;
+  text-align: center;
+  font-size: calc(2.8125rem + ((1vw - 10.24px) * 7.8125));
 }
 .domainContain .content {
   display: flex;
-  justify-content: space-around;
+  align-self: center;
+  width: 70vw;
+  justify-content: space-evenly;
+  gap: 5vh;
 }
 @media (max-width: 1024px) {
   .domainContain .content {
@@ -58,8 +61,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5vh;
-  width: 38vh;
+  width: auto;
+  height: 100%;
 }
 @media (max-width: 1024px) {
   .domainContain .gammes {
@@ -67,7 +70,7 @@
   }
 }
 .domainContain .gammes .logo {
-  width: 165px;
+  width: 7vw;
   height: auto;
 }
 @media (max-width: 1024px) {
@@ -80,10 +83,9 @@
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border-radius: 12px;
   opacity: 1;
-  display: flex;
-  flex-direction: column;
   text-align: center;
   width: 100%;
+  height: auto;
 }
 @media (max-width: 1024px) {
   .domainContain .gammes .block {
@@ -93,22 +95,21 @@
 }
 .domainContain .gammes .block button {
   background-color: transparent;
-  margin-top: 3vh;
   border: 3px solid #a8957e;
   border-radius: 4px;
   width: auto;
   height: auto;
   padding: 0.5vh;
-  margin: 2vw;
+  margin: 1vh;
   align-self: center;
 }
 .domainContain .gammes .block button a {
   text-decoration: none;
   font-family: "FuturaPTNormal";
-  font-size: 20px;
+  font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
   color: #A8957E;
-  margin-right: 2vw;
-  margin-left: 2vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
 }
 .domainContain .gammes .block button:hover {
   background-color: #A8957E;
@@ -117,17 +118,17 @@
   color: #E3E3DC;
 }
 .domainContain .gammes .block p {
+  margin: 1vh;
   font-family: "FuturaPTNormal";
-  font-size: 20px;
-  margin: 2vh;
+  font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
 }
 .domainContain .gammes .block h2 {
   font-family: "FuturaPTMedium";
-  font-size: 20px;
+  font-size: calc(1.125rem + ((1vw - 10.24px) * 0.2232));
 }
 .domainContain .gammes .block h1 {
   font-family: "Reislust";
-  font-size: 90px;
+  font-size: calc(2.1875rem + ((1vw - 10.24px) * 6.1384));
   margin: 0 auto;
 }
 
