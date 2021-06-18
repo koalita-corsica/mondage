@@ -1,0 +1,6 @@
+@import "../pages/normalize.module.css";
+
+.page {
+  background-color: #e3e3dc;
+  width: 100vw;
+}
