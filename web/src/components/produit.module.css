@@ -68,9 +68,9 @@ h1 {
   .wrapperProduit .bouteille {
     grid-area: 2/3/4/4;
     align-self: flex-end;
-    width: 32vw;
-    left: 2vw;
-    top: 6vh;
+    width: 38vw;
+    right: 3vh;
+    top: 8vh;
   }
 }
 .wrapperProduit .retour {

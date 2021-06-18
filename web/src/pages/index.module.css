@@ -45,8 +45,7 @@
 }
 @media (max-width: 1024px) {
   .section1 {
-    height: 76vh;
-    margin-bottom: 12vw;
+    margin-bottom: 6vw;
     grid-template-columns: 35vw 1fr;
     gap: 0;
   }
@@ -54,15 +53,17 @@
 .section1 amp-img {
   grid-area: 1/1/2/2;
   position: relative;
-  width: auto;
+  width: 45vh;
   margin-top: 8vh;
   height: 112vh;
   transform: translateX(-200%);
 }
 @media (max-width: 1024px) {
   .section1 amp-img {
-    height: 42vh;
-    width: auto;
+    height: auto;
+    top: 4vh;
+    right: 10vh;
+    width: 35vh;
   }
 }
 .section1 .block1 * {
@@ -79,6 +80,7 @@
   .section1 .block1 {
     margin: 0 auto;
     align-self: center;
+    margin-right: 5vh;
     width: auto;
   }
 }
@@ -101,7 +103,7 @@
   }
 }
 .section1 div h2 {
-  font-family: "FuturaPTNormal";
+  font-family: "FuturaPTbold";
   line-height: 2;
   font-size: 25px;
 }
@@ -131,7 +133,8 @@
   font-family: "FuturaPTNormal";
   font-size: 20px;
   color: #a8957e;
-  margin: 2vw;
+  margin-right: 2vw;
+  margin-left: 2vw;
 }
 @media (max-width: 1024px) {
   .section1 .gamme a {
@@ -188,10 +191,15 @@
   font-family: "FuturaPTNormal";
   font-size: 20px;
 }
+@media (max-width: 1024px) {
+  .section2 div p {
+    font-family: "FuturaPTNormalOblique";
+  }
+}
 .section2 div h2 {
   margin-top: 5vh;
   color: #e3e3dc;
-  font-family: "FuturaPTNormal";
+  font-family: "FuturaPTbold";
   line-height: 3;
   font-size: 25px;
 }
@@ -208,6 +216,7 @@
 @media (max-width: 1024px) {
   .section2 .gamme {
     margin-bottom: 5vh;
+    margin-top: 5vh;
     width: auto;
   }
 }
@@ -220,7 +229,20 @@
 }
 @media (max-width: 1024px) {
   .section2 .gamme a {
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 0px;
+  }
+}
+@media (max-width: 1024px) {
+  .section2 .gamme a::after {
+    font-family: "FuturaPTNormal";
     font-size: 18px;
+    content: "VOIR PLUS";
+    text-indent: 0;
+    display: block;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
 }
 .section2 .gamme:hover {
@@ -363,6 +385,7 @@
 }
 @media (max-width: 1024px) {
   .section3 .slider div p {
+    font-family: "FuturaPTMedium";
     font-size: 18px;
   }
 }
@@ -434,7 +457,7 @@
 }
 .section4 div h2 {
   margin-top: 14vh;
-  font-family: "FuturaPTNormal";
+  font-family: "FuturaPTmedium";
   font-size: 25px;
   line-height: 2;
 }

@@ -80,8 +80,9 @@
 }
 @media (max-width: 1024px) {
   .content div h2 {
+    font-family: "FuturaPTbold" !important;
     font-size: 21px;
-    line-height: 1;
+    line-height: 2;
   }
 }
 .content p {
@@ -90,6 +91,7 @@
 }
 @media (max-width: 1024px) {
   .content p {
+    font-family: "FuturaPRMedium" !important;
     font-size: 18px;
   }
 }
