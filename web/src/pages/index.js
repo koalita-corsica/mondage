@@ -230,7 +230,6 @@ const IndexPage = (props) => {
                   height: "112vh",
                   transform: "translateX(-200%)",
                 }}
-                
               />
               <div
                 className={styles.block1}
@@ -262,6 +261,7 @@ const IndexPage = (props) => {
                 src={dom.url}
                 layout="responsive"
                 alt="SDSD"
+                style={{ width: "310px", height: "310px" }}
               />
               <PortableText
                 blocks={item.node.pageBuilder[1].desc._rawFr}

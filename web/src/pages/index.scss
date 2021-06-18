@@ -1,33 +1,33 @@
 @import "../pages/normalize.module.css";
 @import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
-$color-fontWhite: #E3E3DC;
+$color-fontWhite: #e3e3dc;
 $color-fontBrown: #685950;
-$color-backgroundGrey:#D9D9D7;
-$color-backgroundLightGrey:#E3E3DC;
-$color-button:#A8957E;
-$color-line:#707070;
-$font-title:70px;
-$font-subtitle:25px;
-$font-text:20px;
+$color-backgroundGrey: #d9d9d7;
+$color-backgroundLightGrey: #e3e3dc;
+$color-button: #a8957e;
+$color-line: #707070;
+$font-title: 70px;
+$font-subtitle: 25px;
+$font-text: 20px;
 @font-face {
-    font-family: "Reislust";
-    src: url("../fonts/Reislust-97D7.ttf");
+  font-family: "Reislust";
+  src: url("../fonts/Reislust-97D7.ttf");
 }
 @font-face {
-    font-family: "FuturaPTNormal";
-    src: url("../fonts/FuturaPTBook.otf");
+  font-family: "FuturaPTNormal";
+  src: url("../fonts/FuturaPTBook.otf");
 }
 @font-face {
-    font-family: "FuturaPTMedium";
-    src: url("../fonts/FuturaPTMedium.otf");
+  font-family: "FuturaPTMedium";
+  src: url("../fonts/FuturaPTMedium.otf");
 }
 @font-face {
-    font-family: "FuturaPTbold";
-    src: url("../fonts/FuturaPTBold.otf");
+  font-family: "FuturaPTbold";
+  src: url("../fonts/FuturaPTBold.otf");
 }
 @font-face {
-    font-family: "FuturaPTNormalOblique";
-    src: url("../fonts/FuturaPTBookOblique.otf");
+  font-family: "FuturaPTNormalOblique";
+  src: url("../fonts/FuturaPTBookOblique.otf");
 }
 
 .wrapperAccueil {
@@ -73,7 +73,6 @@ $font-text:20px;
     @media (max-width: 1024px) {
       height: 42vh;
       width: auto;
-      
     }
   }
   .block1 * {
@@ -147,7 +146,7 @@ $font-text:20px;
 }
 
 .section2 {
-  amp-img img{
+  amp-img img {
     height: 310px;
     width: 310px;
     border-radius: 100%;
@@ -169,15 +168,15 @@ $font-text:20px;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 100;
-  
+
   @media (max-width: 1024px) {
     height: auto;
   }
-  
-  .title{
+
+  .title {
     line-height: 2;
   }
-  
+
   div {
     margin-top: 5vh;
     width: 50%;
@@ -256,18 +255,18 @@ $font-text:20px;
       display: none;
     }
   }
-  .title{
+  .title {
     font-size: 100px;
     font-family: "Reislust";
     font-weight: normal;
     text-align: left;
     margin: 3vh;
-    @media (max-width: 1024px){
-        font-size: 60px;
-        
-        text-align: center;
+    @media (max-width: 1024px) {
+      font-size: 60px;
+
+      text-align: center;
     }
-}
+  }
   .sliderContain {
     // background-color: black;
     display: flex;
@@ -281,25 +280,25 @@ $font-text:20px;
       background-color: white;
       border-radius: 15px;
     }
-    
+
     .b1 {
       width: 20px;
       height: 20px;
       background-color: white;
       border-radius: 15px;
     }
-    
+
     .b2 {
       width: 20px;
       height: 20px;
       background-color: white;
       border-radius: 15px;
     }
-    
+
     .selected {
       background-color: #a8957e;
     }
-    
+
     .glob {
       display: flex;
       width: 13.59vw;
@@ -315,11 +314,10 @@ $font-text:20px;
         width: 20vw;
       }
     }
-    
   }
   .slider {
     // background-color: blue;
-    display:grid;
+    display: grid;
     grid-template-columns: 5vw auto 5vw;
     align-items: center;
     width: auto;
@@ -327,7 +325,7 @@ $font-text:20px;
     @media (max-width: 1024px) {
       grid-template-columns: 90vw 10vw;
       width: 100vw;
-      svg:first-child{
+      svg:first-child {
         display: none;
       }
     }
@@ -342,10 +340,10 @@ $font-text:20px;
         color: $color-fontBrown;
       }
     }
-    h1{
+    h1 {
       font-size: 85px;
       line-height: 0;
-      @media (max-width: 1024px){
+      @media (max-width: 1024px) {
         font-size: 46px;
       }
     }
@@ -353,15 +351,15 @@ $font-text:20px;
       font-family: "FuturaPTNormal";
       font-size: $font-text;
       width: auto;
-        @media (max-width: 1024px){
-          font-size: 18px;
-        }
+      @media (max-width: 1024px) {
+        font-size: 18px;
+      }
     }
     div h2 {
       font-family: "FuturaPTNormal";
       font-size: 25px;
-        @media (max-width: 1024px){
-          font-size: 21px;
+      @media (max-width: 1024px) {
+        font-size: 21px;
       }
     }
   }
@@ -379,7 +377,7 @@ $font-text:20px;
   * {
     color: $color-fontBrown;
   }
-  .pressimg  {
+  .pressimg {
     width: 43vw;
     justify-self: right;
     @media (max-width: 1024px) {
@@ -461,4 +459,3 @@ $font-text:20px;
     }
   }
 }
-
