@@ -54,7 +54,7 @@ const ContactPage = (props) => {
         <amp-img
           src={img}
           Layout="responsive"
-          style={{ height: "auto", width: "70%" }}
+          // style={{ height: "auto", width: "31vw" }}
         />
         <div className={styles.contactLayout}>
           <h1>contactez-nous</h1>

@@ -93,8 +93,9 @@ $font-text:20px;
         font-weight: normal;
         line-height: 2;
             @media (max-width: 1024px){
+                font-family: "FuturaPTbold" !important;
                 font-size: 21px;
-                line-height: 1;
+                line-height: 2;
             }
         }
     }
@@ -103,6 +104,7 @@ $font-text:20px;
         font-family: "FuturaPTNormal" !important;
         font-size: $font-text;
         @media (max-width: 1024px){
+            font-family: "FuturaPRMedium" !important;
             font-size: 18px;
         }
     }
