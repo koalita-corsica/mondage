@@ -74,6 +74,7 @@ h2 {
   .section1Domaine .block1 {
     width: 80vw;
     margin-top: 0;
+    margin-left: 3vw;
     margin-bottom: 4vw;
   }
 }
@@ -125,20 +126,20 @@ h2 {
 @media (max-width: 1024px) {
   .section2 {
     margin-bottom: 10vh;
+    margin-top: 3vh;
   }
 }
 .section2 amp-img img {
-  width: 310px;
-  height: 310px;
-  border-radius: 75%;
+  border-radius: 100% !important;
 }
 @media (max-width: 1024px) {
-  .section2 amp-img img {
-    margin-top: 4vh;
+  .section2 amp-img {
+    width: 144px !important;
+    height: 144px !important;
   }
 }
 .section2 h2 {
-  margin-top: 9vh;
+  margin-top: 6vh;
   line-height: 4;
   font-weight: normal;
   color: #685950;
@@ -147,12 +148,12 @@ h2 {
 @media (max-width: 1024px) {
   .section2 h2 {
     font-size: 21px;
+    margin-top: 0;
     font-family: "FuturaPTBold";
   }
 }
 .section2 .block2 {
-  width: 50vw;
-  margin-bottom: 9vh;
+  width: 60vw;
 }
 @media (max-width: 1024px) {
   .section2 .block2 {
@@ -179,7 +180,7 @@ h2 {
   grid-template-rows: repeat(2, 1fr);
   gap: 16px;
   margin-bottom: 16px;
-  height: auto;
+  height: 100vh;
 }
 @media (max-width: 1024px) {
   .section3 {

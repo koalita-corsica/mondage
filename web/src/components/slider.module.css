@@ -25,16 +25,24 @@
   height: 75vh;
   display: flex;
 }
+@media (max-width: 1024px) {
+  .slide {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35vw 1fr;
+  }
+}
 .slide .sliderBot {
   width: 357px;
   height: 100%;
 }
 @media (max-width: 1024px) {
-  .slide {
-    grid-template-columns: 35vw 1fr;
+  .slide .sliderBot {
+    justify-self: center;
     margin: 0;
-    width: 100%;
-    height: auto;
+    width: 142px;
+    height: 400px;
   }
 }
 .slide .sliderLogo {
@@ -43,7 +51,8 @@
 }
 @media (max-width: 1024px) {
   .slide .sliderLogo {
-    width: 20vw;
+    width: 114px;
+    height: auto;
   }
 }
 
@@ -55,11 +64,6 @@
   flex-direction: column;
   align-items: flex-start;
 }
-@media (max-width: 1024px) {
-  .content {
-    height: 100%;
-  }
-}
 .content h1 {
   font-size: 85px;
   margin: 0;
@@ -67,7 +71,7 @@
 }
 @media (max-width: 1024px) {
   .content h1 {
-    font-size: 46px;
+    font-size: 35px;
   }
 }
 .content div {
@@ -82,7 +86,7 @@
 @media (max-width: 1024px) {
   .content div h2 {
     font-family: "FuturaPTbold" !important;
-    font-size: 21px;
+    font-size: 16px;
     line-height: 2;
   }
 }
@@ -93,7 +97,7 @@
 @media (max-width: 1024px) {
   .content p {
     font-family: "FuturaPRMedium" !important;
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .content button {
@@ -106,7 +110,7 @@
 }
 @media (max-width: 1024px) {
   .content button {
-    margin-bottom: 5vh;
+    margin-top: 2vh;
     width: auto;
   }
 }
@@ -119,7 +123,7 @@
 }
 @media (max-width: 1024px) {
   .content button .btn {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .content button:hover {

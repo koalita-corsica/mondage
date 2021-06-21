@@ -33,8 +33,8 @@ $font-text:20px;
 .wrapperPresse{
     width: auto;
     height: auto;
-    margin-left: 17vw;
-    margin-right: 17vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     * {
         color: $color-fontBrown;
         text-align: left;
@@ -74,25 +74,30 @@ $font-text:20px;
         
         @media (max-width: 1024px){
             text-align: center;
-            font-size: 21px;
+            font-size: 18px;
             font-family: "FuturaPTbold";
+            line-height: 2;
         }
     }
     p{
         @media (max-width: 1024px){
             text-align: center;
             font-family: "FuturaPTMedium";
+            font-size: 14px;
         }
+    }
+    @media (max-width: 1024px){
+        padding-bottom: 5vh;
     }
     
 }
 .container{
     display: flex;
     column-gap: 4vw;
-    padding-bottom: 15vh;
     @media (max-width: 1024px){
         flex-direction: column;
         align-items: center;
+        justify-content: space-around;
         
     }
 }
@@ -105,9 +110,10 @@ $font-text:20px;
     .articlesGauche{
         h1{
             font-size: 65px;
+            line-height: 0.8;
             @media (max-width: 1024px){
                 text-align: center;
-                font-size: 45px;
+                font-size: 34px;
             }
         }
         .block{
@@ -124,6 +130,7 @@ $font-text:20px;
                 @media (max-width: 1024px){
                     text-align: center;
                     font-family: "FuturaPTMedium";
+                    font-size: 14px;
                 }
             }
             img{
@@ -160,9 +167,10 @@ $font-text:20px;
     .articlesDroite{
         h1{
             font-size: 65px;
+            line-height: 0.8;
             @media (max-width: 1024px){
                 text-align: center;
-                font-size: 45px;
+                font-size: 34px;
             }
         }
         
@@ -180,6 +188,7 @@ $font-text:20px;
                 @media (max-width: 1024px){
                     text-align: center;
                     font-family: "FuturaPTMedium";
+                    font-size: 14px;
                 }
             }
             img{

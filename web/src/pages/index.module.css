@@ -30,6 +30,11 @@
   font-size: 7.2em;
   line-height: 1;
 }
+@media (max-width: 1024px) {
+  .title {
+    font-size: 60px;
+  }
+}
 
 .section1 {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(19, 19, 19, 0.6) 75%, rgba(226, 226, 226, 0.7) 100%), url("../asset/accueilvigne.jpg");
@@ -48,6 +53,7 @@
     margin-bottom: 6vw;
     grid-template-columns: 35vw 1fr;
     gap: 0;
+    height: 64vh;
   }
 }
 .section1 amp-img {
@@ -61,10 +67,11 @@
 }
 @media (max-width: 1024px) {
   .section1 amp-img {
-    height: auto;
-    top: 4vh;
-    right: 10vh;
-    width: 35vh;
+    height: 401px;
+    top: 3vh;
+    right: 2vh;
+    width: 162px;
+    align-self: flex-end;
   }
 }
 .section1 .block1 * {
@@ -80,8 +87,8 @@
 @media (max-width: 1024px) {
   .section1 .block1 {
     margin: 0 auto;
-    align-self: center;
-    margin-right: 5vh;
+    align-self: flex-end;
+    margin-right: 1vw;
     width: auto;
   }
 }
@@ -97,7 +104,7 @@
 }
 @media (max-width: 1024px) {
   .section1 div p {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .section1 div h2 {
@@ -107,7 +114,7 @@
 }
 @media (max-width: 1024px) {
   .section1 div h2 {
-    font-size: 21px;
+    font-size: 16px;
     line-height: 1.5;
   }
 }
@@ -136,7 +143,7 @@
 }
 @media (max-width: 1024px) {
   .section1 .gamme a {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .section1 .gamme:hover {
@@ -163,10 +170,19 @@
     height: auto;
   }
 }
+.section2 .title {
+  line-height: 2;
+}
 .section2 amp-img img {
-  height: 310px;
   width: 310px;
-  border-radius: 100%;
+  height: 310px;
+  border-radius: 100% !important;
+}
+@media (max-width: 1024px) {
+  .section2 amp-img {
+    width: 144px !important;
+    height: 144px !important;
+  }
 }
 .section2 .block2 {
   width: 100%;
@@ -194,6 +210,7 @@
 @media (max-width: 1024px) {
   .section2 .block2 div p {
     font-family: "FuturaPTNormalOblique";
+    font-size: 15px;
   }
 }
 .section2 .block2 div h2 {
@@ -201,6 +218,11 @@
   font-family: "FuturaPTbold";
   line-height: 3;
   font-size: 25px;
+}
+@media (max-width: 1024px) {
+  .section2 .block2 div h2 {
+    font-size: 16px;
+  }
 }
 .section2 .block2 .gamme {
   background-color: transparent;
@@ -235,7 +257,7 @@
 @media (max-width: 1024px) {
   .section2 .block2 .gamme a::after {
     font-family: "FuturaPTNormal";
-    font-size: 18px;
+    font-size: 14px;
     content: "VOIR PLUS";
     text-indent: 0;
     display: block;
@@ -287,6 +309,7 @@
 @media (max-width: 1024px) {
   .section3 .sliderContain {
     margin: 0 auto;
+    height: 100vh;
   }
 }
 .section3 .sliderContain .b0 {
@@ -320,9 +343,11 @@
 @media (max-width: 1024px) {
   .section3 .sliderContain .glob {
     grid-area: 2/1/3/3;
-    align-self: center;
+    align-self: start;
+    justify-content: space-between;
     justify-self: center;
-    width: 20vw;
+    width: 25vw;
+    margin: 0;
   }
 }
 .section3 .sliderContain .title {
@@ -337,6 +362,7 @@
   .section3 .sliderContain .title {
     font-size: 60px;
     text-align: center;
+    margin-left: 0;
   }
 }
 .section3 .sliderContain .slider {
@@ -351,7 +377,10 @@
 @media (max-width: 1024px) {
   .section3 .sliderContain .slider {
     grid-template-columns: 90vw 10vw;
-    width: 100vw;
+    grid-template-rows: 80vh 10vh;
+    width: 100%;
+    height: 100%;
+    margin: 0;
   }
   .section3 .sliderContain .slider svg:first-child {
     display: none;
@@ -427,15 +456,21 @@
   font-size: 20px;
   line-height: 1.5;
 }
+@media (max-width: 1024px) {
+  .section4 div p {
+    font-size: 14px;
+  }
+}
 .section4 div h2 {
   margin-top: 14vh;
-  font-family: "FuturaPTmedium";
+  font-family: "FuturaPTMedium";
   font-size: 25px;
   line-height: 2;
 }
 @media (max-width: 1024px) {
   .section4 div h2 {
     margin: 0 auto;
+    font-size: 16px;
   }
 }
 .section4 .pressBlock {
@@ -473,7 +508,7 @@
 }
 @media (max-width: 1024px) {
   .section4 .gamme a {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 .section4 .gamme:hover {

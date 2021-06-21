@@ -46,15 +46,11 @@ label {
   font-family: "FuturaPTbold";
   font-weight: bold;
   @media (max-width: 1024px) {
-    font-size: 21px;
+    font-size: 16px;
   }
 }
 
-.dates {
-  font-weight: bold;
-  font-size: $font-text;
-  font-family: "FuturaPTNormal";
-}
+
 .wrapperCtc {
   margin-left: 6vw;
   margin-right: 6vw;
@@ -137,10 +133,11 @@ label {
     font-size: $font-text;
     font-family: "FuturaPTNormal";
     @media (max-width: 1024px) {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   textarea {
+    margin-top: 1vh;
     height: 13.5vh;
     border: 1px solid $color-line;
   }
@@ -162,27 +159,36 @@ label {
   div {
     line-height: 2;
     width: 80%;
+    font-size: $font-text;
     font-family: "FuturaPTbold";
     @media (max-width: 1024px) {
-      font-size: 18px;
+      font-size: 16px;
       line-height: 3;
     }
   }
+  
   .ouverture {
     font-size: 23px;
     font-family: "FuturaPTBold";
     width: auto;
     margin: 0;
     @media (max-width: 1024px) {
-      font-size: 21px;
+      font-size: 18px;
     }
   }
   p {
     width: 80%;
     @media (max-width: 1024px) {
       width: 90%;
-      font-size: 18px;
+      font-size: 14px;
     }
+  }
+}
+@media (max-width: 1024px) {
+  .horaire div:nth-last-child(2) {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    line-height: 0.8;
   }
 }
 
@@ -202,7 +208,7 @@ label {
     align-items: flex-end;
   }
   .rouge1 {
-    background: url("../asset/Laudria_Rouge.png");
+    background: url("../asset/Spargolato_Rouge.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -222,7 +228,7 @@ label {
     }
   }
   .rouge13 {
-    background: url("../asset/Spargolato_Rouge.png");
+    background: url("../asset/Laudria_Rouge.png");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
@@ -292,7 +298,8 @@ label {
     background-color: transparent;
     border: 1px solid #a8957e;
     align-self: center;
-    font-size: 18px;
+    margin-top: 3vh;
+    font-size: 14px;
     padding-top: 0.5vh;
     padding-bottom: 0.5vh;
     padding-left: 6vw;

@@ -38,6 +38,9 @@ $font-text: 20px;
   font-family: "Reislust";
   font-size: 7.2em;
   line-height: 1;
+  @media (max-width: 1024px) {
+    font-size: 60px;
+  }
 }
 .section1 {
   background: linear-gradient(
@@ -61,6 +64,7 @@ $font-text: 20px;
     margin-bottom: 6vw;
     grid-template-columns: 35vw 1fr;
     gap: 0;
+    height: 64vh;
   }
 
   amp-img {
@@ -72,10 +76,11 @@ $font-text: 20px;
     height: 96vh;
     transform: translateX(-200%);
     @media (max-width: 1024px) {
-      height: auto;
-      top: 4vh;
-      right: 10vh;
-      width: 35vh;
+      height: 401px;
+      top: 3vh;
+      right: 2vh;
+      width: 162px;
+      align-self: flex-end;
     }
   }
   .block1 * {
@@ -90,10 +95,9 @@ $font-text: 20px;
     grid-area: 1/2/2/3;
     @media (max-width: 1024px) {
       margin: 0 auto;
-      align-self: center;
-      margin-right: 5vh;
+      align-self: flex-end;
+      margin-right: 1vw;
       width: auto;
-      
     }
   }
   .title {
@@ -106,7 +110,7 @@ $font-text: 20px;
     font-family: "FuturaPTNormal";
     font-size: $font-text;
     @media (max-width: 1024px) {
-      font-size: 18px;
+      font-size: 14px;
     }
   }
   div h2 {
@@ -114,7 +118,7 @@ $font-text: 20px;
     line-height: 2;
     font-size: 25px;
     @media (max-width: 1024px) {
-      font-size: 21px;
+      font-size: 16px;
       line-height: 1.5;
     }
   }
@@ -138,7 +142,7 @@ $font-text: 20px;
       margin-right: 2vw;
       margin-left: 2vw;
       @media (max-width: 1024px) {
-        font-size: 18px;
+        font-size: 14px;
       }
     }
   }
@@ -174,13 +178,18 @@ $font-text: 20px;
   }
 
   .title {
-    
+    line-height: 2;
   }
-  amp-img img {
-    height: 310px;
-    width: 310px;
-    border-radius: 100%;
-    
+  amp-img {
+    img{
+      width: 310px;
+      height: 310px;
+      border-radius: 100% !important;
+    }
+    @media (max-width: 1024px) {
+      width: 144px !important;
+      height: 144px !important;
+    }
   }
   .block2{
     width: 100%;
@@ -203,6 +212,7 @@ $font-text: 20px;
       font-size: $font-text;
       @media (max-width: 1024px) {
         font-family: "FuturaPTNormalOblique";
+        font-size: 15px;
       }
     }
     div h2 {
@@ -210,6 +220,9 @@ $font-text: 20px;
       font-family: "FuturaPTbold";
       line-height: 3;
       font-size: 25px;
+      @media (max-width: 1024px) {
+        font-size: 16px;
+      }
     }
     .gamme {
       background-color: transparent;
@@ -239,7 +252,7 @@ $font-text: 20px;
       a::after{
         @media (max-width: 1024px) {
           font-family: "FuturaPTNormal";
-          font-size: 18px;
+          font-size: 14px;
           content: "VOIR PLUS";
           text-indent: 0;
           display: block;
@@ -287,6 +300,7 @@ $font-text: 20px;
     flex-direction: column;
     @media (max-width: 1024px) {
       margin: 0 auto;
+      height: 100vh;
     }
     .b0 {
       width: 20px;
@@ -323,9 +337,11 @@ $font-text: 20px;
     @media (max-width: 1024px) {
       .glob {
         grid-area: 2/1/3/3;
-        align-self: center;
+        align-self: start;
+        justify-content: space-between;
         justify-self: center;
-        width: 20vw;
+        width: 25vw;
+        margin: 0;
       }
     }
     .title {
@@ -338,6 +354,7 @@ $font-text: 20px;
       @media (max-width: 1024px) {
         font-size: 60px;
         text-align: center;
+        margin-left: 0;
       }
     }
     .slider {
@@ -350,7 +367,10 @@ $font-text: 20px;
       margin-left: 10vh;
       @media (max-width: 1024px) {
         grid-template-columns: 90vw 10vw;
-        width: 100vw;
+        grid-template-rows: 80vh 10vh;
+        width: 100%;
+        height: 100%;
+        margin: 0;
         svg:first-child {
           display: none;
         }
@@ -416,14 +436,18 @@ $font-text: 20px;
     font-family: "FuturaPTNormal";
     font-size: $font-text;
     line-height: 1.5;
+    @media (max-width: 1024px) {
+      font-size: 14px;
+    }
   }
   div h2 {
     margin-top: 14vh;
-    font-family: "FuturaPTmedium";
+    font-family: "FuturaPTMedium";
     font-size: 25px;
     line-height: 2;
     @media (max-width: 1024px) {
       margin: 0 auto;
+      font-size: 16px;
     }
   }
   .pressBlock {
@@ -454,7 +478,7 @@ $font-text: 20px;
       color: $color-button;
       margin: 2vw;
       @media (max-width: 1024px) {
-        font-size: 18px;
+        font-size: 14px;
       }
     }
   }

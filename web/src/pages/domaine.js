@@ -85,7 +85,6 @@ const DomainePage = (props) => {
                   height: "310px",
                   width: "310px",
                   borderRadius: "100%",
-                  marginTop: "5vh",
                 }}
               />
               <h2> {item.node.pageBuilder[1].title1.fr} </h2>

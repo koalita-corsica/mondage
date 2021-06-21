@@ -45,6 +45,9 @@ $font-text:20px;
     display: flex;
     height: 70vh;
     flex-direction: column;
+    @media (max-width: 1024px){
+        height: auto;
+    }
 
     * {
         color: $color-fontBrown;
@@ -53,6 +56,9 @@ $font-text:20px;
         font-family: "Reislust";
         text-align: center;
         font-size: calc(2.8125rem + ((1vw - 10.24px) * 7.8125));
+        @media (max-width: 1024px){
+            font-size: 45px;
+        }
     }
     .content{
         display: flex;
@@ -62,6 +68,7 @@ $font-text:20px;
         gap: 5vh;
         @media (max-width: 1024px){
             flex-direction: column;
+            align-items: center;
         }
     }
     .gammes{
@@ -71,15 +78,14 @@ $font-text:20px;
         width: auto;
         height: 100%;
      
-        
         @media (max-width: 1024px){
-            width: 80vw;
+            margin-bottom: 3vh;
         }
         .logo{
-            width: 7vw;
+            width: 6vw;
             height: auto;
             @media (max-width: 1024px){
-                width: 30vh;
+                width: 122px;
             }
         }
         .block{
@@ -92,7 +98,7 @@ $font-text:20px;
             height: auto;
             @media (max-width: 1024px){
                 border-radius: 0;
-                width: 80%;
+                width: 100%;
             }
             button{
                 background-color: transparent;
@@ -102,7 +108,11 @@ $font-text:20px;
                 height: auto;
                 padding: 0.5vh;
                 margin: 1vh;
+                margin-top: 3vh;
                 align-self: center;
+                @media (max-width: 1024px){
+                    margin-bottom: 2vh;
+                }
                 a{
                     text-decoration: none;
                     font-family: "FuturaPTNormal";
@@ -110,6 +120,10 @@ $font-text:20px;
                     color: $color-button;
                     margin-right: 1vw;
                     margin-left: 1vw;
+                    
+                    @media (max-width: 1024px){
+                        font-size: 14px;
+                    }
                 }
             }
             button:hover{
@@ -123,16 +137,25 @@ $font-text:20px;
                 margin: 1vh;
                 font-family: "FuturaPTNormal";
                 font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
+                @media (max-width: 1024px){
+                    font-size: 14px;
+                }
             }
             h2 {
                 font-family: "FuturaPTMedium";
                 font-size: calc(1.125rem + ((1vw - 10.24px) * 0.2232));
+                @media (max-width: 1024px){
+                    font-size: 16px;
+                }
                 
             }
             h1{
                 font-family:  "Reislust";
                 font-size: calc(2.1875rem + ((1vw - 10.24px) * 6.1384));
                 margin: 0 auto;
+                @media (max-width: 1024px){
+                    font-size: 35px;
+                }
             }
             
         }

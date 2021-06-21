@@ -37,6 +37,11 @@
   height: 70vh;
   flex-direction: column;
 }
+@media (max-width: 1024px) {
+  .domainContain {
+    height: auto;
+  }
+}
 .domainContain * {
   color: #685950;
 }
@@ -44,6 +49,11 @@
   font-family: "Reislust";
   text-align: center;
   font-size: calc(2.8125rem + ((1vw - 10.24px) * 7.8125));
+}
+@media (max-width: 1024px) {
+  .domainContain .title {
+    font-size: 45px;
+  }
 }
 .domainContain .content {
   display: flex;
@@ -55,6 +65,7 @@
 @media (max-width: 1024px) {
   .domainContain .content {
     flex-direction: column;
+    align-items: center;
   }
 }
 .domainContain .gammes {
@@ -66,16 +77,16 @@
 }
 @media (max-width: 1024px) {
   .domainContain .gammes {
-    width: 80vw;
+    margin-bottom: 3vh;
   }
 }
 .domainContain .gammes .logo {
-  width: 7vw;
+  width: 6vw;
   height: auto;
 }
 @media (max-width: 1024px) {
   .domainContain .gammes .logo {
-    width: 30vh;
+    width: 122px;
   }
 }
 .domainContain .gammes .block {
@@ -90,7 +101,7 @@
 @media (max-width: 1024px) {
   .domainContain .gammes .block {
     border-radius: 0;
-    width: 80%;
+    width: 100%;
   }
 }
 .domainContain .gammes .block button {
@@ -101,7 +112,13 @@
   height: auto;
   padding: 0.5vh;
   margin: 1vh;
+  margin-top: 3vh;
   align-self: center;
+}
+@media (max-width: 1024px) {
+  .domainContain .gammes .block button {
+    margin-bottom: 2vh;
+  }
 }
 .domainContain .gammes .block button a {
   text-decoration: none;
@@ -110,6 +127,11 @@
   color: #A8957E;
   margin-right: 1vw;
   margin-left: 1vw;
+}
+@media (max-width: 1024px) {
+  .domainContain .gammes .block button a {
+    font-size: 14px;
+  }
 }
 .domainContain .gammes .block button:hover {
   background-color: #A8957E;
@@ -122,14 +144,29 @@
   font-family: "FuturaPTNormal";
   font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
 }
+@media (max-width: 1024px) {
+  .domainContain .gammes .block p {
+    font-size: 14px;
+  }
+}
 .domainContain .gammes .block h2 {
   font-family: "FuturaPTMedium";
   font-size: calc(1.125rem + ((1vw - 10.24px) * 0.2232));
+}
+@media (max-width: 1024px) {
+  .domainContain .gammes .block h2 {
+    font-size: 16px;
+  }
 }
 .domainContain .gammes .block h1 {
   font-family: "Reislust";
   font-size: calc(2.1875rem + ((1vw - 10.24px) * 6.1384));
   margin: 0 auto;
+}
+@media (max-width: 1024px) {
+  .domainContain .gammes .block h1 {
+    font-size: 35px;
+  }
 }
 
 /*# sourceMappingURL=vins.module.css.map */
