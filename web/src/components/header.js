@@ -10,7 +10,7 @@ import styled from "styled-components";
 const MenuIcon = styled.div`
   display: ${({ show }) => (show === false ? "none" : "none")};
   @media (max-width: 1024px) {
-    position: ${({ nav }) => (nav ? "relative" : "fixed")};
+    position: ${({ nav }) => (nav ? "fixed" : "fixed")};
     left: ${({ nav }) => (nav ? "" : "6vw")};
     // right: ${({ nav }) => (nav ? "6vw" : "")};
     top: ${({ nav }) => (nav ? "10vh" : "")};
@@ -54,6 +54,7 @@ const MenuLinks = styled.nav`
     text-transform: uppercase;
     flex-direction: column;
     text-align: center;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;

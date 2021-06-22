@@ -44,14 +44,19 @@ $font-text:20px;
     @media (max-width: 1024px){
         flex-direction: column;
         height: auto;
+        width: 100%;
+        margin: 0;
         justify-content: center;
         align-items: flex-end;
+        position: fixed !important;
+        z-index: 100;
         
         
     }
     .siteTitle{ 
         width: auto;
         justify-self: left;
+        
         @media (max-width: 1024px){
             order: 2;
             margin-left: 0;

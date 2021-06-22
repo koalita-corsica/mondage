@@ -25,16 +25,6 @@
   flex-direction: column;
 }
 
-@media (max-width: 1024px) {
-  *{
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
-    transform: none !important;
-  }
-}
-
 .title {
   font-family: "Reislust";
   font-size: 7.2em;
@@ -173,7 +163,6 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 19, 0.7) 75%, rgba(226, 226, 226, 0.7) 150%), url("../asset/nosvins-bandeau.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 100;
 }
 @media (max-width: 1024px) {
   .section2 {
