@@ -25,15 +25,13 @@ function LayoutContainer(props) {
           );
         }
         return (
-          <React.Fragment>
-                        <LayoutProduit
+            <LayoutProduit
             {...props}
             showNav={showNav}
             siteTitle={data.site.title}
             nav={nav}
             show={show}
           />
-        </React.Fragment>
         );
       }}
     />
