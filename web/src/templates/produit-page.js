@@ -1,7 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react";
 import GraphQLErrorList from "../components/graphql-error-list";
-import Layout from "../components/layoutProduit";
+import LayoutProduit from "../components/layoutProduit";
 import Container from "../components/container";
 import SEO from "../components/seo";
 import { toPlainText } from "../lib/helpers";
@@ -42,7 +42,7 @@ const ProduitPageTemplate = (props) => {
   const { data, errors } = props;
   const post = data && data.post;
   return (
-    <Layout>
+    <LayoutProduit>
       {errors && <SEO title="GraphQL Error" />}
       {post && (
         <SEO
@@ -59,7 +59,7 @@ const ProduitPageTemplate = (props) => {
       )}
 
       {post && <ProduitPage {...post} />}
-    </Layout>
+    </LayoutProduit>
   );
 };
 

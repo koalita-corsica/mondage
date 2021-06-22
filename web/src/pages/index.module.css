@@ -25,6 +25,16 @@
   flex-direction: column;
 }
 
+@media (max-width: 1024px) {
+  *{
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
 .title {
   font-family: "Reislust";
   font-size: 7.2em;

@@ -101,6 +101,9 @@ const IndexPage = (props) => {
       setCount(count + 1);
     }
   }
+
+
+
   function translateLoad() {
     const blockPara = document.querySelector("#block1");
     const bottle = document.querySelector("#bottle");
@@ -113,8 +116,20 @@ const IndexPage = (props) => {
       "opacity: 1; transform: translateX(0%); transition: all 1.8s"
     );
   }
+
   typeof window !== "undefined" &&
     window.addEventListener("scroll", () => {
+      const mediaQuery = typeof window !== "undefined" && window.matchMedia('(max-width: 1024px)')
+
+      if(mediaQuery.matches) {
+        const blockPara = document.querySelector("#block1");
+        const bottle = document.querySelector("#bottle");
+        blockPara.style.transform = "none"
+        bottle.style.transform = "none"
+        blockPara.style.transition = "none"
+        bottle.style.transition = "none"
+      }
+      
       const blockPara = document.querySelector("#block1");
       const bottle = document.querySelector("#bottle");
       blockPara.style.transition = "all 1s";

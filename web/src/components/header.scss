@@ -51,7 +51,6 @@ $font-text:20px;
     }
     .siteTitle{ 
         width: auto;
-        
         justify-self: left;
         @media (max-width: 1024px){
             order: 2;
@@ -68,7 +67,7 @@ $font-text:20px;
                 font-size: 48px;
                 min-height: 0vw;
                 align-self: flex-end;
-                
+
             }
         }
         

@@ -54,8 +54,6 @@ const MenuLinks = styled.nav`
     text-transform: uppercase;
     flex-direction: column;
     text-align: center;
-    // height: 100vh;
-    position: absolute;
     top: 0;
     left: 0;
     display: ${({ nav }) => (nav ? "block" : "none")};

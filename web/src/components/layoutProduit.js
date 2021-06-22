@@ -4,7 +4,7 @@ import Main from "./main";
 import "../styles/layout.css";
 import * as styles from "./layoutProduit.module.css";
 import Footer from "./footer";
-const Layout = ({ children, show, nav, showNav, siteTitle }) => (
+const LayoutProduit = ({ children, show, nav, showNav, siteTitle }) => (
   <>
     <div className={styles.page}>
       <Header siteTitle={siteTitle} show={show} nav={nav} showNav={showNav} />
@@ -13,4 +13,4 @@ const Layout = ({ children, show, nav, showNav, siteTitle }) => (
   </>
 );
 
-export default Layout;
+export default LayoutProduit;

@@ -1,9 +1,9 @@
 import { graphql, StaticQuery } from "gatsby";
 import React, { useState } from "react";
-import Layout from "../components/layout";
+import LayoutProduit from "../components/layoutProduit";
 
 const query = graphql`
-  query SiteTitleQuery {
+  query SiteTitleQuery1 {
     site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
       title
     }
@@ -26,13 +26,13 @@ function LayoutContainer(props) {
         }
         return (
           <React.Fragment>
-            <Layout
-              {...props}
-              showNav={showNav}
-              siteTitle={data.site.title}
-              nav={nav}
-              show={show}
-            />
+                        <LayoutProduit
+            {...props}
+            showNav={showNav}
+            siteTitle={data.site.title}
+            nav={nav}
+            show={show}
+          />
         </React.Fragment>
         );
       }}

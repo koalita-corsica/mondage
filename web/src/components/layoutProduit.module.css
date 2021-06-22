@@ -3,4 +3,11 @@
 .page {
   background-color: #e3e3dc;
   width: 100vw;
+  z-index: -1;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    height: 100vh;
+  }
 }
