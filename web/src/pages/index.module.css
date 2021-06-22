@@ -72,6 +72,7 @@
     right: 2vh;
     width: 162px;
     align-self: flex-end;
+    transform: none !important;
   }
 }
 .section1 .block1 * {
@@ -81,6 +82,7 @@
   transform: translateX(200%);
   justify-self: center;
   margin: 12vh;
+  margin-top: 23vh;
   box-sizing: border-box;
   grid-area: 1/2/2/3;
 }
@@ -90,6 +92,7 @@
     align-self: flex-end;
     margin-right: 1vw;
     width: auto;
+    transform: none !important;
   }
 }
 @media (max-width: 1024px) {
@@ -163,10 +166,12 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 19, 0.7) 75%, rgba(226, 226, 226, 0.7) 150%), url("../asset/nosvins-bandeau.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 100;
 }
 @media (max-width: 1024px) {
   .section2 {
     height: auto;
+    z-index: 0;
   }
 }
 .section2 .title {
