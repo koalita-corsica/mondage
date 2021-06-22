@@ -53,41 +53,42 @@ const ProduitPageTemplate = (props) => {
 const [show, showShow] = useState(false);
   return (
     <React.Fragment>
-    <div className={styles.hh}>
-      <Header showNav={showNav} nav={nav} show={show}/>
-    </div>
-      {errors && <SEO title="GraphQL Error" />}
-      {post && (
-        <SEO
-          title={post.title || "Untitled"}
-          description={toPlainText(post._rawExcerpt)}
-          image={post.mainImage}
-        />
-      )}
-
-      {errors && (
-        <Container>
-          <GraphQLErrorList errors={errors} />
-        </Container>
-      )}
-      <div className={styles.con}>
-        <div className={styles.wrapperProduit}>
-        <Link to={"/game/" + `${post.game.slug.current}`} className={styles.retour}>
-          <BsArrowLeft className={styles.arrow} />
-          <div className={styles.back}><p>RETOUR</p></div>
-        </Link>
-        <img src={post.image.asset.url} alt="" className={styles.bouteille} />
-        <div className={styles.game}>
-          <h1> {post.game.title} </h1>
-          <img src={post.game.logo.asset.url} alt="" className={styles.logo} />
-          <div className={styles.desc}>
-            <PortableText blocks={post.fiche._rawFr} />
-          </div>
+      <div className={styles.contain}>
+        <div className={styles.hh}>
+          <Header showNav={showNav} nav={nav} show={show}/>
         </div>
-        <img src={post.game.logo.asset.url} alt="" className={styles.logo2} />
+        {errors && <SEO title="GraphQL Error" />}
+        {post && (
+          <SEO
+            title={post.title || "Untitled"}
+            description={toPlainText(post._rawExcerpt)}
+            image={post.mainImage}
+          />
+        )}
+
+        {errors && (
+          <Container>
+            <GraphQLErrorList errors={errors} />
+          </Container>
+        )}
+        
+        <div className={styles.wrapperProduit}>
+          <Link to={"/game/" + `${post.game.slug.current}`} className={styles.retour}>
+            <BsArrowLeft className={styles.arrow} />
+            <div className={styles.back}><p>RETOUR</p></div>
+          </Link>
+          <img src={post.image.asset.url} alt="" className={styles.bouteille} />
+          <div className={styles.game}>
+            <h1> {post.game.title} </h1>
+            <img src={post.game.logo.asset.url} alt="" className={styles.logo} />
+            <div className={styles.desc}>
+              <PortableText blocks={post.fiche._rawFr} />
+            </div>
+          </div>
+          <img src={post.game.logo.asset.url} alt="" className={styles.logo2} />
+        </div>
       </div>
-    </div>
-    </React.Fragment>
+    </React.Fragment>  
   );
 };
 

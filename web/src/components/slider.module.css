@@ -25,7 +25,7 @@
   height: 75vh;
   display: flex;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .slide {
     height: auto;
     width: 100%;
@@ -37,7 +37,7 @@
   width: 357px;
   height: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .slide .sliderBot {
     justify-self: center;
     margin: 0;
@@ -49,7 +49,7 @@
   width: 12vw;
   height: 23vh;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .slide .sliderLogo {
     width: 114px;
     height: auto;
@@ -64,12 +64,22 @@
   flex-direction: column;
   align-items: flex-start;
 }
+@media (max-width: 1024px) {
+  .content {
+    width: 50vw;
+  }
+}
 .content h1 {
   font-size: 85px;
   margin: 0;
   font-weight: normal;
 }
 @media (max-width: 1024px) {
+  .content h1 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 768px) {
   .content h1 {
     font-size: 35px;
   }
@@ -86,8 +96,13 @@
 @media (max-width: 1024px) {
   .content div h2 {
     font-family: "FuturaPTbold" !important;
+    font-size: 21px;
+  }
+}
+@media (max-width: 768px) {
+  .content div h2 {
     font-size: 16px;
-    line-height: 2;
+    line-height: 1.8;
   }
 }
 .content p {
@@ -96,7 +111,12 @@
 }
 @media (max-width: 1024px) {
   .content p {
+    font-size: 16px;
     font-family: "FuturaPRMedium" !important;
+  }
+}
+@media (max-width: 768px) {
+  .content p {
     font-size: 14px;
   }
 }
@@ -108,7 +128,7 @@
   height: auto;
   padding: 0.5vh;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .content button {
     margin-top: 2vh;
     width: auto;
@@ -121,7 +141,7 @@
   color: #A8957E;
   margin: 2vw;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .content button .btn {
     font-size: 14px;
   }

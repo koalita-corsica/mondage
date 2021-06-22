@@ -37,7 +37,10 @@ $font-text:20px;
     height: 20vh;
     background-position: center 23%;
     background-size: cover;
-    @media (max-width: 1024px){
+    @media (max-width: 1024px) {
+        background-position: center 0%;
+    }
+    @media (max-width: 768px){
         height: 13vh;
     }
 }
@@ -55,9 +58,12 @@ $font-text:20px;
     .title{
         font-family: "Reislust";
         text-align: center;
-        font-size: calc(2.8125rem + ((1vw - 10.24px) * 7.8125));
+        font-size: 85px;
         @media (max-width: 1024px){
-            font-size: 45px;
+            font-size: 70px;
+        }
+        @media (max-width: 768px){
+            font-size: 60px;
         }
     }
     .content{
@@ -66,7 +72,7 @@ $font-text:20px;
         width: 70vw;
         justify-content: space-evenly;
         gap: 5vh;
-        @media (max-width: 1024px){
+        @media (max-width: 768px){
             flex-direction: column;
             align-items: center;
         }
@@ -82,9 +88,9 @@ $font-text:20px;
             margin-bottom: 3vh;
         }
         .logo{
-            width: 6vw;
-            height: auto;
-            @media (max-width: 1024px){
+            width: auto;
+            height: 12vh;
+            @media (max-width: 768px){
                 width: 122px;
             }
         }
@@ -96,7 +102,7 @@ $font-text:20px;
             text-align: center;
             width: 100%;
             height: auto;
-            @media (max-width: 1024px){
+            @media (max-width: 768px){
                 border-radius: 0;
                 width: 100%;
             }
@@ -110,8 +116,12 @@ $font-text:20px;
                 margin: 1vh;
                 margin-top: 3vh;
                 align-self: center;
+                @media (max-width: 768px){
+                    margin-bottom: 2vh;
+                }
                 @media (max-width: 1024px){
                     margin-bottom: 2vh;
+                    margin-top: 1vh;
                 }
                 a{
                     text-decoration: none;
@@ -120,8 +130,10 @@ $font-text:20px;
                     color: $color-button;
                     margin-right: 1vw;
                     margin-left: 1vw;
-                    
                     @media (max-width: 1024px){
+                        font-size: 15px;
+                    }
+                    @media (max-width: 768px){
                         font-size: 14px;
                     }
                 }
@@ -137,15 +149,21 @@ $font-text:20px;
                 margin: 1vh;
                 font-family: "FuturaPTNormal";
                 font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
-                @media (max-width: 1024px){
+                @media (max-width: 768px){
                     font-size: 14px;
+                }
+                @media (max-width: 1024px){
+                    font-size: 15px;
                 }
             }
             h2 {
                 font-family: "FuturaPTMedium";
                 font-size: calc(1.125rem + ((1vw - 10.24px) * 0.2232));
-                @media (max-width: 1024px){
+                @media (max-width: 768px){
                     font-size: 16px;
+                }
+                @media (max-width: 1024px){
+                    font-size: 17px;
                 }
                 
             }
@@ -154,6 +172,9 @@ $font-text:20px;
                 font-size: calc(2.1875rem + ((1vw - 10.24px) * 6.1384));
                 margin: 0 auto;
                 @media (max-width: 1024px){
+                    font-size: 38px;
+                }
+                @media (max-width: 768px){
                     font-size: 35px;
                 }
             }

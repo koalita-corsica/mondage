@@ -35,11 +35,11 @@
   .wrapper {
     flex-direction: column;
     height: auto;
-    width: 100%;
     margin: 0;
+    width: 100vw;
     justify-content: center;
     align-items: flex-end;
-    position: fixed !important;
+    position: fixed;
     z-index: 100;
   }
 }
@@ -50,7 +50,7 @@
 @media (max-width: 1024px) {
   .wrapper .siteTitle {
     order: 2;
-    margin-left: 0;
+    margin-right: 6vw;
   }
 }
 .wrapper .siteTitle a {
@@ -62,9 +62,14 @@
 @media (max-width: 1024px) {
   .wrapper .siteTitle a {
     width: auto;
-    font-size: 48px;
+    font-size: 70px;
     min-height: 0vw;
     align-self: flex-end;
+  }
+}
+@media (max-width: 768px) {
+  .wrapper .siteTitle a {
+    font-size: 48px;
   }
 }
 .wrapper nav {

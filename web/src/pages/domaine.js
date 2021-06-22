@@ -70,7 +70,7 @@ const DomainePage = (props) => {
           <div className={styles.wrapperDomain}>
             <div className={styles.section1Domaine}>
               <div className={styles.block1}>
-                <h1> {item.node.pageBuilder[0].title1.fr} </h1>
+                <h1 className={styles.titlesec1}> {item.node.pageBuilder[0].title1.fr} </h1>
                 <PortableText
                   blocks={item.node.pageBuilder[0].desc._rawFr}
                   serializers={serializers}

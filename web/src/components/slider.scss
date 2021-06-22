@@ -34,7 +34,7 @@ $font-text:20px;
     width: auto;
     height: 75vh;
     display: flex;
-    @media (max-width: 1024px){
+    @media (max-width: 768px){
         height: auto;
         width: 100%;
         display: grid;
@@ -44,7 +44,7 @@ $font-text:20px;
     .sliderBot{
         width: 357px;
         height: 100%;
-        @media (max-width: 1024px){
+        @media (max-width: 768px){
             justify-self: center;
             margin: 0;
             width: 142px;
@@ -56,7 +56,7 @@ $font-text:20px;
         width: 12vw;
         height: 23vh;
     }
-    @media (max-width: 1024px){
+    @media (max-width: 768px){
         .sliderLogo{
             width: 114px;
             height: auto;
@@ -73,13 +73,16 @@ $font-text:20px;
     flex-direction: column;
     align-items: flex-start;
     @media (max-width: 1024px){
-        
+        width: 50vw;
     }
     h1 {
         font-size: 85px;
         margin: 0;
         font-weight: normal;
         @media (max-width: 1024px) {
+            font-size: 70px;
+        }
+        @media (max-width: 768px) {
           font-size: 35px;
         }
     } 
@@ -90,20 +93,27 @@ $font-text:20px;
         font-size: $font-subtitle;
         font-weight: normal;
         line-height: 2;
-            @media (max-width: 1024px){
+            @media (max-width: 1024px) {
                 font-family: "FuturaPTbold" !important;
+                font-size: 21px;
+            }
+            @media (max-width: 768px){
                 font-size: 16px;
-                line-height: 2;
+                line-height: 1.8;
             }
         }
     }
     p {
         font-family: "FuturaPTNormal" !important;
         font-size: $font-text;
-        @media (max-width: 1024px){
-            font-family: "FuturaPRMedium" !important;
-            font-size: 14px;
+        @media (max-width: 1024px) {
+        font-size: 16px;
+        font-family: "FuturaPRMedium" !important;
         }
+        @media (max-width: 768px) {
+        font-size: 14px;
+        }
+        
     }
     button{
         background-color: transparent;
@@ -112,7 +122,7 @@ $font-text:20px;
         width: auto;
         height: auto;
         padding: 0.5vh;
-        @media (max-width: 1024px){
+        @media (max-width: 768px){
             margin-top: 2vh;
             width: auto; 
         }
@@ -122,7 +132,7 @@ $font-text:20px;
             font-size: $font-text;
             color: $color-button;
             margin: 2vw;
-            @media (max-width: 1024px){
+            @media (max-width: 768px){
                 font-size: 14px; 
             }
         }

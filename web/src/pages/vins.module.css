@@ -28,6 +28,11 @@
 }
 @media (max-width: 1024px) {
   .bandeau {
+    background-position: center 0%;
+  }
+}
+@media (max-width: 768px) {
+  .bandeau {
     height: 13vh;
   }
 }
@@ -48,11 +53,16 @@
 .domainContain .title {
   font-family: "Reislust";
   text-align: center;
-  font-size: calc(2.8125rem + ((1vw - 10.24px) * 7.8125));
+  font-size: 85px;
 }
 @media (max-width: 1024px) {
   .domainContain .title {
-    font-size: 45px;
+    font-size: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .domainContain .title {
+    font-size: 60px;
   }
 }
 .domainContain .content {
@@ -62,7 +72,7 @@
   justify-content: space-evenly;
   gap: 5vh;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .domainContain .content {
     flex-direction: column;
     align-items: center;
@@ -81,10 +91,10 @@
   }
 }
 .domainContain .gammes .logo {
-  width: 6vw;
-  height: auto;
+  width: auto;
+  height: 12vh;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .domainContain .gammes .logo {
     width: 122px;
   }
@@ -98,7 +108,7 @@
   width: 100%;
   height: auto;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .domainContain .gammes .block {
     border-radius: 0;
     width: 100%;
@@ -115,9 +125,15 @@
   margin-top: 3vh;
   align-self: center;
 }
+@media (max-width: 768px) {
+  .domainContain .gammes .block button {
+    margin-bottom: 2vh;
+  }
+}
 @media (max-width: 1024px) {
   .domainContain .gammes .block button {
     margin-bottom: 2vh;
+    margin-top: 1vh;
   }
 }
 .domainContain .gammes .block button a {
@@ -129,6 +145,11 @@
   margin-left: 1vw;
 }
 @media (max-width: 1024px) {
+  .domainContain .gammes .block button a {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
   .domainContain .gammes .block button a {
     font-size: 14px;
   }
@@ -144,18 +165,28 @@
   font-family: "FuturaPTNormal";
   font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .domainContain .gammes .block p {
     font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .domainContain .gammes .block p {
+    font-size: 15px;
   }
 }
 .domainContain .gammes .block h2 {
   font-family: "FuturaPTMedium";
   font-size: calc(1.125rem + ((1vw - 10.24px) * 0.2232));
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .domainContain .gammes .block h2 {
     font-size: 16px;
+  }
+}
+@media (max-width: 1024px) {
+  .domainContain .gammes .block h2 {
+    font-size: 17px;
   }
 }
 .domainContain .gammes .block h1 {
@@ -164,6 +195,11 @@
   margin: 0 auto;
 }
 @media (max-width: 1024px) {
+  .domainContain .gammes .block h1 {
+    font-size: 38px;
+  }
+}
+@media (max-width: 768px) {
   .domainContain .gammes .block h1 {
     font-size: 35px;
   }

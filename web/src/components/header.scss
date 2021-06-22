@@ -44,11 +44,11 @@ $font-text:20px;
     @media (max-width: 1024px){
         flex-direction: column;
         height: auto;
-        width: 100%;
         margin: 0;
+        width: 100vw;
         justify-content: center;
         align-items: flex-end;
-        position: fixed !important;
+        position: fixed;
         z-index: 100;
         
         
@@ -56,10 +56,9 @@ $font-text:20px;
     .siteTitle{ 
         width: auto;
         justify-self: left;
-        
         @media (max-width: 1024px){
             order: 2;
-            margin-left: 0;
+            margin-right: 6vw;
         }
         a{   
             color: $color-fontBrown;
@@ -69,10 +68,12 @@ $font-text:20px;
             
             @media (max-width: 1024px) {
                 width: auto;
-                font-size: 48px;
+                font-size: 70px;
                 min-height: 0vw;
                 align-self: flex-end;
-
+            }
+            @media (max-width: 768px) {
+                font-size: 48px;
             }
         }
         

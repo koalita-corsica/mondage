@@ -45,6 +45,14 @@ h1 {
 p {
   font-family: "FuturaPTNormal";
   font-size: calc(1rem + ((1vw - 10.24px) * 0.4464));
+  line-height: 1.5;
+  @media (max-width: 768px) {
+    font-size: 16px;
+    font-family: "FuturaPTNormalOblique";
+  }
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
 }
 h2 {
   font-family: "FuturaPTMedium";
@@ -70,13 +78,20 @@ h2 {
   align-items: center;
   @media (max-width: 1024px) {
     background-position: center;
-    height: auto;
+    
   }
+  @media (max-width: 768px) {
+    background-position: center;
+  }
+  
   .block1 {
     margin-left: 10vw;
     height: auto;
     width: 46vw;
     @media (max-width: 1024px) {
+      width: 60vw;
+    }
+    @media (max-width: 768px) {
       width: 80vw;
       margin-top: 0;
       margin-left: 3vw;
@@ -85,14 +100,17 @@ h2 {
     * {
       color: $color-fontWhite;
     }
-    h1 {
+    .titlesec1 {
       font-family: "Reislust";
       font-size: calc(4.375rem + ((1vw - 10.24px) * 5.0223));
       font-weight: normal;
       margin: 0 auto;
       line-height: 1.5;
       @media (max-width: 1024px) {
-        font-size: 60px;
+        font-size: 70px;
+      }
+      @media (max-width: 768px) {
+        font-size: 45px;
       }
     }
     p {
@@ -100,6 +118,9 @@ h2 {
       line-height: 1.5;
       @media (max-width: 1024px) {
         font-size: 18px;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
         font-family: "FuturaPTNormalOblique";
       }
     }
@@ -108,7 +129,10 @@ h2 {
       line-height: 2;
       font-size: calc(1.3125rem + ((1vw - 10.24px) * 0.4464));
       @media (max-width: 1024px) {
-        font-size: 18px;
+        font-size: 21px;
+      }
+      @media (max-width: 768px) {
+        font-size: 16px;
       }
     }
   }
@@ -122,8 +146,14 @@ h2 {
   text-align: center;
   margin-bottom: 6vh;
   @media (max-width: 1024px) {
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+    height: auto;
+  }
+  @media (max-width: 768px) {
     margin-bottom: 10vh;
     margin-top: 3vh;
+    height: auto;
   }
 
 
@@ -132,10 +162,12 @@ h2 {
       border-radius: 100% !important;
     }
     @media (max-width: 1024px) {
-      
+      width: 204px !important;
+      height: 204px !important;
+    }
+    @media (max-width: 768px) {
       width: 144px !important;
       height: 144px !important;
-      
     }
   }
   h2 {
@@ -148,6 +180,9 @@ h2 {
       font-size: 21px;
       margin-top: 0;
       font-family: "FuturaPTBold";
+    }
+    @media (max-width: 768px) {
+      font-size: 16px;
     }
   }
   .block2 {
@@ -164,6 +199,9 @@ h2 {
       @media (max-width: 1024px) {
         font-size: 18px;
         font-family: "FuturaPTMedium";
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
       }
     }
   }

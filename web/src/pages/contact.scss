@@ -54,9 +54,10 @@ label {
 .wrapperCtc {
   margin-left: 6vw;
   margin-right: 6vw;
-  margin-bottom: 6vw;
+  margin-bottom: 6vh;
   display: flex;
-  width: 88vw;
+  width: auto;
+  height: 84vh;
   background-color: white;
   amp-img {
     height: auto;
@@ -75,6 +76,10 @@ label {
   }
   @media (max-width: 1024px) {
     overflow: hidden;
+    flex-direction: column;
+    height: auto;
+    margin-top: 6vh;
+    width: auto;
   }
 }
 .contactLayout {

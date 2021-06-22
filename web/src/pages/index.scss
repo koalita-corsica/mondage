@@ -39,6 +39,9 @@ $font-text: 20px;
   font-size: 7.2em;
   line-height: 1;
   @media (max-width: 1024px) {
+    font-size: 65px;
+  }
+  @media (max-width: 768px) {
     font-size: 60px;
   }
 }
@@ -76,6 +79,10 @@ $font-text: 20px;
     height: 96vh;
     transform: translateX(-200%);
     @media (max-width: 1024px) {
+      width: 36vh;
+      height: 68vh;
+    }
+    @media (max-width: 580px) {
       height: 401px;
       top: 3vh;
       right: 2vh;
@@ -91,11 +98,15 @@ $font-text: 20px;
   .block1 {
     transform: translateX(200%);
     justify-self: center;
-    margin: 12vh;
-    margin-top: 23vh;
+    margin-left: 8vh;
+    margin-right: 8vh;
+    align-self: center;
     box-sizing: border-box;
     grid-area: 1/2/2/3;
     @media (max-width: 1024px) {
+      margin: 6vh;
+    }
+    @media (max-width: 580px) {
       margin: 0 auto;
       align-self: flex-end;
       margin-right: 1vw;
@@ -104,7 +115,7 @@ $font-text: 20px;
     }
   }
   .title {
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       display: none;
     }
   }
@@ -113,6 +124,9 @@ $font-text: 20px;
     font-family: "FuturaPTNormal";
     font-size: $font-text;
     @media (max-width: 1024px) {
+      font-size: 16px;
+    }
+    @media (max-width: 768px) {
       font-size: 14px;
     }
   }
@@ -121,8 +135,10 @@ $font-text: 20px;
     line-height: 2;
     font-size: 25px;
     @media (max-width: 1024px) {
+      font-size: 21px;
+    }
+    @media (max-width: 768px) {
       font-size: 16px;
-      line-height: 1.5;
     }
   }
   .gamme {
@@ -145,6 +161,9 @@ $font-text: 20px;
       margin-right: 2vw;
       margin-left: 2vw;
       @media (max-width: 1024px) {
+        font-size: 16px;
+      }
+      @media (max-width: 768px) {
         font-size: 14px;
       }
     }
@@ -180,6 +199,10 @@ $font-text: 20px;
     height: auto;
     z-index: 0;
   }
+  @media (max-width: 768px) {
+    height: auto;
+    z-index: 0;
+  }
 
   .title {
     line-height: 2;
@@ -190,7 +213,7 @@ $font-text: 20px;
       height: 310px;
       border-radius: 100% !important;
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       width: 144px !important;
       height: 144px !important;
     }
@@ -201,10 +224,15 @@ $font-text: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 1024px) {
+      width: 80%;
+      margin-bottom: 5vh;
+    }
     div {
       width: 60%;
       color: $color-fontWhite;
-      @media (max-width: 1024px) {
+      
+      @media (max-width: 768px) {
         width: 80%;
         margin-bottom: 5vh;
       }
@@ -214,7 +242,7 @@ $font-text: 20px;
       line-height: 1.5;
       font-family: "FuturaPTNormal";
       font-size: $font-text;
-      @media (max-width: 1024px) {
+      @media (max-width: 768px) {
         font-family: "FuturaPTNormalOblique";
         font-size: 15px;
       }
@@ -224,7 +252,7 @@ $font-text: 20px;
       font-family: "FuturaPTbold";
       line-height: 3;
       font-size: 25px;
-      @media (max-width: 1024px) {
+      @media (max-width: 768px) {
         font-size: 16px;
       }
     }
@@ -236,7 +264,7 @@ $font-text: 20px;
       width: auto;
       height: auto;
       padding: 0.5vh;
-      @media (max-width: 1024px) {
+      @media (max-width: 768px) {
         margin-bottom: 5vh;
         margin-top: 5vh;
         width: auto;
@@ -247,14 +275,14 @@ $font-text: 20px;
         font-size: $font-text;
         color: $color-button;
         margin: 2vw;
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
           text-indent: -9999px;
           line-height: 0;
           font-size: 0px;
         }
       }
       a::after{
-        @media (max-width: 1024px) {
+        @media (max-width: 768px) {
           font-family: "FuturaPTNormal";
           font-size: 14px;
           content: "VOIR PLUS";
@@ -281,6 +309,7 @@ $font-text: 20px;
   height: 100vh;
   @media (max-width: 1024px) {
     width: 100vw;
+    height: 90vh;
     display: flex;
   }
   * {
@@ -341,11 +370,12 @@ $font-text: 20px;
     @media (max-width: 1024px) {
       .glob {
         grid-area: 2/1/3/3;
-        align-self: start;
+        align-self: center;
         justify-content: space-between;
         justify-self: center;
         width: 25vw;
         margin: 0;
+        
       }
     }
     .title {
@@ -356,9 +386,12 @@ $font-text: 20px;
       text-align: left;
       line-height: 1;
       @media (max-width: 1024px) {
-        font-size: 60px;
+        font-size: 70px;
         text-align: center;
         margin-left: 0;
+      }
+      @media (max-width: 768px) {
+        font-size: 60px;
       }
     }
     .slider {
@@ -370,11 +403,13 @@ $font-text: 20px;
       margin-right: 10vh;
       margin-left: 10vh;
       @media (max-width: 1024px) {
-        grid-template-columns: 90vw 10vw;
-        grid-template-rows: 80vh 10vh;
+        grid-template-columns: 10vw 80vw 10vw;
+        grid-template-rows: 70vh 10vh;
         width: 100%;
-        height: 100%;
+        height: auto;
         margin: 0;
+      }
+      @media (max-width: 768px) {
         svg:first-child {
           display: none;
         }
@@ -395,10 +430,10 @@ $font-text: 20px;
   }
 }
 .section4 {
-  height: 100vh;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     height: auto;
     display: flex;
     flex-direction: column;
@@ -410,13 +445,13 @@ $font-text: 20px;
   .pressimg {
     width: 43vw;
     justify-self: right;
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       width: auto;
     }
     amp-img {
       width: auto;
       height: 100%;
-      @media (max-width: 1024px) {
+      @media (max-width: 768px) {
         width: 100%;
         height: auto;
       }
@@ -429,7 +464,7 @@ $font-text: 20px;
     display: flex;
     flex-direction: column;
     align-self: center;
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       width: 100%;
       height: auto;
       margin: 0 auto;
@@ -440,7 +475,7 @@ $font-text: 20px;
     font-family: "FuturaPTNormal";
     font-size: $font-text;
     line-height: 1.5;
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       font-size: 14px;
     }
   }
@@ -449,7 +484,7 @@ $font-text: 20px;
     font-family: "FuturaPTMedium";
     font-size: 25px;
     line-height: 2;
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       margin: 0 auto;
       font-size: 16px;
     }
@@ -457,7 +492,7 @@ $font-text: 20px;
   .pressBlock {
     width: auto;
     height: 100%;
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       margin: 6vw;
       height: auto;
     }
@@ -471,7 +506,7 @@ $font-text: 20px;
     height: auto;
     padding: 0.5vh;
     margin-bottom: 10vh;
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       margin-bottom: 5vh;
       width: auto;
     }
@@ -481,7 +516,7 @@ $font-text: 20px;
       font-size: $font-text;
       color: $color-button;
       margin: 2vw;
-      @media (max-width: 1024px) {
+      @media (max-width: 768px) {
         font-size: 14px;
       }
     }
