@@ -35,6 +35,14 @@ h1 {
   font-size: 70px;
 }
 
+.hh{
+  background-color: #E3E3DC;
+}
+
+.con {
+  background-color: #E3E3DC;
+}
+
 .wrapperProduit {
   display: grid;
   grid-template-columns: 5vw auto 60%;
