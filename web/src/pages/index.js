@@ -266,6 +266,7 @@ const IndexPage = (props) => {
                 layout="responsive"
                 alt="SDSD"
                 style={{ width: "310px", height: "310px",borderRadius: "100%" }}
+                
               />
               <div className={styles.block2}>
                 <PortableText
