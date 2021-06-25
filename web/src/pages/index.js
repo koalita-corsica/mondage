@@ -216,10 +216,10 @@ const IndexPage = (props) => {
   }
 
   if (isBrowser) {
-    var meta = document.createElement('meta')
-    meta.httpEquiv = 'cache-control'
-    meta.content = 'max-age=31536000'
-    document.getElementsByTagName('head')[0].appendChild(meta)
+    let script1 = document.createElement("script");
+    script1.src = "https://cdn.ampproject.org/v0.js";
+    script1.async = true;
+    document.body.appendChild(script1);
   }
 
   return (
