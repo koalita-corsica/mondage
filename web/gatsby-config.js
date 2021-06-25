@@ -27,13 +27,5 @@ module.exports = {
         customImageTypes: ["sanityAssets"],
       },
     },
-    {
-      resolve: `gatsby-plugin-gatsby-cloud`,
-      options: {
-        allPageHeaders: [
-          "Cache-control: public,max-age=31536000; includeSubDomains; preload",
-      ],
-      }
-    }
   ],
 };
