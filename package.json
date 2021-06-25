@@ -31,6 +31,7 @@
     "aos": "^2.3.4",
     "gatsby": "^3.0.3",
     "gatsby-plugin-emotion": "^6.7.1",
+    "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-image": "^1.7.1",
     "gatsby-plugin-preact": "^5.7.1",
     "gatsby-plugin-sanity-image": "^0.6.0",
