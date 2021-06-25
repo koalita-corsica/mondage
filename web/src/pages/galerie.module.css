@@ -2,18 +2,22 @@
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaText";
   src: url("../fonts/FuturaPTBook.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaSub";
   src: url("../fonts/FuturaPTCondMedium.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaLight";
   src: url("../fonts/FuturaPTLight.otf");
+  font-display: swap;
 }
 .wrapperTitle {
   display: flex;

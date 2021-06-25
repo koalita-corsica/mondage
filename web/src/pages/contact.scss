@@ -12,22 +12,27 @@ $font-text: 20px;
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTMedium";
   src: url("../fonts/FuturaPTMedium.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTbold";
   src: url("../fonts/FuturaPTBold.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormalOblique";
   src: url("../fonts/FuturaPTBookOblique.otf");
+  font-display: swap;
 }
 
 p {
@@ -50,7 +55,6 @@ label {
   }
 }
 
-
 .wrapperCtc {
   margin-left: 6vw;
   margin-right: 6vw;
@@ -65,7 +69,6 @@ label {
     @media (max-width: 1024px) {
       display: none;
     }
-    
   }
   p,
   div,
@@ -106,7 +109,7 @@ label {
   width: 100%;
   display: grid;
   grid-template-columns: 43% 40% 17%;
-  gap:2vw;
+  gap: 2vw;
   @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
@@ -146,7 +149,6 @@ label {
     height: 13.5vh;
     border: 1px solid $color-line;
   }
-
 }
 .horaire {
   grid-area: 1/2/2/3;
@@ -171,7 +173,7 @@ label {
       line-height: 3;
     }
   }
-  
+
   .ouverture {
     font-size: 23px;
     font-family: "FuturaPTBold";

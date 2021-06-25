@@ -3,22 +3,27 @@
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTMedium";
   src: url("../fonts/FuturaPTMedium.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTbold";
   src: url("../fonts/FuturaPTBold.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormalOblique";
   src: url("../fonts/FuturaPTBookOblique.otf");
+  font-display: swap;
 }
 .bandeau {
   background: url("../asset/nosvins-bandeau.jpg");
@@ -101,7 +106,7 @@
 }
 .domainContain .gammes .block {
   background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
-  background: #FFFFFF 0% 0% no-repeat padding-box;
+  background: #ffffff 0% 0% no-repeat padding-box;
   border-radius: 12px;
   opacity: 1;
   text-align: center;
@@ -140,7 +145,7 @@
   text-decoration: none;
   font-family: "FuturaPTNormal";
   font-size: calc(0.875rem + ((1vw - 10.24px) * 0.6696));
-  color: #A8957E;
+  color: #a8957e;
   margin-right: 1vw;
   margin-left: 1vw;
 }
@@ -155,10 +160,10 @@
   }
 }
 .domainContain .gammes .block button:hover {
-  background-color: #A8957E;
+  background-color: #a8957e;
 }
 .domainContain .gammes .block button:hover a {
-  color: #E3E3DC;
+  color: #e3e3dc;
 }
 .domainContain .gammes .block p {
   margin: 1vh;

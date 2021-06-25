@@ -3,22 +3,27 @@
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTMedium";
   src: url("../fonts/FuturaPTMedium.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTbold";
   src: url("../fonts/FuturaPTBold.otf");
+  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormalOblique";
   src: url("../fonts/FuturaPTBookOblique.otf");
+  font-display: swap;
 }
 p {
   font-family: "FuturaPTNormal";
