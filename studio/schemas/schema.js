@@ -23,6 +23,7 @@ import produit from "./documents/produit";
 import localeString from "./objects/localeString";
 import localeBody from "./objects/localeBody";
 import asset from "./documents/asset";
+import contact from "./documents/contact";
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -49,6 +50,7 @@ export default createSchema({
     localeString,
     localeBody,
     asset,
+    contact,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ]),

@@ -60,6 +60,7 @@ export const query = graphql`
 const PressePage = (props) => {
   const { data, errors } = props;
 
+  
   return (
     <Layout>
       <div className={styles.wrapperPresse}>
