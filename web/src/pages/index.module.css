@@ -42,7 +42,13 @@
 }
 
 .section1 {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(19, 19, 19, 0.6) 75%, rgba(226, 226, 226, 0.7) 100%), url("../asset/accueilvigne.webp");
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(19, 19, 19, 0.6) 75%,
+      rgba(226, 226, 226, 0.7) 100%
+    ),
+    url("../asset/accueilvigne.webp");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -194,7 +200,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 19, 0.7) 75%, rgba(226, 226, 226, 0.7) 150%), url("../asset/nosvins-bandeau.jpg");
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(19, 19, 19, 0.7) 75%,
+      rgba(226, 226, 226, 0.7) 150%
+    ),
+    url("../asset/nosvins-bandeau.webp");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 100;
