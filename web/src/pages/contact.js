@@ -66,7 +66,7 @@ const ContactPage = (props) => {
         <div className={styles.contactLayout}>
           <h1>contactez-nous</h1>
           <div className={styles.contact}>
-            <form className={styles.form}>
+            <form action="https://getform.io/f/147656b8-45a5-4d6d-a25b-da72158258bf" method="POST" className={styles.form}>
               <div className={styles.lbl}>
                 <label className={styles.nom}>NOM</label>
                 <input
