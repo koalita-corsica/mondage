@@ -57,7 +57,7 @@ $font-text: 20px;
       rgba(19, 19, 19, 0.6) 75%,
       rgba(226, 226, 226, 0.7) 100%
     ),
-    url("../asset/accueilvigne.jpg");
+    url("../asset/accueilvigne.webp");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -82,7 +82,6 @@ $font-text: 20px;
     width: 50vh;
     margin-top: 10vh;
     height: 96vh;
-    transform: translateX(-200%);
     @media (max-width: 1024px) {
       width: 36vh;
       height: 68vh;
