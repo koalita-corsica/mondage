@@ -117,84 +117,84 @@ const IndexPage = (props) => {
   //   );
   // }
 
-  typeof window !== "undefined" &&
-    window.addEventListener("scroll", () => {
-      const blockPara = document.querySelector("#block1");
-      const bottle = document.querySelector("#bottle");
-      blockPara.style.transition = "all 1s";
-      bottle.style.transition = "all 1s";
-      var i = 0;
-      if (window.scrollY == i) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 1; transform: translateX(0%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(0%)";
-      }
-      if (window.scrollY > 99) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.9; transform: translateX(15%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-15%)";
-      }
-      if (window.scrollY > 199) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.8; transform: translateX(30%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-30%)";
-      }
-      if (window.scrollY > 299) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.7; transform: translateX(45%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-45%)";
-      }
-      if (window.scrollY > 399) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.6; transform: translateX(60%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-60%)";
-      }
-      if (window.scrollY > 499) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.5; transform: translateX(75%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-75%)";
-      }
-      if (window.scrollY > 599) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.4; transform: translateX(90%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-90%)";
-      }
-      if (window.scrollY > 699) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.3; transform: translateX(105%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-105%)";
-      }
-      if (window.scrollY > 799) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.2; transform: translateX(120%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-120%)";
-      }
-      if (window.scrollY > 899) {
-        blockPara.setAttribute(
-          "style",
-          "opacity: 0.1; transform: translateX(135%); transition: all 1s"
-        );
-        bottle.style.transform = "translateX(-135%)";
-      }
-    });
+  // typeof window !== "undefined" &&
+  //   window.addEventListener("scroll", () => {
+  //     const blockPara = document.querySelector("#block1");
+  //     const bottle = document.querySelector("#bottle");
+  //     blockPara.style.transition = "all 1s";
+  //     bottle.style.transition = "all 1s";
+  //     var i = 0;
+  //     if (window.scrollY == i) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 1; transform: translateX(0%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(0%)";
+  //     }
+  //     if (window.scrollY > 99) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.9; transform: translateX(15%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-15%)";
+  //     }
+  //     if (window.scrollY > 199) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.8; transform: translateX(30%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-30%)";
+  //     }
+  //     if (window.scrollY > 299) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.7; transform: translateX(45%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-45%)";
+  //     }
+  //     if (window.scrollY > 399) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.6; transform: translateX(60%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-60%)";
+  //     }
+  //     if (window.scrollY > 499) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.5; transform: translateX(75%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-75%)";
+  //     }
+  //     if (window.scrollY > 599) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.4; transform: translateX(90%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-90%)";
+  //     }
+  //     if (window.scrollY > 699) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.3; transform: translateX(105%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-105%)";
+  //     }
+  //     if (window.scrollY > 799) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.2; transform: translateX(120%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-120%)";
+  //     }
+  //     if (window.scrollY > 899) {
+  //       blockPara.setAttribute(
+  //         "style",
+  //         "opacity: 0.1; transform: translateX(135%); transition: all 1s"
+  //       );
+  //       bottle.style.transform = "translateX(-135%)";
+  //     }
+  //   });
 
   const serializers = {
     types: {
