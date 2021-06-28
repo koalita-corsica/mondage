@@ -227,7 +227,7 @@ const IndexPage = (props) => {
       <title>Mondange</title>
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
-          <div className={styles.wrapperAccueil} onLoad={translateLoad}>
+          <div className={styles.wrapperAccueil}>
             <div className={styles.section1}>
               <amp-img
                 src={bo.url}
