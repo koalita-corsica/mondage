@@ -74,6 +74,7 @@ const ContactPage = (props) => {
                   id="nom"
                   className={styles.inputNom}
                   placeholder="Entrez votre nom"
+                  name="nom"
                 />
               </div>
               <div className={styles.lbl}>
@@ -81,6 +82,7 @@ const ContactPage = (props) => {
                 <input
                   type="text"
                   id="prenom"
+                  name="prenom"
                   className={styles.inputPrenom}
                   placeholder="Entrez votre prénom"
                 />
@@ -91,6 +93,7 @@ const ContactPage = (props) => {
                   type="text"
                   id="mail"
                   className={styles.inputMail}
+                  name="E-mail"
                   placeholder="Entrez votre adresse e-mail"
                 />
               </div>
@@ -100,10 +103,11 @@ const ContactPage = (props) => {
                   id="msg"
                   className={styles.msgArea}
                   placeholder="Entrez votre message"
+                  name="message"
                 />
               </div>
-            </form>
               <button className={styles.envoyer}>ENVOYER</button>
+            </form>
             <div className={styles.horaire}>
               <h1 className={styles.ouverture}>HORAIRES D'OUVERTURE</h1>
               <div className={styles.dates}>Avril / Octobre</div>

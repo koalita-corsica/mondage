@@ -30,6 +30,8 @@ const Slider = ({ data, count }) => (
           src={game[count].logo.asset.url}
           alt=""
           className={styles.sliderLogo}
+          width='300'
+          height='200'
         />
         <h1 className={styles.title}> {game[count].title} </h1>
         <PortableText

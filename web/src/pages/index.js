@@ -104,18 +104,18 @@ const IndexPage = (props) => {
 
 
 
-  function translateLoad() {
-    const blockPara = document.querySelector("#block1");
-    const bottle = document.querySelector("#bottle");
-    blockPara.setAttribute(
-      "style",
-      "opacity: 1; transform: translateX(0%); transition: all 1.8s"
-    );
-    bottle.setAttribute(
-      "style",
-      "opacity: 1; transform: translateX(0%); transition: all 1.8s"
-    );
-  }
+  // function translateLoad() {
+  //   const blockPara = document.querySelector("#block1");
+  //   const bottle = document.querySelector("#bottle");
+  //   blockPara.setAttribute(
+  //     "style",
+  //     "opacity: 1; transform: translateX(0%); transition: all 1.8s"
+  //   );
+  //   bottle.setAttribute(
+  //     "style",
+  //     "opacity: 1; transform: translateX(0%); transition: all 1.8s"
+  //   );
+  // }
 
   typeof window !== "undefined" &&
     window.addEventListener("scroll", () => {
