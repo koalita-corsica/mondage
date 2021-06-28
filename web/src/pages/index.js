@@ -239,7 +239,6 @@ const IndexPage = (props) => {
                   width: "auto",
                   marginTop: "8vh",
                   height: "112vh",
-                  transform: "translateX(-200%)",
                 }}
               />
               <div
