@@ -20,13 +20,13 @@ module.exports = {
         overlayDrafts: !isProd,
       },
     },
-    {
-      resolve: "gatsby-plugin-sanity-image",
-      options: {
-        ...clientConfig.sanity,
-        customImageTypes: ["sanityAssets"],
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-sanity-image",
+    //   options: {
+    //     ...clientConfig.sanity,
+    //     customImageTypes: ["sanityAssets"],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
