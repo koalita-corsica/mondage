@@ -8,7 +8,7 @@ import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
 import * as styles from "../pages/contact.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
-import img from "../asset/galerie2.jpg";
+import img from "../asset/galerie2.webp";
 import spargo from "../asset/Spargolato_Rouge.png";
 import primizia from "../asset/Primizia_Rouge.png";
 import laudria from "../asset/Laudria_Rouge.png";
