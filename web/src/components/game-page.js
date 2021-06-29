@@ -40,13 +40,11 @@ function GamePage(props) {
               <div
                 className={styles.btl}
                 style={{
-                  background: `url(${item.image.asset.url})`,
-                  backgroundSize: "25vh",
-                  backgroundRepeat: "no-repeat",
-                  height: "100%",
-                  width: "9vw",
-                  backgroundPositionX: "center",
-                  backgroundPositionY: "10vh",
+                  background: `url(${item.miniImage.asset.url})`,
+                  width: '100px',
+                  height: '100%',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center'
                 }}
               />
             </Link>

@@ -35,6 +35,11 @@ export default {
       title: "Image",
     },
     {
+      name: "miniImage",
+      type: "image",
+      title: "Mini Image",
+    },
+    {
       name: "genre",
       type: "string",
       title: "Genre",

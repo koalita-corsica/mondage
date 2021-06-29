@@ -38,6 +38,11 @@ export const query = graphql`
             url
           }
         }
+        miniImage {
+          asset {
+            url
+          }
+        }
       }
     }
   }

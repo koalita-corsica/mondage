@@ -236,8 +236,9 @@ label {
   }
 }
 .bouteilles .rouge1 {
-  background: url("../asset/Spargolato_Rouge.png");
+  background: url("../asset/Spargolato_Rouge.webp");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100%;
   width: 22vh;
@@ -248,8 +249,9 @@ label {
   }
 }
 .bouteilles .rouge12 {
-  background: url("../asset/Primizia_Rouge.png");
+  background: url("../asset/Primizia_Rouge.webp");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100%;
   width: 22vh;
@@ -260,8 +262,9 @@ label {
   }
 }
 .bouteilles .rouge13 {
-  background: url("../asset/Laudria_Rouge.png");
+  background: url("../asset/Laudria_Rouge.webp");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100%;
   width: 22vh;
@@ -277,12 +280,12 @@ label {
 @media (max-width: 1024px) {
   .bouteilles .rouge21 {
     display: block;
-    background: url("../asset/Laudria_Rouge2.png");
+    background: url("../asset/bouteille-laudria1.webp");
     background-size: 15vh;
     background-repeat: no-repeat;
     height: 15vh;
     width: 100%;
-    background-position-x: center;
+    background-position: center;
     align-self: flex-end;
   }
 }
@@ -292,12 +295,12 @@ label {
 @media (max-width: 1024px) {
   .bouteilles .rouge22 {
     display: block;
-    background: url("../asset/Primizia_Rouge2.png");
+    background: url("../asset/bouteille-primizia1.webp");
     background-size: 15vh;
     background-repeat: no-repeat;
     height: 15vh;
     width: 100%;
-    background-position-x: center;
+    background-position: center;
     align-self: flex-end;
   }
 }
@@ -307,12 +310,12 @@ label {
 @media (max-width: 1024px) {
   .bouteilles .rouge23 {
     display: block;
-    background: url("../asset/Spargolato_Rouge2.png");
+    background: url("../asset/bouteille-spargolato1.webp");
     background-size: 15vh;
     background-repeat: no-repeat;
     height: 15vh;
     width: 100%;
-    background-position-x: center;
+    background-position: center;
     align-self: flex-end;
   }
 }

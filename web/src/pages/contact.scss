@@ -215,8 +215,9 @@ label {
     align-items: flex-end;
   }
   .rouge1 {
-    background: url("../asset/Spargolato_Rouge.png");
+    background: url("../asset/Spargolato_Rouge.webp");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     width: 22vh;
@@ -225,8 +226,9 @@ label {
     }
   }
   .rouge12 {
-    background: url("../asset/Primizia_Rouge.png");
+    background: url("../asset/Primizia_Rouge.webp");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     width: 22vh;
@@ -235,8 +237,9 @@ label {
     }
   }
   .rouge13 {
-    background: url("../asset/Laudria_Rouge.png");
+    background: url("../asset/Laudria_Rouge.webp");
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     width: 22vh;
@@ -248,12 +251,12 @@ label {
     display: none;
     @media (max-width: 1024px) {
       display: block;
-      background: url("../asset/Laudria_Rouge2.png");
+      background: url("../asset/bouteille-laudria1.webp");
       background-size: 15vh;
       background-repeat: no-repeat;
       height: 15vh;
       width: 100%;
-      background-position-x: center;
+      background-position: center;
       align-self: flex-end;
     }
   }
@@ -261,12 +264,12 @@ label {
     display: none;
     @media (max-width: 1024px) {
       display: block;
-      background: url("../asset/Primizia_Rouge2.png");
+      background: url("../asset/bouteille-primizia1.webp");
       background-size: 15vh;
       background-repeat: no-repeat;
       height: 15vh;
       width: 100%;
-      background-position-x: center;
+      background-position: center;
       align-self: flex-end;
       // background-position-y: 5vh;
     }
@@ -275,12 +278,12 @@ label {
     display: none;
     @media (max-width: 1024px) {
       display: block;
-      background: url("../asset/Spargolato_Rouge2.png");
+      background: url("../asset/bouteille-spargolato1.webp");
       background-size: 15vh;
       background-repeat: no-repeat;
       height: 15vh;
       width: 100%;
-      background-position-x: center;
+      background-position: center;
       align-self: flex-end;
       // background-position-y: 5vh;
     }
