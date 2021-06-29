@@ -28,7 +28,7 @@ function LayoutContainer(props) {
         return (
           <React.Fragment>
             <Helmet>
-              <meta name="Cache-control" content="no-store" />
+              <meta name="Cache-control" content="max-age=31536000" />
             </Helmet> 
             <Layout
               {...props}
