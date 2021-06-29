@@ -57,6 +57,10 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           name: "twitter:description",
           content: metaDescription,
         },
+        {
+          name: "Cache-control",
+          content: "max-age=31536000"
+        }
       ]
         .concat(
           keywords && keywords.length > 0
