@@ -9,21 +9,21 @@ import { graphql } from "gatsby";
 import { mapEdgesToNodes } from "../lib/helpers";
 import * as styles from "../pages/galerie.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
-import galerie1 from "../asset/galerie1.jpg";
-import galerie2 from "../asset/galerie2.jpg";
-import galerie3 from "../asset/galerie3.jpg";
-import galerie4 from "../asset/galerie4.jpg";
-import galerie5 from "../asset/galerie5.jpg";
-import galerie6 from "../asset/galerie6.jpg";
-import galerie7 from "../asset/galerie7.jpg";
-import galerie8 from "../asset/galerie8.jpg";
-import galerie9 from "../asset/galerie9.jpg";
-import galerie10 from "../asset/galerie10.jpg";
-import galerie11 from "../asset/galerie11.jpg";
-import galerie12 from "../asset/galerie12.jpg";
-import galerie13 from "../asset/galerie13.jpg";
-import galerie14 from "../asset/galerie14.jpg";
-import galerie15 from "../asset/galerie15.jpg";
+import galerie1 from "../asset/galerie1.webp";
+import galerie2 from "../asset/galerie2.webp";
+import galerie3 from "../asset/galerie3.webp";
+import galerie4 from "../asset/galerie4.webp";
+import galerie5 from "../asset/galerie5.webp";
+import galerie6 from "../asset/galerie6.webp";
+import galerie7 from "../asset/galerie7.webp";
+import galerie8 from "../asset/galerie8.webp";
+import galerie9 from "../asset/galerie9.webp";
+import galerie10 from "../asset/galerie10.webp";
+import galerie11 from "../asset/galerie11.webp";
+import galerie12 from "../asset/galerie12.webp";
+import galerie13 from "../asset/galerie13.webp";
+import galerie14 from "../asset/galerie14.webp";
+import galerie15 from "../asset/galerie15.webp";
 
 export const query = graphql`
   query GaleriePageQuery {
