@@ -11,27 +11,31 @@ $font-subtitle: 25px;
 $font-text: 20px;
 @font-face {
   font-family: "Reislust";
-  src: url("../fonts/Reislust-97D7.ttf");
+  src: local("Reislust"), url("../fonts/Reislust-97D7.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormal";
-  src: url("../fonts/FuturaPTBook.otf");
+  src: local("FuturaPTNormal"),
+    url("../fonts/FuturaPTBook.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTMedium";
-  src: url("../fonts/FuturaPTMedium.otf");
+  src: local("FuturaPTMedium"),
+    url("../fonts/FuturaPTMedium.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
-  font-family: "FuturaPTBold";
-  src: url("../fonts/FuturaPTBold.otf");
+  font-family: "FuturaPTbold";
+  src: local("FuturaPTbold"),
+    url("../fonts/FuturaPTBold.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormalOblique";
-  src: url("../fonts/FuturaPTBookOblique.otf");
+  src: local("FuturaPTNormalOblique"),
+    url("../fonts/FuturaPTBookOblique.otf") format("opentype");
   font-display: swap;
 }
 .wrapperDomain {

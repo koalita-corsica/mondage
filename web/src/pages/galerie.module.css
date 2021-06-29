@@ -1,22 +1,27 @@
 @import "../pages/normalize.module.css";
 @font-face {
   font-family: "Reislust";
-  src: url("../fonts/Reislust-97D7.ttf");
+  src: local("Reislust"), url("../fonts/Reislust-97D7.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
-  font-family: "FuturaText";
-  src: url("../fonts/FuturaPTBook.otf");
+  font-family: "FuturaPTNormal";
+  src: local("FuturaPTNormal"), url("../fonts/FuturaPTBook.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
-  font-family: "FuturaSub";
-  src: url("../fonts/FuturaPTCondMedium.otf");
+  font-family: "FuturaPTMedium";
+  src: local("FuturaPTMedium"), url("../fonts/FuturaPTMedium.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
-  font-family: "FuturaLight";
-  src: url("../fonts/FuturaPTLight.otf");
+  font-family: "FuturaPTbold";
+  src: local("FuturaPTbold"), url("../fonts/FuturaPTBold.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "FuturaPTNormalOblique";
+  src: local("FuturaPTNormalOblique"), url("../fonts/FuturaPTBookOblique.otf") format("opentype");
   font-display: swap;
 }
 .wrapperTitle {

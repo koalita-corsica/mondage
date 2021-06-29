@@ -2,27 +2,27 @@
 @import url("https://p.typekit.net/p.css?s=1&k=mkk7zfs&ht=tk&f=10881.10882.10884.10885.15357.15358.15361.15362.32874.32875&a=50854053&app=typekit&e=css");
 @font-face {
   font-family: "Reislust";
-  src: url("../fonts/Reislust-97D7.ttf");
+  src: local("Reislust"), url("../fonts/Reislust-97D7.ttf") format("truetype");
   font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormal";
-  src: url("../fonts/FuturaPTBook.otf");
+  src: local("FuturaPTNormal"), url("../fonts/FuturaPTBook.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTMedium";
-  src: url("../fonts/FuturaPTMedium.otf");
+  src: local("FuturaPTMedium"), url("../fonts/FuturaPTMedium.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTbold";
-  src: url("../fonts/FuturaPTBold.otf");
+  src: local("FuturaPTbold"), url("../fonts/FuturaPTBold.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormalOblique";
-  src: url("../fonts/FuturaPTBookOblique.otf");
+  src: local("FuturaPTNormalOblique"), url("../fonts/FuturaPTBookOblique.otf") format("opentype");
   font-display: swap;
 }
 .wrapperAccueil {
@@ -47,13 +47,7 @@
 }
 
 .section1 {
-  background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.6) 0%,
-      rgba(19, 19, 19, 0.6) 75%,
-      rgba(226, 226, 226, 0.7) 100%
-    ),
-    url("../asset/accueilvigne.webp");
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(19, 19, 19, 0.6) 75%, rgba(226, 226, 226, 0.7) 100%), url("../asset/accueilvigne.webp");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
@@ -72,7 +66,7 @@
     height: 64vh;
   }
 }
-.section1 amp-img img {
+.section1 amp-img {
   grid-area: 1/1/2/2;
   position: relative;
   justify-self: right;
@@ -81,13 +75,13 @@
   height: 96vh;
 }
 @media (max-width: 1024px) {
-  .section1 amp-img img {
+  .section1 amp-img {
     width: 36vh;
     height: 68vh;
   }
 }
 @media (max-width: 580px) {
-  .section1 amp-img img {
+  .section1 amp-img {
     height: 401px;
     top: 3vh;
     right: 2vh;
@@ -100,6 +94,7 @@
   color: #d9d9d7;
 }
 .section1 .block1 {
+  transform: translateX(200%);
   justify-self: center;
   margin-left: 8vh;
   margin-right: 8vh;
@@ -203,13 +198,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(19, 19, 19, 0.7) 75%,
-      rgba(226, 226, 226, 0.7) 150%
-    ),
-    url("../asset/background-domaine_res.webp");
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 19, 0.7) 75%, rgba(226, 226, 226, 0.7) 150%), url("../asset/nosvins-bandeau.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 100;
