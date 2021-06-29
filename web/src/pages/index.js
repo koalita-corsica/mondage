@@ -17,7 +17,6 @@ import pressImg from "../asset/accueilpresse.jpg";
 import domainImg from "../asset/accueildomaine.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
-import * as styles from "../pages/index.module.css";
 
 export const query = graphql`
   query AccueilQuery {
@@ -102,20 +101,6 @@ const IndexPage = (props) => {
     }
   }
 
-
-
-  // function translateLoad() {
-  //   const blockPara = document.querySelector("#block1");
-  //   const bottle = document.querySelector("#bottle");
-  //   blockPara.setAttribute(
-  //     "style",
-  //     "opacity: 1; transform: translateX(0%); transition: all 1.8s"
-  //   );
-  //   bottle.setAttribute(
-  //     "style",
-  //     "opacity: 1; transform: translateX(0%); transition: all 1.8s"
-  //   );
-  // }
 
   typeof window !== "undefined" &&
     window.addEventListener("scroll", () => {
@@ -213,13 +198,6 @@ const IndexPage = (props) => {
     script.src = "https://cdn.ampproject.org/v0.js";
     script.async = true;
     document.body.appendChild(script);
-  }
-
-  if (isBrowser) {
-    let script1 = document.createElement("script");
-    script1.src = "https://cdn.ampproject.org/v0.js";
-    script1.async = true;
-    document.body.appendChild(script1);
   }
 
   return (
