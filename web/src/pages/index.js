@@ -212,13 +212,6 @@ const IndexPage = (props) => {
                 src={bo.url}
                 id="bottle"
                 layout="responsive"
-                // style={{
-                //   gridArea: "1/1/2/2",
-                //   position: "relative",
-                //   width: "auto",
-                //   marginTop: "8vh",
-                //   height: "112vh",
-                // }}
               />
               <div
                 className={styles.block1}
