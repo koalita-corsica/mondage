@@ -14,9 +14,15 @@ export default {
     {
       name: "game",
       type: "reference",
-      title: "Game",
+      title: "Gamme",
       to: [{ type: "game" }],
     },
+    // {
+    //   name: "bouchon",
+    //   type: "reference",
+    //   title: "Couleur bouchon",
+    //   to: [{ type: "bouchon" }],
+    // },
     {
       name: "slug",
       type: "slug",

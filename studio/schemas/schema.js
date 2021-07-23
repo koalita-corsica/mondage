@@ -10,6 +10,10 @@ import category from "./documents/category";
 import post from "./documents/post";
 import siteSettings from "./documents/siteSettings";
 import page from "./documents/page";
+import produit from "./documents/produit";
+import asset from "./documents/asset";
+import game from "./documents/game";
+// import bouchons from "./documents/bouchons";
 
 // Object types
 import bodyPortableText from "./objects/bodyPortableText";
@@ -18,11 +22,9 @@ import excerptPortableText from "./objects/excerptPortableText";
 import mainImage from "./objects/mainImage";
 import authorReference from "./objects/authorReference";
 import div from "./objects/div";
-import game from "./documents/game";
-import produit from "./documents/produit";
 import localeString from "./objects/localeString";
 import localeBody from "./objects/localeBody";
-import asset from "./documents/asset";
+
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -49,6 +51,9 @@ export default createSchema({
     localeString,
     localeBody,
     asset,
+    // bouchons,
+
+
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas
   ]),

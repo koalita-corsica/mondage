@@ -3,7 +3,7 @@ import { AiFillTags } from "react-icons/ai";
 export default {
   name: "game",
   type: "document",
-  title: "Game",
+  title: "Gamme",
   icon: AiFillTags,
   fields: [
     {

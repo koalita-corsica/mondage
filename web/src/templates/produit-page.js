@@ -15,7 +15,7 @@ import * as styles from "../components/produit.module.css";
 
 export const query = graphql`
   query ProduitTemplateQuery($id: String!) {
-    post: sanityProduit(id: { eq: $id }) {
+    post: sanityProduit(id: {eq: $id}) {
       id
       slug {
         current
@@ -43,6 +43,45 @@ export const query = graphql`
     }
   }
 `;
+// export const query = graphql`
+//   query ProduitTemplateQuery($id: String!) {
+//     post: sanityProduit(id: {eq: $id}) {
+//       id
+//       slug {
+//         current
+//       }
+//       game {
+//         slug {
+//           current
+//         }
+//         logo {
+//           asset {
+//             url
+//           }
+//         }
+//         title
+//       }
+//       fiche {
+//         _rawEn
+//         _rawFr
+//       }
+//       image {
+//         asset {
+//           url
+//         }
+//       }
+//       bouchon {
+//         couleur
+//         title
+//         logo {
+//           asset {
+//             url
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 const ProduitPageTemplate = (props) => {
   const { data, errors } = props;
@@ -79,6 +118,12 @@ const [show, showShow] = useState(false);
           </Link>
           <img src={post.image.asset.url} alt="" className={styles.bouteille} />
           <div className={styles.game}>
+            {/* <h2 className={styles.bouchons}>La couleur du bouchon est : 
+              <span style={{color:post.bouchon.couleur}}>{post.bouchon.title}</span>
+            </h2>
+            <div>
+              <img src={post.bouchon.logo.asset.url} alt="" style={{height:'100px', width: '100px'}}/>
+            </div> */}
             <h1> {post.game.title} </h1>
             <img src={post.game.logo.asset.url} alt="" className={styles.logo} />
             <div className={styles.desc}>
