@@ -1,7 +1,7 @@
 export default {
   name: "assets",
   type: "document",
-  title: "Assets",
+  title: "Images",
   fields: [
     {
       name: "title",

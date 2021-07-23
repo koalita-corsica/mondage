@@ -41,10 +41,10 @@ export const getDefaultDocumentNode = (props) => {
 
 export default () =>
   S.list()
-    .title("Content")
+    .title("Contenus")
     .items([
       S.listItem()
-        .title("Settings")
+        .title("Paramètres")
         .icon(MdSettings)
         .child(
           S.editor()
@@ -54,20 +54,20 @@ export default () =>
         ),
       S.divider(),
       S.listItem()
-        .title("Blog posts")
+        .title("Publications")
         .icon(MdDescription)
         .schemaType("post")
-        .child(S.documentTypeList("post").title("Blog posts")),
+        .child(S.documentTypeList("post").title("Publication")),
       S.listItem()
-        .title("Authors")
+        .title("Auteurs")
         .icon(MdPerson)
         .schemaType("author")
-        .child(S.documentTypeList("author").title("Authors")),
+        .child(S.documentTypeList("author").title("Auteur")),
       S.listItem()
-        .title("Categories")
+        .title("Catégories")
         .icon(MdLocalOffer)
         .schemaType("category")
-        .child(S.documentTypeList("category").title("Categories")),
+        .child(S.documentTypeList("category").title("Catégorie")),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.

@@ -10,7 +10,7 @@ const baseLanguage = supportedLanguages.find((l) => l.isDefault);
 export default {
   name: "page",
   type: "document",
-  title: "Page",
+  title: "Pages",
   icon: RiPagesFill,
   fields: [
     {

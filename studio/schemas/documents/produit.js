@@ -3,7 +3,7 @@ import { FaWineBottle } from "react-icons/fa";
 export default {
   name: "produit",
   type: "document",
-  title: "Produit",
+  title: "Produits",
   icon: FaWineBottle,
   fields: [
     {
