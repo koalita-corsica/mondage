@@ -195,13 +195,6 @@ const IndexPage = (props) => {
 
   const isBrowser = typeof window !== "undefined";
 
-  if (isBrowser) {
-    let script = document.createElement("script");
-    script.src = "https://cdn.ampproject.org/v0.js";
-    script.async = true;
-    document.body.appendChild(script);
-  }
-
   return (
     <Layout>
       <title>Mondange</title>

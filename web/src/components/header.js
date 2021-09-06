@@ -114,6 +114,7 @@ const Header = ({ nav, showNav, show }) => (
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Koalità" />
   <link rel="preload" as="font" />
+  <script async src="https://cdn.ampproject.org/v0.js" />
   <meta http-equiv="Cache-control" content="max-age=31536000" />
 </Helmet>
     <div className={styles.siteTitle}>

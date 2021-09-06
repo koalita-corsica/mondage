@@ -42,20 +42,6 @@ export const query = graphql`
 
 const isBrowser = typeof window !== "undefined";
 
-if (isBrowser) {
-  let script = document.createElement("script");
-  script.src = "https://cdn.ampproject.org/v0.js";
-  script.async = true;
-  document.body.appendChild(script);
-}
-
-if (isBrowser) {
-  var meta = document.createElement('meta')
-  meta.httpEquiv = 'cache-control'
-  meta.content = 'max-age=31536000'
-  document.getElementsByTagName('head')[0].appendChild(meta)
-}
-
 const GaleriePage = (props) => {
   const { data, errors } = props;
 
