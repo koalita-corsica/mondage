@@ -4,8 +4,11 @@ import { cn } from "../lib/helpers";
 import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import * as styles from "./header.module.css";
+import { Helmet } from 'react-helmet';
 
 import styled from "styled-components";
+
+
 
 const MenuIcon = styled.div`
   display: ${({ show }) => (show === false ? "none" : "none")};
@@ -99,6 +102,19 @@ const MenuLinks = styled.nav`
 
 const Header = ({ nav, showNav, show }) => (
   <div className={styles.wrapper}>
+  <Helmet
+  htmlAttributes={{
+    lang: 'fr',
+  }}>
+  {/* General tags */}
+  <meta name="description" content="Mondange" />
+  <meta charset="utf-8" />
+  <html lang="fr" />
+  <title> Mondange </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Koalità" />
+  <link rel="preload" as="font" />
+</Helmet>
     <div className={styles.siteTitle}>
       <Link to="/">domaine mondange</Link>
     </div>
