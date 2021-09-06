@@ -361,4 +361,9 @@ h1 {
   font-family: "FuturaPTMedium";
 }
 
+.btl:hover{
+  transform: scale(1.1);
+  transition: 1s;
+}
+
 /*# sourceMappingURL=game.module.css.map */

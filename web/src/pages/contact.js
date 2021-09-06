@@ -56,7 +56,7 @@ if (isBrowser) {
 const ContactPage = (props) => {
   return (
     <Layout>
-      <SEO title="contact" />
+      <SEO title="Contact" />
       <div className={styles.wrapperCtc}>
         <amp-img
           src={img}
@@ -121,7 +121,7 @@ const ContactPage = (props) => {
               </div>
               <p>
                 Visite commentée de la cave avec dégustation de cinq vins du
-                Domaine, accordés à cinq mets corse. Tarif: 35 euros
+                Domaine, accordés à cinq mets corses. Tarif: 35 euros
               </p>
             </div>
             <div className={styles.bouteilles}>
@@ -133,7 +133,7 @@ const ContactPage = (props) => {
               <div className={styles.rouge23} />
             </div>
           </div>
-          
+
         </div>
       </div>
     </Layout>

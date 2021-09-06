@@ -84,8 +84,8 @@
   .section1 amp-img {
     height: 401px;
     top: 3vh;
-    right: 2vh;
-    width: 162px;
+    left: 4vh;
+    width: 200px;
     align-self: flex-end;
     transform: none !important;
   }

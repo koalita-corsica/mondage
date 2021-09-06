@@ -61,7 +61,7 @@ const GaleriePage = (props) => {
 
   return (
     <Layout>
-      <SEO title="galerie" />
+      <SEO title="Galerie" />
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
           <div className={styles.wrapperTitle}>

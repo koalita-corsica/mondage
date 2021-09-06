@@ -72,6 +72,7 @@ const DomainePage = (props) => {
 
   return (
     <Layout>
+      <SEO title="Domaine" />
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
           <div className={styles.wrapperDomain}>
@@ -104,8 +105,8 @@ const DomainePage = (props) => {
             </div>
             <div className={styles.section3}>
               <div className={styles.domainImg1}>
-                <amp-img src={domainImg1} 
-                  Layout="responsive" 
+                <amp-img src={domainImg1}
+                  Layout="responsive"
                   // style={{
                   //   height: "310px",
                   //   width: "310px",
@@ -115,8 +116,8 @@ const DomainePage = (props) => {
                 />
               </div>
               <div className={styles.domainImg2}>
-                <amp-img src={domainImg2} 
-                  Layout="responsive" 
+                <amp-img src={domainImg2}
+                  Layout="responsive"
                   // style={{
                   //   height: "310px",
                   //   width: "310px",
@@ -126,8 +127,8 @@ const DomainePage = (props) => {
                 />
               </div>
               <div className={styles.domainImg3}>
-                <amp-img src={domainImg3} 
-                  Layout="responsive" 
+                <amp-img src={domainImg3}
+                  Layout="responsive"
                   // style={{
                   //   height: "310px",
                   //   width: "310px",

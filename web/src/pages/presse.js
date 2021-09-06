@@ -60,9 +60,10 @@ export const query = graphql`
 const PressePage = (props) => {
   const { data, errors } = props;
 
-  
+
   return (
     <Layout>
+            <SEO title="Presse" />
       <div className={styles.wrapperPresse}>
         {data.allSanityPage.edges.map((item) => (
           <div className={styles.presse}>

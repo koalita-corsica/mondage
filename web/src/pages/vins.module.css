@@ -27,7 +27,7 @@
 }
 .bandeau {
   background: url("../asset/nosvins-bandeau.jpg");
-  height: 20vh;
+  height: 293px;
   background-position: center 23%;
   background-size: cover;
 }
@@ -38,14 +38,15 @@
 }
 @media (max-width: 768px) {
   .bandeau {
-    height: 13vh;
+    height: 117px;
+    background-position: center -15%;
   }
 }
 
 .domainContain {
   display: flex;
-  height: 70vh;
   flex-direction: column;
+  margin-bottom: 2rem;
 }
 @media (max-width: 1024px) {
   .domainContain {
@@ -59,6 +60,7 @@
   font-family: "Reislust";
   text-align: center;
   font-size: 85px;
+  margin-bottom: 1rem;
 }
 @media (max-width: 1024px) {
   .domainContain .title {
@@ -98,6 +100,7 @@
 .domainContain .gammes .logo {
   width: auto;
   height: 12vh;
+  margin-bottom: 2rem;
 }
 @media (max-width: 768px) {
   .domainContain .gammes .logo {
@@ -112,6 +115,7 @@
   text-align: center;
   width: 100%;
   height: auto;
+
 }
 @media (max-width: 768px) {
   .domainContain .gammes .block {
@@ -129,6 +133,7 @@
   margin: 1vh;
   margin-top: 3vh;
   align-self: center;
+  text-transform: uppercase;
 }
 @media (max-width: 768px) {
   .domainContain .gammes .block button {

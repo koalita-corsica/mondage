@@ -46,8 +46,8 @@
   }
 }
 .slide .sliderLogo {
-  width: 12vw;
-  height: 23vh;
+  width: 257px;
+  height: 223px;
 }
 @media (max-width: 768px) {
   .slide .sliderLogo {

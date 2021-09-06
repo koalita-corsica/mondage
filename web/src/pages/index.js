@@ -12,6 +12,7 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import Slider from "../components/slider";
 import PortableText from "../components/portableText";
+import SEO from "../components/seo";
 import bottle from "../asset/Laudria_Rouge2.png";
 import pressImg from "../asset/accueilpresse.jpg";
 import domainImg from "../asset/accueildomaine.jpg";
@@ -204,6 +205,7 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <title>Mondange</title>
+      <SEO title="Mondange" />
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
           <div className={styles.wrapperAccueil}>
@@ -244,7 +246,7 @@ const IndexPage = (props) => {
                 layout="responsive"
                 alt="SDSD"
                 style={{ width: "310px", height: "310px",borderRadius: "100%" }}
-                
+
               />
               <div className={styles.block2}>
                 <PortableText
