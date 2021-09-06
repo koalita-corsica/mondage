@@ -63,7 +63,7 @@
     margin-bottom: 6vw;
     grid-template-columns: 35vw 1fr;
     gap: 0;
-    height: 64vh;
+    height: 85vh;
   }
 }
 .section1 amp-img {
@@ -83,9 +83,9 @@
 @media (max-width: 580px) {
   .section1 amp-img {
     height: 401px;
-    top: 3vh;
-    left: 4vh;
-    width: 200px;
+    top: 4vh;
+    left: 9vh;
+    width: 210px;
     align-self: flex-end;
     transform: none !important;
   }
