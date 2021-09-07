@@ -113,11 +113,6 @@ const Header = ({ nav, showNav, show }) => (
   <title> Mondange </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Koalità" />
-  <link rel="preload" href="../fonts/Reislust-97D7.ttf" as="font" crossorigin="anonymous"/>
-  <link rel="preload" href="../fonts/FuturaPTBook.otf" as="font" crossorigin="anonymous"/>
-  <link rel="preload" href="../fonts/FuturaPTMedium.otf" as="font" crossorigin="anonymous"/>
-  <link rel="preload" href="../fonts/FuturaPTBold.otf" as="font" crossorigin="anonymous"/>
-  <link rel="preload" href="../fonts/FuturaPTBookOblique.otf" as="font" crossorigin="anonymous"/>
 </Helmet>
     <div className={styles.siteTitle}>
       <Link to="/">domaine mondange</Link>
