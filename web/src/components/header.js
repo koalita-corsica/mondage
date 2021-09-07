@@ -121,6 +121,21 @@ const Header = ({ nav, showNav, show }) => (
   <link rel="preconnect" href="https://cdn.ampproject.org/v0.js" />
   <link rel="preload" as="image" href="../asset/accueilnosvins.jpg" />
   <link rel="preload" as="image" href="../asset/accueilnosvigne.jpg" />
+  <link rel="preload" as="image" href="../asset/galerie1.webp" />
+  <link rel="preload" as="image" href="../asset/galerie2.webp" />
+  <link rel="preload" as="image" href="../asset/galerie3.webp" />
+  <link rel="preload" as="image" href="../asset/galerie4.webp" />
+  <link rel="preload" as="image" href="../asset/galerie5.webp" />
+  <link rel="preload" as="image" href="../asset/galerie6.webp" />
+  <link rel="preload" as="image" href="../asset/galerie7.webp" />
+  <link rel="preload" as="image" href="../asset/galerie8.webp" />
+  <link rel="preload" as="image" href="../asset/galerie9.webp" />
+  <link rel="preload" as="image" href="../asset/galerie10.webp" />
+  <link rel="preload" as="image" href="../asset/galerie11.webp" />
+  <link rel="preload" as="image" href="../asset/galerie12.webp" />
+  <link rel="preload" as="image" href="../asset/galerie13.webp" />
+  <link rel="preload" as="image" href="../asset/galerie14.webp" />
+  <link rel="preload" as="image" href="../asset/galerie15.webp" />
 </Helmet>
     <div className={styles.siteTitle}>
       <Link to="/">domaine mondange</Link>
