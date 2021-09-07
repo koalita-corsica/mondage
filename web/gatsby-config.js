@@ -37,5 +37,11 @@ module.exports = {
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
     },
+    {
+  resolve: `gatsby-plugin-offline`,
+  options: {
+    precachePages: [`/galerie/`, `index`, `/presse/`],
+  },
+},
   ],
 };
