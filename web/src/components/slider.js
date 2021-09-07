@@ -18,13 +18,13 @@ const Slider = ({ data, count }) => (
   data.allSanityGame.edges.map((item) => game.push(item.node)),
   (
     <div className={styles.slide}>
-      
+
       <img
         className={styles.sliderBot}
         src={game[count].produits[0].image.asset.url}
         alt=""
       />
-      
+
       <div className={styles.content}>
         <img
           src={game[count].logo.asset.url}
