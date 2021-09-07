@@ -114,6 +114,7 @@ const Header = ({ nav, showNav, show }) => (
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Koalità" />
   <link rel="preload" as="font" />
+  <link rel="preconnect" href="https://cdn.ampproject.org/v0.js" />
 </Helmet>
     <div className={styles.siteTitle}>
       <Link to="/">domaine mondange</Link>
