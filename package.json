@@ -28,8 +28,11 @@
     "@react-icons/all-files": "^4.1.0",
     "gatsby-plugin-gatsby-cloud": "^2.8.1",
     "gatsby-plugin-offline": "^4.13.0",
+    "gatsby-plugin-preact": "^5.13.0",
     "gatsby-plugin-purgecss": "^6.0.2",
     "gatsby-plugin-sanity-image": "^0.6.0",
+    "preact": "^10.5.14",
+    "preact-render-to-string": "^5.1.19",
     "react-icons": "^4.2.0",
     "styled-components": "^5.3.0"
   }
