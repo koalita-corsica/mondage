@@ -119,8 +119,8 @@ const Header = ({ nav, showNav, show }) => (
   <link rel="preload" href="../fonts/FuturaPTBold.otf" as="font" crossorigin="anonymous"/>
   <link rel="preload" href="../fonts/FuturaPTBookOblique.otf" as="font" crossorigin="anonymous"/>
   <link rel="preconnect" href="https://cdn.ampproject.org/v0.js" />
-  <link rel="preload" as="image" href="../asset/accueilnosvins.jpg">
-  <link rel="preload" as="image" href="../asset/accueilnosvigne.jpg">
+  <link rel="preload" as="image" href="../asset/accueilnosvins.jpg" />
+  <link rel="preload" as="image" href="../asset/accueilnosvigne.jpg" />
 </Helmet>
     <div className={styles.siteTitle}>
       <Link to="/">domaine mondange</Link>
