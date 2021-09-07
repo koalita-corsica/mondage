@@ -4,7 +4,7 @@ import * as styles from "./footer.module.css";
 import { FaFacebookF } from "@react-icons/all-files/fa/FaFacebookF";
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 
-const Footer  = () => (
+const Footer = () => (
   <div className={styles.wrapper}>
     <div className={styles.container}>
       <div className={styles.domainMondange}>
