@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-source-sanity",
       options: {
@@ -37,11 +38,5 @@ module.exports = {
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
     },
-    {
-  resolve: `gatsby-plugin-offline`,
-  options: {
-    precachePages: [`/galerie/`, `/`, `/presse/`],
-  },
-},
   ],
 };
