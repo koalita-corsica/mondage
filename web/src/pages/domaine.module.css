@@ -177,17 +177,17 @@ h2 {
     height: auto;
   }
 }
-.section2 amp-img img {
+.section2 img {
   border-radius: 100% !important;
 }
 @media (max-width: 1024px) {
-  .section2 amp-img {
+  .section2 img {
     width: 204px !important;
     height: 204px !important;
   }
 }
 @media (max-width: 768px) {
-  .section2 amp-img {
+  .section2 img {
     width: 144px !important;
     height: 144px !important;
   }

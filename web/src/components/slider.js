@@ -6,14 +6,6 @@ import * as styles from "./slider.module.css";
 
 const game = [];
 
-const isBrowser = typeof window !== "undefined";
-
-if (isBrowser) {
-  let script = document.createElement("script");
-  script.src = "https://cdn.ampproject.org/v0.js";
-  script.async = true;
-  document.body.appendChild(script);
-}
 const Slider = ({ data, count }) => (
   data.allSanityGame.edges.map((item) => game.push(item.node)),
   (

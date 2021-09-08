@@ -64,36 +64,36 @@ const GaleriePage = (props) => {
         <div className={styles.galerie2}>{/* <img src={galerie2} /> */}</div>
         <div className={styles.galerie3}>{/* <img src={galerie3} /> */}</div>
         <div className={styles.galerie4}>
-          <amp-img src={galerie4} layout="responsive" />
+          <img src={galerie4} alt="" />
         </div>
         <div className={styles.galerie5}>
-          <amp-img src={galerie5} layout="responsive" />
+          <img src={galerie5} alt="" />
         </div>
         <div className={styles.galerie6}>
-          <amp-img src={galerie6} layout="responsive" />
+          <img src={galerie6} alt="" />
         </div>
         <div className={styles.galerie7}>
-          <amp-img src={galerie7} layout="responsive" />
+          <img src={galerie7} alt="" />
         </div>
         <div className={styles.galerie8}>
-          <amp-img src={galerie8} layout="responsive" />
+          <img src={galerie8} alt="" />
         </div>
         <div className={styles.galerie9}>
-          <amp-img src={galerie9} layout="responsive" />
+          <img src={galerie9} alt="" />
         </div>
         <div className={styles.galerie10}>
-          <amp-img src={galerie10} layout="responsive" />
+          <img src={galerie10} alt="" />
         </div>
         <div className={styles.galerie11}>{/* <img src={galerie11} /> */}</div>
         <div className={styles.galerie12}>{/* <img src={galerie12} /> */}</div>
         <div className={styles.galerie13}>
-          <img src={galerie13} />
+          <img src={galerie13} alt="" />
         </div>
         <div className={styles.galerie14}>
-          <img src={galerie14} />
+          <img src={galerie14} alt="" />
         </div>
         <div className={styles.galerie15}>
-          <img src={galerie15} />
+          <img src={galerie15} alt="" />
         </div>
       </div>
     </Layout>

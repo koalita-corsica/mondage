@@ -44,10 +44,10 @@ const ContactPage = (props) => {
     <Layout>
       <SEO title="Contact" />
       <div className={styles.wrapperCtc}>
-        <amp-img
+        <img
           src={img}
-          Layout="responsive"
-          // style={{ height: "auto", width: "31vw" }}
+          style={{ height: "auto", width: "31vw" }}
+          alt=""
         />
         <div className={styles.contactLayout}>
           <h1>contactez-nous</h1>

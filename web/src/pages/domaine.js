@@ -72,7 +72,7 @@ const DomainePage = (props) => {
               </div>
             </div>
             <div className={styles.section2}>
-              <amp-img
+              <img
                 src={laura}
                 Layout="responsive"
                 style={{
@@ -80,6 +80,7 @@ const DomainePage = (props) => {
                   width: "310px",
                   borderRadius: "100%",
                 }}
+                alt=""
               />
               <h2> {item.node.pageBuilder[1].title1.fr} </h2>
               <div className={styles.block2}>
@@ -91,36 +92,36 @@ const DomainePage = (props) => {
             </div>
             <div className={styles.section3}>
               <div className={styles.domainImg1}>
-                <amp-img src={domainImg1}
-                  Layout="responsive"
-                  // style={{
-                  //   height: "310px",
-                  //   width: "310px",
-                  //   borderRadius: "100%",
-                  //   marginTop: "5vh",
-                  // }}
+                <img src={domainImg1}
+                  alt=""
+                  style={{
+                    height: "310px",
+                    width: "310px",
+                    borderRadius: "100%",
+                    marginTop: "5vh",
+                  }}
                 />
               </div>
               <div className={styles.domainImg2}>
-                <amp-img src={domainImg2}
-                  Layout="responsive"
-                  // style={{
-                  //   height: "310px",
-                  //   width: "310px",
-                  //   borderRadius: "100%",
-                  //   marginTop: "5vh",
-                  // }}
+                <img src={domainImg2}
+                  alt=""
+                  style={{
+                    height: "310px",
+                    width: "310px",
+                    borderRadius: "100%",
+                    marginTop: "5vh",
+                  }}
                 />
               </div>
               <div className={styles.domainImg3}>
-                <amp-img src={domainImg3}
-                  Layout="responsive"
-                  // style={{
-                  //   height: "310px",
-                  //   width: "310px",
-                  //   borderRadius: "100%",
-                  //   marginTop: "5vh",
-                  // }}
+                <img src={domainImg3}
+                  alt=""
+                  style={{
+                    height: "310px",
+                    width: "310px",
+                    borderRadius: "100%",
+                    marginTop: "5vh",
+                  }}
                 />
               </div>
               {/* <div className={styles.domainImg1}></img></div>

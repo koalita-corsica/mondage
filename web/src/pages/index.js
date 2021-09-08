@@ -203,10 +203,10 @@ const IndexPage = (props) => {
         <React.Fragment>
           <div className={styles.wrapperAccueil}>
             <div className={styles.section1}>
-              <amp-img
+              <img
                 src={bo.url}
                 id="bottle"
-                layout="responsive"
+                alt=""
               />
               <div
                 className={styles.block1}
@@ -234,12 +234,9 @@ const IndexPage = (props) => {
                 {" "}
                 {item.node.pageBuilder[1].title1.fr}{" "}
               </div>
-              <amp-img
+              <img
                 src={dom.url}
-                layout="responsive"
-                alt="SDSD"
-                style={{ width: "310px", height: "310px",borderRadius: "100%" }}
-
+                alt=""
               />
               <div className={styles.block2}>
                 <PortableText
@@ -311,9 +308,8 @@ const IndexPage = (props) => {
                 </div>
               </div>
               <div className={styles.pressimg}>
-                <amp-img
+                <img
                   src={pres.url}
-                  layout="responsive"
                   alt=""
                   width="400px"
                   height="400px"
