@@ -159,7 +159,6 @@ const Header = ({ nav, showNav, show }) => (
         </div>
       </nav>
     </MenuLinks>
-      // <script async src="https://cdn.ampproject.org/v0.js" />
   </div>
 );
 
