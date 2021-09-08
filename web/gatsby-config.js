@@ -33,6 +33,11 @@ module.exports = {
         printRejected: true,
       },
     },
-    `gatsby-plugin-offline`,
+    {
+  resolve: `gatsby-plugin-offline`,
+  options: {
+    precachePages: [`/`, `/galerie`, `/domaine`],
+  },
+},
   ],
 };
