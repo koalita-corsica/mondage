@@ -9,7 +9,6 @@ const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-offline`,
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     {
@@ -34,5 +33,6 @@ module.exports = {
         printRejected: true,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 };
