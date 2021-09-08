@@ -92,37 +92,10 @@ const DomainePage = (props) => {
             </div>
             <div className={styles.section3}>
               <div className={styles.domainImg1}>
-                <img src={domainImg1}
-                  alt=""
-                  style={{
-                    height: "310px",
-                    width: "310px",
-                    borderRadius: "100%",
-                    marginTop: "5vh",
-                  }}
-                />
               </div>
               <div className={styles.domainImg2}>
-                <img src={domainImg2}
-                  alt=""
-                  style={{
-                    height: "310px",
-                    width: "310px",
-                    borderRadius: "100%",
-                    marginTop: "5vh",
-                  }}
-                />
               </div>
               <div className={styles.domainImg3}>
-                <img src={domainImg3}
-                  alt=""
-                  style={{
-                    height: "310px",
-                    width: "310px",
-                    borderRadius: "100%",
-                    marginTop: "5vh",
-                  }}
-                />
               </div>
               {/* <div className={styles.domainImg1}></img></div>
               <div className={styles.domainImg2}><img src={domainImg2}></img></div>
