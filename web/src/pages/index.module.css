@@ -75,8 +75,8 @@ html {
   grid-area: 1/1/2/2;
   position: relative;
   justify-self: right;
-  width: 50vh;
-  margin-top: 10vh;
+  width: 54vh;
+  margin-top: 6vh;
   height: 96vh;
 }
 @media (max-width: 1024px) {
