@@ -34,10 +34,16 @@ module.exports = {
       },
     },
     {
-  resolve: `gatsby-plugin-offline`,
-  options: {
-    precachePages: [`/`, `/galerie`, `/domaine`,],
-  },
-},
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/galerie`, `/domaine`,],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        icon: 'src/asset/favicon.png',
+      },
+    },
   ],
 };
