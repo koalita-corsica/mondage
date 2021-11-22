@@ -113,6 +113,7 @@ const Header = ({ nav, showNav, show }) => (
   <title> Mondange </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Koalità" />
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
 </Helmet>
     <div className={styles.siteTitle}>
       <Link to="/">domaine mondange</Link>
@@ -159,6 +160,7 @@ const Header = ({ nav, showNav, show }) => (
         </div>
       </nav>
     </MenuLinks>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
   </div>
 );
 
