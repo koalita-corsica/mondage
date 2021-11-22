@@ -58,11 +58,7 @@ const Footer = () => (
         <Link to="/domaine">Domaine Mondange</Link>
       </div>
       <div className={styles.cgv}>
-        <Link to="/politique">Politique de confidentialité</Link>
-        <div>-</div>
         <Link to="/domaine">Mentions légales</Link>
-        <div>-</div>
-        <Link to="/domaine">CGV</Link>
       </div>
     </div>
   </div>
