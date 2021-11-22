@@ -14,8 +14,8 @@ const Footer = () => (
         <div>Laura et Andria Mondange</div>
         <p>Saint-Antoine</p>
         <p>20240 Ghisonaccia</p>
-        <p>Tél:+33 (0)4 95 59 70 09</p>
-        <p>Port:+33 (0)6 17 05 34 79</p>
+        <p>Tél : +33 (0)4 95 59 70 09</p>
+        <p>Port : +33 (0)6 17 05 34 79</p>
       </div>
       <div className={styles.plansite}>
         <div className={styles.plan}>Plan du site</div>
