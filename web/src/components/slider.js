@@ -15,6 +15,7 @@ const Slider = ({ data, count }) => (
         className={styles.sliderBot}
         src={game[count].produits[0].image.asset.url}
         alt=""
+        width="357"
       />
 
       <div className={styles.content}>
