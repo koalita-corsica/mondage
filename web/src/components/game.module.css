@@ -3,27 +3,22 @@
 @font-face {
   font-family: "Reislust";
   src: url("../fonts/Reislust-97D7.ttf");
-  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormal";
   src: url("../fonts/FuturaPTBook.otf");
-  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTMedium";
   src: url("../fonts/FuturaPTMedium.otf");
-  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTBold";
   src: url("../fonts/FuturaPTBold.otf");
-  font-display: swap;
 }
 @font-face {
   font-family: "FuturaPTNormalOblique";
   src: url("../fonts/FuturaPTBookOblique.otf");
-  font-display: swap;
 }
 p {
   font-family: "FuturaPTNormal";
@@ -78,7 +73,7 @@ h1 {
   font-size: 20px;
 }
 .wrapper .gameBg:nth-child(2n) {
-  background-color: #D9D9D7;
+  background-color: #d9d9d7;
 }
 .wrapper .gameBg {
   height: 100vh;
@@ -162,7 +157,7 @@ h1 {
   }
 }
 .desc .logo {
-  width: 170px;
+  width: 88px;
   height: auto;
 }
 @media (max-width: 768px) {
@@ -235,8 +230,8 @@ h1 {
   height: auto;
   font-size: 20px;
   font-family: "FuturaPTNormal";
-  color: #A8957E;
-  border: 3px solid #A8957E;
+  color: #a8957e;
+  border: 3px solid #a8957e;
   border-radius: 4px;
   background-color: transparent;
   margin-top: 5vh;
@@ -253,14 +248,14 @@ h1 {
 }
 .game .gameText button a {
   text-decoration: none;
-  color: #A8957E;
+  color: #a8957e;
   margin: 2vh;
 }
 .game .gameText button:hover {
-  background-color: #A8957E;
+  background-color: #a8957e;
 }
 .game .gameText button:hover a {
-  color: #E3E3DC;
+  color: #e3e3dc;
 }
 .game h2 {
   font-family: "FuturaPTMedium";
@@ -347,6 +342,7 @@ h1 {
   align-items: center;
   justify-self: right;
   padding-right: 2vw;
+  z-index: 1;
 }
 .bandeau .retour * {
   color: #685950;
@@ -364,11 +360,6 @@ h1 {
   color: #685950;
   font-size: 25px;
   font-family: "FuturaPTMedium";
-}
-
-.btl:hover{
-  transform: scale(1.1);
-  transition: 1s;
 }
 
 /*# sourceMappingURL=game.module.css.map */
