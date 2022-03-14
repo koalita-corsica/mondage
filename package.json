@@ -36,6 +36,6 @@
     "preact-compat": "^3.19.0",
     "preact-render-to-string": "^5.1.19",
     "react-icons": "^4.3.1",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.3"
   }
 }
