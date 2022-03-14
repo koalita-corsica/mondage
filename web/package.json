@@ -17,6 +17,7 @@
     "postcss-preset-env": "^6.6.0"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "@sanity/block-content-to-react": "^2.0.7",
     "@sanity/image-url": "^0.140.22",
     "date-fns": "^2.19.0",
