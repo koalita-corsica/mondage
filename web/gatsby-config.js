@@ -28,12 +28,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: true,
-      },
-    },
-    {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/`, `/galerie`, `/domaine`,],
