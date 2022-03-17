@@ -1,6 +1,4 @@
 /* eslint-disable react/jsx-key */
-import BlogPostPreviewGrid from "../components/blog-post-preview-grid";
-import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import React from "react";

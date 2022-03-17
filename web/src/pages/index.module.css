@@ -46,17 +46,12 @@
   }
 }
 
-html {
-  overflow: -moz-scrollbars-vertical;
-  overflow-y: scroll;
-}
-
 .section1 {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(19, 19, 19, 0.6) 75%, rgba(226, 226, 226, 0.7) 100%), url("../asset/accueilvigne.webp");
   background-size: cover;
   background-position: center 25%;
   background-repeat: no-repeat;
-  height: 87vh;
+  height: 84vh;
   margin-left: 6vw;
   margin-right: 6vw;
   margin-bottom: 6vh;
@@ -68,29 +63,29 @@ html {
     margin-bottom: 6vw;
     grid-template-columns: 35vw 1fr;
     gap: 0;
-    height: 85vh;
+    height: 64vh;
   }
 }
-.section1 img {
+.section1 amp-img {
   grid-area: 1/1/2/2;
   position: relative;
   justify-self: right;
-  width: 54vh;
-  margin-top: 6vh;
+  width: 50vh;
+  margin-top: 10vh;
   height: 96vh;
 }
 @media (max-width: 1024px) {
-  .section1 img {
+  .section1 amp-img {
     width: 36vh;
     height: 68vh;
   }
 }
 @media (max-width: 580px) {
-  .section1 img {
+  .section1 amp-img {
     height: 401px;
-    top: 4vh;
-    left: 9vh;
-    width: 210px;
+    top: 3vh;
+    right: 2vh;
+    width: 162px;
     align-self: flex-end;
     transform: none !important;
   }
@@ -222,13 +217,13 @@ html {
 .section2 .title {
   line-height: 2;
 }
-.section2 img {
+.section2 amp-img img {
   width: 310px;
   height: 310px;
   border-radius: 100% !important;
 }
 @media (max-width: 768px) {
-  .section2 img {
+  .section2 amp-img {
     width: 144px !important;
     height: 144px !important;
   }
@@ -452,6 +447,7 @@ html {
 .section3 .sliderContain .slider svg {
   height: auto;
   width: 100%;
+  cursor: pointer;
 }
 @media (max-width: 1024px) {
   .section3 .sliderContain .slider svg {
@@ -488,12 +484,12 @@ html {
     width: auto;
   }
 }
-.section4 .pressimg img {
+.section4 .pressimg amp-img {
   width: auto;
   height: 100%;
 }
 @media (max-width: 768px) {
-  .section4 .pressimg img {
+  .section4 .pressimg amp-img {
     width: 100%;
     height: auto;
   }

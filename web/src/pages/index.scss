@@ -421,6 +421,7 @@ $font-text: 20px;
       svg {
         height: auto;
         width: 100%;
+        cursor: pointer;
         @media (max-width: 1024px) {
           width: 10vw;
           justify-self: right;

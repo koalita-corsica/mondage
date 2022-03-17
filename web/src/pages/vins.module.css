@@ -113,6 +113,7 @@
   width: 100%;
   height: auto;
   padding: 2rem;
+  margin-top: 1rem;
 }
 @media (max-width: 768px) {
   .domainContain .gammes .block {

@@ -1,17 +1,14 @@
 import { graphql } from "gatsby";
 import React, {useState} from "react";
 import GraphQLErrorList from "../components/graphql-error-list";
-import LayoutProduit from "../components/layoutProduit";
-import Container from "../components/container";
 import SEO from "../components/seo";
 import { toPlainText } from "../lib/helpers";
-import ProduitPage from "../components/produit-page";
-import Header from "../components/header";
+import Header from "../components/Header/header";
 import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "gatsby";
 import PortableText from "../components/portableText";
 
-import * as styles from "../components/produit.module.css";
+import * as styles from "../components/ProduitPage/produit.module.css";
 
 export const query = graphql`
   query ProduitTemplateQuery($id: String!) {
@@ -99,16 +96,16 @@ const [show, showShow] = useState(false);
         {errors && <SEO title="GraphQL Error" />}
         {post && (
           <SEO
-            title={post.title || "Untitled"}
+            title={post.game.title || "Untitled"}
             description={toPlainText(post._rawExcerpt)}
             image={post.mainImage}
           />
         )}
 
         {errors && (
-          <Container>
+          <>
             <GraphQLErrorList errors={errors} />
-          </Container>
+          </>
         )}
         
         <div className={styles.wrapperProduit}>
@@ -118,12 +115,6 @@ const [show, showShow] = useState(false);
           </Link>
           <img src={post.image.asset.url} alt="" className={styles.bouteille} />
           <div className={styles.game}>
-            {/* <h2 className={styles.bouchons}>La couleur du bouchon est : 
-              <span style={{color:post.bouchon.couleur}}>{post.bouchon.title}</span>
-            </h2>
-            <div>
-              <img src={post.bouchon.logo.asset.url} alt="" style={{height:'100px', width: '100px'}}/>
-            </div> */}
             <h1> {post.game.title} </h1>
             <img src={post.game.logo.asset.url} alt="" className={styles.logo} />
             <div className={styles.desc}>

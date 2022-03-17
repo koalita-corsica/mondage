@@ -1,5 +1,3 @@
-import BlogPostPreviewGrid from "../components/blog-post-preview-grid";
-import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
 import React from "react";
@@ -50,7 +48,7 @@ const ContactPage = (props) => {
           alt=""
         />
         <div className={styles.contactLayout}>
-          <h1>contactez-nous</h1>
+          <h1>contactez<span>-</span>nous</h1>
           <div className={styles.contact}>
             <form action="https://getform.io/f/147656b8-45a5-4d6d-a25b-da72158258bf" method="POST" className={styles.form}>
               <div className={styles.lbl}>
@@ -64,7 +62,7 @@ const ContactPage = (props) => {
                 />
               </div>
               <div className={styles.lbl}>
-                <label className={styles.prenom}>PRENOM</label>
+                <label className={styles.prenom}>PRÉNOM</label>
                 <input
                   type="text"
                   id="prenom"
@@ -107,7 +105,7 @@ const ContactPage = (props) => {
               </div>
               <p>
                 Visite commentée de la cave avec dégustation de cinq vins du
-                Domaine, accordés à cinq mets corses. Tarif: 35 euros
+                Domaine, accordés à cinq mets corses. Tarif : 35 euros
               </p>
             </div>
             <div className={styles.bouteilles}>

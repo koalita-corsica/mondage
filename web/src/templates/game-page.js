@@ -2,10 +2,9 @@ import { graphql } from "gatsby";
 import React from "react";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
-import Container from "../components/container";
 import SEO from "../components/seo";
 import { toPlainText } from "../lib/helpers";
-import GamePage from "../components/game-page";
+import GamePage from "../components/GamePage/game-page";
 
 export const query = graphql`
   query GamePageTemplateQuery($id: String!) {
@@ -63,9 +62,9 @@ const GamePageTemplate = (props) => {
       )}
 
       {errors && (
-        <Container>
+        <>
           <GraphQLErrorList errors={errors} />
-        </Container>
+        </>
       )}
 
       {post && <GamePage {...post} />}

@@ -10,7 +10,7 @@ import {
 } from "../lib/helpers";
 import GraphQLErrorList from "../components/graphql-error-list";
 import Layout from "../containers/layout";
-import Slider from "../components/slider";
+import Slider from "../components/Slider/slider";
 import PortableText from "../components/portableText";
 import SEO from "../components/seo";
 import bottle from "../asset/Laudria_Rouge2.png";
