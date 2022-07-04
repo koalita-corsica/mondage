@@ -130,11 +130,6 @@ const IndexPage = (props) => {
                 {context.isEN ? 
                 <div className={styles.wrapperAccueil}>
                 <div className={styles.section1}>
-                  <img
-                    src={bo.url}
-                    id="bottle"
-                    alt=""
-                  />
                   <div
                     className={styles.block1}
                     id="block1"
