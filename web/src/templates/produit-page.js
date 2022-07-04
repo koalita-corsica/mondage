@@ -7,6 +7,7 @@ import Header from "../components/Header/header";
 import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "gatsby";
 import PortableText from "../components/portableText";
+import { myContext } from "../provider";
 
 import * as styles from "../components/ProduitPage/produit.module.css";
 
@@ -88,6 +89,8 @@ const ProduitPageTemplate = (props) => {
 
 const [show, showShow] = useState(false);
   return (
+    <myContext.Consumer>
+      {context => (
     <React.Fragment>
       <div className={styles.contain}>
         <div className={styles.hh}>
@@ -111,20 +114,22 @@ const [show, showShow] = useState(false);
         <div className={styles.wrapperProduit}>
           <Link to={"/game/" + `${post.game.slug.current}`} className={styles.retour}>
             <BsArrowLeft className={styles.arrow} />
-            <div className={styles.back}><p>RETOUR</p></div>
+            <div className={styles.back}><p>{context.isEN ? "BACK" : "RETOUR"}</p></div>
           </Link>
           <img src={post.image.asset.url} alt="" className={styles.bouteille} />
           <div className={styles.game}>
             <h1> {post.game.title} </h1>
             <img src={post.game.logo.asset.url} alt="" className={styles.logo} />
             <div className={styles.desc}>
-              <PortableText blocks={post.fiche._rawFr} />
+              {context.isEN ? <PortableText blocks={post.fiche._rawEn} /> : <PortableText blocks={post.fiche._rawFr} /> }
             </div>
           </div>
           <img src={post.game.logo.asset.url} alt="" className={styles.logo2} />
         </div>
       </div>
     </React.Fragment>  
+    )}
+    </myContext.Consumer>
   );
 };
 

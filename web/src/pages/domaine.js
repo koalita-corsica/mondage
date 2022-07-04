@@ -13,6 +13,7 @@ import laura from "../asset/domainelaura.jpg";
 import domainImg1 from "../asset/domainetonneau.jpg";
 import domainImg2 from "../asset/domainevigne.jpg";
 import domainImg3 from "../asset/domainelabo.jpg";
+import { myContext } from "../provider";
 
 export const query = graphql`
   query DomainePageQuery {
@@ -58,9 +59,20 @@ const DomainePage = (props) => {
     <Layout>
       <SEO title="Domaine" />
       {data.allSanityPage.edges.map((item) => (
+        <myContext.Consumer>
+        {context => (
         <React.Fragment>
           <div className={styles.wrapperDomain}>
             <div className={styles.section1Domaine}>
+            {context.isEN ? 
+                <div className={styles.block1}>
+                  <h1 className={styles.titlesec1}> {item.node.pageBuilder[0].title1.en} </h1>
+                  <PortableText
+                    blocks={item.node.pageBuilder[0].desc._rawEn}
+                    serializers={serializers}
+                  />
+              </div>
+            : 
               <div className={styles.block1}>
                 <h1 className={styles.titlesec1}> {item.node.pageBuilder[0].title1.fr} </h1>
                 <PortableText
@@ -68,6 +80,7 @@ const DomainePage = (props) => {
                   serializers={serializers}
                 />
               </div>
+            }
             </div>
             <div className={styles.section2}>
               <img
@@ -80,6 +93,18 @@ const DomainePage = (props) => {
                 }}
                 alt=""
               />
+              {context.isEN ? 
+              <>
+              <h2> {item.node.pageBuilder[1].title1.en} </h2>
+              <div className={styles.block2}>
+                <PortableText
+                  blocks={item.node.pageBuilder[1].desc._rawEn}
+                  serializers={serializers}
+                />
+              </div>
+              </>
+              :
+              <>
               <h2> {item.node.pageBuilder[1].title1.fr} </h2>
               <div className={styles.block2}>
                 <PortableText
@@ -87,6 +112,8 @@ const DomainePage = (props) => {
                   serializers={serializers}
                 />
               </div>
+              </>
+              } 
             </div>
             <div className={styles.section3}>
               <div className={styles.domainImg1}>
@@ -101,7 +128,10 @@ const DomainePage = (props) => {
             </div>
           </div>
         </React.Fragment>
+        )}
+        </myContext.Consumer>
       ))}
+      
     </Layout>
   );
 };

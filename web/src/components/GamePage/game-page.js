@@ -12,6 +12,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import { BsArrowUp } from "react-icons/bs";
 import { IoIosArrowBack } from "react-icons/io";
 import { sr } from "date-fns/locale";
+import { myContext } from "../../provider";
 
 const isBrowser = typeof window !== "undefined";
 
@@ -19,11 +20,13 @@ function GamePage(props) {
   const { title, produits, logo, description, slug } = props;
 
   return (
+    <myContext.Consumer>
+            {context => (
     <div className={styles.wrapper}>
       <div className={styles.bandeau}>
         <Link to="/vins" className={styles.retour}>
           <BsArrowLeft className={styles.arrow} />
-          <div className={styles.back}>RETOUR</div>
+          {context.isEN ? <div className={styles.back}>BACK</div> : <div className={styles.back}>RETOUR</div>}
         </Link>
         <div className={styles.img}>
           {produits.map((item) => (
@@ -46,7 +49,7 @@ function GamePage(props) {
         <p className={styles.title}> {title} </p>
         <img src={logo.asset.url} alt="" className={styles.logo} />
         <div className={styles.descText}>
-          <PortableText blocks={description._rawFr} />
+          {context.isEN ? <PortableText blocks={description._rawEn} /> : <PortableText blocks={description._rawFr} /> } 
         </div>
       </div>
       {produits.map((item) => (
@@ -56,10 +59,10 @@ function GamePage(props) {
               <amp-img src={item.image.asset.url} alt="" Layout="responsive" />
               <div className={styles.gameText}>
                 <h1> {item.genre} </h1>
-                <PortableText blocks={item.description._rawFr} />
+                {context.isEN ? <PortableText blocks={item.description._rawEn} /> : <PortableText blocks={item.description._rawFr} /> }
                 <button>
                   <Link to={"/produit/" + `${item.slug.current}`}>
-                    Fiche Produit
+                    {context.isEN ? "Product description" : "Fiche Produit" }
                   </Link>
                 </button>{" "}
               </div>
@@ -70,10 +73,12 @@ function GamePage(props) {
       ;
       <div className={styles.btt}>
         <Link to={"/game/" + `${slug.current}`}>
-          <BsArrowUp className={styles.icon} /> <p>HAUT DE PAGE</p>
+          <BsArrowUp className={styles.icon} /> <p>{context.isEN ? "TOP OF PAGE" : "HAUT DE PAGE" }</p>
         </Link>
       </div>
     </div>
+    )}
+    </myContext.Consumer>
   );
 }
 

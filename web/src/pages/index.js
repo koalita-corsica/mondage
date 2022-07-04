@@ -19,6 +19,7 @@ import domainImg from "../asset/accueildomaine.jpg";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import * as styles from "../pages/index.module.css";
+import { myContext } from "../provider";
 
 export const query = graphql`
   query AccueilQuery {
@@ -123,122 +124,248 @@ const IndexPage = (props) => {
       <SEO title="Mondange" />
       {data.allSanityPage.edges.map((item) => (
         <React.Fragment>
-          <div className={styles.wrapperAccueil}>
-            <div className={styles.section1}>
-              <img
-                src={bo.url}
-                id="bottle"
-                alt=""
-              />
-              <div
-                className={styles.block1}
-                id="block1"
-                data-att="block1"
-                onScroll={{}}
-              >
-                <div className={styles.title}>
-                  {item.node.pageBuilder[0].title1.fr}{" "}
-                </div>
-                <PortableText
-                  blocks={item.node.pageBuilder[0].desc._rawFr}
-                  className={styles.text}
-                  serializers={serializers}
-                />
-                <button className={styles.gamme}>
-                  <Link to="/vins" className={styles.a}>
-                    VOIR NOS GAMMES
-                  </Link>
-                </button>
-              </div>
-            </div>
-            <div className={styles.section2}>
-              <div className={styles.title}>
-                {" "}
-                {item.node.pageBuilder[1].title1.fr}{" "}
-              </div>
-              <img
-                src={dom.url}
-                alt=""
-              />
-              <div className={styles.block2}>
-                <PortableText
-                  blocks={item.node.pageBuilder[1].desc._rawFr}
-                  serializers={serializers}
-                />
-                <button className={styles.gamme}>
-                  <Link to="/domaine" className={styles.a}>
-                    EN SAVOIR PLUS
-                  </Link>
-                </button>
-              </div>
-            </div>
-            <div className={styles.section3}>
-              <div className={styles.sliderimg} />
-              <div className={styles.sliderContain}>
-                <div className={styles.title}>
-                  {item.node.pageBuilder[2].title1.fr}
-                </div>
-                <div className={styles.slider}>
-                  <IoIosArrowBack onClick={moins} />
-                  <Slider count={count} />
-                  <IoIosArrowForward onClick={plus} />
-                  {count && count == 1 ? (
-                    <div className={styles.glob}>
-                      <div id="b0" className={styles.b0} />
-                      <div
-                        id="b1"
-                        className={styles.b1 + " " + styles.selected}
-                      />
-                      <div id="b2" className={styles.b2} />
-                    </div>
-                  ) : count == 2 ? (
-                    <div className={styles.glob}>
-                      <div id="b0" className={styles.b0} />
-                      <div id="b1" className={styles.b1} />
-                      <div
-                        id="b2"
-                        className={styles.b2 + " " + styles.selected}
-                      />
-                    </div>
-                  ) : (
-                    <div className={styles.glob}>
-                      <div
-                        id="b0"
-                        className={styles.b0 + " " + styles.selected}
-                      />
-                      <div id="b1" className={styles.b1} />
-                      <div id="b2" className={styles.b2} />
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-            <div className={styles.section4}>
-              <div className={styles.pressContain}>
-                <div className={styles.title}>
-                  {" "}
-                  {item.node.pageBuilder[3].title1.fr}{" "}
-                </div>
-                <div className={styles.pressBlock}>
-                  <PortableText
-                    blocks={item.node.pageBuilder[3].desc._rawFr}
-                    serializers={serializers}
+                    <myContext.Consumer>
+            {context => (
+                <>
+                {context.isEN ? 
+                <div className={styles.wrapperAccueil}>
+                <div className={styles.section1}>
+                  <img
+                    src={bo.url}
+                    id="bottle"
+                    alt=""
                   />
-                  <button className={styles.gamme}>
-                    <Link to="/presse">VOIR LES ARTICLES</Link>
-                  </button>
+                  <div
+                    className={styles.block1}
+                    id="block1"
+                    data-att="block1"
+                    onScroll={{}}
+                  >
+                    <div className={styles.title}>
+                      {item.node.pageBuilder[0].title1.en}{" "}
+                    </div>
+                    <PortableText
+                      blocks={item.node.pageBuilder[0].desc._rawEn}
+                      className={styles.text}
+                      serializers={serializers}
+                    />
+                    <button className={styles.gamme}>
+                      <Link to="/vins" className={styles.a}>
+                      SEE OUR COLLECTIONS
+                      </Link>
+                    </button>
+                  </div>
+                </div>
+                <div className={styles.section2}>
+                  <div className={styles.title}>
+                    {" "}
+                    {item.node.pageBuilder[1].title1.en}{" "}
+                  </div>
+                  <img
+                    src={dom.url}
+                    alt=""
+                  />
+                  <div className={styles.block2}>
+                    <PortableText
+                      blocks={item.node.pageBuilder[1].desc._rawEn}
+                      serializers={serializers}
+                    />
+                    <button className={styles.gamme}>
+                      <Link to="/domaine" className={styles.a}>
+                        MORE INFOS
+                      </Link>
+                    </button>
+                  </div>
+                </div>
+                <div className={styles.section3}>
+                  <div className={styles.sliderimg} />
+                  <div className={styles.sliderContain}>
+                    <div className={styles.title}>
+                      {item.node.pageBuilder[2].title1.en}
+                    </div>
+                    <div className={styles.slider}>
+                      <IoIosArrowBack onClick={moins} />
+                      <Slider count={count} />
+                      <IoIosArrowForward onClick={plus} />
+                      {count && count == 1 ? (
+                        <div className={styles.glob}>
+                          <div id="b0" className={styles.b0} />
+                          <div
+                            id="b1"
+                            className={styles.b1 + " " + styles.selected}
+                          />
+                          <div id="b2" className={styles.b2} />
+                        </div>
+                      ) : count == 2 ? (
+                        <div className={styles.glob}>
+                          <div id="b0" className={styles.b0} />
+                          <div id="b1" className={styles.b1} />
+                          <div
+                            id="b2"
+                            className={styles.b2 + " " + styles.selected}
+                          />
+                        </div>
+                      ) : (
+                        <div className={styles.glob}>
+                          <div
+                            id="b0"
+                            className={styles.b0 + " " + styles.selected}
+                          />
+                          <div id="b1" className={styles.b1} />
+                          <div id="b2" className={styles.b2} />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.section4}>
+                  <div className={styles.pressContain}>
+                    <div className={styles.title}>
+                      {" "}
+                      {item.node.pageBuilder[3].title1.en}{" "}
+                    </div>
+                    <div className={styles.pressBlock}>
+                      <PortableText
+                        blocks={item.node.pageBuilder[3].desc._rawEn}
+                        serializers={serializers}
+                      />
+                      <button className={styles.gamme}>
+                        <Link to="/presse">SEE THE ARTICLES</Link>
+                      </button>
+                    </div>
+                  </div>
+                  <div className={styles.pressimg}>
+                    <img
+                      src={pres.url}
+                      alt=""
+                      width="400px"
+                      height="400px"
+                    />
+                  </div>
+                </div>
+              </div> 
+                : 
+                // VERSION FR
+                <div className={styles.wrapperAccueil}>
+                <div className={styles.section1}>
+                  <img
+                    src={bo.url}
+                    id="bottle"
+                    alt=""
+                  />
+                  <div
+                    className={styles.block1}
+                    id="block1"
+                    data-att="block1"
+                    onScroll={{}}
+                  >
+                    <div className={styles.title}>
+                      {item.node.pageBuilder[0].title1.fr}{" "}
+                    </div>
+                    <PortableText
+                      blocks={item.node.pageBuilder[0].desc._rawFr}
+                      className={styles.text}
+                      serializers={serializers}
+                    />
+                    <button className={styles.gamme}>
+                      <Link to="/vins" className={styles.a}>
+                        VOIR NOS GAMMES
+                      </Link>
+                    </button>
+                  </div>
+                </div>
+                <div className={styles.section2}>
+                  <div className={styles.title}>
+                    {" "}
+                    {item.node.pageBuilder[1].title1.fr}{" "}
+                  </div>
+                  <img
+                    src={dom.url}
+                    alt=""
+                  />
+                  <div className={styles.block2}>
+                    <PortableText
+                      blocks={item.node.pageBuilder[1].desc._rawFr}
+                      serializers={serializers}
+                    />
+                    <button className={styles.gamme}>
+                      <Link to="/domaine" className={styles.a}>
+                        EN SAVOIR PLUS
+                      </Link>
+                    </button>
+                  </div>
+                </div>
+                <div className={styles.section3}>
+                  <div className={styles.sliderimg} />
+                  <div className={styles.sliderContain}>
+                    <div className={styles.title}>
+                      {item.node.pageBuilder[2].title1.fr}
+                    </div>
+                    <div className={styles.slider}>
+                      <IoIosArrowBack onClick={moins} />
+                      <Slider count={count} />
+                      <IoIosArrowForward onClick={plus} />
+                      {count && count == 1 ? (
+                        <div className={styles.glob}>
+                          <div id="b0" className={styles.b0} />
+                          <div
+                            id="b1"
+                            className={styles.b1 + " " + styles.selected}
+                          />
+                          <div id="b2" className={styles.b2} />
+                        </div>
+                      ) : count == 2 ? (
+                        <div className={styles.glob}>
+                          <div id="b0" className={styles.b0} />
+                          <div id="b1" className={styles.b1} />
+                          <div
+                            id="b2"
+                            className={styles.b2 + " " + styles.selected}
+                          />
+                        </div>
+                      ) : (
+                        <div className={styles.glob}>
+                          <div
+                            id="b0"
+                            className={styles.b0 + " " + styles.selected}
+                          />
+                          <div id="b1" className={styles.b1} />
+                          <div id="b2" className={styles.b2} />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+                <div className={styles.section4}>
+                  <div className={styles.pressContain}>
+                    <div className={styles.title}>
+                      {" "}
+                      {item.node.pageBuilder[3].title1.fr}{" "}
+                    </div>
+                    <div className={styles.pressBlock}>
+                      <PortableText
+                        blocks={item.node.pageBuilder[3].desc._rawFr}
+                        serializers={serializers}
+                      />
+                      <button className={styles.gamme}>
+                        <Link to="/presse">VOIR LES ARTICLES</Link>
+                      </button>
+                    </div>
+                  </div>
+                  <div className={styles.pressimg}>
+                    <img
+                      src={pres.url}
+                      alt=""
+                      width="400px"
+                      height="400px"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className={styles.pressimg}>
-                <img
-                  src={pres.url}
-                  alt=""
-                  width="400px"
-                  height="400px"
-                />
-              </div>
-            </div>
-          </div>
+                }
+          </>
+            )}
+            </myContext.Consumer>
         </React.Fragment>
       ))}
     </Layout>

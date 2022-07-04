@@ -367,4 +367,10 @@ label {
   }
 }
 
-/*# sourceMappingURL=contact.module.css.map */
+button:hover {
+  color: white;
+  border: none;
+  background-color: #a8957e;
+  cursor: pointer;
+  border: 2px solid #a8957e;
+}

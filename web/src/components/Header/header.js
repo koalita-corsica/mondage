@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 
 import styled from "styled-components";
 
+import { myContext } from "../../provider";
 
 
 const MenuIcon = styled.div`
@@ -101,7 +102,9 @@ const MenuLinks = styled.nav`
 `;
 
 const Header = ({ nav, showNav, show }) => (
-  <div className={styles.wrapper}>
+  <myContext.Consumer>
+    {context => (
+  <div className={styles.wrapper}> 
   <Helmet
   htmlAttributes={{
     lang: 'fr',
@@ -136,22 +139,35 @@ const Header = ({ nav, showNav, show }) => (
         </div>
         <ul>
           <li>
-            <Link to="/">ACCUEIL</Link>
+          {context.isEN ?<Link to="/">WELCOME</Link> : <Link to="/">ACCUEIL</Link>}
           </li>
           <li>
-            <Link to="/vins">NOS VINS</Link>
+            {context.isEN ? <Link to="/vins">OUR WINES</Link> : <Link to="/vins">NOS VINS</Link>}
           </li>
           <li>
-            <Link to="/domaine">LE DOMAINE</Link>
+            {context.isEN ? <Link to="/domaine">THE DOMAIN</Link> : <Link to="/domaine">LE DOMAINE</Link>}
           </li>
           <li>
-            <Link to="/galerie">LA GALERIE</Link>
+          {context.isEN ? <Link to="/galerie">THE GALLERY</Link> : <Link to="/galerie">LA GALERIE</Link>}
           </li>
           <li>
-            <Link to="/presse">LA PRESSE</Link>
+            {context.isEN ? <Link to="/presse">PRESS</Link>: <Link to="/presse">LA PRESSE</Link>}
           </li>
           <li>
             <Link to="/contact">CONTACT</Link>
+          </li>
+          <li>
+        {context.isEN ? 
+          <select onChange={() => context.changeTheme()}>
+            <option value="en">🇬🇧</option>
+            <option value="fr">🇫🇷</option>
+           </select>
+          : 
+          <select onChange={() => context.changeTheme()}>
+            <option value="fr">🇫🇷</option>
+            <option value="en">🇬🇧</option>
+          </select> 
+          }
           </li>
         </ul>
         <div className={styles.sociaux}>
@@ -162,6 +178,8 @@ const Header = ({ nav, showNav, show }) => (
     </MenuLinks>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
   </div>
+      )}
+      </myContext.Consumer>
 );
 
 export default Header;

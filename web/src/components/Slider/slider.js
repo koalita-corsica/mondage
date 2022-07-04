@@ -1,6 +1,7 @@
 import { Link, StaticQuery, graphql } from "gatsby";
 import React from "react";
 import PortableText from "../portableText";
+import { myContext } from "../../provider";
 
 import * as styles from "./slider.module.css";
 
@@ -9,6 +10,8 @@ const game = [];
 const Slider = ({ data, count }) => (
   data.allSanityGame.edges.map((item) => game.push(item.node)),
   (
+    <myContext.Consumer>
+      {context => (
     <div className={styles.slide}>
 
       <img
@@ -27,20 +30,19 @@ const Slider = ({ data, count }) => (
           height='200'
         />
         <h1 className={styles.title}> {game[count].title} </h1>
-        <PortableText
-          blocks={game[count].description._rawFr}
-          className={styles.desc}
-        />
+        {context.isEN ? <PortableText blocks={game[count].description._rawEn} className={styles.desc} /> : <PortableText blocks={game[count].description._rawFr} className={styles.desc} />}
         <button>
           <Link
             to={"/game/" + `${game[count].slug.current}`}
             className={styles.btn}
           >
-            VOIR PLUS
+            {context.isEN ? "SEE MORE" : "VOIR PLUS"}
           </Link>
         </button>
       </div>
     </div>
+      )}
+      </myContext.Consumer>
   )
 );
 export default function MySlider(props) {

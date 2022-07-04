@@ -12,21 +12,25 @@ import { Link } from "gatsby";
 function ProduitPage(props) {
   const { fiche, game, image, slug } = props;
   return (
-    <div className={styles.wrapperProduit}>
-      <Link to={"/game/" + `${game.slug.current}`} className={styles.retour}>
-        <BsArrowLeft className={styles.arrow} />
-        <div className={styles.back}><p>RETOUR</p></div>
-      </Link>
-      <img src={image.asset.url} alt="" className={styles.bouteille} />
-      <div className={styles.game}>
-        <h1> {game.title} </h1>
-        <img src={game.logo.asset.url} alt="" className={styles.logo} />
-        <div className={styles.desc}>
-          <PortableText blocks={fiche._rawFr} />
+    <myContext.Consumer>
+      {context => (
+        <div className={styles.wrapperProduit}>
+          <Link to={"/game/" + `${game.slug.current}`} className={styles.retour}>
+            <BsArrowLeft className={styles.arrow} />
+            <div className={styles.back}><p>{context.isEN ? "BACK" : "RETOUR" }</p></div>
+          </Link>
+          <img src={image.asset.url} alt="" className={styles.bouteille} />
+          <div className={styles.game}>
+            <h1> {game.title} </h1>
+            <img src={game.logo.asset.url} alt="" className={styles.logo} />
+            <div className={styles.desc}>
+              {context.isEN ? <PortableText blocks={fiche._rawEn} /> : <PortableText blocks={fiche._rawFr} />}
+            </div>
+          </div>
+          <img src={game.logo.asset.url} alt="" className={styles.logo2} />
         </div>
-      </div>
-      <img src={game.logo.asset.url} alt="" className={styles.logo2} />
-    </div>
+      )}
+    </myContext.Consumer>
   );
 }
 

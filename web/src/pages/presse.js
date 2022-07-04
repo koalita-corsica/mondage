@@ -9,6 +9,7 @@ import * as styles from "../pages/presse.module.css";
 import { responsiveTitle1 } from "../components/typography.module.css";
 import PortableText from "../components/portableText";
 import { el } from "date-fns/locale";
+import { myContext } from "../provider";
 
 export const query = graphql`
   query PressePageQuery {
@@ -61,13 +62,25 @@ const PressePage = (props) => {
 
   return (
     <Layout>
+      <myContext.Consumer>
+            {context => (
+              <>
             <SEO title="Presse" />
       <div className={styles.wrapperPresse}>
         {data.allSanityPage.edges.map((item) => (
+          <>
+          {context.isEN ?
+            <div className={styles.presse}>
+            <h1> {item.node.pageBuilder[0].title1.en} </h1>
+            <PortableText blocks={item.node.pageBuilder[0].desc._rawEn} />
+          </div>
+            : 
           <div className={styles.presse}>
             <h1> {item.node.pageBuilder[0].title1.fr} </h1>
             <PortableText blocks={item.node.pageBuilder[0].desc._rawFr} />
           </div>
+          }
+          </>
         ))}
         <div className={styles.container}>
           <div className={styles.gauche}>
@@ -78,9 +91,9 @@ const PressePage = (props) => {
                     className={styles.articlesGauche}
                     data-pos={element.node.cote}
                   >
-                    <h1> {element.node.title.fr} </h1>
+                    {context.isEN ? <h1> {element.node.title.en} </h1> : <h1> {element.node.title.fr} </h1>}
                     <div className={styles.block}>
-                      <PortableText blocks={element.node.excerpt._rawFr} />
+                      {context.isEN ? <PortableText blocks={element.node.excerpt._rawEn} /> : <PortableText blocks={element.node.excerpt._rawFr} />}
                       <img src={element.node.mainImage.asset.url} alt="" />
                     </div>
                   </div>
@@ -96,9 +109,9 @@ const PressePage = (props) => {
                     className={styles.articlesDroite}
                     data-pos={element.node.cote}
                   >
-                    <h1> {element.node.title.fr} </h1>
+                    {context.isEN ? <h1> {element.node.title.en} </h1> : <h1> {element.node.title.fr} </h1>}
                     <div className={styles.block}>
-                      <PortableText blocks={element.node.excerpt._rawFr} />
+                    {context.isEN ? <PortableText blocks={element.node.excerpt._rawEn} /> : <PortableText blocks={element.node.excerpt._rawFr} />}
                       <img src={element.node.mainImage.asset.url} alt="" />
                     </div>
                   </div>
@@ -108,6 +121,9 @@ const PressePage = (props) => {
           </div>
         </div>
       </div>
+      </>
+            )}
+            </myContext.Consumer>
     </Layout>
   );
 };

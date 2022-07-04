@@ -22,6 +22,7 @@ import galerie12 from "../asset/galerie12.webp";
 import galerie13 from "../asset/galerie13.webp";
 import galerie14 from "../asset/galerie14.webp";
 import galerie15 from "../asset/galerie15.webp";
+import { myContext } from "../provider";
 
 export const query = graphql`
   query GaleriePageQuery {
@@ -47,15 +48,19 @@ const GaleriePage = (props) => {
     <Layout>
       <SEO title="Galerie" />
       {data.allSanityPage.edges.map((item) => (
+        <myContext.Consumer>
+        {context => (
         <React.Fragment>
           <div className={styles.wrapperTitle}>
             <div className={styles.titleContain}>
               <div className={styles.trait}></div>
-              <div className={styles.title}>{item.node.title.fr}</div>
+              {context.isEN ? <div className={styles.title}>{item.node.title.en}</div> : <div className={styles.title}>{item.node.title.fr}</div>}
               <div className={styles.trait2}></div>
             </div>
           </div>
         </React.Fragment>
+        )}
+        </myContext.Consumer>
       ))}
       <div className={styles.gridGalery}>
         <div className={styles.galerie1}>{/* <img src={galerie1} /> */}</div>
