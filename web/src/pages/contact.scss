@@ -311,7 +311,6 @@ label {
   align-self: flex-end;
   font-size: $font-text;
   font-family: "FuturaPTNormal";
-  
 
   @media (max-width: 1024px) {
     color: $color-button;
@@ -338,10 +337,3 @@ label {
     }
   }
 }
-button:hover {
-  color: white;
-  border: none;
-  background-color: $color-button;
-  cursor: pointer;
-  border: 2px solid $color-button;
-} 
